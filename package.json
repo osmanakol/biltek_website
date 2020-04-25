@@ -2,9 +2,11 @@
   "name": "biltek_website",
   "version": "0.0.1",
   "description": "Science and Technology Club Website",
-  "main": "app.ts",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "ts-node-dev --respawn src/server.ts","dev":"nodemon --exec ts-node src/server.ts",
+      "build":"tsc",
+      "dev:debug":"ts-node-dev --inspect --respawn src/server.ts"
   },
   "repository": {
     "type": "git",
