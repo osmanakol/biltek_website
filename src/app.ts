@@ -1,6 +1,6 @@
 import bodyParser from "body-parser";
 import express,{ Application } from "express";
-
+import { __static } from "../host.json";
 class App{
     public app:Application
 
@@ -12,7 +12,7 @@ class App{
     }
 
     private config=()=>{
-        this.app.use(express.static(""));//ileride düzenlenecek
+        this.app.use(express.static(__static));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({
             extended:true
@@ -26,6 +26,8 @@ class App{
     private mongoSetup=()=>{
         //ileride içerisi tanımlanacak
     }
+
+    
 }
 
 export default new App().app;
