@@ -7,6 +7,8 @@ class App{
     constructor() {
         this.app = express();
         this.config();
+        this.routeConfig();
+        this.mongoSetup();
     }
 
     private config=()=>{
@@ -16,4 +18,14 @@ class App{
             extended:true
         }));
     }
+
+    private routeConfig=()=>{
+        //ileride içerisi tanımlanacak
+    }
+
+    private mongoSetup=()=>{
+        //ileride içerisi tanımlanacak
+    }
 }
+
+export default new App().app;
