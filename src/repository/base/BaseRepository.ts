@@ -1,6 +1,14 @@
 import { IRead } from "../interface/IRead";
 import { IWrite } from "../interface/IWrite";
+import { Model,Document } from "mongoose";
 export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
+
+    public readonly _model:Model<Document>
+
+    constructor(model:Model<Document>) {
+        this._model = model;
+    }
+
     findAll(): Promise<T[]> {
         throw new Error("Method not implemented.");
     }
