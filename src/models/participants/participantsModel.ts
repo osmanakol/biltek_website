@@ -1,4 +1,4 @@
-import { UniversityModel } from "../universities/universitySchema";
+import { UniversityModel } from "../universities/universityModel";
 
 export class ParticipantModel {
     private name: string;
@@ -13,11 +13,9 @@ export class ParticipantModel {
         this.email = email;
     }
 
-
     public get FullName(): string {
         return this.name.trim() + this.surName.trim()
     }
-
 
     public set Name(name: string) {
         this.name = name;
@@ -26,7 +24,4 @@ export class ParticipantModel {
     public set SurName(surName: string) {
         this.surName = surName;
     }
-
-
-
 }

@@ -10,7 +10,7 @@ class App{
         this.routeConfig();
         this.mongoSetup();
     }
-
+    
     private config=()=>{
         this.app.use(express.static(__static));
         this.app.use(bodyParser.json());
@@ -19,12 +19,13 @@ class App{
         }));
     }
 
+     
     private routeConfig=()=>{
-        //ileride içerisi tanımlanacak
+        // TODO:  ileride içerisi tanımlanacak
     }
 
     private mongoSetup=()=>{
-        //ileride içerisi tanımlanacak
+        // TODO : ileride içerisi tanımlanacak
     }
 
     

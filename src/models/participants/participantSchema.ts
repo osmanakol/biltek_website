@@ -1,5 +1,5 @@
 import { Document, Model, model, Schema } from "mongoose";
-import { UniversityModel } from "../universities/universitySchema";
+import { UniversityModel } from "../universities/universityModel";
 
 export interface IParticipant extends Document {
     name: string;
