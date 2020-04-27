@@ -1,36 +1,39 @@
 import bodyParser from "body-parser";
-import express,{ Application } from "express";
+import express, { Application, Router } from "express";
 import { __static } from "../host.json";
 import connection from "./models/configuration/connection";
-class App{
-    public app:Application
-
+import { ApiRoutes } from "./routes/api-routes";
+class App {
+    public app: Application
+    public router: express.Router
     constructor() {
         this.app = express();
+        this.router = express.Router()
         this.config();
         this.routeConfig();
         this.mongoSetup();
+
     }
-    
-    private config=()=>{
+
+    private config = () => {
         this.app.use(express.static(__static));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({
-            extended:true
+            extended: true
         }));
     }
 
-     
-    private routeConfig=()=>{
+
+    private routeConfig = () => {
         // TODO:  ileride içerisi tanımlanacak
+        this.app.use('/api', new ApiRoutes(this.router).Routes())
     }
 
-    private mongoSetup=()=>{
-        // TODO : ileride içerisi tanımlanacak
+    private mongoSetup = () => {
         connection.connection();
     }
 
-    
+
 }
 
 export default new App().app;
