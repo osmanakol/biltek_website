@@ -6,14 +6,16 @@ import { UniversityModel } from "../models/universities/universityModel";
 export class ParticipantController {
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
         const participantService = new ParticipantService();
-        const result = await participantService.create(new ParticipantModel(req.body.name, req.body.surName, new UniversityModel(), req.body.email)).then((result)=>{
+        console.log(req.body);
+        const result = await participantService.create(new ParticipantModel(req.body.name, req.body.surName, new UniversityModel(req.body.universityModel.name), req.body.email)).then((result) => {
             res.status(201).json({
-                data:result,
-                message:"OK"
+                data: result,
+                message: "OK"
             })
-        }).catch(err=>{
+        }).catch(err => {
             res.json({
-                message:"Bir hata oluştu"
+                err:err,
+                message: "Bir hata oluştu"
             })
         })
     }
