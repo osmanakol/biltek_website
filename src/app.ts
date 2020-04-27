@@ -1,6 +1,7 @@
 import bodyParser from "body-parser";
 import express,{ Application } from "express";
 import { __static } from "../host.json";
+import connection from "./models/configuration/connection";
 class App{
     public app:Application
 
@@ -26,6 +27,7 @@ class App{
 
     private mongoSetup=()=>{
         // TODO : ileride içerisi tanımlanacak
+        connection.connection();
     }
 
     
