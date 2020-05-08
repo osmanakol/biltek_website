@@ -56,6 +56,21 @@ export class DepartmentController {
         }
     }
 
+    public delete = async (req:Request,res:Response,next:NextFunction)=>{
+        try {
+            const result = await this.departmentService.delete(req.body._id)
+            res.status(200).json({
+                data:result,
+                state:"Success"
+            })
+        } catch (error) {
+            res.json({
+                err:error,
+                state:"Error"
+            })
+        }
+    }
+
     public findAll= async (req:Request,res:Response,next:NextFunction)=>{
         try {
             const result = await this.departmentService.findAll()
