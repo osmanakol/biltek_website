@@ -5,12 +5,14 @@ export class ParticipantModel {
     private surName: string;
     public university: UniversityModel;
     public email: string;
+    public date:string;
 
-    constructor(name: string, surName: string, university: UniversityModel, email: string) {
+    constructor(name: string, surName: string, university: UniversityModel, email: string,date:string=Date().toString()) {
         this.name = name;
         this.surName = surName;
         this.university = university;
         this.email = email;
+        this.date=date;
     }
 
     public get FullName(): string {
