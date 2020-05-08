@@ -3,14 +3,16 @@ import { UniversityModel } from "../universities/universityModel";
 export class ParticipantModel {
     private name: string;
     private surName: string;
-    public university: UniversityModel;
+    public university: string;
+    public department:string;
     public email: string;
     public date:string;
 
-    constructor(name: string, surName: string, university: UniversityModel, email: string,date:string=Date().toString()) {
+    constructor(name: string, surName: string, university: string,department:string, email: string,date:string=Date().toString()) {
         this.name = name;
         this.surName = surName;
         this.university = university;
+        this.department = department;
         this.email = email;
         this.date=date;
     }
