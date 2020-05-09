@@ -8,7 +8,7 @@ export class ParticipantModel {
     public email: string;
     public date:string;
 
-    constructor(name: string, surName: string, university: string,department:string, email: string,date:string=Date().toString()) {
+    constructor(name: string, surName: string, university: string,department:string, email: string,date:string=new Date().toLocaleDateString("tr-TR",{timeZone:"Europe/Istanbul",weekday:"long",year:"numeric",month:"short",day:"numeric"})) {
         this.name = name;
         this.surName = surName;
         this.university = university;

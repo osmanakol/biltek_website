@@ -16,7 +16,7 @@ const ParticipantSchema: Schema = new Schema({
     university: { type: Schema.Types.ObjectId, ref: 'universities' },
     department:{type:Schema.Types.ObjectId,ref:'departmentofUniversities'},
     email: { type: String, required: 'Email is a required parameter', trim: true },
-    date:{type:String,required:"Date is a required parameter",default:Date().toString()}
+    date:{type:String,required:"Date is a required parameter",default:new Date().toLocaleDateString("tr-TR",{timeZone:"Europe/Istanbul",weekday:"long",year:"numeric",month:"short",day:"numeric"})}
 })
 
 const ParticipantDbModel: Model<IParticipant> = model('partipacipants', ParticipantSchema);
