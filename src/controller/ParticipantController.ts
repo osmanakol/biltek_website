@@ -11,7 +11,7 @@ export class ParticipantController {
     }
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
 
-        const result = await this.participantService.create(new ParticipantModel(req.body.name, req.body.surName, new UniversityModel(req.body.universityName), req.body.email)).then((result) => {
+        const result = await this.participantService.create(new ParticipantModel(req.body.name, req.body.surName, req.body.universityId,req.body.departmentId, req.body.email)).then((result) => {
             res.status(201).json({
                 data: result,
                 message: "OK"
@@ -41,7 +41,7 @@ export class ParticipantController {
 
     public updateParticipant = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.participantService.update(req.body._id, new ParticipantModel(req.body.name, req.body.surName, new UniversityModel(req.body.universityName), req.body.email))
+            const result = await this.participantService.update(req.body._id, new ParticipantModel(req.body.name, req.body.surName, req.body.universityId,req.body.departmentId, req.body.email))
             res.status(200).json({
                 data: result,
                 state: "Success"
