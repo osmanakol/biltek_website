@@ -1,17 +1,16 @@
 import { IRead } from "../interface/IRead";
 import { IWrite } from "../interface/IWrite";
-import { Model,Document } from "mongoose";
-import { STATUS_CODES } from "http";
+import { Model, Document, DocumentQuery } from "mongoose";
 export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
-    
-    public readonly _model:Model<Document>
+
+    public readonly _model: Model<Document>
 
     /**
      * @constructor
      * @param model is exporting to models file
      */
 
-    constructor(model:Model<Document>) {
+    constructor(model: Model<Document>) {
         this._model = model;
     }
 
@@ -22,33 +21,34 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
         return result;
     }
 
-    findAll(): Promise<T[]> {
-        const result = this._model.find({})
-        return result.cast(this._model);
+    async findAll(): Promise<T[]> {
+        const result = await this._model.find()
+        console.log(result)
+        return result as unknown as T[]
     }
 
-    findOne(property: any): Promise<T> {
+    findOne(property: any): Promise<Document> {
         throw new Error("Method not implemented.");
     }
 
-    findById(id: string): Promise<T> {
-        const result = this._model.findById({"_id":id});
-        return result.cast(this._model);
+    async findById(id: string): Promise<T | null> {
+        const result = await this._model.findById({ "_id": id });
+        return result as unknown as T
     }
 
     create(item: T): Promise<Document> {
         const result = this._model.create(item);
         return result;
     }
-    
+
     update(id: string, item: T): Promise<Document> {
-        const result = this._model.update({"_id":id},item);
+        const result =  this._model.update({ "_id": id }, item);
         console.log(result);
         return result as any;
     }
 
     delete(id: string): Promise<boolean> {
-        const result = this._model.deleteOne({"_id":id});
+        const result = this._model.deleteOne({ "_id": id });
         return result as any;
     }
 }

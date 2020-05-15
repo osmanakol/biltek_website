@@ -25,7 +25,6 @@ class App {
 
 
     private routeConfig = () => {
-        // TODO:  ileride içerisi tanımlanacak
         this.app.use('/api', new ApiRoutes(this.router).Routes())
     }
 

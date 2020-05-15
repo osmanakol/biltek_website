@@ -1,13 +1,17 @@
 import express, { Router, Request, Response } from "express";
-import { ParticipantController } from "../controller/participantController";
+import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
+import { DepartmentController } from "../controller/DepartmentController";
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
+    private deparmentController:DepartmentController
+
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
+        this.deparmentController = new DepartmentController();
         this.Routes();
     }
 
@@ -22,14 +26,29 @@ export class ApiRoutes {
             })
         // ? Routes /api/participant
         this.router.route('/participant')
-            .get()
+            .get(this.participantController.findAll)
             .post(this.participantController.createParticipant)
-        
+            .put(this.participantController.updateParticipant)
+            .delete(this.participantController.deleteParticipant);
+
         // ? Routes /api/university
         this.router.route('/university')
-            .get()
-            .post(this.universityController.createUniversity);
+            .get(this.universityController.findAll)
+            .post(this.universityController.createUniversity)
+            .put(this.universityController.update)
+            .delete(this.universityController.delete);
+        
+        // ? Routes /api/university/addMany
+        this.router.route('/university/addMany')
+            .post(this.universityController.createUniversities)
+
+        // ? Routes /api/department
+        this.router.route('/department')
+            .get(this.deparmentController.findAll)
+            .post(this.deparmentController.createMany)
+            .put(this.deparmentController.update)
+            .delete(this.deparmentController.delete);
 
         return this.router;
     }
-}
+} 
