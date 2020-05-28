@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <link rel="stylesheet" href="css/register.css">
+
 
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
     <!-- Button tanımlama-->
-
+    <link rel="stylesheet" href="static\register\css\register.css">
 
 <body>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1">
@@ -31,21 +28,21 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form  id="form" role="form" action="" method="post" class="kayıt-form">
+                    <form id="form" role="form" action="" method="post" class="kayıt-form">
                         <fieldset style="display: block;">
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <h5>Ad</h5>
                                     <label class="sr-only" for="form-first-name">Ad</label>
-                                    <input type="text"  name="form-first-name" placeholder="Adınızı Giriniz..."
-                                        class="form-first-name form-control input-error" id="form-first-name" >
+                                    <input type="text" name="form-first-name" placeholder="Adınızı Giriniz..."
+                                        class="form-first-name form-control input-error" required id="form-first-name">
 
                                 </div>
                                 <div class="form-group">
                                     <h5>Soyad</h5>
                                     <label class="sr-only" for="form-last-name">Soyad</label>
-                                    <input  name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
-                                        class="form-last-name form-control input-error" id="form-last-name" >
+                                    <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
+                                        class="form-last-name form-control input-error" id="form-last-name">
                                 </div>
 
                             </div>
@@ -54,7 +51,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" id=next-button1 class="btn btn-success" >İleri</button>
+                    <button type="submit" id=next-button1 class="btn btn-success">İleri</button>
 
                 </div>
 
@@ -125,20 +122,20 @@
                                     <!-- <label class="sr-only" for="form-school">school</label>
                                     <input name="form-school" placeholder="Okulunuzu giriniz..."
                                         class="form-school form-control" id="form-school" type="text"> -->
-                                        
-                                        <select name="dersler">
 
-                                            <option>AYBÜ</option>
-                                        
-                                            <option>İTÜ</option>
-                                        
-                                            <option>ODTü</option>
-                                        
-                                            <option selected>KATÜ</option>
-                                        
-                                            <option>GAÜN</option>
-                                        
-                                        </select>
+                                    <select name="dersler">
+
+                                        <option>AYBÜ</option>
+
+                                        <option>İTÜ</option>
+
+                                        <option>ODTü</option>
+
+                                        <option selected>KATÜ</option>
+
+                                        <option>GAÜN</option>
+
+                                    </select>
 
                                 </div>
                                 <div class="form-group">
@@ -146,27 +143,27 @@
                                     <select name="dersler">
 
                                         <option>CENG</option>
-                                    
+
                                         <option>İEEE</option>
-                                    
+
                                         <option>INSENG</option>
-                                    
+
                                         <option>MECENG</option>
-                                    
+
                                     </select>
-                                    
+
                                     <!-- <label class="sr-only" for="form-dep">dep</label>
                                     <input name="form-d ep" placeholder="Bölümünüzü giriniz ..."
                                         class="form-dep form-control" id="form-dep" type="text"> -->
 
-                                        
+
                                 </div>
 
                             </div>
                         </fieldset>
                     </form>
                 </div>
-              
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger">Geri</button>
                     <button type="button" class="btn btn-success">Kayıt Ol </button>
@@ -176,9 +173,7 @@
         </div>
     </div>
 
-
-
-
+    <!--Javascript connection-->
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -189,10 +184,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
- 
-        
+    <script src="static\register\js\register.js"></script>
+
 </body>
-<!--Javascript connection-->
-<script src="js/register.js"></script>
 
 </html>
