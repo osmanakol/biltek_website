@@ -1,0 +1,65 @@
+body,html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bgimage{
+    height: 100%;
+    background-image:url(../images/bgimage.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(40%);
+  }
+
+  .content{
+    position:absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#comingsoon{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    padding-bottom: 10px
+  }
+  footer{
+    position: absolute;
+    min-height: 50px;
+    max-height: 80px;
+    bottom:10px;
+    left:40%;
+    right:40%;
+    width: auto;
+    float: left;
+    text-align: center;
+    
+  }
+  
+  .logo{
+    width: 50px;
+    height: 50px;
+    padding:10px 10px 10px 10px;
+  
+  }
+  .vl{
+    border: 1px solid white;
+    height: 50px;
+    width: 0px;
+  
+  }
+  .biltek{
+    color: white;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    padding:10px 10px 10px 10px;
+  }
+  .scrolleft{
+    float:left;
+  }
+  
