@@ -14,8 +14,3 @@ $("div[id^='myModal']").each(function(){
     });
   
   }); 
-
-
-
-
-
