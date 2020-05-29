@@ -1,5 +1,7 @@
 #header {
     background-image: url(../img/aybu_homepage_background.jpeg);
-    width: auto;
-    height: auto;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
