@@ -1,0 +1,33 @@
+.aybulogo{
+    float: left;
+    height: 80px;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 100px;
+    
+}
+
+.mainNav{
+    float: left
+}
+
+nav ul{
+    margin:  0px;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 100px;
+    margin-top: 35px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+}
+nav a:hover{
+    color: #000;
+}
