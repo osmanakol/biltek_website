@@ -16,4 +16,13 @@ transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transform: translate(10px,150px);
 }
 
+.modal-header {
+background-color: black;
+color: white;
 
+}
+
+.modal-header .close{
+    color: #f8f9fa;
+    opacity: inherit;
+}
