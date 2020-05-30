@@ -11,5 +11,9 @@ height: calc(1.5em + .75rem + 2px);
 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.modal.show .modal-dialog{
+
+    transform: translate(10px,150px);
+}
 
 
