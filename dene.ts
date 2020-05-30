@@ -3,3 +3,4 @@ console.log(dene);
 console.assert(true,"asdasd");
 console.log(dene);
 console.assert(true,"asdasd");
+console
