@@ -1,3 +1,4 @@
+function next_prev(){
 $("div[id^='myModal']").each(function () {
 
   var currentModal = $(this);
@@ -14,5 +15,5 @@ $("div[id^='myModal']").each(function () {
   });
 
 });
-
+}
 //TODO: Fonksiyion içine koyulacak
