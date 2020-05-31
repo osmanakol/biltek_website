@@ -16,4 +16,6 @@ $("div[id^='myModal']").each(function () {
 
 });
 }
+
+
 //TODO: Fonksiyion içine koyulacak
