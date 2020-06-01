@@ -18,14 +18,34 @@ nav li{
     display: inline-block;
     margin-right: 100px;
     margin-top: 35px;
+    position: relative;
 }
 
 nav a{
     color: white;
+    display: inline-block;
     text-decoration: none;
     font-style: italic;
 }
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background-color: greenyellow;
+  
+    position: absolute;
+    top: auto;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+}
+
+
 nav a:hover{
     color: #000;
-    border-bottom: 2px solid greenyellow;
 }
+
+nav a:hover::after {
+    width: 100%;
+  }
