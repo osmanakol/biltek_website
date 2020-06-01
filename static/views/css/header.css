@@ -1,7 +1,15 @@
-#header {
-  background-image: url(../img/aybu_homepage_background.jpeg);
+
+body, html{
+  margin: 0;
   height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+#header{
+  height: 100vh;
+}
+
+.bground{
+  background: url("../img/aybu_homepage_background.jpeg");
   background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
