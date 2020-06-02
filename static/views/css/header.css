@@ -8,7 +8,8 @@ body, html{
 }
 
 .bground{
-  background: url("../img/aybu_homepage_background.jpeg");
+  background:rgba(0, 0, 0, .65) url("../img/aybu_homepage_background.jpeg");
+  background-blend-mode: darken;
   background-size: cover;
   background-position: center;
   height: 100vh;
