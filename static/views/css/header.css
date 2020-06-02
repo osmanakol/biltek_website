@@ -30,9 +30,10 @@ body, html{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 30px;
   color: white;
+  margin-bottom: 0px;
 }
 #header-msg::before{
-    content: '';
+    content: '';  
     display: block;
     height: 6px;
     width: 15vw;
@@ -40,9 +41,11 @@ body, html{
 }
 
 #header-msg2{
+  margin-top: 0px;
   color:white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 70px;
+  margin-bottom: 30px;
 }
 
 .button {
