@@ -3,7 +3,7 @@
     height: 80px;
     width: 80px;
     margin-top: 20px;
-    margin-left: 150px;
+    margin-left: 195px;
 }
 
 nav ul{
@@ -24,7 +24,7 @@ nav a{
     color: white;
     display: inline-block;
     text-decoration: none;
-    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 nav a::after {

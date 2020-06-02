@@ -27,10 +27,16 @@ body, html{
 }
 
 #header-msg{
-  color:white;
-  text-decoration-line: overline;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 30px;
+  color: white;
+}
+#header-msg::before{
+    content: '';
+    display: block;
+    height: 6px;
+    width: 15vw;
+    background-color: white;
 }
 
 #header-msg2{
