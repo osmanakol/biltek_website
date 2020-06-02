@@ -13,3 +13,68 @@ body, html{
   background-position: center;
   height: 100vh;
 }
+
+.schoolName{
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 25%;
+  left: 10%;
+  right: 60%;
+  text-align: left;
+
+
+}
+
+#header-msg{
+  color:white;
+  text-decoration-line: overline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 30px;
+}
+
+#header-msg2{
+  color:white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 70px;
+}
+
+.button {
+
+  display: inline-block;
+
+  background-color:transparent;
+  color: white;
+  border:2px solid white;
+  text-align: center;
+  font-size: 25px;
+  padding: 12px;
+  width: 260px;
+
+  margin: 6px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
