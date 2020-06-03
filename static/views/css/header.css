@@ -30,9 +30,10 @@ body, html{
 #header-msg::before{
   content: '';  
   display: block;
-  height: 6px;
+  height: 5px;
   width: 15vw;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 #header-msg{
@@ -64,6 +65,7 @@ body, html{
   width: 260px;
   cursor: pointer;
   margin: 6px;
+  
 }
 
 .button span {
