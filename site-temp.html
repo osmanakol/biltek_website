@@ -52,8 +52,21 @@
                     <div class="schoolName">
                         <h1 id="header-msg">Ankara Yıldırım Beyazıt Üniversitesi</h1>
                         <h2 id="header-msg2">Bilim Ve Teknoloji Kulübü</h2>
-                        <button class="button" style="vertical-align:middle">
-                        <span>Kayıt Ol </span></button>
+                       <!-- for later use -->
+                        <script>
+                            var isFirst=true;
+                            function Send(){
+                            if(isFirst){
+                            isFirst=false;
+                            window.open('https://www.google.com.tr/');
+                            }
+                            alert("nereye göndereciğimi bilemedim o yüzden google")
+                            $().submit();
+                            }
+                            </script>
+                        <a href="https://www.google.com.tr/"><button  class="button"  style="vertical-align:middle" >   
+                        <span>Kayıt Ol </span> </button></a>
+                    </div>
                     </div>
                 </div>
             </div>
