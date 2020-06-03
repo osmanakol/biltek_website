@@ -27,19 +27,21 @@ body, html{
 
 }
 
+#header-msg::before{
+  content: '';  
+  display: block;
+  height: 6px;
+  width: 15vw;
+  background-color: white;
+}
+
 #header-msg{
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 30px;
   color: white;
   margin-bottom: 0px;
 }
-#header-msg::before{
-    content: '';  
-    display: block;
-    height: 6px;
-    width: 15vw;
-    background-color: white;
-}
+
 
 #header-msg2{
   margin-top: 0px;
@@ -60,12 +62,12 @@ body, html{
   font-size: 25px;
   padding: 12px;
   width: 260px;
-
+  cursor: pointer;
   margin: 6px;
 }
 
 .button span {
-  cursor: pointer;
+  
   display: inline-block;
   position: relative;
   transition: 0.5s;
