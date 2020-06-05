@@ -8,8 +8,9 @@ body, html{
 }
 
 .bground{
-  background:rgba(0, 0, 0, .65) url("../img/aybu_homepage_background.jpeg");
-  background-blend-mode: darken;
+  /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
+  background-image:linear-gradient(to right,black, rgba(0,0,0,0.4)), url("../img/aybu_homepage_background.jpeg");
+  /* background-blend-mode: darken; */
   background-size: cover;
   background-position: center;
   height: 100vh;
