@@ -25,6 +25,8 @@ function next_Prev(n) {
           currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show');
 
         }
+
+        
       });
     });
   }

@@ -11,6 +11,83 @@
     <!-- Button tanımlama-->
     <link rel="stylesheet" href="css\register.css">
 
+    <style>
+
+        body {
+          background-color: #f1f1f1;
+        }
+        
+        #regForm {
+          background-color: #ffffff;
+          margin: 100px auto;
+          font-family: Raleway;
+          padding: 40px;
+          width: 70%;
+          min-width: 300px;
+        }
+        
+        h1 {
+          text-align: center;  
+        }
+        
+        input {
+          padding: 10px;
+          width: 100%;
+          font-size: 17px;
+          font-family: Raleway;
+          border: 1px solid #aaaaaa;
+        }
+        
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+          background-color: #ffdddd;
+        }
+        
+        /* Hide all steps by default: */
+        .tab {
+          display: none;
+        }
+        
+        button {
+          background-color: #4CAF50;
+          color: #ffffff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 17px;
+          font-family: Raleway;
+          cursor: pointer;
+        }
+        
+        button:hover {
+          opacity: 0.8;
+        }
+        
+        #prevBtn {
+          background-color: #bbbbbb;
+        }
+        
+        /* Make circles that indicate the steps of the form: */
+        .step {
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbbbbb;
+          border: none;  
+          border-radius: 50%;
+          display: inline-block;
+          opacity: 0.5;
+        }
+        
+        .step.active {
+          opacity: 1;
+        }
+        
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+          background-color: #4CAF50;
+        }
+        </style>
+    
 <body>
     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
         Kayıt ol
@@ -18,7 +95,11 @@
 
     <!--Modal Box One -->
 
+<<<<<<< HEAD
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog " aria-labelledby="myModalLabel"
+=======
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -28,6 +109,7 @@
                             aria-hidden="true">&times;</span></button> 
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                     <form id="form" role="form" action="" method="post" class="kayıt-form" name="myForm">
                         <fieldset style="display: block;">
                             <div class="form-bottom">
@@ -43,17 +125,43 @@
                                     <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
                                         class="form-last-name form-control input-error" id="form-last-name" >
                                 </div>
+=======
+                    <form id="regForm" action="" method="post" class="register-form">
+                        <fieldset style="display: block;">
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
 
+                            <div class="tab">
+                                <h5>Ad</h5>
+                                <label class="sr-only" for="form-first-name">Ad</label>
+                                <input type="text" name="form-first-name" placeholder="Adınızı Giriniz..."
+                                    class="form-first-name form-control input-error" required id="form-first-name">
+
+
+                                <h5>Soyad</h5>
+                                <label class="sr-only" for="form-last-name">Soyad</label>
+                                <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
+                                    class="form-last-name form-control input-error" required id="form-last-name">
                             </div>
+<<<<<<< HEAD
                     </form>
                     
                 </div>
 
                 <div class="modal-footer">
                     <button type="submit" id="next-button1" onclick="next_Prev(1)" class="btn btn-success">İleri</button>
+=======
 
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
+
+                            <div style="text-align:center;margin-top:40px;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                              </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -72,6 +180,7 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                 
                     <form id="form2" role="form" action="" method="post" class="kayıt-form" name="myForm2">
                             <div class="form-bottom">
@@ -95,7 +204,28 @@
                 <div class="modal-footer"> 
                     <button type="button" id="next-buttonGeri" class="btn btn-danger" >Geri</button>
                     <button type="submit" id="next-button2"onclick="next_Prev(2)" class="btn btn-success">İleri</button>
+=======
+
+                        
+                            <div class="tab">
+                                <h5>Telefon</h5>
+                                <label class="sr-only" for="form-phone">Telefon</label>
+                                <input name="form-phone" placeholder="Telefon numaranızı giriniz..."
+                                    class="form-phone form-control" id="form-phone" type="tel">
+
+                                <h5>Adress</h5>
+                                <label class="sr-only" for="form-adress">Adress</label>
+                                <input name="form-adress" placeholder="Adresinizi giriniz..."
+                                    class="form-adress form-control" id="form-adress" type="text">
+
+                            </div>
+                      
+                
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
                 </div>
+
             </div>
         </div>
     </div>
@@ -113,50 +243,58 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                   
                         
+=======
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
 
-                            <div class="form-bottom">
-                                <div class="form-group">
-                                    <h5>Okul</h5>
-                                    <!-- <label class="sr-only" for="form-school">school</label>
+ 
+
+                        <div class="tab">
+                            
+                                <h5>Okul</h5>
+                                <!-- <label class="sr-only" for="form-school">school</label>
                                     <input name="form-school" placeholder="Okulunuzu giriniz..."
                                         class="form-school form-control" id="form-school" type="text"> -->
 
-                                    <select name="dersler">
+                                <select name="dersler">
 
-                                        <option>AYBÜ</option>
+                                    <option>AYBÜ</option>
 
-                                        <option>İTÜ</option>
+                                    <option>İTÜ</option>
 
-                                        <option>ODTü</option>
+                                    <option>ODTü</option>
 
-                                        <option selected>KATÜ</option>
+                                    <option selected>KATÜ</option>
 
-                                        <option>GAÜN</option>
+                                    <option>GAÜN</option>
 
-                                    </select>
+                                </select>
 
-                                </div>
-                                <div class="form-group">
-                                    <h5>Bölüm</h5>
-                                    <select name="dersler">
+                                <h5>Bölüm</h5>
+                                <select name="dersler">
 
-                                        <option>CENG</option>
+                                    <option>CENG</option>
 
-                                        <option>İEEE</option>
+                                    <option>İEEE</option>
 
-                                        <option>INSENG</option>
+                                    <option>INSENG</option>
 
-                                        <option>MECENG</option>
+                                    <option>MECENG</option>
 
-                                    </select>
+                                </select>
 
-                                    <!-- <label class="sr-only" for="form-dep">dep</label>
+                                <!-- <label class="sr-only" for="form-dep">dep</label>
                                     <input name="form-d ep" placeholder="Bölümünüzü giriniz ..."
                                         class="form-dep form-control" id="form-dep" type="text"> -->
+                        </div>
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                       
 
 
+<<<<<<< HEAD
                                 </div>
                             </form>
                             </div>
@@ -167,11 +305,28 @@
                 <div class="modal-footer">
                     <button type="button" id="next-buttonGeri" class="btn btn-danger" >Geri</button>
                     <button type="button" class="btn btn-success" > Submit </button>
+=======
+
+                             <!-- Circles which indicates the steps of the form: -->
+
+                    </fieldset>
+>>>>>>> 4bfe9bd96d2514bc44a63872a3635bd0c32dca62
 
                 </div>
+
+
             </div>
         </div>
     </div>
+
+    
+          
+    
+
+
+
+
+    </form>
 
     <!--Javascript connection-->
     <!-- JS, Popper.js, and jQuery -->
@@ -187,6 +342,9 @@
     <script src="js\register.js"></script>
     
 
+
+
+    
 </body>
 
 </html>
