@@ -14,7 +14,6 @@ html {
 }
 
 .content {
-  border: 1px solid red;
   position: absolute;
   width: calc(10em*3);
   height: auto;
@@ -32,6 +31,82 @@ html {
   font-size: calc(1.5rem + 0.7vw);
   padding-bottom: 10px;
   font-family:'Orbitron',sans-serif;
+}
+
+.shadowBar {
+  width: 400px;
+  height: 30px;
+  position: relative;
+  background: rgba(17, 17, 17, .3);
+  margin:20px auto;
+  border-radius: 15px;
+}
+.progressbar {
+border-radius: 15px;
+z-index: 9;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: 20 px auto;
+width: 300px;
+height: 30px;
+}
+.progressbar::before,
+.progressbar::after {
+content: '';
+display: block;
+position:relative;
+z-index: 500;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 15px;
+background: repeating-linear-gradient(90deg, #fce8d5 ,#ffd3e1,#0a97b0,#ffd3e1);
+animation: movebar 2s linear infinite;
+}
+.progressbar::before {
+box-shadow: 0 6px 10px 0 rgba(0,0,0,0.1);
+}
+.progressbar::after {
+z-index: 9;
+top: 6px;
+filter: blur(16px);
+opacity: 0.7;
+}
+
+@-moz-keyframes movebar {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 300px 0;
+}
+}
+@-webkit-keyframes movebar {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 300px 0;
+}
+}
+@-o-keyframes movebar {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 300px 0;
+}
+}
+@keyframes movebar {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 300px 0;
+}
 }
 
 footer {
