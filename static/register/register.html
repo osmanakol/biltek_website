@@ -12,46 +12,45 @@
     <link rel="stylesheet" href="css\register.css">
 
 <body>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal1">
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
         Kayıt ol
     </button>
 
     <!--Modal Box One -->
 
-    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog " aria-labelledby="myModalLabel"
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog " aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Ad Soyad</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
+                            aria-hidden="true">&times;</span></button> 
                 </div>
                 <div class="modal-body">
-                    <form id="form" role="form" action="" method="post" class="kayıt-form">
+                    <form id="form" role="form" action="" method="post" class="kayıt-form" name="myForm">
                         <fieldset style="display: block;">
                             <div class="form-bottom">
                                 <div class="form-group">
                                     <h5>Ad</h5>
-                                    <label class="sr-only" for="form-first-name">Ad</label>
+                                    <label id = "adsL"> </label>
+                                    <label class="sr-only" id="adL" for="form-first-name">Ad</label>
                                     <input type="text" name="form-first-name" placeholder="Adınızı Giriniz..."
-                                        class="form-first-name form-control input-error" required id="form-first-name">
+                                        class="form-first-name form-control input-error"  id="form-first-name">
 
-                                </div>
-                                <div class="form-group">
                                     <h5>Soyad</h5>
-                                    <label class="sr-only" for="form-last-name">Soyad</label>
+                                    <label class="sr-only" id="sydL" for="form-last-name">Soyad</label>
                                     <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
-                                        class="form-last-name form-control input-error" id="form-last-name">
+                                        class="form-last-name form-control input-error" id="form-last-name" >
                                 </div>
 
                             </div>
-                        </fieldset>
                     </form>
+                    
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" id=next-button1 onclick="next_prev()" class="btn btn-success">İleri</button>
+                    <button type="submit" id="next-button1" onclick="next_Prev(1)" class="btn btn-success">İleri</button>
 
                 </div>
 
@@ -62,7 +61,7 @@
     <!--Modal Box Two-->
 
 
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -73,28 +72,29 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <fieldset style="display: block;">
+                
+                    <form id="form2" role="form" action="" method="post" class="kayıt-form" name="myForm2">
                             <div class="form-bottom">
                                 <div class="form-group">
+                                    <label id = "IL"> </label>
                                     <h5>Telefon</h5>
                                     <label class="sr-only" for="form-phone">Telefon</label>
                                     <input name="form-phone" placeholder="Telefon numaranızı giriniz..."
-                                        class="form-phone form-control" id="form-phone" type="tel">
-                                </div>
-                                <div class="form-group">
+                                        class="form-phone form-control" id="form-phone" type="tel" >
+                               
+                                
                                     <h5>Adress</h5>
                                     <label class="sr-only" for="form-adress">Adress</label>
                                     <input name="form-adress" placeholder="Adresinizi giriniz..."
-                                        class="form-adress form-control" id="form-adress" type="text">
+                                        class="form-adress form-control" id="form-adress" type="text"  >
                                 </div>
                             </div>
-                        </fieldset>
+                        
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" onclick="next_prev()" >Geri</button>
-                    <button type="button" id=next-button2 onclick="next_prev()" class="btn btn-success">İleri</button>
+                <div class="modal-footer"> 
+                    <button type="button" id="next-buttonGeri" class="btn btn-danger" onclick="next_Prev(1)" >Geri</button>
+                    <button type="submit" id="next-button2"onclick="next_Prev(2)" class="btn btn-success">İleri</button>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@
 
     <!-- Modal Box Third One -->
 
-    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -113,8 +113,8 @@
                             aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <fieldset style="display: block;">
+                  
+                        
 
                             <div class="form-bottom">
                                 <div class="form-group">
@@ -158,15 +158,15 @@
 
 
                                 </div>
-
+                            </form>
                             </div>
                         </fieldset>
-                    </form>
+                    
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger"onclick="next_prev()" >Geri</button>
-                    <button type="button" class="btn btn-success" >Kayıt Ol </button>
+                    <button type="button" id="next-buttonGeri" class="btn btn-danger"onclick="next_Prev(2)" >Geri</button>
+                    <button type="button" class="btn btn-success" > Submit </button>
 
                 </div>
             </div>
@@ -185,6 +185,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="js\register.js"></script>
+    
 
 </body>
 
