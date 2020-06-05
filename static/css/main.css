@@ -14,21 +14,26 @@ html {
 }
 
 .content {
+  border: 1px solid red;
   position: absolute;
-  width: auto;
+  width: calc(10em*3);
   height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-size: calc(1.5rem + 0.7vw);
 }
 
-#comingsoon {
+
+
+.comingsoon {
   color: white;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 45px;
+  font-size: calc(1.5rem + 0.7vw);
   padding-bottom: 10px;
+  font-family:'Orbitron',sans-serif;
 }
+
 footer {
   position: absolute;
   min-height: 50px;
@@ -39,6 +44,7 @@ footer {
   width: auto;
   float: left;
   text-align: center;
+  display: flex;
 }
 
 .logo {
@@ -53,23 +59,23 @@ footer {
 }
 
 .biltek-container {
-  position: absolute;
-  height: 80px;
   right: 0;
   left: 80px;
-  text-align: center;
+  bottom:0;
 }
 
 .biltek {
   color: white;
+  font-family: 'Roboto', sans-serif;
+
   font-size: calc(0.7rem + 0.5vw);
-  font-family: "Times New Roman", Times, serif;
   padding: 10px auto;
 }
-.scrolleft {
+
+/*.slideleft {
   float: left;
   padding: 10px auto;
-}
+}*/
 
 @media screen and (max-width: 800px) {
   .biltek {
