@@ -6,7 +6,8 @@ html {
 
 .bgimage {
   height: 100%;
-  background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../images/bgimage.jpeg);
+  background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4)), 
+                   url(../images/deneme.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,7 +28,7 @@ html {
 
 
 .comingsoon {
-  color: white;
+  color: whitesmoke;
   font-size: calc(1.5rem + 0.7vw);
   padding-bottom: 10px;
   font-family:'Orbitron',sans-serif;
@@ -105,9 +106,6 @@ footer {
   cursor: pointer;
   transform-style: preserve-3d;
   animation: spin 5s linear infinite;
-}
-.spin:hover{
-
 }
 @keyframes spin {
   0% {
