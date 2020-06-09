@@ -9,7 +9,7 @@ body, html{
 
 .bground{
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
-  background-image:linear-gradient(to right,black, rgba(0,0,0,0.4)), url("../img/aybu_homepage_background.jpeg");
+  background-image:url("../img/alt2.jpg");
   /* background-blend-mode: darken; */
   background-size: cover;
   background-position: center;

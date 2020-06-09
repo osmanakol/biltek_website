@@ -30,21 +30,23 @@ nav a{
 nav a::after {
     content: '';
     display: block;
-    height: 4px;
-    background-color: greenyellow;
-  
+    background-color: #0099e6;
+    height: 1px;
+    width: 100%;
     position: absolute;
     top: auto;
-    width: 0%;
-  
-    transition: all ease-in-out 250ms;
+    transform: skew(89deg);
+    transition: height 300ms, transform ease-in-out 300ms;
+    
 }
 
 
 nav a:hover{
-    color: #000;
+    color: #0099e6;
 }
 
 nav a:hover::after {
-    width: 100%;
+    transform: skew(45deg);
+    height: 3px;
+    transition: height 300ms, transform ease-in-out 300ms;
   }
