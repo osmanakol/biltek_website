@@ -1,0 +1,140 @@
+body, html{
+    margin: 0;
+    height: 100vh;
+  }
+  #header{
+    height: 100vh;
+  }
+  
+  .bground{
+    /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
+    background-image:linear-gradient(black, rgba(0,0,0,0.2)), url("../img/alt2.jpg");
+    /* background-blend-mode: darken; */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .schoolName{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 22%;
+    left: 10%;
+    right: 10%;
+    text-align: left;
+    cursor: pointer;
+  
+  
+  }
+  
+  /* .header-msg::before{
+    content: '';  
+    display: block;
+    height: 5px;
+    width: 15vw;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+   */
+  .header-msg{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 7vh;
+    color: white;
+    margin-bottom: 0px;
+    position: absolute;
+    text-align: left;
+    right: 50%;
+    left: 4%;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);	
+  }
+  
+  .header-line{
+    font-size: 32vh;
+  
+    position: absolute;
+    left: 46%;
+    top: 100px;
+    color: white;
+  text-shadow: 1px 1px 2px black, 
+               0 0 25px blue, 
+               0 0 5px darkblue;
+    
+  }
+
+  .header-msg2{
+    margin-top: 0px;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 7vh;
+    margin-bottom: 0px;
+    display: inline-flex;
+    position: absolute;
+    left: 51%;
+    right: 10%;
+    text-align: left;
+    top: 87px;
+    text-shadow: 0px 0px 6px rgba(255,255,255,0.7);	
+  }
+  
+ .perspective-text {
+    color:white;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 5vh;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 25px;
+    left: 15%;
+    right: 0%;
+  }
+  
+  .perspective-line {
+    height: 50px;
+    overflow: hidden;
+    
+  }
+  
+  p {
+    margin: 0;
+    height: 46px;
+    line-height: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .perspective-line:nth-child(odd) {
+    transform: skew(60deg, -30deg) scaleY(0.667);
+  }
+  
+  .perspective-line:nth-child(even) {
+    transform: skew(0deg, -30deg) scaleY(1.337);
+  }
+  
+  .perspective-text:hover p {
+    transform: translate(0, -50px);
+  }
+  
+  .perspective-line:nth-child(1) {
+    left: 29px;
+  }
+  
+  .perspective-line:nth-child(2) {
+    left: 58px;
+    background: transparent;
+  }
+  
+  .perspective-line:nth-child(3) {
+    left: 87px;
+    background: transparent;
+  }
+  
+  .perspective-line:nth-child(4) {
+    left: 116px;
+    background:transparent;
+  }
+  
+  .perspective-line:nth-child(5) {
+    left: 145px;
+  }
+  
