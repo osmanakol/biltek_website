@@ -24,7 +24,8 @@ nav a{
     color: white;
     display: inline-block;
     text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 18px;
 }
 
 nav a::after {
@@ -42,7 +43,8 @@ nav a::after {
 
 
 nav a:hover{
-    color: #0099e6;
+    color:  white;
+    text-shadow: 1px 1px #0099e6;
 }
 
 nav a:hover::after {
