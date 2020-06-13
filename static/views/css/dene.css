@@ -28,15 +28,6 @@ body, html{
   
   }
   
-  /* .header-msg::before{
-    content: '';  
-    display: block;
-    height: 5px;
-    width: 15vw;
-    background-color: white;
-    margin-bottom: 10px;
-  }
-   */
   .header-msg{
     font-family: 'Aldrich', sans-serif;
     font-size: 7vh;
@@ -51,10 +42,9 @@ body, html{
   
   .header-line{
     font-size: 32vh;
-  
     position: absolute;
     left: 46%;
-    top: 100px;
+    top: -33vh;
     color: white;
   text-shadow: 1px 1px 2px black, 
                0 0 25px blue, 
@@ -76,7 +66,52 @@ body, html{
     top: 87px;
     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);	
   }
+
   
+  
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+    width: 40vh;
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    overflow: hidden;
+    left: 14vh;
+    top: 43vh;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 4vh;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
+  
+  .button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent
+    );
+    transition: all 650ms;
+  }
+  
+  .button:hover:before {
+    left: 100%;
+  }
+  
+/*   
  .perspective-text {
     color:white;
     font-family: 'Aldrich', sans-serif;
@@ -137,4 +172,4 @@ body, html{
   .perspective-line:nth-child(5) {
     left: 145px;
   }
-  
+   */

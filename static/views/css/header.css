@@ -10,7 +10,6 @@ body, html{
 .bground{
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
   background-image:url("../img/alt2.jpg");
-  /* background-blend-mode: darken; */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -20,9 +19,9 @@ body, html{
   position: absolute;
   width: auto;
   height: auto;
-  top: 25%;
-  left: 10%;
-  right: 60%;
+  top: 20vh;
+  left: 20vh;
+  right: 125vh;
   text-align: left;
 
 
@@ -38,7 +37,7 @@ body, html{
 }
 
 #header-msg{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Aldrich', sans-serif;
   font-size: 30px;
   color: white;
   margin-bottom: 0px;
@@ -48,48 +47,52 @@ body, html{
 #header-msg2{
   margin-top: 0px;
   color:white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Aldrich', sans-serif;
   font-size: 70px;
   margin-bottom: 30px;
 }
 
 .button {
-
-  display: inline-block;
-
-  background-color:transparent;
-  color: white;
-  border:2px solid white;
-  text-align: center;
-  font-size: 25px;
-  padding: 12px;
-  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11vh;
+  width: 40vh;
+  text-decoration: none;
+  border: 1px solid rgb(44, 47, 216);
+  box-shadow: 1px 1px 2px black, 
+  0 0 25px blue, 
+  0 0 5px darkblue;
   cursor: pointer;
-  margin: 6px;
-  
-}
-
-.button span {
-  color: white;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
   position: absolute;
-  opacity: 0;
+  overflow: hidden;
+  background-color:transparent;
+  top: 55vh;
+  color: white;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 4vh;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+
+.button:before {
+  content: "";
+  position: absolute;
   top: 0;
-  right: -20px;
-  transition: 0.5s;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(146, 148, 248, 0.4),
+    transparent
+  );
+  transition: all 650ms;
 }
 
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+.button:hover:before {
+  left: 100%;
 }
