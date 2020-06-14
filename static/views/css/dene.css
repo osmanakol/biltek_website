@@ -19,9 +19,9 @@ body, html{
     position: absolute;
     width: auto;
     height: auto;
-    top: 22%;
-    left: 10%;
-    right: 10%;
+    top: 22vh;
+    left: 20vh;
+    right: 30vh;
     text-align: left;
     cursor: pointer;
   
@@ -30,20 +30,19 @@ body, html{
   
   .header-msg{
     font-family: 'Aldrich', sans-serif;
-    font-size: 7vh;
+    font-size: 5vh;
     color: white;
-    margin-bottom: 0px;
     position: absolute;
     text-align: left;
-    right: 50%;
-    left: 4%;
+    right: 75vh;
+    left: 23vh;
     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);	
   }
   
   .header-line{
     font-size: 32vh;
     position: absolute;
-    left: 46%;
+    left: 78vh;
     top: -33vh;
     color: white;
   text-shadow: 1px 1px 2px black, 
@@ -53,17 +52,15 @@ body, html{
   }
 
   .header-msg2{
-    margin-top: 0px;
     color: white;
     font-family: 'Aldrich', sans-serif;
-    font-size: 7vh;
-    margin-bottom: 0px;
+    font-size: 8vh;
     display: inline-flex;
     position: absolute;
-    left: 51%;
-    right: 10%;
+    left: 87vh;
+    right: 10vh;
     text-align: left;
-    top: 87px;
+    top: 5vh;
     text-shadow: 0px 0px 6px rgba(255,255,255,0.7);	
   }
 
@@ -80,24 +77,23 @@ body, html{
     border: none;
     position: absolute;
     overflow: hidden;
-    left: 14vh;
+    left: 25vh;
     top: 43vh;
     color: white;
     font-family: 'Aldrich', sans-serif;
     font-size: 4vh;
+    box-shadow: 1px 1px 20px black, 0 0 11px white, 0 0 60px darkblue;
   }
   
-  .button:hover {
-    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
-  }
+ 
   
   .button:before {
     content: "";
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    left: -100vh;
+    width: 100vh;
+    height: 100vh;
     background: linear-gradient(
       120deg,
       transparent,
@@ -108,68 +104,6 @@ body, html{
   }
   
   .button:hover:before {
-    left: 100%;
+    left: 100vh;
   }
   
-/*   
- .perspective-text {
-    color:white;
-    font-family: 'Aldrich', sans-serif;
-    font-size: 5vh;
-    font-weight: 700;
-    letter-spacing: -2px;
-    text-transform: uppercase;
-    position: absolute;
-    top: 25px;
-    left: 15%;
-    right: 0%;
-  }
-  
-  .perspective-line {
-    height: 50px;
-    overflow: hidden;
-    
-  }
-  
-  p {
-    margin: 0;
-    height: 46px;
-    line-height: 50px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .perspective-line:nth-child(odd) {
-    transform: skew(60deg, -30deg) scaleY(0.667);
-  }
-  
-  .perspective-line:nth-child(even) {
-    transform: skew(0deg, -30deg) scaleY(1.337);
-  }
-  
-  .perspective-text:hover p {
-    transform: translate(0, -50px);
-  }
-  
-  .perspective-line:nth-child(1) {
-    left: 29px;
-  }
-  
-  .perspective-line:nth-child(2) {
-    left: 58px;
-    background: transparent;
-  }
-  
-  .perspective-line:nth-child(3) {
-    left: 87px;
-    background: transparent;
-  }
-  
-  .perspective-line:nth-child(4) {
-    left: 116px;
-    background:transparent;
-  }
-  
-  .perspective-line:nth-child(5) {
-    left: 145px;
-  }
-   */
