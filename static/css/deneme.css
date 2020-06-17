@@ -2,9 +2,7 @@ body,
 html {
   height: 100%;
   margin: 0;
-  overflow-x: hidden;
 }
-
 .bgimage {
   height: 100%;
   background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), 
@@ -85,24 +83,24 @@ header{
     text-align: center;
     display: flex;
 }
+.spin {
+  cursor: pointer;
+  transform-style: preserve-3d;
+  animation: spin 5s linear infinite;
+} 
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
   .logo {
     width: 60px;
-    height: 60px;
     padding: 10px 9px 10px 10px;
   }
-  .spin {
-    cursor: pointer;
-    transform-style: preserve-3d;
-    animation: spin 5s linear infinite;
-  } 
-  @keyframes spin {
-    0% {
-      transform: rotateY(0deg);
-    }
-    100% {
-      transform: rotateY(360deg);
-    }
-  }
+  
   /*.vl {
     border: 1px solid white;
     height: 60px;
@@ -111,12 +109,17 @@ header{
   
   .biltek-container {
     text-align: center;
+    margin-top: 5px;
   }
 
   .biltek {
     color: white;
     font-family: 'Roboto', sans-serif;
     font-size: calc(0.6rem + 0.5vw);
+  }
+  
+  #biltek{
+    margin-block-start: -8px;
   }
   
 .type-writing p{
@@ -214,8 +217,11 @@ header{
     font-family:'Orbitron',sans-serif;
     font-size: calc(1.9rem + 0.7vw);
     letter-spacing: 0.5em;
-    animation: glitch-skew 2s infinite linear alternate-reverse;
   }
+
+.comingsoon-animation{
+  animation: glitch-skew 2s infinite linear alternate-reverse;
+}
   .comingsoon::before {
     content: attr(data-text);
     position: absolute;
@@ -669,13 +675,11 @@ ul li a:hover{
   background: #004d40;
   border-radius: 15px 0 0 15px;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding: 5px;
   position: relative;
   margin: 4px 0;
   right: -81%;
   z-index: 1000;
-  text-align: left;
   font-family: 'Roboto', sans-serif;
   -webkit-transition: all 375ms cubic-bezier(0.86, 0, 0.07, 1);
   -moz-transition: all 375ms cubic-bezier(0.86, 0, 0.07, 1);
@@ -693,25 +697,50 @@ ul li a:hover{
   text-decoration: none;
 }
 .links .fl-fl a .fa {
-  transition: all 700ms ease 375ms;
+  /*transition: all 700ms ease 375ms;*/
   float: left;
   font-size: 20px;
   color: #000;
-  padding: 10px 0;
   width: 40px;
-  margin-right: 5px;
-}
-.links .fl-fl a .fa.fa-google-plus {
-  padding: 12px 0;
-  font-size: 18px;
-  margin-right: -1px;
+  margin:7px 7px;
 }
 .links .fl-fl a span {
-  transition: all 700ms ease 427ms;
+  /*transition: all 700ms ease 427ms;*/
   color: #111;
   text-decoration: none;
   text-align: center;
+  font-size: calc(0.5rem + 0.5vw);
   line-height: 29px !important;
   vertical-align: top !important;
 }
+@media only screen and (max-width:1025px){
+  .logo{
+    width:50px;
+  }
+  .comingsoon{
+    font-size:calc(1.4rem + 0.6vw);
+  }
+  .biltek{
+    font-size: calc(0.5rem + 0.6vw);
+  }
+  .links .fl-fl {
+    padding: 3px;
+    margin: 4px 0;
+    right: -80%;
+}
+}
+@media screen and (max-width:769px){
+  .comingsoon {
+    font-size: calc(1rem + 0.9vw);
+}
+}
 
+@media screen and (max-width:427px){
+  header{
+    left: 22%;
+  }
+  .biltek{
+    font-size: calc(0.6rem + 0.6vw);
+  }
+  
+}
