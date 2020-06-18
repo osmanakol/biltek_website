@@ -28,7 +28,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel"> &emsp; &emsp; &emsp; &emsp; &emsp;Kayıt Ol</h4>
+                        <h4 class="modal-title" id="myModalLabel"><!--&emsp; &emsp; &emsp; &emsp; &emsp;--> Kayıt Ol</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
@@ -40,7 +40,7 @@
                                 <div class="form-group">
                                     <h5>Ad</h5>
                                     <i class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                                    <label class="sr-only" id="adL" for="form-first-name">Ad</label>
+                                    <label class="sr-only" id="id_name" for="form-first-name">Ad</label>
 
                                     <input type="text" name="form-first-name" placeholder="Adınızı Giriniz..."
                                         class="form-first-name form-control input-error" id="form-first-name">
@@ -48,13 +48,13 @@
 
                                     <h5>Soyad</h5>
                                     <i class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                                    <label class="sr-only" id="sydL" for="form-last-name">Soyad</label>
+                                    <label class="sr-only" id="id_surname" for="form-last-name">Soyad</label>
                                     <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
                                         class="form-last-name form-control input-error" id="form-last-name">
 
                                     <h5>Telefon</h5>
                                     <i class="fas fa-phone-square-alt fa-lg fa-fw" aria-hidden="true"></i>
-                                    <label class="sr-only" id="sydL" for="form-phone">Telefon</label>
+                                    <label class="sr-only" id="id_phone" for="form-phone">Telefon</label>
 
                                     <input name="form-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                         placeholder="Telefon numaranızı girin..."
@@ -62,14 +62,14 @@
                                     <span>(Format XXX-XXX-XXXX)</span>
 
 
-                                    <h5>Adres</h5>
+                                    <h5>E-Mail</h5>
                                     <i class="fas fa-map-marker-alt fa-lg fa-fw"></i>
-                                    <label class="sr-only" id="sydL" for="form-last-name">Adres</label>
-                                    <input name="form-adress" type="text" placeholder="Adresinizi giriniz..."
+                                    <label class="sr-only" id="id_email" for="form-last-name">E-mail</label>
+                                    <input name="form-adress" type="text" placeholder="E-mail giriniz..."
                                         class="form-adress form-control input-error" id="form-adress">
                                     <br>
                                     <h5>Okul</h5>
-                                    <select name="okul" id="okul-id">
+                                    <select name="okul" id="id_school">
                                         <option value="ODTÜ ">ODTÜ</option>
                                         <option value="itü">İTÜ</option>
                                         <option value="aybü">AYBÜ</option>
@@ -77,7 +77,7 @@
                                     </select><br><br>
 
                                     <h5>Bölüm</h5>
-                                    <select name="bölüm" id="bölüm-id">
+                                    <select name="bölüm" id="id_dep">
                                         <option value="ceng ">CENG</option>
                                         <option value="ieee">IEEE</option>
                                         <option value="civil">CIVENG</option>
