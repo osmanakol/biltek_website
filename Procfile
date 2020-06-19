@@ -1,1 +1,1 @@
-web:npm deployment
+web:npm start

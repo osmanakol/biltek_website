@@ -8,8 +8,8 @@
     "npm": "6.14.4"
   },
   "scripts": {
-    "deployment": "node dist/src/server.js",
-    "start": "ts-node-dev --respawn src/server.ts",
+    "deployment": "ts-node-dev --respawn src/server.ts",
+    "start": "node dist/src/server.js",
     "dev": "nodemon --exec ts-node src/server.ts",
     "build": "tsc --outDir dist",
     "dev:debug": "ts-node-dev --inspect --respawn src/server.ts"
