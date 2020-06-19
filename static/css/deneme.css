@@ -448,7 +448,7 @@ header {
     transform: skew(2deg);
   }
 }
- 
+
 .links {
   position: fixed;
   width: auto;
@@ -534,66 +534,72 @@ header {
   header {
     left: 22%;
   }
-  .logo{
-    width:45px;
+  .logo {
+    width: 45px;
   }
   .biltek {
     font-size: calc(0.6rem + 0.6vw);
   }
-  .links{
+  .links {
     position: absolute;
-    right:-15%;
-    top:91%;
-    transform: translate(-50%,-50%);
-    display:flex;
+    /* right:-15%; */
+    top: 91%;
+    transform: translate(-50%, -50%);
+    display: flex;
     margin-bottom: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    justify-content: center;
   }
-  .links::before {
+
+  /* .links::before {
     position: absolute;
     border: 0.7px solid rgb(246, 227, 172);
     width: 7em;
     height: 0;
     content: "";
     top: -0.5rem;
-}
-.links::after {
-  position: absolute;
-  color: rgb(246, 227, 172);
-  font-size: calc(0.6rem + 1vw);
-  font-family: "Roboto", sans-serif;
-  content: "Bizi takip edin";
-  right: 33px;
-  top: -41%;
-}
+  } */
 
-  .links .fl-fl{
+  .links::after {
+    position: absolute;
+    color: rgb(246, 227, 172);
+    font-size: calc(0.6rem + 1vw);
+    font-family: "Roboto", sans-serif;
+    content: "Bizi takip edin";
+    top: -41%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .links .fl-fl {
     margin: 0;
-    background-color:transparent;
+    background-color: transparent;
     border-radius: unset;
     position: initial;
-
   }
-  .links .fl-fl a span{
+  .links .fl-fl a span {
     font-size: 0;
   }
-  i.fa.fa-youtube-play::before{
+  i.fa.fa-youtube-play::before {
     color: rgb(246, 227, 172);
   }
-  i.fa.fa-twitter::before{
+  i.fa.fa-twitter::before {
     color: rgb(246, 227, 172);
   }
-  i.fa.fa-instagram::before{
+  i.fa.fa-instagram::before {
     color: rgb(246, 227, 172);
   }
-  i.fa.fa-linkedin::before{
+  i.fa.fa-linkedin::before {
     color: rgb(246, 227, 172);
   }
 }
-@media screen and (max-width:321px){
-  header{
-    left:17%;
+@media screen and (max-width: 321px) {
+  header {
+    left: 17%;
   }
-  .links{
-    right:-29%;
+  .links {
+    right: -29%;
   }
 }
