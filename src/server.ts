@@ -6,6 +6,7 @@ import app from "./app";
   * @param host
   * ? create server for your app
   */
-app.listen(port,()=>{
-    console.log(`Server Çalışıyor, http://${host}:${port}`)
+const port2 = process.env.PORT || 3003;
+app.listen(port2,()=>{
+    console.log(`Server Çalışıyor, http://${host}:${port2}`)
 });
