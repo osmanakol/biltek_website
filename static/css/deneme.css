@@ -543,10 +543,9 @@ header {
   .links {
     position: absolute;
     /* right:-15%; */
-    top: 91%;
+    top: 87%;
     transform: translate(-50%, -50%);
     display: flex;
-    margin-bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -581,6 +580,9 @@ header {
   }
   .links .fl-fl a span {
     font-size: 0;
+  }
+  .links .fl-fl a .fa{
+    margin: 0px 7px;
   }
   i.fa.fa-youtube-play::before {
     color: rgb(246, 227, 172);
