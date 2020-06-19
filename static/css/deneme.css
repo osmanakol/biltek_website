@@ -567,7 +567,7 @@ header {
     font-size: calc(0.6rem + 1vw);
     font-family: "Roboto", sans-serif;
     content: "Bizi takip edin";
-    top: -41%;
+    top: -61%;
     left: 50%;
     transform: translateX(-50%);
   }
