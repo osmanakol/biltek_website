@@ -10,13 +10,16 @@ function e_mail_validation(){
         if(email.value.match(emailPattern)){
             emailBox.classList.add('valid');
             emailBox.classList.remove('invalid');
-            emailText.innerHTML = "Düzgün mail"; 
+        
         }else{
             emailBox.classList.add('invalid');
             emailBox.classList.remove('valid');
-            emailText.innerHTML = "yanlış mail"; 
+            
+        }
+        if(email.value==0){
+            emailBox.classList.remove('invalid');
+            emailBox.classList.remove('valid');
+           
         }
     });
-
-		
-    }
+}

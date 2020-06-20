@@ -38,26 +38,19 @@
                             <fieldset style="display: block;">
 
                                 <div class="form-group">
-                                    <h5>Ad</h5>
+                                    <h5>Ad-Soyad</h5>
                                     <i class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                                    <label class="sr-only" id="id_name" for="form-first-name">Ad</label>
+                                    <label class="sr-only" id="id_name" for="form-first-last-name">Ad-Soyad</label>
 
-                                    <input type="text" name="form-first-name" placeholder="Adınızı Giriniz..."
-                                        class="form-first-name form-control input-error" id="form-first-name">
-
-
-                                    <h5>Soyad</h5>
-                                    <i class="fas fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                                    <label class="sr-only" id="id_surname" for="form-last-name">Soyad</label>
-                                    <input name="form-last-name" type="text" placeholder="Soyadınızı giriniz..."
-                                        class="form-last-name form-control input-error" id="form-last-name">
+                                    <input type="text" name="form-first-name" placeholder="Ad-Soyad..."
+                                        class="form-first-last-name form-control input-error" id="form-first-last-name">
 
                                     <h5>Telefon</h5>
                                     <i class="fas fa-phone-square-alt fa-lg fa-fw" aria-hidden="true"></i>
                                     <label class="sr-only" id="id_phone" for="form-phone">Telefon</label>
 
                                     <input name="form-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                        placeholder="Telefon numaranızı girin..."
+                                        placeholder="555-555-5555"
                                         class="form-phone form-control input-error" id="form-phone">
 
                                     <h5>E-Mail</h5>
@@ -65,13 +58,11 @@
                                     <label class="emailBox">
                                         <input type="email" id="email" placeholder="Email"
                                             class="form-email form-control " onkeydown="e_mail_validation()">
-                                        <span class="emailText"></span>
                                     </label>
-
-                                    <span id="text"> </span>
                                     <br>
                                     <h5>Okul</h5>
                                     <select name="okul" id="id_school">
+                                        <option value="" disabled selected hidden>Okulunuzu seçiniz...</option>
                                         <option value="ODTÜ ">ODTÜ</option>
                                         <option value="itü">İTÜ</option>
                                         <option value="aybü">AYBÜ</option>
@@ -80,6 +71,7 @@
 
                                     <h5>Bölüm</h5>
                                     <select name="bölüm" id="id_dep">
+                                        <option value="" disabled selected hidden>Bölümünüzü seçiniz...</option>
                                         <option value="ceng ">CENG</option>
                                         <option value="ieee">IEEE</option>
                                         <option value="civil">CIVENG</option>
@@ -88,7 +80,7 @@
 
                                 </div>
                                 <div class="modal-footer">
-                                    <button class="btn-submit" type="submit">Submit</button>
+                                    <button class="btn-submit" type="submit">KAYDOL</button>
 
                                 </div>
                             </fieldset>
