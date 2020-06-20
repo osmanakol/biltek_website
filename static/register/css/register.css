@@ -47,14 +47,19 @@ position: absolute;
 
 }
 /*icon place fix*/
-.fa-lg {
-    line-height: 1.7;
+.fa-lg-user{
+    top: 54px;
+    font-size: 22px;
 }
-.fa-lga{
+.fa-lg-phone{
+    top: 228px;
+    font-size: 25px;
+}
+.fa-lg-mail{
     line-height: 3.8;
     width: 30px;
-    font-size: 19px;
-    top: 37%;
+    font-size: 23px;
+    top: 111px;
 }
 
 /*close button 'X'*/
