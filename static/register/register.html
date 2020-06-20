@@ -61,7 +61,7 @@
                                         class="form-phone form-control input-error" id="form-phone">
                                     <br>
                                     <h5>Okul(*)</h5>
-                                    <select name="okul" id="id_school">
+                                    <select name="okul" required id="id_school">
                                         <option value="" disabled selected hidden>Okulunuzu seçiniz...</option>
                                         <option value="ODTÜ ">ODTÜ</option>
                                         <option value="itü">İTÜ</option>
@@ -70,7 +70,7 @@
                                     </select><br><br>
 
                                     <h5>Bölüm(*)</h5>
-                                    <select name="bölüm" id="id_dep">
+                                    <select name="bölüm" required id="id_dep">
                                         <option value="" disabled selected hidden>Bölümünüzü seçiniz...</option>
                                         <option value="ceng ">CENG</option>
                                         <option value="ieee">IEEE</option>
@@ -95,6 +95,8 @@
         </div>
 
         <script src="js/register.js"></script>
+        
+
 
         <!-- JS, Popper.js, and jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
