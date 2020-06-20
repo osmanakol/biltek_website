@@ -8,9 +8,15 @@ border-radius: .25rem;
 border: 1px solid #ced4da;
 
 }
+/*Kayıt ol Text-center*/
+.h4, h4{
+    font-size: 1.5rem;
+    margin-left: 175px;
+}
 /*for input placeholders*/
 .form-control {
     padding-left: 30px;
+    width: 465px;
 }
 
 .btn-submit{
@@ -27,6 +33,10 @@ border: 1px solid #ced4da;
     background-color: black;
     color: white;
 }
+/*content-background*/
+.modal-content{
+    background-color: currentColor;
+}
 /*icons place absolute*/
 .register-form .form-group i{
 position: absolute;
@@ -35,6 +45,12 @@ position: absolute;
 /*icon place fix*/
 .fa-lg {
     line-height: 1.7;
+}
+.fa-lga{
+    line-height: 3.8;
+    width: 30px;
+    font-size: 19px;
+    top: 287px;
 }
 
 /*close button 'X'*/
@@ -45,4 +61,48 @@ position: absolute;
 /*submit button */
 .btn-submit{
  height: 35px;
+}
+#form #form-group{
+    position: relative;
+}
+
+
+/*e-mail validation*/
+form input{
+	margin: 10px 0;
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	font-size: 18px;
+	border: none;
+	outline: none;
+}
+.emailText{
+	display: block;
+	font-weight: 300;
+	font-style: italic;
+	padding: 5px;
+}
+label.valid .emailText{
+	color: #00ff00;
+}
+label.invalid .emailText{
+	color: #f00;
+}
+label.valid::before,
+label.invalid::before{
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 18px;
+	right: 5px;
+	z-index: 100;
+}
+label.valid::before{
+	background: url(img\check.svg)no-repeat center /cover;
+}
+label.invalid::before{
+	background: url(img\error.png)no-repeat center /cover;
 }

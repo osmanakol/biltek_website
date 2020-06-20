@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1, initial-scale=1.0">
-   
+
     <script src="https://kit.fontawesome.com/e84a57d8f7.js" crossorigin="anonymous"></script>
-   
+
     <!--icons css script-->
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
-        <link rel="stylesheet" href="css/register.css">
+
+    <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
@@ -28,13 +28,13 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel"><!--&emsp; &emsp; &emsp; &emsp; &emsp;--> Kayıt Ol</h4>
+                        <h4 class="modal-title" id="myModalLabel">  <!--&emsp; &emsp; &emsp; &emsp; &emsp;--> Kayıt Ol</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
 
                     <div class="modal-body">
-                        <form id="form" role="form" action="" method="post" class="register-form" name="myForm">
+                        <form id="form" role="form" action="#" method="post" class="register-form" name="myForm">
                             <fieldset style="display: block;">
 
                                 <div class="form-group">
@@ -59,14 +59,16 @@
                                     <input name="form-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                         placeholder="Telefon numaranızı girin..."
                                         class="form-phone form-control input-error" id="form-phone">
-                                    <span>(Format XXX-XXX-XXXX)</span>
-
 
                                     <h5>E-Mail</h5>
-                                    <i class="fas fa-envelope fa-lg fa-fw"></i>
-                                    <label class="sr-only" id="id_email" for="form-last-name">E-mail</label>
-                                    <input name="form-adress" type="email" placeholder="E-mail giriniz..."
-                                        class="form-adress form-control input-error" id="form-adress">
+                                    <i class="fas fa-envelope fa-lga fa-fw" aria-hidden="true"></i>
+                                    <label class="emailBox">
+                                        <input type="email" id="email" placeholder="Email"
+                                            class="form-email form-control " onkeydown="e_mail_validation()">
+                                        <span class="emailText"></span>
+                                    </label>
+
+                                    <span id="text"> </span>
                                     <br>
                                     <h5>Okul</h5>
                                     <select name="okul" id="id_school">
@@ -89,6 +91,9 @@
                                     <button class="btn-submit" type="submit">Submit</button>
 
                                 </div>
+                            </fieldset>
+                        </form>
+
 
                     </div>
                 </div>
@@ -96,6 +101,8 @@
         </div>
 
         </div>
+
+        <script src="js/register.js"></script>
 
         <!-- JS, Popper.js, and jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
