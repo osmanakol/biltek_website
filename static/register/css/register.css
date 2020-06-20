@@ -74,7 +74,7 @@ position: absolute;
 #form #form-group{
     position: relative;
 }
-/*e-mail validation*/
+/*e-mail validation******************************************/
 form input{
 	margin: 10px 0;
 	width: 100%;
@@ -108,3 +108,4 @@ label.valid::before{
 label.invalid::before{
 	background: url(error.png)no-repeat center /cover;
 }
+/*********************************************************/
