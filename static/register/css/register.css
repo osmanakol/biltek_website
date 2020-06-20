@@ -98,8 +98,8 @@ label.invalid::before{
 	z-index: 100;
 }
 label.valid::before{
-	background: url(img\valid.png)no-repeat center /cover;
+	background: url(valid.png)no-repeat center /cover;
 }
 label.invalid::before{
-	background: url(img\error.png)no-repeat center /cover;
+	background: url(error.png)no-repeat center /cover;
 }
