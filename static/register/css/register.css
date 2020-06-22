@@ -1,126 +1,125 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
-
-
-select{
-width: 100%;
-height: calc(1.5em + .75rem + 2px);
-background-clip: padding-box;
-border-radius: .25rem;
-border: 1px solid #ced4da;
-font-size: 14px;
-    font-style: italic;
-    font-weight: 600;
+select {
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
 }
-.h5,h5{
-    font-size: 1.1rem;
-    color: wheat;
+.h5,
+h5 {
+  font-size: 1.1rem;
+  color: wheat;
 }
 /*for input placeholders*/
 .form-control {
-    padding-left: 38px;
-    width: 350px;
+  padding-left: 38px;
+  width: 100%;
 }
 /*Put modal to center*/
-.modal.show .modal-dialog{
-transform: translate(12%, 10%);
+.modal.show .modal-dialog {
+  transform: translate(12%, 10%);
 }
 
-.btn-submit{
-    width: 100%;
-    color: white;
-    background-color:green;
+.btn-submit {
+  width: 100%;
+  color: white;
+  background-color: green;
 }
-.btn-register{
-    background-color: green;
-    color: white;
+.btn-register {
+  background-color: green;
+  color: white;
 }
 /*Kayıt ol Text-center*/
-.modal-title{
-    margin-left: 120px;
-    line-height: 1.5;
+.modal-title {
+  margin-left: 120px;
+  line-height: 1.5;
 }
 /*Header background*/
-.modal-header{
-    background-color: black;
-    color: white;
+.modal-header {
+  background-color: black;
+  color: white;
 }
 /*content-background*/
-.modal-content{
-    background-color: currentColor;
-    width: 78%;
+.modal-content {
+  background-color: currentColor;
+  width: 78%;
 }
 /*icons place absolute*/
-.register-form .form-group i{
-position: absolute;
-
+.register-form .form-group i {
+  position: absolute;
 }
 /*icon place fix*/
-.fa-lg-user{
-    top: 54px;
-    font-size: 22px;
+.fa-lg-user {
+  top: 54px;
+  font-size: 22px;
 }
-.fa-lg-phone{
-    top: 228px;
-    font-size: 25px;
+.fa-lg-phone {
+  top: 212px;
+  font-size: 25px;
 }
-.fa-lg-mail{
-    line-height: 3.8;
-    width: 30px;
-    font-size: 23px;
-    top: 111px;
+.fa-lg-mail {
+  width: 30px;
+  font-size: 23px;
+  top: 135px;
 }
-.fa-lg-info{
-    top: 60px;
-    font-size: 22px;
-
+.fa-lg-info {
+  top: 60px;
+  font-size: 22px;
 }
 
 /*close button 'X'*/
 .close {
-    color:white;
-    opacity: inherit;
+  color: white;
+  opacity: inherit;
 }
 /*submit button */
-.btn-submit{
- height: 35px;
+.btn-submit {
+  height: 35px;
 }
-#form #form-group{
-    position: relative;
+#form #form-group {
+  position: relative;
 }
 /*e-mail validation******************************************/
-form input{
-	margin: 10px 0;
-	width: 100%;
-	color: #fff;
-	padding: 10px;
-	border-radius: 6px;
-	font-size: 18px;
-	border: none;
-	outline: none;
+form input {
+  margin: 10px 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 18px;
+  border: none;
+  outline: none;
 }
-.emailText{
-	display: block;
-	font-weight: 300;
-	font-style: italic;
-	padding: 5px;
+.emailText {
+  display: block;
+  font-weight: 300;
+  font-style: italic;
+  padding: 5px;
+}
+
+label {
+  display: none;
 }
 
 label.valid::before,
-label.invalid::before{
-	content: "";
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	top: 140px;
-	right: 23px;
-	z-index: 100;
+label.invalid::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 140px;
+  right: 23px;
+  z-index: 100;
 }
-label.valid::before{
-	background: url(valid.png)no-repeat center /cover;
+label.valid::before {
+  background: url(valid.png) no-repeat center / cover;
 }
-label.invalid::before{
-	background: url(error.png)no-repeat center /cover;
+label.invalid::before {
+  background: url(error.png) no-repeat center / cover;
 }
 /*********************************************************/
-
