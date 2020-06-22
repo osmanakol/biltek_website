@@ -56,8 +56,8 @@
                                     <i class="fas fa-phone-square-alt fa-lg-phone fa-fw"  aria-hidden="true"></i>
                                     <label class="sr-only" for="form-phone">Telefon</label>
 
-                                    <input name="form-phone" type="text" onclick="phone_validate()" id="id_phone"
-                                        placeholder="XXX XXX XXXX"
+                                    <input name="form-phone" type="text" onclick="phone_validate()"  pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}  id="id_phone"
+                                        placeholder="XXX-XXX-XXXX"
                                         class="form-phone form-control input-error" id="form-phone">
                                     <br>
                                     <h5>Okul(*)</h5>
