@@ -29,6 +29,7 @@ h5 {
   width: 100%;
   color: white;
   background-color: green;
+  border-radius: 15px;
 }
 .btn-register {
   background-color: green;
@@ -123,3 +124,38 @@ label.invalid::before {
   background: url(error.png) no-repeat center / cover;
 }
 /*********************************************************/
+/*Responsive*/
+@media screen and (max-width: 500px) {
+    .modal-title{
+        margin-left:75px ;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 350px) {
+.modal-title{
+    margin-left:58px ;
+        font-size: 18px;
+}
+.h5,h5{
+
+    font-size: 0.9rem;
+
+}
+.fa-lg-mail{
+    top: 127px;
+
+}
+.fa-lg-phone {
+top: 200px;
+font-size: 23px;
+}
+
+.modal-content{
+        width: 87%;
+}
+.modal.show .modal-dialog{
+    transform: translate(6%, 10%);
+}
+/***********************************************/
+
+}
