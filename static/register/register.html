@@ -37,9 +37,10 @@
                         <form id="form" role="form" action="#" method="post" class="register-form" name="myForm">
                             <fieldset style="display: block;">
 
-                                
+                              
                                 <div class="form-group">
                                     <h5>Ad-Soyad(*)</h5>
+                                   <!--<i class="fas fas fa-info-circle fa-lg-info fa-fw" aria-hidden="true"></i>--> 
                                     <i class="fas fa-user fa-lg-user fa-fw" aria-hidden="true"></i>
                                     <label class="sr-only" for="form-first-last-name">Ad-Soyad</label>
 
@@ -49,21 +50,21 @@
                                     <h5>E-Mail(*)</h5>
                                     <i class="fas fa-envelope fa-lg-mail fa-fw"  aria-hidden="true"></i>
                                     <label class="emailBox">
-                                        <input type="email" id="email" required placeholder="Email"
+                                        <input type="email" id="email" required placeholder="Email..."
                                             class="form-email form-control " onkeydown="e_mail_validation()">
-                                    </label>
+                                        </label>
 
                                     <h5>Telefon</h5>
                                     <i class="fas fa-phone-square-alt fa-lg-phone fa-fw"  aria-hidden="true"></i>
                                     <label class="sr-only" for="form-phone">Telefon</label>
 
-                                    <input name="form-phone" type="text" onclick="phone_validate()"  pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}  id="id_phone"
+                                    <input name="form-phone" type="text" onkeyup="phone_validate()"  pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}  id="id_phone"
                                         placeholder="XXX-XXX-XXXX"
                                         class="form-phone form-control input-error" id="form-phone">
-                                    <br>
+                                    
                                     <h5>Okul(*)</h5>
                                     <select name="okul" required id="id_school">
-                                        <option value="" disabled selected hidden>Okulunuzu seçiniz...</option>
+                                        <option value=""  disabled selected hidden>Okulunuzu seçiniz...</option>
                                         <option value="ODTÜ ">ODTÜ</option>
                                         <option value="itü">İTÜ</option>
                                         <option value="aybü">AYBÜ</option>

@@ -1,12 +1,16 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
+
+
 select{
 width: 100%;
 height: calc(1.5em + .75rem + 2px);
 background-clip: padding-box;
 border-radius: .25rem;
 border: 1px solid #ced4da;
-
+font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
 }
 .h5,h5{
     font-size: 1.1rem;
@@ -14,8 +18,12 @@ border: 1px solid #ced4da;
 }
 /*for input placeholders*/
 .form-control {
-    padding-left: 30px;
-    width: 465px;
+    padding-left: 38px;
+    width: 350px;
+}
+/*Put modal to center*/
+.modal.show .modal-dialog{
+transform: translate(12%, 10%);
 }
 
 .btn-submit{
@@ -29,7 +37,7 @@ border: 1px solid #ced4da;
 }
 /*Kayıt ol Text-center*/
 .modal-title{
-    margin-left: 180px;
+    margin-left: 120px;
     line-height: 1.5;
 }
 /*Header background*/
@@ -40,6 +48,7 @@ border: 1px solid #ced4da;
 /*content-background*/
 .modal-content{
     background-color: currentColor;
+    width: 78%;
 }
 /*icons place absolute*/
 .register-form .form-group i{
@@ -60,6 +69,11 @@ position: absolute;
     width: 30px;
     font-size: 23px;
     top: 111px;
+}
+.fa-lg-info{
+    top: 60px;
+    font-size: 22px;
+
 }
 
 /*close button 'X'*/
@@ -109,3 +123,4 @@ label.invalid::before{
 	background: url(error.png)no-repeat center /cover;
 }
 /*********************************************************/
+

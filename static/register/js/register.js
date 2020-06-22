@@ -26,9 +26,8 @@ function e_mail_validation(){
 function phone_validate(){
     $(document).ready(function(){
         $("#id_phone").attr('maxlength','12');
-        $('#id_phone').keyup(function(event){
-           
-            var value = document.getElementById('id_phone').value
+        
+        var value = document.getElementById('id_phone').value
     if(value.length==3 || value.length==7)
     {
         $('#id_phone').val($('#id_phone').val()+"-");
@@ -37,5 +36,5 @@ function phone_validate(){
     
     
     });
-    });
+  
     }
