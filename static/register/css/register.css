@@ -1,129 +1,125 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
-select {
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  background-clip: padding-box;
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 600;
+select{
+width: 100%;
+height: calc(1.5em + .75rem + 2px);
+background-clip: padding-box;
+border-radius: .25rem;
+border: 1px solid #ced4da;
+font-weight: 500;
+font-style: italic;
+font-size: 13px;
 }
-.h5,
-h5 {
-  font-size: 1.0rem;
-  color: wheat;
+.h5,h5{
+    font-size: 1.0rem;
+    color: wheat;
 }
 /*for input placeholders*/
 .form-control {
-  padding-left: 38px;
-  width: 100%;
-}
-/*Put modal to center*/
-.modal.show .modal-dialog {
-  transform: translate(12%, 10%);
+    padding-left: 36px;
+    width: 100%;
 }
 
-.btn-submit {
-  width: 100%;
-  color: white;
-  background-color: green;
-  border-radius: 15px;
+.btn-submit{
+    width: 100%;
+    color: white;
+    background-color:green;
+    border-radius: 15px;
 }
-.btn-register {
-  background-color: green;
-  color: white;
+.btn-register{
+    background-color: green;
+    color: white;
 }
 /*Kayıt ol Text-center*/
-.modal-title {
-  margin-left: 120px;
-  line-height: 1.5;
+.modal-title{
+    margin-left: 31%;
+    line-height: 1.5;
+}
+.modal.show .modal-dialog{
+transform: translate(6%, 14%);
 }
 /*Header background*/
-.modal-header {
-  background-color: black;
-  color: white;
+.modal-header{
+    background-color: black;
+    color: white;
 }
 /*content-background*/
-.modal-content {
-  background-color: currentColor;
-  width: 78%;
+.modal-content{
+    background-color: currentColor;
+    width: 75%;
+    margin-left: 38px;
 }
 /*icons place absolute*/
-.register-form .form-group i {
-  position: absolute;
+.register-form .form-group i{
+position: absolute;
+
 }
 /*icon place fix*/
-.fa-lg-user {
-  top: 54px;
-  font-size: 22px;
+.fa-lg-user{
+    top: 54px;
+    font-size: 22px;
 }
-.fa-lg-phone {
-  top: 207px;
-  font-size: 25px;
+.fa-lg-phone{
+    top: 207px;
+    font-size: 25px;
 }
-.fa-lg-mail {
-  width: 30px;
-  font-size: 23px;
-  top: 132px;
-}
-.fa-lg-info {
-  top: 60px;
-  font-size: 22px;
+.fa-lg-mail{
+    line-height: 3.8;
+    width: 30px;
+    font-size: 23px;
+    top: 99px;
 }
 
 /*close button 'X'*/
 .close {
-  color: white;
-  opacity: inherit;
+    color:white;
+    opacity: inherit;
 }
 /*submit button */
-.btn-submit {
-  height: 35px;
+.btn-submit{
+ height: 35px;
 }
-#form #form-group {
-  position: relative;
+#form #form-group{
+    position: relative;
 }
 /*e-mail validation******************************************/
-form input {
-  margin: 10px 0;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 18px;
-  border: none;
-  outline: none;
+form input{
+	margin: 10px 0;
+	width: 100%;
+	color: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	font-size: 18px;
+	border: none;
+	outline: none;
 }
-.emailText {
-  display: block;
-  font-weight: 300;
-  font-style: italic;
-  padding: 5px;
+.emailText{
+	display: block;
+	font-weight: 300;
+	font-style: italic;
+	padding: 5px;
 }
-
-label {
-  display: none;
+label{
+display: none;  
 }
 
 label.valid::before,
-label.invalid::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 140px;
-  right: 23px;
-  z-index: 100;
+label.invalid::before{
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 140px;
+	right: 23px;
+	z-index: 100;
 }
-label.valid::before {
-  background: url(\img\valid.png) no-repeat center / cover;
+label.valid::before{
+	background: url(valid.png)no-repeat center /cover;
 }
-label.invalid::before {
-  background: url(\img\error.png) no-repeat center / cover;
+label.invalid::before{
+	background: url(error.png)no-repeat center /cover;
 }
-/*********************************************************/
+
 /*Responsive*/
 @media screen and (max-width: 500px) {
     .modal-title{
@@ -131,10 +127,19 @@ label.invalid::before {
         font-size: 20px;
     }
 }
+@media screen and (max-width:400px){
+  .modal.show .modal-dialog {
+    transform: translate(0%, 9%);
+  }
+.modal-title{
+  margin-left: 59px;
+}
+
+}
 @media screen and (max-width: 350px) {
 .modal-title{
-    margin-left:58px ;
-        font-size: 18px;
+    margin-left:70px ;
+    font-size: 18px;
 }
 .h5,h5{
 
@@ -142,7 +147,7 @@ label.invalid::before {
 
 }
 .fa-lg-mail{
-    top: 127px;
+    top: 95px;
 
 }
 .fa-lg-phone {
@@ -154,7 +159,7 @@ font-size: 23px;
         width: 87%;
 }
 .modal.show .modal-dialog{
-    transform: translate(6%, 10%);
+  transform: translate(-7%, 7%);
 }
 /***********************************************/
 
