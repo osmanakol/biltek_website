@@ -60,13 +60,13 @@ h5 {
   font-size: 22px;
 }
 .fa-lg-phone {
-  top: 212px;
+  top: 207px;
   font-size: 25px;
 }
 .fa-lg-mail {
   width: 30px;
   font-size: 23px;
-  top: 135px;
+  top: 132px;
 }
 .fa-lg-info {
   top: 60px;
@@ -118,10 +118,10 @@ label.invalid::before {
   z-index: 100;
 }
 label.valid::before {
-  background: url(valid.png) no-repeat center / cover;
+  background: url(\img\valid.png) no-repeat center / cover;
 }
 label.invalid::before {
-  background: url(error.png) no-repeat center / cover;
+  background: url(\img\error.png) no-repeat center / cover;
 }
 /*********************************************************/
 /*Responsive*/
