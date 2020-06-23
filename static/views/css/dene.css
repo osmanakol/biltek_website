@@ -3,6 +3,7 @@ html {
   margin: 0;
   height: 100vh;
 }
+
 #header {
   height: 100vh;
 }
@@ -11,90 +12,82 @@ html {
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
   background-image: linear-gradient(black, rgba(0, 0, 0, 0.2)),
     url("https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-  /* background-blend-mode: darken; */
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 
-.schoolName {
+.schoolName{
   position: absolute;
   width: auto;
   height: auto;
-  top: 22vh;
+  top: 25vh;
   left: 20vh;
-  right: 30vh;
+  right: 125vh;
   text-align: left;
   cursor: pointer;
 }
 
-.header-msg {
-  font-family: "Aldrich", sans-serif;
-  font-size: 5vh;
-  color: white;
+.kutu{
+  width: 60vh;
+  height: 55vh;
+  background-color: white;
   position: absolute;
-  text-align: left;
-  right: 75vh;
-  left: 23vh;
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  left: 80%;
+  right: 50%;
+  opacity: 0.8;
 }
 
-.header-line {
-  font-size: 32vh;
+.header-msg{
+  font-family: 'Aldrich', sans-serif;
+    font-size: 3vh;
+    color:black;
+    text-align: center;
+    position: absolute;
+    top: 2vh;
+    left: 10%;
+}
+  
+.header-msg2{ 
+  font-family: 'Aldrich', sans-serif;
+  font-size: 9vh;
+  text-align: center;
+  color:black;
   position: absolute;
-  left: 78vh;
-  top: -33vh;
-  color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  top: 10vh;
 }
 
-.header-msg2 {
-  color: white;
-  font-family: "Aldrich", sans-serif;
-  font-size: 8vh;
-  display: inline-flex;
+.button-info{
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2vh;
+  text-align: center;
+  color:black;
   position: absolute;
-  left: 87vh;
-  right: 10vh;
-  text-align: left;
-  top: 5vh;
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  top: 46vh;
+  left: 16vh;
 }
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 11vh;
-  width: 40vh;
-  text-decoration: none;
-  border: none;
-  position: absolute;
-  overflow: hidden;
-  left: 25vh;
-  top: 43vh;
-  color: white !important;
-  font-family: "Aldrich", sans-serif;
-  font-size: 4vh;
-  box-shadow: 1px 1px 20px black, 0 0 11px white, 0 0 60px darkblue;
+  position: absolute;;
+  margin-top: 82%;
+   margin-left: 20vh;
+  background:linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%);
+  border:1px solid white;
+  padding:20px;
+  font-size:2vh;
+  box-shadow:4px 4px 0px 0px white;
+  font-family: 'Aldrich', sans-serif;
+  font-weight:700;
+  letter-spacing:5px;
+  transition: all 300ms ease-in-out;
+  ;
 }
 
-.button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100vh;
-  width: 100vh;
-  height: 100vh;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(146, 148, 248, 0.4),
-    transparent
-  );
-  transition: all 650ms;
+.button:hover {
+  left:4px;
+  top:4px;
+  box-shadow:0 0 0 0 white;
 }
 
-.button:hover:before {
-  left: 100vh;
-}
+
+
