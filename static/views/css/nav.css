@@ -90,8 +90,8 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #8cd4f8;
-  text-shadow: 3px 3px 6px #0099e6;
+  color: #535353;
+  text-shadow: 3px 3px 6px #404040;
 }
 
 nav ul ul::before ~ a:hover {

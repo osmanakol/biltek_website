@@ -30,7 +30,6 @@ html {
 
 .kutu {
   width: 60vh;
-  height: 48.5vh;
   background-color: white;
   opacity: 0.8;
   padding: 25px;
@@ -72,13 +71,16 @@ html {
   font-weight: 700;
   letter-spacing: 5px;
   transition: all 300ms ease-in-out;
-  display: block;
-  margin: 0px auto 0 auto;
   text-align: center;
   width: 50%;
   background-color: white;
   border-radius: 7px;
   border: 1px solid;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
 }
 
 .button:hover {
