@@ -114,10 +114,10 @@ label.invalid::before{
 	z-index: 100;
 }
 label.valid::before{
-	background: url(valid.png)no-repeat center /cover;
+	background: url('valid.jpeg')no-repeat center /cover;
 }
 label.invalid::before{
-	background: url(error.png)no-repeat center /cover;
+	background: url('invalid.jpeg')no-repeat center /cover;
 }
 
 /*Responsive*/
@@ -125,6 +125,10 @@ label.invalid::before{
     .modal-title{
         margin-left:75px ;
         font-size: 20px;
+    }
+
+    .modal.show .modal-dialog {
+        transform: translate(0%, 14%);
     }
 }
 @media screen and (max-width:400px){
