@@ -3,13 +3,11 @@ body, html{
   margin: 0;
   height: 100vh;
 }
-#header{
-  height: 100vh;
-}
+
 
 .bground{
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
-  background-image:url("../img/alt2.jpg");
+  background-image:linear-gradient(black, darkblue , black);   /*url("../img/alt4.png");*/
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -41,6 +39,7 @@ body, html{
   font-size: 30px;
   color: white;
   margin-bottom: 0px;
+  position:absolute;
 }
 
 
