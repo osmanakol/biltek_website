@@ -17,82 +17,80 @@ html {
   height: 100vh;
 }
 
-.schoolName{
+.schoolName {
   position: absolute;
   width: auto;
   height: auto;
-  top: 25vh;
-  left: 20vh;
-  right: 125vh;
   text-align: left;
   cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.kutu{
+.kutu {
   width: 60vh;
-  height: 55vh;
+  height: 48.5vh;
   background-color: white;
-  position: absolute;
-  left: 80%;
-  right: 50%;
   opacity: 0.8;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 15px;
 }
 
-.header-msg{
-  font-family: 'Aldrich', sans-serif;
-    font-size: 3vh;
-    color:black;
-    text-align: center;
-    position: absolute;
-    top: 2vh;
-    left: 10%;
+.header-msg {
+  font-family: "Aldrich", sans-serif;
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+  top: 2vh;
+  left: 10%;
 }
-  
-.header-msg2{ 
-  font-family: 'Aldrich', sans-serif;
+
+.header-msg2 {
+  font-family: "Aldrich", sans-serif;
   font-size: 9vh;
   text-align: center;
-  color:black;
-  position: absolute;
+  color: black;
   top: 10vh;
 }
 
-.button-info{
-  font-family: 'Aldrich', sans-serif;
+.button-info {
+  font-family: "Aldrich", sans-serif;
   font-size: 2vh;
   text-align: center;
-  color:black;
-  position: absolute;
+  color: black;
   top: 46vh;
   left: 16vh;
 }
 
 .button {
-  position: absolute;;
-  margin-top: 82%;
-   margin-left: 20vh;
-  background:linear-gradient(to right, #304352 0%, #d7d2cc 51%, #304352 100%);
-  border:1px solid white;
-  padding:20px;
-  font-size:2vh;
-  box-shadow:4px 4px 0px 0px white;
-  font-family: 'Aldrich', sans-serif;
-  font-weight:700;
-  letter-spacing:5px;
+  border: 1px solid;
+  padding: 20px;
+  font-size: 2vh;
+  font-family: "Aldrich", sans-serif;
+  font-weight: 700;
+  letter-spacing: 5px;
   transition: all 300ms ease-in-out;
-  ;
+  display: block;
+  margin: 0px auto 0 auto;
+  text-align: center;
+  width: 50%;
+  background-color: white;
+  border-radius: 7px;
+  border: 1px solid;
 }
 
 .button:hover {
-  left:4px;
-  top:4px;
-  box-shadow:0 0 0 0 white;
+  background-color: #404040;
+  color: white !important;
 }
 
-.social-icons{
+.social-icons {
   position: absolute;
-  top:85vh;
-  left: 80vh;
+  top: 85vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .social-icons a {
@@ -103,7 +101,19 @@ html {
   height: 50px;
   width: 50px;
   margin: 15px 15px;
-  font-size: 22px;
+  font-size: 26px;
+}
+
+.social-icons a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+}
+
+.social-icons a:hover i {
+  transform: translate(-50%, -50%) rotate(360deg);
 }
 
 .slider-nav-item:before {
@@ -115,6 +125,8 @@ html {
   left: -8px;
   border-radius: 50%;
   border: 1px solid rgba(132, 132, 164, 0.35);
+  box-shadow: 0px 0px 8px white;
+  animation: 1.5s linear 0s normal none infinite focuse;
 }
 
 .slider-nav-item {
@@ -124,5 +136,17 @@ html {
   cursor: pointer;
 }
 
-
-
+@keyframes focuse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
