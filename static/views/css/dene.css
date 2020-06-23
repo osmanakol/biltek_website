@@ -29,7 +29,7 @@ html {
 }
 
 .kutu {
-  width: 60vh;
+  width: auto;
   background-color: white;
   opacity: 0.8;
   padding: 25px;
