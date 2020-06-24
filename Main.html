@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/views/css/nav.css">
-    <link rel="stylesheet" href="static/views/css/dene.css">
+    <link rel="stylesheet" href="static/views/css/header.css">
 </head>
 
 <body>
@@ -48,14 +48,15 @@
             </ul>
         </div>
     </nav> 
+    
     <div id="side-bar">
 		<div class="toggle-btn" id="toggle-btn">
 			<span></span>
 			<span></span>
 			<span></span>
 		</div>
-
 		<ul>
+            <img class="aybulogo" src="./static/views/img/aybulogo.png">
 			<li>Ana Sayfa</li>
 			<li>Hakkımızda</li>
 			<li>Etkinlikler</li>
@@ -73,8 +74,8 @@
                 <p class="button-info">Bizden haberdar olmak için</p>
                 <a class="button" onclick="location.href='https://www.google.com.tr/'">KAYIT OL</a>
             </div>
-
         </div>
+        
         <div class="social-icons">
             <a href="https://twitter.com/aybubiltek" class="slider-nav-item"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/aybubiltek/" class="slider-nav-item"><i class="fab fa-instagram"></i></a>
@@ -83,29 +84,28 @@
                     class="fab fa-linkedin-in"></i></a>
 
         </div>
+
     </section>
-
-
-
 
     <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         const toggleButton = document.getElementById('toggle-btn');
-const sideBar = document.getElementById('side-bar');
+        const sideBar = document.getElementById('side-bar');
 
-toggleButton.addEventListener('click', show);
+        toggleButton.addEventListener('click', show);
 
-function show(){
-  sideBar.classList.toggle('active');
-}
+        function show(){
+            sideBar.classList.toggle('active');
+        }
 
-// REMOVE SIDEBAR IF CLICK ON THE MAIN CONTENT
-const header = document.querySelector('.#header');
+        // REMOVE SIDEBAR IF CLICK ON THE MAIN CONTENT
+        const header = document.querySelector('#header');
 
-header.addEventListener('click', () => {
-  sideBar.classList.remove('active');
-});
-        </script>
+        header.addEventListener('click', () => {
+            sideBar.classList.remove('active');
+        });
+    </script>
+
 </body>
 
 </html>

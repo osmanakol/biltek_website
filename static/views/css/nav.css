@@ -1,3 +1,6 @@
+/*----------------------
+    Navbar Section
+----------------------*/
 .aybulogo {
   height: 80px;
   width: 80px;
@@ -24,7 +27,6 @@
 
 nav {
   background-color: transparent;
-  float: right;
   display: block;
 }
 
@@ -77,17 +79,17 @@ nav a:hover::after {
 }
 
 /* -------------------
-   SIDE-BAR SECTION 
+   Sidebar Section
 --------------------*/
 #side-bar{
   position: absolute;
 	width: 230px;
 	height: 100%;
-	background: white;
+	background: black;
 	left:-300px;
   transition: .5s ease-out;
   z-index: 4;
-  opacity: 0.8;
+  display: none;
 }
 .toggle-btn{
 	position: absolute;
@@ -98,10 +100,10 @@ nav a:hover::after {
   width: 50px;
 }
 .toggle-btn span{
-	width: 60px;
-	height: 10px;
+	width:  calc(2.5rem + .5vw);  /* 60px*/
+	height: calc(0.50rem +  .01vh); /* 10px*/
   border-radius:5px;
-	background: white;
+	background-color: #3f345f;
 	display: block;
   margin-top:4px; 
   transition: 0.3s ease;
@@ -110,16 +112,16 @@ nav a:hover::after {
   padding-left: 0px;
 }
 #side-bar li{
-	color: #292929;
+	color: white;
 	list-style: none;
-	font-size: 2.5rem;
+	font-size: calc(1.5rem + .5vh + .5vw);
 	cursor: pointer;
-	padding-left:5px; 
+  text-align: center;
+  font-family: "Aldrich", sans-serif;
 }
-
 #side-bar li:hover{
-	background: #292929;
-	color: #FCFCFB;
+	background: #535353;
+	color: white;
 }
 
 #side-bar.active{
@@ -131,6 +133,7 @@ nav a:hover::after {
 }
 #side-bar.active span {
   position: absolute;
+  
 }
 #side-bar.active span:nth-child(1) {
   transform: rotate(45deg);
@@ -148,8 +151,66 @@ nav a:hover::after {
 
 
 
+/*-----------------------
+    Responsive Section
+-----------------------*/
 
+@media screen and (max-width: 1426px){
+  .navbar-container {
+    padding: 0 5%;
+  }
+}
 
-           
+@media screen and (max-width: 1300px){
+  .navbar-container {
+    padding: 0 0%;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .aybulogo{
+    display: none;
+  }
+  nav ul{
+    float: none;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 995px){
+  .navbar{display: none}
+  #side-bar{
+    display: block;
+  }
+  .aybulogo{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 25%;
+  }
+}
+
+@media screen and (max-height: 560px){
+  .navbar{display: none}
+  #side-bar{
+    display: block;
+  }
+  
+  .aybulogo{
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 25%;
+  }
+  .toggle-btn{
+    top: 15px;
+  }  
+}
+
+@media screen and (max-height: 460px){
+  .aybulogo{
+    display: none;
+  }
+}        
                             
                             
