@@ -11,7 +11,8 @@ class Connection {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,
-            useFindAndModify: true
+            useFindAndModify: true,
+            autoIndex:true
         }).then(() => { console.log("Connected to Mongo DB") }).catch(() => { console.log("Could not connect to Mongo DB") })
     }
 }

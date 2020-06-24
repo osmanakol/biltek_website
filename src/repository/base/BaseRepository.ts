@@ -22,8 +22,7 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
     }
 
     async findAll(): Promise<T[]> {
-        const result = await this._model.find()
-        console.log(result)
+        const result = await this._model.find().lean()
         return result as unknown as T[]
     }
 
@@ -43,7 +42,6 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
 
     update(id: string, item: T): Promise<Document> {
         const result =  this._model.update({ "_id": id }, item);
-        console.log(result);
         return result as any;
     }
 
