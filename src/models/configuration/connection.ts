@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { mongoURIString } from "../../../host.json";
+import {MONGODB_URI } from "../../config";
 
 class Connection {
     public connection = (): void => {
@@ -7,7 +8,7 @@ class Connection {
         mongoose.Promise = global.Promise;
 
         /**@mongoose configuration */
-        mongoose.connect(mongoURIString, {
+        mongoose.connect(MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,

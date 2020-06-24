@@ -5,6 +5,7 @@ import connection from "./models/configuration/connection";
 import { ApiRoutes } from "./routes/api-routes";
 import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
+import { staticFile } from "./config";
 class App {
     public app: Application
     public router: express.Router
@@ -17,7 +18,6 @@ class App {
         this.config();
         this.routeConfig();
         this.mongoSetup();
-
     }
 
     private handlebars = ()=>{
@@ -26,7 +26,7 @@ class App {
     }
 
     private config = () => {
-        this.app.use(express.static(__static));
+        this.app.use(express.static(staticFile));
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({
             extended: true
