@@ -152,3 +152,63 @@ html {
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .social-icons a
+  {
+    height: 40px;
+    width: 40px;
+    margin: 15px 12px;
+    font-size: 22px;
+  }
+}
+
+@media  screen and (max-width: 540px) {
+  .social-icons a
+  {
+    height: 35px;
+    width: 35px;
+    margin: 15px 11px;
+    font-size: 21px;
+  }
+}
+
+@media  screen and (max-width: 482px) {
+  .social-icons a
+  {
+    height: 30px;
+    width: 30px;
+    margin: 15px 9px;
+    font-size: 15px;
+  }
+}
+
+@media  screen and (max-width: 409px) {
+  .social-icons a
+  {
+    height: 25px;
+    width: 25px;
+    margin: 15px 7px;
+    font-size: 12px;
+  }
+}
+
+@media  screen and (max-width: 338px) {
+  .social-icons a
+  {
+    height: 21px;
+    width: 21px;
+    margin: 15px 6px;
+    font-size: 11px;
+  }
+}
+
+@media  screen and (max-width: 290px) {
+  .social-icons a
+  {
+    height: 16px;
+    width: 16px;
+    margin: 15px 4px;
+    font-size: 9px;
+  }
+}
