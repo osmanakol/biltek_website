@@ -46,8 +46,8 @@ transform: translate(6%, 14%);
 /*content-background*/
 .modal-content{
     background-color: currentColor;
-    width: 75%;
-    margin-left: 38px;
+     width: 75%;
+    margin-left: 38px; 
 }
 /*icons place absolute*/
 .register-form .form-group i{
@@ -93,15 +93,10 @@ form input{
 	border: none;
 	outline: none;
 }
-.emailText{
-	display: block;
-	font-weight: 300;
-	font-style: italic;
-	padding: 5px;
-}
-label{
-display: none;  
-}
+
+ label{
+display: inherit;  
+} 
 
 label.valid::before,
 label.invalid::before{
@@ -109,7 +104,7 @@ label.invalid::before{
 	position: absolute;
 	width: 24px;
 	height: 24px;
-	top: 140px;
+	top: 129px;
 	right: 23px;
 	z-index: 100;
 }
@@ -125,6 +120,10 @@ label.invalid::before{
     .modal-title{
         margin-left:75px ;
         font-size: 20px;
+    }
+
+    .modal.show .modal-dialog {
+        transform: translate(0%, 14%);
     }
 }
 @media screen and (max-width:400px){
