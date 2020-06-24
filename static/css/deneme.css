@@ -86,7 +86,7 @@ header {
   width: auto;
   float: left;
   text-align: center;
-  display: flex;
+  display: flex !important;
 }
 .spin {
   cursor: pointer;
