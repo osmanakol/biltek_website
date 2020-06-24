@@ -27,18 +27,7 @@ nav {
   float: right;
   display: block;
 }
-/* nav ul:before {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  position: relative;
-  right: 0px;
-  width: 55vw;
-  height: 4px;
-  background-color: white;
-  content: "";
-  opacity: 1;
-  transition: all 1s;
-} */
+
 nav ul {
   margin: 0px;
   padding: 0;
@@ -53,20 +42,15 @@ nav li {
   margin-top: 35px;
   position: relative;
 }
+nav:before {
+  position:absolute;
+  top:0px; right:50%; bottom:0px;
 
-nav a::before {
-  position: absolute;
-  display: block;
-  left: -14px;
-  width: 5px;
-  height: 0%;
-  box-shadow: 0px 0px 10px white;
-  background-color: white;
-  content: "";
-  opacity: 1;
-  transform: skew(45deg);
-  transition: all 0.3s 0.3s;
+  border:1.33em solid #333;
+  border-left-color:red;
+  content:"";
 }
+
 nav a {
   color: white;
   display: inline-block;
@@ -78,32 +62,24 @@ nav a {
 nav a::after {
   box-shadow: 0px 0px 10px white;
   display: block;
-  position: absolute;
   left: 0px;
   width: 0%;
   height: 3px;
   background-color: white;
   content: "";
   opacity: 1;
-  transform: skew(50deg);
-  transition: all 0.3s;
+  transition: all 0.25s;
+  margin: auto;
 }
 
 nav a:hover {
   color: #535353;
-  text-shadow: 3px 3px 6px #404040;
+  text-shadow: 0px 0px 20px #ffffff;
 }
 
-nav ul ul::before ~ a:hover {
-  box-shadow: 3px 3px 50px red;
-}
 
-nav a:hover::before {
-  transition: all 0.3s;
-  height: 29px;
-}
 nav a:hover::after {
   opacity: 1;
   width: 100%;
-  transition: all 0.3s 0.3s;
+  transition: all 0.25s;
 }
