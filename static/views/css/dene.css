@@ -93,6 +93,7 @@ html {
   top: 85vh;
   left: 50%;
   transform: translateX(-50%);
+  width: fit-content;
 }
 
 .social-icons a {
@@ -155,8 +156,9 @@ html {
 
 @media screen and (max-width: 1200px){
   .social-icons a{
-    height: 45px;
-    width: 45px;
+    height: 48px;
+    width: 48px;
+    margin: 15px 14px;
     font-size: 24px;
   }
 }
@@ -164,48 +166,43 @@ html {
 @media screen and (max-width: 780px) {
   .social-icons a
   {
-    height: 40px;
-    width: 40px;
+    height: 46px;
+    width: 46px;
     margin: 15px 12px;
+    font-size: 23px;
+  }
+}
+
+@media  screen and (max-width: 680px) {
+  .social-icons a
+  {
+    height: 44px;
+    width: 44px;
+    margin: 15px 10px;
     font-size: 22px;
   }
 }
 
-@media  screen and (max-width: 540px) {
+@media  screen and (max-width: 620px) {
   .social-icons a
   {
-    height: 35px;
-    width: 35px;
-    margin: 15px 11px;
+    height: 42px;
+    width: 42px;
+    margin: 15px 8px;
     font-size: 21px;
   }
 }
 
-@media  screen and (max-width: 482px) {
+@media  screen and (max-width: 430px) {
   .social-icons a
   {
-    height: 32px;
-    width: 32px;
-    margin: 15px 8px;
-    font-size: 16px;
-  }
-}
-
-@media  screen and (max-width: 410px) {
-  .social-icons a
-  {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin: 15px 7px;
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
-@media  screen and (max-width: 378px) {
-  .social-icons a
-  {
-    margin: 15px 3px;
-  }
-}
+
 
 
