@@ -48,6 +48,21 @@
             </ul>
         </div>
     </nav> 
+    <div id="side-bar">
+		<div class="toggle-btn" id="toggle-btn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
+		<ul>
+			<li>Ana Sayfa</li>
+			<li>Hakkımızda</li>
+			<li>Etkinlikler</li>
+            <li>Takımlarımız</li>
+			<li>Contact</li>
+		</ul>
+  </div>
 
     <section id="header">
         <div class="bground"></div>
@@ -74,7 +89,23 @@
 
 
     <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
-    
+    <script type="text/javascript">
+        const toggleButton = document.getElementById('toggle-btn');
+const sideBar = document.getElementById('side-bar');
+
+toggleButton.addEventListener('click', show);
+
+function show(){
+  sideBar.classList.toggle('active');
+}
+
+// REMOVE SIDEBAR IF CLICK ON THE MAIN CONTENT
+const header = document.querySelector('.#header');
+
+header.addEventListener('click', () => {
+  sideBar.classList.remove('active');
+});
+        </script>
 </body>
 
 </html>
