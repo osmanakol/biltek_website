@@ -84,14 +84,28 @@ nav a:hover::after {
   position: absolute;
   width: 230px;
   height: 100%;
-  left: -0px;
-  transform: translateX(-100%);
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    radial-gradient(
+      at 50% 0%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 50%
+    );
+  left: -300px;
   transition: 0.5s ease-out;
   z-index: 4;
   display: none;
 }
-#side-bar li:nth-child(1){
-  padding-left: 10%;
+.toggle-btn {
+  position: absolute;
+  top: 30px;
+  left: 310px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
 }
 .toggle-btn span {
   width: calc(0.8rem + 1.3vw);
@@ -103,42 +117,29 @@ nav a:hover::after {
   margin-top: 4px;
   transition: 0.3s ease;
 }
-.fa, .fas{
-  font-size: 100%;
-  transform: translate(19px);
-}
 #side-bar ul {
   padding-left: 0px;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
 }
 #side-bar li {
   color: white;
-  background: orange;
-  padding: 7% 0;
-  border-radius: 14px;
   list-style: none;
   font-size: calc(0.8rem + 0.5vh + 0.5vw);
   cursor: pointer;
   text-align: center;
   font-family: "Aldrich", sans-serif;
 }
-#side-bar li:nth-child(1){
-  transform: translateX(25%);
-  transition: all linear 0.1s;
-}
 #side-bar li:hover {
   background: #535353;
   color: white;
   margin: 5px;
-  transition: all linear 0.2s;
 }
 
 #side-bar.active {
-  transform: translateX(-20%);
+  left: 0;
 }
-#side-bar.active li:nth-child(1) i{
-  display: none;
+#side-bar.active .toggle-btn {
+  top: 1.8rem;
+  left: 235px;
 }
 #side-bar.active span {
   position: absolute;
@@ -153,11 +154,8 @@ nav a:hover::after {
 #side-bar.active span:nth-child(3) {
   transform: rotate(-45deg);
 }
-#side-bar.active  li:nth-child(1) {
-  transform: translateX(0%);
-}
-#side-bar.active ~ #header{
-  filter: brightness(20%);
+#side-bar.active ~ .content {
+  opacity: 0.3;
 }
 
 /*-----------------------
@@ -199,9 +197,11 @@ nav a:hover::after {
   }
   .aybulogo {
     display: block;
-    width: 50px;
-    height: 50px;
-    float: right;
+    width: 70px;
+    height: 70px;
+    margin-top: 15% !important;
+    margin-left: 34%;
+    margin-bottom: 20% !important;
   }
 }
 
