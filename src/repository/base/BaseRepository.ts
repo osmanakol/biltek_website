@@ -16,9 +16,9 @@ export abstract class BaseRepository<T> implements IWrite<T>, IRead<T>{
 
     //! That functions commets line is in the their interface file (IRead and IWrite)
 
-    createMany(item: T[]): Promise<Document[]> {
-        const result = this._model.create(item);
-        return result;
+    async createMany(item: T[]): Promise<T[]> { 
+        const result =await this._model.create(item);
+        return result as unknown as T[];
     }
 
     async findAll(): Promise<T[]> {

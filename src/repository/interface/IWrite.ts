@@ -9,7 +9,7 @@ export interface IWrite<T>{
      * @return Document[] what is created
      * ? create more then one data in database on one time
      */
-    createMany(item:T[]):Promise<Document[]>;
+    createMany(item:T[]):Promise<T[]>;
     /**
      * @function @async
      * @param item 
