@@ -90,9 +90,8 @@ nav a:hover::after {
   z-index: 4;
   display: none;
 }
-.toggle-btn {
-  height: 50px;
-  width: 50px;
+#side-bar li:nth-child(1){
+  padding-left: 10%;
 }
 .toggle-btn span {
   width: calc(0.8rem + 1.3vw);
@@ -103,6 +102,10 @@ nav a:hover::after {
   display: block;
   margin-top: 4px;
   transition: 0.3s ease;
+}
+.fa, .fas{
+  font-size: 100%;
+  transform: translate(19px);
 }
 #side-bar ul {
   padding-left: 0px;
@@ -121,7 +124,7 @@ nav a:hover::after {
   font-family: "Aldrich", sans-serif;
 }
 #side-bar li:nth-child(1){
-  transform: translateX(20%);
+  transform: translateX(25%);
   transition: all linear 0.1s;
 }
 #side-bar li:hover {
@@ -132,11 +135,10 @@ nav a:hover::after {
 }
 
 #side-bar.active {
-  transform: translateX(0%);
+  transform: translateX(-20%);
 }
-#side-bar.active .toggle-btn {
-  top: 1.8rem;
-  left: 235px;
+#side-bar.active li:nth-child(1) i{
+  display: none;
 }
 #side-bar.active span {
   position: absolute;
@@ -153,6 +155,9 @@ nav a:hover::after {
 }
 #side-bar.active  li:nth-child(1) {
   transform: translateX(0%);
+}
+#side-bar.active ~ #header{
+  filter: brightness(20%);
 }
 
 /*-----------------------
