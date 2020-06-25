@@ -85,11 +85,12 @@ nav a:hover::after {
   position: absolute;
 	width: 230px;
 	height: 100%;
-	background: linear-gradient( 171.8deg,  rgba(5,111,146,1) 13.5%, rgba(6,57,84,1) 78.6% );
+  background:linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
 	left:-300px;
   transition: .5s ease-out;
   z-index: 4;
   display: none;
+
 }
 .toggle-btn{
 	position: absolute;
@@ -100,10 +101,11 @@ nav a:hover::after {
   width: 50px;
 }
 .toggle-btn span{
-	width:  calc(2.5rem + .5vw);  /* 60px*/
-	height: calc(0.50rem +  .01vh); /* 10px*/
+	width: calc(0.8rem + 0.3vw);
+  height: calc(0.2rem + .01vh);
   border-radius:5px;
-	background: linear-gradient( 171.8deg,  rgba(5,111,146,1) 13.5%, rgba(6,57,84,1) 78.6% );
+	background:white; 
+  background-blend-mode: soft-light,screen;;
 	display: block;
   margin-top:4px; 
   transition: 0.3s ease;
@@ -114,14 +116,15 @@ nav a:hover::after {
 #side-bar li{
 	color: white;
 	list-style: none;
-	font-size: calc(1.5rem + .5vh + .5vw);
+	font-size: calc(0.8rem + .5vh + .5vw);
 	cursor: pointer;
   text-align: center;
   font-family: "Aldrich", sans-serif;
 }
 #side-bar li:hover{
 	background: #535353;
-	color: white;
+  color: white;
+  margin: 5px;
 }
 
 #side-bar.active{
@@ -177,18 +180,21 @@ nav a:hover::after {
   }
 }
 
-@media screen and (max-width: 995px){
+@media screen and (max-width: 999px){
   .navbar{display: none}
   #side-bar{
     display: block;
   }
   .aybulogo{
     display: block;
-    width: 100px;
-    height: 100px;
-    margin: 25%;
+    width: 70px;
+    height: 70px;
+    margin-top: 15% !important;
+    margin-left: 34%;
+    margin-bottom: 20% !important;
   }
 }
+
 @media screen and (max-height: 1300px){
   .aybulogo{
     margin-bottom: 39%;
@@ -200,44 +206,54 @@ nav a:hover::after {
 
 @media screen and (max-height: 760px){
   .aybulogo{
-    margin-bottom: 21%;
+    margin-top: 1%;
   }
   #side-bar li{
     margin: 12% 0;
   }
 }
-@media screen and (max-height: 590px){
-  .aybulogo{margin-top: 8%;}
-}
+
 @media screen and (max-height: 570px){
   .navbar{display: none}
   #side-bar{
     display: block;
   }
   #side-bar li{
+    padding: 3%;
     margin: 12% 0;
-    font-size: calc(1.2rem + .5vh + .5vw);
+    font-size: calc(0.4rem + .5vh + .5vw);
   }
   .aybulogo{
-    margin-bottom: 12%;
+    margin-bottom: 10%;
+    margin-left: 32%;
+    margin-top: 14%;
   }
   .toggle-btn{
     top: 15px;
   }  
 }
 
-@media screen and (max-height: 460px){
+
+@media screen and (max-height: 475px){
   .aybulogo{
-    display: none;
+    display:none;
   }
   #side-bar ul{
     margin: 28% 0;
   }
-}        
+ 
+}    
+
+@media screen and (max-height: 410px){
+  .aybulogo{
+    display:none;
+  }
+}
+
 @media screen and (max-height: 360px){
   #side-bar li {
   margin: 14% 0;
-  font-size: calc(1rem + .5vh + .5vw);
+  font-size: calc(0.25srem + .5vh + .5vw);
   }
   #side-bar ul{
     margin: 14% 0;
