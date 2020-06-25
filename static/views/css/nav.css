@@ -206,6 +206,9 @@ nav a:hover::after {
     margin: 12% 0;
   }
 }
+@media screen and (max-height: 590px){
+  .aybulogo{margin-top: 8%;}
+}
 @media screen and (max-height: 570px){
   .navbar{display: none}
   #side-bar{
@@ -213,9 +216,10 @@ nav a:hover::after {
   }
   #side-bar li{
     margin: 12% 0;
+    font-size: calc(1.2rem + .5vh + .5vw);
   }
   .aybulogo{
-    display: none;
+    margin-bottom: 12%;
   }
   .toggle-btn{
     top: 15px;
@@ -226,6 +230,17 @@ nav a:hover::after {
   .aybulogo{
     display: none;
   }
+  #side-bar ul{
+    margin: 28% 0;
+  }
 }        
-                            
+@media screen and (max-height: 360px){
+  #side-bar li {
+  margin: 14% 0;
+  font-size: calc(1rem + .5vh + .5vw);
+  }
+  #side-bar ul{
+    margin: 14% 0;
+  }
+}                            
                             
