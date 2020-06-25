@@ -229,13 +229,6 @@ html {
   }
 }
 
-@media screen and (max-height: 560px){
-  .schoolName{
-    top: 42%;
-    left: 46%;
-  }
-  
-}
 
 @media screen and (max-height: 530px){
   .social-icons{

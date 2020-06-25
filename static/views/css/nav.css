@@ -85,7 +85,7 @@ nav a:hover::after {
   position: absolute;
 	width: 230px;
 	height: 100%;
-	background: black;
+	background: linear-gradient( 171.8deg,  rgba(5,111,146,1) 13.5%, rgba(6,57,84,1) 78.6% );
 	left:-300px;
   transition: .5s ease-out;
   z-index: 4;
@@ -103,7 +103,7 @@ nav a:hover::after {
 	width:  calc(2.5rem + .5vw);  /* 60px*/
 	height: calc(0.50rem +  .01vh); /* 10px*/
   border-radius:5px;
-	background-color: #3f345f;
+	background: linear-gradient( 171.8deg,  rgba(5,111,146,1) 13.5%, rgba(6,57,84,1) 78.6% );
 	display: block;
   margin-top:4px; 
   transition: 0.3s ease;
@@ -189,18 +189,33 @@ nav a:hover::after {
     margin: 25%;
   }
 }
+@media screen and (max-height: 1300px){
+  .aybulogo{
+    margin-bottom: 39%;
+  }
+  #side-bar li{
+    margin: 15% 0;
+  }
+}
 
-@media screen and (max-height: 560px){
+@media screen and (max-height: 760px){
+  .aybulogo{
+    margin-bottom: 21%;
+  }
+  #side-bar li{
+    margin: 12% 0;
+  }
+}
+@media screen and (max-height: 570px){
   .navbar{display: none}
   #side-bar{
     display: block;
   }
-  
+  #side-bar li{
+    margin: 12% 0;
+  }
   .aybulogo{
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: 25%;
+    display: none;
   }
   .toggle-btn{
     top: 15px;
