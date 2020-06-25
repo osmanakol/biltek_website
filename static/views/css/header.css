@@ -229,15 +229,30 @@ html {
   }
 }
 
-
-@media screen and (max-height: 530px){
+@media screen and (max-height: 700px){
   .social-icons{
-    top: 11vh;
-    left: 85%;
+    top: 85vh;
   }
-  .social-icons a{
-    display:flex;
+  #header,.bground,
+  body,html{
+    height: 105vh;
   }
+}
+
+@media screen and (max-height: 625px){
+  .social-icons{
+    top: 88vh;
+  }
+}
+@media screen and (max-height: 560px){
+  .bground,#header,
+  body,html{
+    height: 117vh;
+  }
+  .social-icons{
+    top: 88vh;
+  }
+
   .header-msg{
     font-size: calc(0.75rem + 0.5vw);
   }
@@ -251,4 +266,17 @@ html {
     font-size: calc(0.9rem + 0.2vw);
   }
 }
-
+@media screen and (max-height: 500px){
+  .social-icons{
+    top: 91vh;
+  }
+}
+@media screen and (max-height: 400px){
+  .social-icons{
+    top: 100vh;
+  }
+  .bground,#header,
+  body,html{
+    height: 130vh;
+  }
+}
