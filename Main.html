@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/views/css/nav.css">
     <link rel="stylesheet" href="static/views/css/header.css">
+    <link rel="stylesheet" href="static/views/css/og.css">
 </head>
 
 <body>
@@ -50,23 +51,22 @@
         </div>
     </nav> 
     
-    <div id="side-bar">
-		<div class="toggle-btn" id="toggle-btn">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-		<ul>
-            <img class="aybulogo" src="./static/views/img/aybulogo.png">
-			<li><i class="fas fa-caret-right"><i class="fas fa-caret-right"></i></i>Ana Sayfa</li>
-			<li><i class="fas fa-caret-right"><i class="fas fa-caret-right"></i></i>Hakkımızda</li>
-			<li><i class="fas fa-caret-right"><i class="fas fa-caret-right"></i></i>Takımlarımız</li>
-            <li><i class="fas fa-caret-right"><i class="fas fa-caret-right"></i></i>Etkinlikler</li>
-			<li><i class="fas fa-caret-right"></i><i class="fas fa-caret-right"></i>Fotoğraflar</li>
-		</ul>
-  </div>
+    <div class="animated-menu">
 
-    <section id="header" ontouchmove="show()">
+        <div class="nav">
+          <a href="#" id="menu"><span></span></a>
+          <ul id="navlist" class="animate-right">
+            <li><a href="#">Ana Sayfa</a></li>
+            <li><a href="#">Hakkımızda</a></li>
+            <li><a href="#">Takımlarımız</a></li>
+            <li><a href="#">Etkinlikler</a></li>
+            <li><a href="#">fotoğraflar</a></li>
+          </ul>
+          <div class="footer"></div>
+        </div>
+    </div> 
+
+    <section id="header">
         <div class="bground"></div>
         <div class="schoolName">
             <div class="header-box">
@@ -89,21 +89,28 @@
 
     <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        const toggleButton = document.getElementById('toggle-btn');
-        const sideBar = document.getElementById('side-bar');
+const navlist = document.querySelector("#navlist");
+const links = navlist.querySelectorAll("li a");
 
-        toggleButton.addEventListener('click', show);
+menu.addEventListener("click", function() {
+  setTimeout(() => {
+    menu.classList.toggle("active");
+  }, 600);
+  navlist.classList.toggle("animate-right");
+});
 
-        function show(){
-            sideBar.classList.toggle('active');
-        }
+links.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    setTimeout(() => {
+      menu.classList.remove("active");
+    }, 1000);
+    setTimeout(() => {
+      navlist.classList.add("animate-right");
+    }, 800);
+  });
+});
 
-        // REMOVE SIDEBAR IF CLICK ON THE MAIN CONTENT
-        const header = document.querySelector('#header');
-
-        header.addEventListener('click', () => {
-            sideBar.classList.remove('active');
-        });
     </script>
 
 </body>
