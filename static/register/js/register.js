@@ -142,13 +142,12 @@ function submit_validation() {
 
     if (name_surname != "" && email.value.match(emailPattern) && text_school != "Okulunuzu seçiniz..." && text_dep != "Bölümünüzü seçiniz...") {
 
-        Swal.fire
-            ({
-                icon: 'success',
-                title: 'Kayıt başarılı',
-                showConfirmButton: false,
-                timer: 1500
-            });
+        Swal.fire({
+            icon: 'success',
+            title: 'Kayıt başarılı ',
+            showConfirmButton: false,
+            timer: 1500
+          })
 
         emailBox.classList.remove('invalid');
         emailBox.classList.remove('valid');
