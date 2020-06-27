@@ -251,7 +251,7 @@ html {
     height: 117vh;
   }
   .social-icons{
-    top: 88vh;
+    top: 90vh;
   }
 
   .header-msg{
@@ -264,7 +264,7 @@ html {
     font-size: calc(0.75rem + 0.3vw);
   }
   .button{
-    font-size: calc(0.9rem + 0.3vw);
+    font-size: calc(0.8rem + 0.3vw);
   }
 }
 @media screen and (max-height: 500px){
