@@ -92,59 +92,58 @@ function submit_validation() {
     var name_surname = $("#id_name").val();
     var phone = $("#id_phone").val();
 
-    var school = document.getElementById("id_school");
-    var text_school = school.options[school.selectedIndex].text;
-    var dep = document.getElementById("id_dep");
-    var text_dep = dep.options[dep.selectedIndex].text;
+    var school =$('#id_school option:selected').val();
+    var dep=$('id_dep option:selected').val();
 
-    if (text_dep == "Bölümünüzü seçiniz...") {
-        swal({
+
+    if (dep == 0) {
+        swal.fire({
             title: "Boşlukları doldurun !",
             text: "Bölüm boş bırakılamaz ! ",
             icon: "warning",
-            button: "Tamam",
+         
         });
 
     }
 
 
-    if (text_school == "Okulunuzu seçiniz...") {
-        swal({
+    if (school == 0) {
+        swal.fire({
             title: "Boşlukları doldurun !",
             text: "Okul boş bırakılamaz ! ",
             icon: "warning",
-            button: "Tamam",
+            
         });
 
     }
 
     if (!email.value.match(emailPattern)) {
-        swal({
+        swal.fire({
             title: "Boşlukları doldurun !",
             text: "Geçersiz mail adresi ! ",
             icon: "warning",
-            button: "Tamam",
+            
         });
 
 
     }
 
     if (name_surname == "") {
-        swal({
+        swal.fire({
             title: "Boşlukları doldurun !",
             text: "Ad soyad boş bırakılamaz ! ",
             icon: "warning",
-            button: "Tamam",
+           
         });
     }
 
 
 
-    if (name_surname != "" && email.value.match(emailPattern) && text_school != "Okulunuzu seçiniz..." && text_dep != "Bölümünüzü seçiniz...") {
+    if (name_surname != "" && email.value.match(emailPattern) && school != 0 && dep != 0) {
 
         Swal.fire({
             icon: 'success',
-            title: 'Kayıt başarılı ',
+            title: 'Kayıt başarılı',
             showConfirmButton: false,
             timer: 1500
           })
