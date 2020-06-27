@@ -34,7 +34,7 @@
 .animated-menu .nav ul {
   margin: 34px auto 0px auto;
   width: 70%;
-  padding: 30px 30px 30px 30px;
+  padding: 55px 30px 30px 30px;
   border-radius: 5%;
   -webkit-transition: lineat 0.4s;
   -o-transition: lineat 0.4s;
@@ -98,8 +98,8 @@
   -webkit-transition: linear 0.4s;
   -o-transition: linear 0.4s;
   transition: linear 0.4s;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,7 +151,7 @@
 .animated-menu .nav #menu.active:after {
   -webkit-transform: translateX(-18px) translateY(-9px) rotate(45deg);
   -ms-transform: translateX(-18px) translateY(-9px) rotate(45deg);
-  transform: translateX(-18px) translateY(-5px) rotate(45deg);
+  transform: translateX(-20px) translateY(-8px) rotate(45deg);
   margin-left: 9%;
   -webkit-transition: linear 0.3s;
   -o-transition: linear 0.3s;
@@ -204,11 +204,20 @@
   }
 }
 
-@media screen and (max-height:510px){
+@media screen and (max-height:700px){
+  .animated-menu .nav #menu{
+    width: 4rem;
+    height: 4rem;
+  }
+  .animated-menu .nav #menu.active:before{
+    transform: translateX(-19px) translateY(8px) rotate(-45deg);
+  }
+  .animated-menu .nav #menu.active::after{
+    transform: translateX(-18px) translateY(-5px) rotate(45deg);
+  }
   .animated-menu .nav ul{
     padding: 30px 30px 20px 30px;
   }
- 
 }
 
 @media screen and (max-height:478px){
@@ -250,4 +259,20 @@
     margin-left:24%;
   }
 
+}
+
+@media screen and (max-width:600px){
+  .animated-menu .nav #menu{
+    width: 4rem;
+    height: 4rem;
+  }
+  .animated-menu .nav #menu.active:before{
+    transform: translateX(-19px) translateY(8px) rotate(-45deg);
+  }
+  .animated-menu .nav #menu.active::after{
+    transform: translateX(-18px) translateY(-5px) rotate(45deg);
+  }
+  .animated-menu .nav ul{
+    padding: 30px 30px 20px 30px;
+  }
 }
