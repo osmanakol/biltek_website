@@ -32,7 +32,7 @@
   width: 100%;
 }/* transform: perspective(200px) rotate(180deg) animate-right*/
 .animated-menu .nav ul {
-  margin: 75px auto 0px auto;
+  margin: 34px auto 0px auto;
   width: 70%;
   padding: 30px 30px 30px 30px;
   border-radius: 5%;
@@ -76,6 +76,7 @@
   text-decoration: none;
   color: #fff;
   font-weight: 700;
+  font-size: calc(0.8rem + 0.3vw);
   margin: 0px;
   width: 100%;
   display: -webkit-box;
@@ -97,13 +98,13 @@
   -webkit-transition: linear 0.4s;
   -o-transition: linear 0.4s;
   transition: linear 0.4s;
-  height: 80px;
-  width: 80px;
+  height: 15%;
+  width: 15%;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 30px;
+  top: 2%;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -118,7 +119,7 @@
 .animated-menu .nav #menu span, .animated-menu .nav #menu:after, .animated-menu .nav #menu:before {
   content: "";
   height: 3px;
-  width: 30px;
+  width: calc(1.8rem + 0.1vw);
   background: #3f51b5;
   position: absolute;
   left: 50%;
@@ -180,7 +181,7 @@
 .animated-menu .footer {
   position: fixed;
   top: 0px;
-  height: 70px;
+  height: 8%;
   width: 100%;
   background: #7579ff;
   z-index: 1;
@@ -201,4 +202,40 @@
   .animated-menu .nav{
     display: flex;
   }
+}
+
+@media screen and (max-height:510px){
+  .animated-menu .nav ul{
+    padding: 30px 30px 20px 30px;
+  }
+ 
+}
+
+@media screen and (max-height:478px){
+  .animated-menu .nav ul{
+    padding: 30px 30px 5px 30px;
+  }
+  .animated-menu .nav #menu span, .animated-menu .nav #menu:after, .animated-menu .nav #menu:before{
+   width: calc(1.2rem + 0.1vw); 
+  }
+}
+
+
+@media screen and (max-height:380px){
+ 
+  .animated-menu .nav ul li a {
+    padding: 15px 20px;
+  }
+  .animated-menu .nav ul{
+    margin: 28px auto 0px auto;
+  }
+  .animated-menu .nav #menu{
+    width: 12%;
+    height: 12%;
+  }
+  .animated-menu .nav #menu span, .animated-menu .nav #menu:after, .animated-menu .nav #menu:before {
+    height: 2px;
+    width: calc(1rem + 0.1vw);
+  }
+
 }

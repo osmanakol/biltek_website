@@ -12,7 +12,7 @@
   position: absolute;
   width: 100vw;
   height: auto;
-  padding: 0.5rem 13rem;
+  padding: 0.5rem 12rem;
 }
 
 .navbar > .collapse {
@@ -43,6 +43,7 @@ nav li {
   margin-left: 2vw;
   margin-top: 35px;
   position: relative;
+  text-align: center;
 }
 
 nav a {
@@ -50,7 +51,7 @@ nav a {
   display: inline-block;
   text-decoration: none;
   font-family: "Aldrich", sans-serif;
-  font-size: 18px;
+  font-size: calc(0.9rem + 0.3vw);
 }
 
 nav a::after {
@@ -75,103 +76,6 @@ nav a:hover::after {
   opacity: 1;
   width: 100%;
   transition: all 0.25s;
-}
-
-/* -------------------
-   Sidebar Section
---------------------*/
-
-#side-bar {
-  position: absolute;
-  width: 230px;                     /* sidebar uzunluğu*/
-  height: 100%;
-  background: #202020;            /* sidebar arkaplanı */
-  border-right: white 2px solid;  /*siderbarın bitişindeki çizginin rengi*/
-  box-shadow: 0px 0px 5px white;  /* sağ kenardaki çubuğun gölgelendirmesi*/
-  left: -300px;                     /* sidebarı sol tarafta sayfa dışında tutmak için. eğer bozulduğu bi aralık varsa değiş yoksa dokunma*/
-  transition: 0.5s ease-out;
-  z-index: 4;
-  display: none;
-}
-
-
-/*              ---HAMGBURGER/X ICON---                    */   
-.toggle-btn {
-  position: absolute;
-  top: 30px;
-  left: 310px;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-}
-
-.toggle-btn span {
-  width: calc(0.8rem + 1.3vw);
-  height: calc(0.2rem + 0.01vh);
-  border-radius: 5px;
-  background: white;
-  background-blend-mode: soft-light, screen;
-  display: block;
-  margin-top: 4px;
-  transition: 0.3s ease;
-}
-
-
-/* --------------------------
-    SIDE BAR SUB ELEMENTS 
--------------------------- */
-
-#side-bar ul {
-  padding-left: 0px;
-}
-
-#side-bar li {
-  color: white;                             /*yazı rengi*/
-  text-shadow: 0px 0px 10px white;          /*yazı gölgelendirmesi*/
-  list-style: none;
-  font-size: calc(0.8rem + 0.5vh + 0.5vw);    
-  cursor: pointer;
-  margin: 15% 0% 15% 20%;                     /* yazıların bulunduğu kutuların margini */
-  font-family: "Aldrich", sans-serif;
-  transition: .25s all ease;
-}
-
-
-#side-bar li:hover {
-  color: black;
-  transform: scale(1.1);                      /* kutuyu ve içindekileri 1.1 katı büyütür.(eğer çok büyütüyorsa değiştir)*/
-}
-
-/*----------------------------
-   ONCLICK HAMBURGER BUTTON 
-----------------------------*/
-
-#side-bar.active {
-  left: 0;
-}
-
-#side-bar.active ~ #header{
-  filter: brightness(40%);                    /* sidebar açıldığı zaman eknaın kalanını karartır*/
-}
-
-#side-bar.active .toggle-btn {
-  top: 1.8rem;
-  left: 235px;                                /* tıklandıktan sonra hamburger butonunun yerini değiştirir. (X ikonu oldu burda çoktan)*/
-}
-
-/*  --- HAMBURGER TO X ICON ---  */
-#side-bar.active span {
-  position: absolute;
-}
-#side-bar.active span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 0px;
-}
-#side-bar.active span:nth-child(2) {
-  opacity: 0;
-}
-#side-bar.active span:nth-child(3) {
-  transform: rotate(-45deg);
 }
 
 /*-----------------------
@@ -203,29 +107,49 @@ nav a:hover::after {
     float: none;
     justify-content: center;
   }
-
+ 
   .navbar {
-    padding: 0.5rem 2rem;
+    padding: 0rem 3rem;
   }
 }
 
-@media screen and (max-width: 999px) {
-  .navbar {
+@media screen and (max-width: 992px) {
+  .aybulogo {
     display: none;
   }
-  #side-bar {
-    display: block;
+  nav ul {
+    float: none;
+    justify-content: center;
   }
-  .aybulogo {
-    display: block;
-    width: 70px;
-    height: 70px;
-    margin-top: 15% !important;
-    margin-left: 34%;
-    margin-bottom: 20% !important;
+
+  .navbar {
+    padding: 0 10rem;
+  }
+  .navbar-nav {
+    display:block;
+  }
+}
+@media screen and (max-width: 909px) {
+  .navbar{
+    padding: 0 6rem;
+  }
+  nav li{
+    margin-left:2vw;
+    margin-right:2vw;
+    
+  }
+} 
+@media screen and (max-width: 860px){
+  .navbar{
+    padding: 0 4rem;
   }
 }
 
+@media screen and (max-width: 768px){
+  .navbar{
+    display: none;
+  }
+}
 
 
 /*---------------
@@ -237,67 +161,13 @@ nav a:hover::after {
   .aybulogo {
     margin-bottom: 39%;
   }
-
-
-  #side-bar li {
-    margin: 15% 0% 15% 20%;
-  }
 }
-
 
 @media screen and (max-height: 760px) {
   .aybulogo {
     margin-top: 1%;
   }
-  #side-bar li {
-    margin: 12% 0;
-  }
 }
 
-@media screen and (max-height: 570px) {
-  .navbar {
-    display: none;
-  }
-  #side-bar {
-    display: block;
-  }
-  #side-bar li {
-    padding: 3%;
-    margin: 12% 0;
-    font-size: calc(0.4rem + 0.5vh + 0.5vw);
-  }
-  .aybulogo {
-    margin-bottom: 10%;
-    margin-left: 32%;
-    margin-top: 14%;
-  }
-  .toggle-btn {
-    top: 15px;
-  }
-}
 
-@media screen and (max-height: 475px) {
-  .aybulogo {
-    display: none;
-  }
-  #side-bar ul {
-    margin: 28% 0;
-  }
-}
-
-@media screen and (max-height: 410px) {
-  .aybulogo {
-    display: none;
-  }
-}
-
-@media screen and (max-height: 360px) {
-  #side-bar li {
-    margin: 14% 0;
-    font-size: calc(0.25srem + 0.5vh + 0.5vw);
-  }
-  #side-bar ul {
-    margin: 14% 0;
-  }
-}
 
