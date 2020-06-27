@@ -1,3 +1,4 @@
+/* background-properties*/
 body,
 html {
   height: 100%;
@@ -64,6 +65,9 @@ html {
     top: 110%;
   }
 }
+/* background-properties*/
+
+/*header*/
 header {
   position: absolute;
   min-height: 50px;
@@ -102,7 +106,7 @@ header {
   font-size: calc(0.6rem + 0.5vw);
 }
 
-#biltek-text2 {
+#biltek-text2 {/* for the biltek text below part*/
   margin-block-start: -8px;
 }
 
@@ -111,7 +115,7 @@ header {
   white-space: nowrap;
   overflow: hidden;
 }
-.type-writing p:nth-child(1) {
+.type-writing p:nth-child(1) {/*1st part biltek text */
   width: 11.5em;
   -webkit-animation: type 2s steps(40, end);
   animation: type 2s steps(40, end);
@@ -119,7 +123,7 @@ header {
   animation-fill-mode: forwards;
 }
 
-.type-writing p:nth-child(2) {
+.type-writing p:nth-child(2) {/*below part biltek text*/
   width: 11.5em;
   opacity: 0;
   -webkit-animation: type2 2s steps(40, end);
@@ -129,7 +133,7 @@ header {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-@keyframes type {
+@keyframes type {/*typing animation for 1st part*/
   0% {
     width: 0;
   }
@@ -153,7 +157,7 @@ header {
   }
 }
 
-@keyframes type2 {
+@keyframes type2 {/*animation typing for below part*/
   0% {
     width: 0;
   }
@@ -184,7 +188,9 @@ header {
     border: none;
   }
 }
+/*header*/
 
+/*main content*/
 .comingsoon-text-container {
   position: absolute;
   width: max-content;
@@ -268,7 +274,7 @@ header {
     transform: skew(0.02deg);
   }
 }
-@keyframes glitch-anim2 {
+@keyframes glitch-anim2 { 
   0% {
     clip: rect(5px, 9999px, 9px, 0);
     transform: skew(0.84deg);
@@ -354,7 +360,8 @@ header {
     transform: skew(0.09deg);
   }
 }
-@keyframes glitch-skew {
+
+@keyframes glitch-skew { /*animation skew movement for the coming soon text */ 
   0% {
     transform: skew(-4deg);
   }
@@ -389,7 +396,9 @@ header {
     transform: skew(2deg);
   }
 }
+/*main-content*/
 
+/*content-and-footer*/
 .social-media-icons-container {
   position: fixed;
   width: auto;
@@ -440,6 +449,9 @@ header {
   line-height: 29px !important;
   vertical-align: top !important;
 }
+/*content-and-footer*/
+
+/*responsive part*/
 @media only screen and (max-width: 1025px) {
   .biltek-logo {
     width: 50px;
