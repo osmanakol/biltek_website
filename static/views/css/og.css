@@ -32,7 +32,7 @@
   width: 100%;
 }/* transform: perspective(200px) rotate(180deg) animate-right*/
 .animated-menu .nav ul {
-  margin: 34px auto 0px auto;
+  margin: 44px auto 0px auto;
   width: 70%;
   padding: 55px 30px 30px 30px;
   border-radius: 5%;
@@ -218,6 +218,9 @@
   .animated-menu .nav ul{
     padding: 30px 30px 20px 30px;
   }
+  .animated-menu .nav ul{
+    margin: 39px auto 0px auto;
+  }
 }
 
 @media screen and (max-height:478px){
@@ -242,7 +245,7 @@
     padding: 15px 20px;
   }
   .animated-menu .nav ul{
-    margin: 28px auto 0px auto;
+    margin: 30px auto 0px auto;
   }
   .animated-menu .nav #menu{
     width: 3rem;
@@ -273,6 +276,6 @@
     transform: translateX(-18px) translateY(-5px) rotate(45deg);
   }
   .animated-menu .nav ul{
-    padding: 30px 30px 20px 30px;
+    padding: 39px 30px 20px 30px;
   }
 }
