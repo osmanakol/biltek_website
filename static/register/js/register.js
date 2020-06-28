@@ -80,80 +80,115 @@ function getDepartmentsById() {
 }
 
 /*Form submit validation*/
-/*Form submit validation*/
 function submit_validation() {
-    $("#mymodal1").hide;
-    const email = document.getElementById("email");
+
+    /*const email = document.getElementById("email");
     const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
-
-    const emailBox = document.querySelector('.emailBox');
-
 
     var name_surname = $("#id_name").val();
     var phone = $("#id_phone").val();
 
-    var school =$('#id_school option:selected').val();
-    var dep=$('id_dep option:selected').val();
+    var school = document.getElementById("id_school");
+    var text_school = school.options[school.selectedIndex].text;
+    var dep = document.getElementById("id_dep");
+    var text_dep = dep.options[dep.selectedIndex].text;
 
-
-    if (dep == 0) {
-        swal.fire({
+    if (text_dep == "Bölümünüzü seçiniz...") {
+        Swal.fire({
             title: "Boşlukları doldurun !",
             text: "Bölüm boş bırakılamaz ! ",
             icon: "warning",
-         
+            button: "Tamam",
         });
 
     }
 
 
-    if (school == 0) {
-        swal.fire({
+    if (text_school == "Okulunuzu seçiniz...") {
+        Swal.fire({
             title: "Boşlukları doldurun !",
             text: "Okul boş bırakılamaz ! ",
             icon: "warning",
-            
+            button: "Tamam",
         });
 
     }
 
     if (!email.value.match(emailPattern)) {
-        swal.fire({
+        Swal.fire({
             title: "Boşlukları doldurun !",
             text: "Geçersiz mail adresi ! ",
             icon: "warning",
-            
+            button: "Tamam",
         });
 
 
     }
 
     if (name_surname == "") {
-        swal.fire({
-            title: "Boşlukları doldurun !",
-            text: "Ad soyad boş bırakılamaz ! ",
-            icon: "warning",
-           
+      
+        Swal.fire({
+             title: "Boşlukları doldurun !",
+             text: "Ad soyad boş bırakılamaz ! ",
+             icon: "warning",
+             button: "Tamam",
         });
     }
 
 
 
-    if (name_surname != "" && email.value.match(emailPattern) && school != 0 && dep != 0) {
+    if (name_surname != "" && email.value.match(emailPattern) && text_school != "Okulunuzu seçiniz..." && text_dep != "Bölümünüzü seçiniz...") {
 
         Swal.fire({
-            icon: 'success',
-            title: 'Kayıt başarılı',
-            showConfirmButton: false,
-            timer: 1500
-          })
+            title: "Kayıt başarılı",
+            text: "Kayıt olduğunuz için teşekkürler!",
+            icon: "success",
+            button: "Tamam",
 
-        emailBox.classList.remove('invalid');
-        emailBox.classList.remove('valid');
-
-        document.getElementById("form").reset();
+        });
         $('#myModal1').modal('hide');
+    }*/
 
+
+    /**Get user input */
+    const email = $("#email");
+    const nameSurname = $("#id_name");
+    const phone = $("#id_phone");
+    const school = $("#id_school option:selected");
+    const department = $("#id_dep option:selected");
+    const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
+    /**Get user input */
+
+    /**Check this input */
+    if (nameSurname.val() === "") {
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen ad soyad alanını doldurduğunuzdan emin olun!!", true, false);
     }
+    else if (email.val() === "" || !emailPattern.test(email.val())) {
+        sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
+    }
+    else if (school.index() == 0) {
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
+    }
+    else if (department.index() === 0) {
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen bölümünüzü seçtiğinizden emin olun!!", true, false);
+    }
+    else {
+        //save data in database
+        sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
+        $('#myModal1').modal('hide');
+        $("#form")[0].reset();
+    }
+    /**Check this input */
+}
 
+
+function sweetAlert(title, icon, text, confirmButton, cancelButton, timer) {
+    Swal.fire({
+        title: `${title}`,
+        icon: `${icon}`,
+        text: `${text}`,
+        timer: timer,
+        showConfirmButton: confirmButton,
+        showCancelButton: cancelButton
+    })
 }
