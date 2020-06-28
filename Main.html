@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/views/css/nav.css">
     <link rel="stylesheet" href="static/views/css/header.css">
-    <link rel="stylesheet" href="static/views/css/og.css">
+    <link rel="stylesheet" href="static/views/css/mobileNav.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 
@@ -63,7 +63,7 @@
             <li><a href="#">Etkinlikler</a></li>
             <li><a href="#">Fotoğraflar</a></li>
           </ul>
-          <div class="footer"></div>
+          <div class="nav-footer"></div>
         </div>
     </div> 
 
@@ -92,12 +92,23 @@
     <script type="text/javascript">
 const navlist = document.querySelector("#navlist");
 const links = navlist.querySelectorAll("li a");
+const header = document.querySelector("#header");
 
 menu.addEventListener("click", function() {
   setTimeout(() => {
     menu.classList.toggle("active");
   }, 600);
   navlist.classList.toggle("animate-right");
+});
+
+header.addEventListener("click", function(e){
+    e.preventDefault();
+    setTimeout(() => {
+      menu.classList.remove("active");
+    }, 200);
+    setTimeout(() => {
+      navlist.classList.add("animate-right");
+    }, 0);
 });
 
 links.forEach(link => {

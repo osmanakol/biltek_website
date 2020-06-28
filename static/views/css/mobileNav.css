@@ -1,18 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,700");
 .animated-menu {
-  margin: auto;
   position: fixed;
-  height: 100%;
   width: 100%;
-  bottom: 0;
-  left: 50%;
-  z-index: 5;
-  -webkit-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
-  max-width: 768px;
-  border-bottom: 0;
-  overflow: hidden;
+  z-index: 99;
 }
 .animated-menu h1 {
   font-family: "Comfortaa", cursive;
@@ -25,6 +15,7 @@
   position: absolute;
   display:none;
   top: 0;
+  height: 5vh;
   left: 50%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -178,10 +169,10 @@
 }
 
 
-.animated-menu .footer {
+.animated-menu .nav-footer {
   position: fixed;
   top: 0px;
-  height: 8%;
+  height: 100%;
   width: 100%;
   background: #7579ff;
   z-index: 1;
