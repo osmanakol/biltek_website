@@ -175,7 +175,7 @@ body{
   
     a{
     position: relative;;
-    color: aquamarine;
+    color: aquamarine !important;
     background-color: darkslategrey;
     padding: 12px 110px ;
     font-size: 15px;
