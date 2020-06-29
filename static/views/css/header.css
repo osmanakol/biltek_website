@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  height: 100vh;
+  height: 100vh;  /*to change site size. if you add about seciton you should change this */ 
 }
 
 #header {
@@ -9,7 +9,7 @@ html {
   transition: all ease 1s;
 }
 
-.bground {
+.header-bground {
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
   background-image: linear-gradient(black, rgba(0, 0, 0, 0.2)),
     url("https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
@@ -45,7 +45,7 @@ html {
 /*------------------------
     Inside The Box
 ------------------------*/
-
+/*Ankara Yıldırım Beyazıt Üniversitesi*/
 .header-msg {
   font-family: 'Titillium Web', sans-serif;
   font-size: calc(0.7rem + 0.6vw);
@@ -55,6 +55,7 @@ html {
   left: 10%;
 }
 
+/*Bilim Ve Teknoloji Kulübü*/
 .header-msg2 {
   font-family: "Aldrich", sans-serif;
   font-size: calc(3.0rem + 1.6vw);
@@ -63,7 +64,8 @@ html {
   top: 10vh;
 }
 
-.button-info {
+/*Bizden haberdar olmak için*/
+.header-button-info {
   font-family: 'Titillium Web', sans-serif;
   font-size: calc(0.5rem + 0.4vw);
   text-align: center;
@@ -72,7 +74,8 @@ html {
   left: 16vh;
 }
 
-.button {
+/* "Kayıt ol" button */
+.header-button {
   border: 1px solid;
   padding: 20px;
   font-size: calc(0.7rem + 0.4vw);
@@ -149,6 +152,7 @@ html {
   animation: 1.5s linear 0s normal none infinite focuse;
 }
 
+/*white circles which contains social media icons*/
 .slider-nav-item {
   position: relative;
   border-radius: 50%;

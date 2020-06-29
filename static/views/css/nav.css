@@ -8,6 +8,7 @@
 }
 
 /*rgb(104, 110, 107)*/
+
 .navbar {
   position: absolute;
   width: 100vw;
@@ -30,6 +31,7 @@ nav {
   display: block;
 }
 
+/*navbar block*/
 nav ul {
   margin: 0px;
   padding: 0;
@@ -38,6 +40,7 @@ nav ul {
   height: 20px;
 }
 
+/*navbar link boxes*/
 nav li {
   display: inline-block;
   margin-left: 2vw;
@@ -46,21 +49,23 @@ nav li {
   text-align: center;
 }
 
+/*navbar link parts*/
 nav a {
-  color: white;
+  color: white;                /* text color */
   display: inline-block;
   text-decoration: none;
   font-family: "Aldrich", sans-serif;
   font-size: calc(0.9rem + 0.3vw);
 }
 
-nav a::after {
-  box-shadow: 0px 0px 10px white;
+/*Hover animation of navbar (white line)*/
+nav a::after { 
+  box-shadow: 0px 0px 10px white;   
   display: block;
   left: 0px;
   width: 0%;
   height: 3px;
-  background-color: white;
+  background-color: white;         /*line animation color*/
   content: "";
   opacity: 1;
   transition: all 0.25s;
@@ -68,7 +73,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #535353;
+  color: #535353;               
   text-shadow: 0px 0px 20px #ffffff;
 }
 
