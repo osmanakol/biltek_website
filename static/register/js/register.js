@@ -1,3 +1,6 @@
+const { error } = require("console");
+
+//E-mail validation function for register_modal 
 function e_mail_validation() {
 
     const email = document.getElementById("email");
@@ -23,6 +26,7 @@ function e_mail_validation() {
         }
     });
 }
+//Phone number validation for register_modal 
 function phone_validate() {
 
     $(document).ready(function () {
@@ -39,7 +43,7 @@ function phone_validate() {
 
 
 }
-
+//insert universities from database to university combobox  
 function getUniversity() {
     $.ajax({
         url: "/api/university",
@@ -58,6 +62,7 @@ function getUniversity() {
         }
     })
 }
+//insert departments from database to department combobox according to selected university  
 
 function getDepartmentsById() {
 
@@ -121,20 +126,22 @@ function submit_validation() {
 
             success(res) {
                 if (typeof res.error !== "undefined") {
-
+                   //if any input value is null or modified , give an error !
+                    sweetAlert("Kayıt Başarısız ! ", "warning", "Veriler alınamadı,daha sonra tekrar deneyin !", false, false);
                 }
                 else {
 
-                    
+                    //if registration is succesfull !
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
                     $('#myModal1').modal('hide');
                     $("#form")[0].reset();
                 }
+            },
+            
+            error: function(res){
+                //if there is an error in db side!
+                sweetAlert("Kayıt Başarısız ! ", "warning", "Daha sonra tekrar deneyin !", false, false);
             }
-            //TODO ,ERROR EKLENECEK
-
-
-
         })
 
 
@@ -143,7 +150,7 @@ function submit_validation() {
 
 
 
-
+//general sweetalert function to give feedback to user
 function sweetAlert(title, icon, text, confirmButton, cancelButton, timer) {
     Swal.fire({
         title: `${title}`,
