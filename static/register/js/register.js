@@ -82,7 +82,7 @@ function getDepartmentsById() {
 /*Form submit validation*/
 function submit_validation() {
 
-   
+
     /**Get user input */
     const email = $("#email");
     const nameSurname = $("#id_name");
@@ -107,33 +107,41 @@ function submit_validation() {
     }
     else {
         //save data in database
-$.ajax({
-
-url:`/api/participant`,
-type:"POST",
-data:{
-"name_surname":nameSurname,
-""
-
-
-
-}
-
+        $.ajax({
+            url: `/api/participant`,
+            type: "POST",
+            data: {
+                "name_surname": nameSurname.val(),
+                "university": school.text(),
+                "department": department.text(),
+                "email": email.val(),
+                "phone": phone.val()
+            },
 
 
+            success(res) {
+                if (typeof res.error !== "undefined") {
 
-})
+                }
+                else {
+
+                    
+                    sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
+                    $('#myModal1').modal('hide');
+                    $("#form")[0].reset();
+                }
+            }
+            //TODO ,ERROR EKLENECEK
 
 
 
+        })
 
-        
-        sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-        $('#myModal1').modal('hide');
-        $("#form")[0].reset();
+
     }
-    /**Check this input */
 }
+
+
 
 
 function sweetAlert(title, icon, text, confirmButton, cancelButton, timer) {
