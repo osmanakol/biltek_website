@@ -14,12 +14,12 @@ export class ParticipantController {
         const result = await this.participantService.create(new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone)).then((result) => {
             res.status(201).json({
                 data: result,
-                message: "OK"
+                status: "Success"
             })
         }).catch(err => {
             res.json({
                 err: err,
-                message: "Bir hata oluştu"
+                status: "Failed"
             })
         })
     }
