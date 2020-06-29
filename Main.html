@@ -66,7 +66,7 @@
           <div class="nav-footer"></div>
         </div>
     </div> 
-
+<section id="wrapper"> <!-- ENTER OTHER SECTIONS INSIDE THIS SECTION-->
     <section id="header">
         <div class="bground"></div>
         <div class="schoolName">
@@ -87,12 +87,12 @@
         </div>
 
     </section>
-
+</section>
     <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
 const navlist = document.querySelector("#navlist");
 const links = navlist.querySelectorAll("li a");
-const header = document.querySelector("#header");
+const wrapper = document.querySelector("#wrapper");
 
 menu.addEventListener("click", function() {
   setTimeout(() => {
@@ -101,7 +101,7 @@ menu.addEventListener("click", function() {
   navlist.classList.toggle("animate-right");
 });
 
-header.addEventListener("click", function(e){
+wrapper.addEventListener("click", function(e){
     e.preventDefault();
     setTimeout(() => {
       menu.classList.remove("active");
