@@ -11,7 +11,7 @@ export class ParticipantController {
     }
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
 
-        const result = await this.participantService.create(new ParticipantModel(req.body.name, req.body.surName, req.body.universityId,req.body.departmentId, req.body.email)).then((result) => {
+        const result = await this.participantService.create(new ParticipantModel(req.body.name_surname, req.body.universityId,req.body.departmentId, req.body.email)).then((result) => {
             res.status(201).json({
                 data: result,
                 message: "OK"
