@@ -2,127 +2,14 @@
 <html lang="tr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sliding Perspective</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/views/css/nav.css">
-    <link rel="stylesheet" href="static/views/css/header.css">
-    <link rel="stylesheet" href="static/views/css/mobileNav.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+   
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="navbar-container" id="navbarNav">
-            <img class="aybulogo" src="./static/views/img/aybulogo.png">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="">
-                        <pt>Ana Sayfa</pt>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#about">
-                        <pt>Hakkımızda</pt>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#teams">
-                        <pt>Takımlarımız</pt>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#events">
-                        <pt>Etkinlikler</pt>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#photos">
-                        <pt>Fotoğraflar</pt>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav> 
-    
-    <div class="animated-menu">
+ 
 
-        <div class="nav">
-          <a  id="menu"><span></span></a>
-          <ul id="navlist" class="animate-right">
-            <li><a href="#">Ana Sayfa</a></li>
-            <li><a href="#">Hakkımızda</a></li>
-            <li><a href="#">Takımlarımız</a></li>
-            <li><a href="#">Etkinlikler</a></li>
-            <li><a href="#">Fotoğraflar</a></li>
-          </ul>
-          <div class="nav-footer"></div>
-        </div>
-    </div> 
-<section id="wrapper"> <!--!ENTER OTHER SECTIONS INSIDE THIS SECTION OTHERWISE MOBILENAV JS NOT WORKS CORRECTLY-->
-    <section id="header">
-        <div class="header-bground"></div>
-        <div class="schoolName">
-            <div class="header-box">
-                <h1 class="header-msg">Ankara Yıldırım Beyazıt Üniversitesi</h1>
-                <h2 class="header-msg2">Bilim Ve Teknoloji Kulübü</h2>
-                <p class="header-button-info">Bizden haberdar olmak için</p>
-                <a class="header-button" onclick="location.href='https://www.google.com.tr/'">KAYIT OL</a>
-            </div>
-        </div>
-        
-        <div class="social-icons">
-            <a href="https://twitter.com/aybubiltek" class="slider-nav-item"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/aybubiltek/" class="slider-nav-item"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/user/ybubiltek" class="slider-nav-item"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/aybubiltek/" class="slider-nav-item"><i class="fab fa-linkedin-in"></i></a>
 
-        </div>
-
-    </section>
-</section>
-    <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-const navlist = document.querySelector("#navlist");
-const links = navlist.querySelectorAll("li a");
-const wrapper = document.querySelector("#wrapper");
-
-// MOBILENAV JS
-menu.addEventListener("click", function() {
-  setTimeout(() => {
-    menu.classList.toggle("active");
-  }, 600);
-  navlist.classList.toggle("animate-right");
-});
-
-wrapper.addEventListener("click", function(){
-    setTimeout(() => {
-      menu.classList.remove("active");
-    }, 200);
-    setTimeout(() => {
-      navlist.classList.add("animate-right");
-    }, 0);
-});
-
-links.forEach(link => {
-  link.addEventListener("click", function() {
-    setTimeout(() => {
-      menu.classList.remove("active");
-    }, 1000);
-    setTimeout(() => {
-      navlist.classList.add("animate-right");
-    }, 800);
-  });
-});
-
-    </script>
 
 </body>
 

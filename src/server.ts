@@ -1,11 +1,12 @@
 import { host,port } from "../host.json";
 import app from "./app";
-
+import { HOST,PORT } from "./config";
  /**
   * @param port
   * @param host
   * ? create server for your app
   */
-app.listen(port,()=>{
-    console.log(`Server Çalışıyor, http://${host}:${port}`)
+const port2 = PORT || 3003;
+app.listen(port2,()=>{
+    console.log(`Server Çalışıyor, http://${HOST}:${PORT}`)
 });

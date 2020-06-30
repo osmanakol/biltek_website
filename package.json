@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "description": "Science and Technology Club Website",
   "main": "server.ts",
+  "engines": {
+    "node": "12.17.0",
+    "npm": "6.14.4"
+  },
   "scripts": {
-    "start": "ts-node-dev --respawn src/server.ts",
-    "dev": "nodemon --exec ts-node src/server.ts",
-    "build": "tsc",
+    "deployment": "ts-node-dev --respawn src/server.ts",
+    "start": "node dist/src/server.js",
+    "dev": "nodemon  -r dotenv/config --exec ts-node src/server.ts",
+    "build": "tsc --outDir dist",
     "dev:debug": "ts-node-dev --inspect --respawn src/server.ts"
   },
   "repository": {
@@ -35,6 +40,7 @@
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/express": "^4.17.6",
+    "@types/express-handlebars": "^3.1.0",
     "@types/mongoose": "^5.7.13",
     "@types/node": "^13.13.2",
     "ts-node": "^8.9.0",
@@ -43,7 +49,9 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
     "mongoose": "^5.9.10"
   }
 }
