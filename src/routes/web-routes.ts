@@ -11,6 +11,11 @@ export class WebRoutes {
             , res: Response) => {
             res.render("site/comingSoon", { layout: "comingSoonLayout" })
         })
+
+        //!Register ı denemek için yazılmıştır anasayfada kayıt ol aktif olduğunda silinecek ve anasayfaya adapte edilecek
+        this.router.get("/register",(req:Request,res:Response)=>{
+            res.render("site/participant", {layout: "comingSoonLayout" })
+        })
         
         this.router.get("/homepage",(req:Request,res:Response)=>{
             res.render("site/homepage",{layout:"mainLayout"})

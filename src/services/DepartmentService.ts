@@ -44,4 +44,9 @@ export class DepartmentService{
         const result = await this.repository.findById(id)
         return result
     }
+
+    public getDepartmentsById = (universityId:string)=>{
+        const result = this.repository.getDeparmentsById(universityId);
+        return result;
+    }
 }

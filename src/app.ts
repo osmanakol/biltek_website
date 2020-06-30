@@ -18,7 +18,6 @@ class App {
         this.config();
         this.routeConfig();
         this.mongoSetup();
-
     }
 
     private handlebars = ()=>{

@@ -100,4 +100,22 @@ export class DepartmentController {
             })
         }
     }
+
+    public getDepartmentsByUniversityId = (req:Request,res:Response,next:NextFunction)=>{
+        try {
+            const result = this.departmentService.getDepartmentsById(req.query.universityId.toString()).sort({"departmentName":1}).collation({"locale":"tr"}).lean().exec();
+            result.then((departments)=>{
+                res.status(200).json({
+                    data:departments,
+                    state:"Success"
+                })
+            })
+       
+        } catch (error) {
+            res.json({
+                err:error,
+                state:"Error"
+            })
+        }
+    } 
 }

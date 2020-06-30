@@ -48,6 +48,9 @@ export class ApiRoutes {
             .post(this.deparmentController.createMany)
             .put(this.deparmentController.update)
             .delete(this.deparmentController.delete);
+            
+        this.router.route('/departments')
+            .get(this.deparmentController.getDepartmentsByUniversityId);
 
         return this.router;
     }
