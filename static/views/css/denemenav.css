@@ -1,0 +1,142 @@
+/* .d-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #2f3538;
+  display: flex;
+}
+
+.d-nav-right {
+  width: 30%;
+  height: 100%;
+  float: left;
+  padding: 7px 10px;
+  display: flex;
+}
+
+.d-nav-left {
+  width: 70%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+}
+
+.d-nav-logo {
+  height: 100%;
+  animation-name: nav-logo;
+  animation-duration: 4s;
+  animation: nav-logo 4s infinite;
+}
+
+@keyframes nav-logo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.d-nav-vl {
+  border-left: 1px solid white;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.d-nav-schoolName p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.d-nav-btn-group {
+  display: block;
+  width: max-content;
+  height: auto;
+  margin-left: auto;
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  padding: 20px;
+}
+
+.d-nav-btn-group a {
+  margin: 0 5px;
+  color: white !important;
+} */
+.deneme-nav {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  display: flex;
+}
+
+.deneme-nav-left {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  padding: 5px 20px;
+}
+
+.deneme-nav-right {
+  width: 75%;
+  height: 100%;
+}
+
+.deneme-nav-logo {
+  height: 100%;
+  animation: nav-logo 4s infinite;
+  cursor: pointer;
+}
+
+@keyframes nav-logo {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.deneme-nav-vl {
+  border-right: 2px solid white;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.deneme-nav-left-p p {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 18pt;
+  margin-left: 10px;
+}
+
+.deneme-nav-button-group {
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+.deneme-nav-button-group a {
+  margin: 0 13px;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .deneme-nav {
+    display: none;
+  }
+}

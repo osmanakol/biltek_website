@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  height: 100vh;  /*to change site size. if you add about seciton you should change this */ 
+  height: 100vh; /*to change site size. if you add about seciton you should change this */
 }
 
 #header {
@@ -27,7 +27,6 @@ html {
   width: auto;
   height: auto;
   text-align: left;
-  cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -47,7 +46,7 @@ html {
 ------------------------*/
 /*Ankara Yıldırım Beyazıt Üniversitesi*/
 .header-msg {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: calc(0.7rem + 0.6vw);
   color: black;
   text-align: center;
@@ -58,7 +57,7 @@ html {
 /*Bilim Ve Teknoloji Kulübü*/
 .header-msg2 {
   font-family: "Aldrich", sans-serif;
-  font-size: calc(3.0rem + 1.6vw);
+  font-size: calc(3rem + 1.6vw);
   text-align: center;
   color: black;
   top: 10vh;
@@ -66,7 +65,7 @@ html {
 
 /*Bizden haberdar olmak için*/
 .header-button-info {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: calc(0.5rem + 0.4vw);
   text-align: center;
   color: black;
@@ -79,7 +78,7 @@ html {
   border: 1px solid;
   padding: 20px;
   font-size: calc(0.7rem + 0.4vw);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 700;
   letter-spacing: 5px;
   transition: all 300ms ease-in-out;
@@ -93,13 +92,14 @@ html {
   left: 50%;
   transform: translate(-50%, 50%);
   text-align: center;
+  cursor: pointer;
 }
 
 /*------------------------
     Social media bar
 ------------------------*/
 
-.social-icons {
+.homepage-header-social-icons {
   position: absolute;
   top: 85vh;
   left: 50%;
@@ -107,7 +107,7 @@ html {
   width: fit-content;
 }
 
-.social-icons a {
+.homepage-header-social-icons a {
   border-radius: 50px;
   color: #3f345f;
   display: inline-block;
@@ -118,7 +118,7 @@ html {
   font-size: 26px;
 }
 
-.social-icons a i {
+.homepage-header-social-icons a i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -130,12 +130,12 @@ html {
     Animations
 ---------------------*/
 
-.button:hover {
+.header-button:hover {
   background-color: #404040;
   color: white !important;
 }
 
-.social-icons a:hover i {
+.homepage-header-social-icons a:hover i {
   transform: translate(-50%, -50%) rotate(360deg);
 }
 
@@ -179,8 +179,8 @@ html {
     Responsive Section
 -----------------------*/
 
-@media screen and (max-width: 1200px){
-  .social-icons a{
+@media screen and (max-width: 1200px) {
+  .homepage-header-social-icons a {
     height: 48px;
     width: 48px;
     margin: 15px 14px;
@@ -189,8 +189,7 @@ html {
 }
 
 @media screen and (max-width: 780px) {
-  .social-icons a
-  {
+  .homepage-header-social-icons a {
     height: 46px;
     width: 46px;
     margin: 15px 12px;
@@ -198,9 +197,8 @@ html {
   }
 }
 
-@media  screen and (max-width: 680px) {
-  .social-icons a
-  {
+@media screen and (max-width: 680px) {
+  .homepage-header-social-icons a {
     height: 44px;
     width: 44px;
     margin: 15px 10px;
@@ -208,9 +206,8 @@ html {
   }
 }
 
-@media  screen and (max-width: 620px) {
-  .social-icons a
-  {
+@media screen and (max-width: 620px) {
+  .homepage-header-social-icons a {
     height: 42px;
     width: 42px;
     margin: 15px 8px;
@@ -218,9 +215,8 @@ html {
   }
 }
 
-@media  screen and (max-width: 430px) {
-  .social-icons a
-  {
+@media screen and (max-width: 430px) {
+  .homepage-header-social-icons a {
     height: 40px;
     width: 40px;
     margin: 15px 7px;
@@ -228,60 +224,66 @@ html {
   }
 }
 
-@media screen and (max-height: 800px){
-  .social-icons {
+@media screen and (max-height: 800px) {
+  .homepage-header-social-icons {
     top: 80vh;
   }
 }
 
-@media screen and (max-height: 700px){
-  .social-icons{
+@media screen and (max-height: 700px) {
+  .homepage-header-social-icons {
     top: 85vh;
   }
-  #header,.bground,
-  body,html{
+  #header,
+  .bground,
+  body,
+  html {
     height: 105vh;
   }
 }
 
-@media screen and (max-height: 625px){
-  .social-icons{
+@media screen and (max-height: 625px) {
+  .homepage-header-social-icons {
     top: 88vh;
   }
 }
-@media screen and (max-height: 560px){
-  .bground,#header,
-  body,html{
+@media screen and (max-height: 560px) {
+  .bground,
+  #header,
+  body,
+  html {
     height: 117vh;
   }
-  .social-icons{
+  .homepage-header-social-icons {
     top: 90vh;
   }
 
-  .header-msg{
+  .header-msg {
     font-size: calc(0.75rem + 0.5vw);
   }
-  .header-msg2{
+  .header-msg2 {
     font-size: calc(2.5rem + 0.5vw);
   }
-  .button-info{
+  .button-info {
     font-size: calc(0.75rem + 0.3vw);
   }
-  .button{
+  .button {
     font-size: calc(0.8rem + 0.3vw);
   }
 }
-@media screen and (max-height: 500px){
-  .social-icons{
+@media screen and (max-height: 500px) {
+  .homepage-header-social-icons {
     top: 91vh;
   }
 }
-@media screen and (max-height: 400px){
-  .social-icons{
+@media screen and (max-height: 400px) {
+  .homepage-header-social-icons {
     top: 100vh;
   }
-  .bground,#header,
-  body,html{
+  .bground,
+  #header,
+  body,
+  html {
     height: 130vh;
   }
 }
