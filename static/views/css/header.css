@@ -13,7 +13,7 @@ html {
   /*on top, on bottom vb özelliklerde de kullanabilirsiniz*/
   background-image: linear-gradient(black, rgba(0, 0, 0, 0.2)),
     url("https://images.pexels.com/photos/256262/pexels-photo-256262.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   height: 100vh;
 }
