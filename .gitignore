@@ -2,5 +2,5 @@ node_modules
 .env
 .vscode
 dist
-host.json
 package-lock.json
+host.json

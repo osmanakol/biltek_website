@@ -1,6 +1,5 @@
 import bodyParser from "body-parser";
-import express, { Application, Router } from "express";
-import { __static } from "../host.json";
+import express, { Application } from "express";
 import connection from "./models/configuration/connection";
 import { ApiRoutes } from "./routes/api-routes";
 import {WebRoutes} from "./routes/web-routes";
