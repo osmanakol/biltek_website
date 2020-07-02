@@ -14,7 +14,7 @@ export class WebRoutes {
 
         //!Register ı denemek için yazılmıştır anasayfada kayıt ol aktif olduğunda silinecek ve anasayfaya adapte edilecek
         this.router.get("/register",(req:Request,res:Response)=>{
-            res.render("site/participant", {layout: "comingSoonLayout" })
+            res.render("site/participant", {layout: "mainLayout" })
         })
         
         this.router.get("/homepage",(req:Request,res:Response)=>{

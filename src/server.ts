@@ -1,4 +1,3 @@
-import { host,port } from "../host.json";
 import app from "./app";
 import { HOST,PORT } from "./config";
  /**
