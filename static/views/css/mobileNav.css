@@ -24,7 +24,9 @@ You will probably don't need to change this part but if you need talk to team-2(
   -ms-transform: translate(-50%);
   transform: translate(-50%);
   width: 100%;
-}/* transform: perspective(200px) rotate(180deg) animate-right*/
+}
+
+/* transform: perspective(200px) rotate(180deg) animate-right*/
 .animated-menu .nav ul {
   margin: 50px auto 0px auto;
   width: 70%;
