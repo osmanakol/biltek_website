@@ -13,14 +13,16 @@ body, html{
     filter: brightness(78%);
 }
 .errorpage-clubname {
-    top: 0;
-    transform: translateX(213px);
+    top: 25px;
+    transform: translateX(170px);
     position: absolute;
+    background: black;
     font-size: calc(3.5rem + 0.5vw);
     font-family: 'Libre Barcode 39 Text', cursive;
 }
 .errorpage-clubname p{
-    margin: 37px 0;
+    margin: 0px 3px;
+    color: white;
 }
 
 .errorpage-boxes{
@@ -35,11 +37,12 @@ body, html{
     width: 600px;
     height: 420px;
     transform: translate(-25%, 37%);
-    transition: 2s;
+    
 }
 .errorpage-box-homepage.active{
     transform: translate(17%, 62%);
     box-shadow: 2px 5px 18px;
+    transition: 2s;
     z-index: 200;
 }
 .errorpage-box-homepage img{
@@ -47,7 +50,7 @@ body, html{
 }
 
 .errorpage-box-terminal{
-    transition: 2s;
+    
     width: 600px;
     height: 420px;
     background-color: black;
@@ -57,6 +60,7 @@ body, html{
 .errorpage-box-terminal.active{
     transform: translate(-25%, -63%);
     box-shadow: none;
+    transition: 2s;
 }
 
 .errorpage-box-terminal-text-one{
@@ -72,11 +76,11 @@ body, html{
 }   
 @keyframes textclip {
 	50% {
-        text-shadow: 1px 0  orange, -2px 0 blue, -5px 0 green;
+        text-shadow: 1px 0  blue, -2px 0 red, -5px 0 green;
 		
     }
     100%{
-        text-shadow: -1px 0 blue, 2px 0 orange, 5px 0 green;
+        text-shadow: -1px 0 blue, 2px 0 red, 5px 0 green;
     }
 }
 .errorpage-box-terminal-texts{
