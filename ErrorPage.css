@@ -35,52 +35,70 @@ body, html{
     width: 600px;
     height: 420px;
     transform: translate(-25%, 37%);
+    transition: 2s;
+}
+.errorpage-box-homepage.active{
+    transform: translate(17%, 62%);
+    box-shadow: 2px 5px 18px;
+    z-index: 200;
 }
 .errorpage-box-homepage img{
     height: 100%;
 }
 
 .errorpage-box-terminal{
+    transition: 2s;
     width: 600px;
     height: 420px;
     background-color: black;
     transform: translate(17%, -37%);
     box-shadow: 2px 5px 18px;
 }
-.errorpage-box-terminal-texts{
-    display:flex;
+.errorpage-box-terminal.active{
+    transform: translate(-25%, -63%);
+    box-shadow: none;
+}
+
+.errorpage-box-terminal-text-one{
     position: relative;
-    top: 5%;
+    top: 8%;
+    font-size: calc(6.1rem + 0.5vw);
+    margin: 0;
+    color: green;
+    text-shadow: 0 0 5px green;
+    text-align: center;
+    font-family: 'Shojumaru', cursive;
+    animation: textclip 1s linear infinite;
+}   
+@keyframes textclip {
+	50% {
+        text-shadow: 1px 0  orange, -2px 0 blue, -5px 0 green;
+		
+    }
+    100%{
+        text-shadow: -1px 0 blue, 2px 0 orange, 5px 0 green;
+    }
+}
+.errorpage-box-terminal-texts{
+    margin-left: 14px;
+    position: relative;
+    top: 20%;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
-    transform: translate(-39% , 125%);
 }
-.errorpage-box-terminal p{
+.errorpage-box-terminal-texts-row-one{
+    margin: 5px 0;
+}
+.errorpage-box-terminal-text-two, .errorpage-box-terminal-text-three{
     color: rgb(73, 107, 5);
     text-shadow: 0 0 5px rgb(41, 61, 1);
 }
 
-.errorpage-box-terminal-text-one{
-    font-size: calc(6.1rem + 0.5vw)!important;
-    margin: 0;
-    text-align: center;
-    transform: translate(163% ,-118%);
-    font-family: 'Shojumaru', cursive !important;
-    animation: textclip 1s linear infinite;
 
-}   
-@keyframes textclip {
-	50% {
-        text-shadow: 1px 0 blue, -2px 0 red, -5px 0 green;
-		
-    }
-    100%{
-        text-shadow: -1px 0 blue, 2px 0 red, 5px 0 green;
-    }
-}
 .errorpage-box-terminal-username{
     color: rgb(1, 75, 136);
     text-shadow: 0 0 3px rgb(1, 75, 136);
+    transition: 2s;
 }
 .errorpage-box-terminal-folder{
     color: purple;
