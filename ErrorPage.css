@@ -1,0 +1,85 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+#errorpage-error{
+    height: 100vh;
+}
+.errorpage-bground{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    background-color: white;
+    filter: brightness(78%);
+}
+.errorpage-clubname {
+    top: 0;
+    transform: translateX(213px);
+    position: absolute;
+    font-size: calc(3.5rem + 0.5vw);
+    font-family: 'Libre Barcode 39 Text', cursive;
+}
+.errorpage-clubname p{
+    margin: 37px 0;
+}
+
+.errorpage-boxes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+}
+
+.errorpage-box-homepage{
+    width: 600px;
+    height: 420px;
+    transform: translate(-25%, 37%);
+}
+.errorpage-box-homepage img{
+    height: 100%;
+}
+
+.errorpage-box-terminal{
+    width: 600px;
+    height: 420px;
+    background-color: black;
+    transform: translate(17%, -37%);
+    box-shadow: 2px 5px 18px;
+}
+
+.errorpage-box-terminal p{
+    font-size: 19px;
+    color: yellowgreen;
+    text-shadow: 0 0 5px yellowgreen;
+    position: relative;
+    top: 15%;
+}
+
+.errorpage-box-terminal a{
+    font-size: 19px;
+    position: relative;
+    top:15%;
+}
+
+.errorpage-box-terminal-text-1{
+    font-size: calc(6.1rem + 0.5vw)!important;
+    margin: 0;
+    text-align: center;
+
+}   
+.errorpage-box-terminal-username{
+    color: rgb(1, 75, 136);
+    text-shadow: 0 0 3px rgb(1, 75, 136);
+}
+.errorpage-box-terminal-folder{
+    color: purple;
+    text-shadow: 0 0 3px purple;
+}
+.errorpage-box-terminal-username, .errorpage-box-terminal-folder{
+   transform: translateY(160%)!important; 
+}
+.errorpage-box-terminal-text-2, .errorpage-box-terminal-text-3{
+    transform: translate(35%, 160%);
+    margin: 0.2em 0!important;
+}
