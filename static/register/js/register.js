@@ -7,19 +7,21 @@ function e_mail_validation() {
 
         if (email !== '') {
             if (emailPattern.test(email)) {
+                // if pattern match ,display check icon
                 $('#register-modal-mail-valid').css('display', 'block');
                 $('#register-modal-mail-warning').css('display', 'none');
                 $('#register-modal-mail-invalid').css('display', 'none');
 
             }
             else {
+                // if pattern does not match ,display invalid icon
                 $('#register-modal-mail-valid').css('display', 'none');
                 $('#register-modal-mail-warning').css('display', 'none');
                 $('#register-modal-mail-invalid').css('display', 'block');
             }
         }
         else {
-
+            // if mail input is empty ,display warning icon
             $('#register-modal-mail-valid').css('display', 'none');
             $('#register-modal-mail-warning').css('display', 'block');
             $('#register-modal-mail-invalid').css('display', 'none');
@@ -131,7 +133,7 @@ function submit_validation() {
                 }
                 else {
 
-                    
+
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
                     //removing icons after registration successfull
                     $('#register-modal-mail-valid').css('display', 'none');

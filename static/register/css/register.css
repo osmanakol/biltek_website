@@ -96,7 +96,7 @@
 .register-form-label {
   display: inherit;
 }
-
+/* valid,invalid and warning icons located */
 #register-modal-mail-valid{
   color:green;
   display: none;
@@ -125,7 +125,7 @@
     font-size: 24px;
       right: 12px
   } 
-
+/* ********************************************** */
 /*Responsive*/
 @media screen and (max-width: 500px) {
   .modal-title {
