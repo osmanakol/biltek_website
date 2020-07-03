@@ -127,8 +127,8 @@ function submit_validation() {
 
                     
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-                    $('#myModal1').modal('hide');
-                    $("#form")[0].reset();
+                    $('#registration-form-for-homepage').modal('hide');
+                    $("#registration-form-for-homepage")[0].reset();
                 }
             }
             //TODO ,ERROR EKLENECEK
