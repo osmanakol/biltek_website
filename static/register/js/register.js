@@ -127,7 +127,7 @@ function submit_validation() {
 
                     
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-                    $('#registration-form-for-homepage').modal('hide');
+                    $('#register-modal-for-homepage').modal('hide');
                     $("#registration-form-for-homepage")[0].reset();
                 }
             }
