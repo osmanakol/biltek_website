@@ -103,8 +103,8 @@ label.invalid::before {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 129px;
-  right: 23px;
+  top: 37px;
+  right: 6px;
   z-index: 100;
 }
 label.valid::before {
