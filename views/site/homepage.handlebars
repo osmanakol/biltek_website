@@ -1,5 +1,6 @@
 <section id="wrapper"> <!--!ENTER OTHER SECTIONS INSIDE THIS SECTION OTHERWISE MOBILENAV JS NOT WORKS CORRECTLY-->
     <section id="header">
+        {{!-- registration modal form open when click kayıt ol button --}}
         <div class="modal fade" id="register-modal-for-homepage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -18,7 +19,7 @@
                             <i class="fas fa-user register-fa-lg-user fa-fw" aria-hidden="true"></i>
                             <label class="sr-only register-form-label" for="form-first-last-name">Ad-Soyad</label>
 
-                            <input type="text" id="id_name" name="form-first-name" required placeholder="Ad-Soyad..."
+                            <input type="text" id="id_name" name="form-first-name"  placeholder="Ad-Soyad..."
                                 class="form-first-last-name form-control input-error register-form-input"
                                 id="form-first-last-name">
                         </div>
@@ -26,7 +27,7 @@
                             <h5>E-Mail(*)</h5>
                             <i class="fas fa-envelope register-fa-lg-mail fa-fw" aria-hidden="true"></i>
                             <label class="emailBox register-form-label"></label>
-                            <input type="email" id="email" required placeholder="example@example.com"
+                            <input type="email" id="email"  placeholder="example@example.com"
                                 class="form-email form-control register-form-input" onkeydown="e_mail_validation()">
                         </div>
                         <div class="form-group register-form-h5 register-form-group">
@@ -41,28 +42,24 @@
                         <div class="form-group register-form-h5 register-form-group">
 
                             <h5>Okul(*)</h5>
-                            <select class="register-form-select" name="okul" onchange="getDepartmentsById()" required
+                            <select class="register-form-select" name="okul" onchange="getDepartmentsById()" 
                                 id="id_school">
                                 <option value="" disabled selected hidden>Okulunuzu seçiniz...</option>
-                                {{!-- <option value="ODTÜ ">ODTÜ</option>
-                                        <option value="itü">İTÜ</option>
-                                        <option value="aybü">AYBÜ</option>
-                                        <option value="gazi">GAZİ</option> --}}
                             </select>
                         </div>
                         <div class="form-group register-form-h5 register-form-group">
 
                             <h5>Bölüm(*)</h5>
-                            <select class="register-form-select" name="bölüm" required id="id_dep">
+                            <select class="register-form-select" name="bölüm"  id="id_dep">
                                 <option value="" disabled selected hidden>Bölümünüzü seçiniz...</option>
-                                {{!-- <option value="ceng ">CENG</option>
-                                        <option value="ieee">IEEE</option>
-                                        <option value="civil">CIVENG</option>
-                                        <option value="med">MEDICINE</option> --}}
+                               
                             </select>
                         </div>
                         <div class="modal-footer">
                             <a class="register-modal-footer-a" onclick=" submit_validation()">
+                                {{!-- each span;
+                                for button animation in kayıt ol button
+                                represent left right top and bottom lines --}}
                                 <span></span>
                                 <span></span>
                                 <span></span>
