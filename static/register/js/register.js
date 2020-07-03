@@ -127,6 +127,11 @@ function submit_validation() {
 
                     
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
+                    //removing valid ,invalid png after registration successfull
+                    const emailBox = document.querySelector('.emailBox');
+                    emailBox.classList.remove('invalid');
+                    emailBox.classList.remove('valid');
+                    //*********************************************************** */
                     $('#register-modal-for-homepage').modal('hide');
                     $("#registration-form-for-homepage")[0].reset();
                 }
