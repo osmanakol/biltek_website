@@ -1,26 +1,32 @@
 function e_mail_validation() {
 
-    const email = document.getElementById("email");
+    var email = $("#email").val();
 
-    email.addEventListener('input', () => {
-        const emailBox = document.querySelector('.emailBox');
-        const emailText = document.querySelector('.emailText');
-        const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+    const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/;
+    $(document).ready(function () {
 
-        if (email.value.match(emailPattern)) {
-            emailBox.classList.add('valid');
-            emailBox.classList.remove('invalid');
+        if (email !== '') {
+            if (emailPattern.test(email)) {
+                $('#register-modal-mail-valid').css('display', 'block');
+                $('#register-modal-mail-warning').css('display', 'none');
+                $('#register-modal-mail-invalid').css('display', 'none');
 
-        } else {
-            emailBox.classList.add('invalid');
-            emailBox.classList.remove('valid');
+            }
+            else {
+                $('#register-modal-mail-valid').css('display', 'none');
+                $('#register-modal-mail-warning').css('display', 'none');
+                $('#register-modal-mail-invalid').css('display', 'block');
+            }
+        }
+        else {
+
+            $('#register-modal-mail-valid').css('display', 'none');
+            $('#register-modal-mail-warning').css('display', 'block');
+            $('#register-modal-mail-invalid').css('display', 'none');
 
         }
-        if (email.value == 0) {
-            emailBox.classList.remove('invalid');
-            emailBox.classList.remove('valid');
 
-        }
+
     });
 }
 function phone_validate() {
@@ -127,10 +133,10 @@ function submit_validation() {
 
                     
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-                    //removing valid ,invalid png after registration successfull
-                    const emailBox = document.querySelector('.emailBox');
-                    emailBox.classList.remove('invalid');
-                    emailBox.classList.remove('valid');
+                    //removing icons after registration successfull
+                    $('#register-modal-mail-valid').css('display', 'none');
+                    $('#register-modal-mail-warning').css('display', 'none');
+                    $('#register-modal-mail-invalid').css('display', 'none');
                     //*********************************************************** */
                     $('#register-modal-for-homepage').modal('hide');
                     $("#registration-form-for-homepage")[0].reset();
