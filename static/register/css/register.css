@@ -97,22 +97,34 @@
   display: inherit;
 }
 
-label.valid::before,
-label.invalid::before {
-  content: "";
-  position: absolute;
-  width: 24px;
-  height: 24px;
+#register-modal-mail-valid{
+  color:green;
+  display: none;
   top: 37px;
-  right: 6px;
-  z-index: 100;
-}
-label.valid::before {
-  background: url("../../img/valid.png") no-repeat center / cover;
-}
-label.invalid::before {
-  background: url("../../img/error.png") no-repeat center / cover;
-}
+  right: 13px;
+  font-size: 24px;
+  }
+  #register-modal-mail-invalid{
+  color: red;
+  display: none;
+  top: 37px;
+  right: 13px;
+  font-size: 24px;
+  }
+  #register-modal-mail-warning{
+  color: orange;
+  display: none;
+  right: 13px;
+  font-size: 24px;
+  top: 37px;
+  }
+  
+  .register-mail-fas fa-check{
+    top: 120px;
+    position: absolute;
+    font-size: 24px;
+      right: 12px
+  } 
 
 /*Responsive*/
 @media screen and (max-width: 500px) {
