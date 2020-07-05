@@ -27,7 +27,7 @@ export class ApiRoutes {
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
-            .post(this.participantController.createParticipant)
+            .post(this.participantController.validate('createParticipant'),this.participantController.createParticipant)
             .put(this.participantController.updateParticipant)
             .delete(this.participantController.deleteParticipant);
 

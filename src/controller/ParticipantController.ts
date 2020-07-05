@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { ParticipantService } from "../services/ParticipantService";
 import { ParticipantModel } from "../models/participants/participantModel";
 import { UniversityModel } from "../models/universities/universityModel";
+import{body,validationResult} from  "express-validator";
 
 export class ParticipantController {
     private participantService: ParticipantService;
@@ -9,20 +10,50 @@ export class ParticipantController {
     constructor() {
         this.participantService = new ParticipantService()
     }
+    //**participant için validation yapan fonksiyon **//
+    public validate = (method: any) => {
+        switch (method) {
+            case 'createParticipant': {
+                return [ 
+                    body('name_surname', 'invalid name').exists().isLength({min:5}).trim(),
+                    body('email', 'Invalid email').exists().isEmail(),
+                    body('phone').optional(),
+                ] }
+        }
+}
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
-
-        const result = await this.participantService.create(new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone)).then((result) => {
+        //const participantObj=new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone)
+        try{
+            //**validation kontrol */
+            const errors=validationResult(req);
+            console.log("errors,",errors)
+            if (!errors.isEmpty()){
+                res.json({
+                    state:"error",
+                    errors:errors.array()
+                    
+                });
+                return;
+                
+            }
+            //* geçerli input olduğu zaman /
+            const participantObj=new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone)
+            console.log("******object is:\n",participantObj)
             res.status(201).json({
-                data: result,
-                status: "Success"
+                data: await this.participantService.create(participantObj),
+                state: "Success"
+                
             })
-        }).catch(err => {
+        }catch(error){
             res.json({
-                err: err,
-                status: "Failed"
+                err: error,
+                state: "Error"
             })
-        })
+        }
+       
+
     }
+   
 
     public createManyParticipant = async (req: Request, res: Response, next: NextFunction) => {
         try {
