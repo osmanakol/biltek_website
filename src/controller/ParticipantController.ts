@@ -12,14 +12,6 @@ export class ParticipantController {
     }
 
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
-        const errors = validationResult(req);
-        console.log("errors neymis,\n")
-        if (!errors.isEmpty()) {
-            console.log("error bu\n", errors)
-            return res.status(421).json({
-                error: errors
-            });
-        }
         console.log("error yok devam")
         const participantObj = new ParticipantModel(req.body.name_surname, req.body.university, req.body.department, req.body.email, req.body.phone)
         console.log("object is \n", participantObj)

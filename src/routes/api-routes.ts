@@ -2,7 +2,7 @@ import express, { Router, Request, Response } from "express";
 import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
-import {registerValidation} from "../helpers/validation";
+import {registerValidationRules,validate} from "../helpers/validation";
 
 export class ApiRoutes {
     private participantController:ParticipantController;
@@ -28,7 +28,7 @@ export class ApiRoutes {
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
-            .post(registerValidation,this.participantController.createParticipant)
+            .post(registerValidationRules,validate,this.participantController.createParticipant)
             .put(this.participantController.updateParticipant)
             .delete(this.participantController.deleteParticipant);
 

@@ -1,5 +1,4 @@
 import { Schema } from "express-validator";
-
 export const registerSchema:Schema={ 
     name_surname:{
         trim:true,
@@ -15,7 +14,6 @@ export const registerSchema:Schema={
         trim:true,
         isEmail:true,
         errorMessage:"Invalid email",
-
     },
     phone:{
         blacklist:{
@@ -34,7 +32,6 @@ export const registerSchema:Schema={
             errorMessage:"Invalid phone number"
         },
     }
-
 }
 
 
