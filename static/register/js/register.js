@@ -132,11 +132,10 @@ function submit_validation() {
                 }
             }
             //TODO ,ERROR EKLENECEK
-            /*,error(res) {
+            ,error(res) {
 
-                sweetAlert(res.error, "warning", "", false, false, 1500);
-                $('#myModal1').modal('hide');
-            }*/
+                sweetAlert(res.errors, "warning", "", false, false, 1500);
+            }
 
 
 
