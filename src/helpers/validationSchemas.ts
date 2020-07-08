@@ -1,21 +1,29 @@
 import { Schema } from "express-validator";
 export const registerSchema:Schema={ 
     name_surname:{
+        exists:true,
+        errorMessage:"Name_surname propertysi eksik",
         trim:true,
         escape:true,
-        isAlpha:true,
-        errorMessage:"please enter an alphacase",
+        isAlpha:{
+            errorMessage:"Invalid name_surname"
+        },
         isLength:{
             options:{min:5,max:30},
             errorMessage:"Minimum 5 characters required!"
         }
     },
     email:{
+        exists:{
+            errorMessage:"Email property eksik"
+        },
         trim:true,
         isEmail:true,
         errorMessage:"Invalid email",
     },
     phone:{
+        exists:true,
+        errorMessage:"Phone propertysi eksik",
         blacklist:{
             options:['-']
         },
@@ -31,6 +39,14 @@ export const registerSchema:Schema={
             },
             errorMessage:"Invalid phone number"
         },
+    },
+    university:{
+        exists:true,
+        errorMessage:"University property eksik"
+    },
+    department:{
+        exists:true,
+        errorMessage:"Department property eksik"
     }
 }
 
