@@ -1,8 +1,9 @@
-import express, { Router, Request, Response } from "express";
+import express, { Router, Request, Response ,NextFunction} from "express";
 import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
-import {registerValidationRules,validate} from "../helpers/validation";
+import {validate} from "../middlewares/validation";
+import{ParticipantValidationChain} from "../models/participants/participantSchema"
 
 export class ApiRoutes {
     private participantController:ParticipantController;
@@ -28,7 +29,7 @@ export class ApiRoutes {
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
-            .post(registerValidationRules,validate,this.participantController.createParticipant)
+            .post(validate(ParticipantValidationChain),this.participantController.createParticipant)
             .put(this.participantController.updateParticipant)
             .delete(this.participantController.deleteParticipant);
 
