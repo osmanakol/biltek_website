@@ -3,7 +3,7 @@ import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
-import{ParticipantValidationChain} from "../models/participants/participantSchema"
+import{ParticipantValidationChain} from "../models/participants/participantModel"
 
 export class ApiRoutes {
     private participantController:ParticipantController;
