@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 const { ModuleResolutionKind } = require("typescript");
 const { Module } = require("module");
-export default class AdminAccount{
+ class AdminAccount{
   identifyMailService(){
     var index;
     for (index = 0; index < this.email.length; index++) {
@@ -34,12 +34,13 @@ export default class AdminAccount{
   }
 
   async sendMail(mailArray){
-    var uzunluk, indexs, email
+    var uzunluk, indexs, user_email
     for (indexs = 0 , uzunluk = mailArray.length; indexs < uzunluk; indexs++){
-      email = mailArray[indexs];
+      try{
+      user_email = mailArray[indexs];
       let info = await  this.transporter.sendMail({
       from: this.email , 
-      to:email , 
+      to:user_email , 
       subject: "Test",
       text: "Test",
       html: {path:"maildene.html"},
@@ -47,7 +48,14 @@ export default class AdminAccount{
         filename: "dene.jpg",
         path: "denemail.jpg",
       }]
-  })}
-  console.log("Success")
+  })
+  console.log("E-posta "+user_email+" adresine başarıyla gönderildi.")
 }
-}
+catch(err){
+  console.log(err)
+}}}}
+
+admin= new AdminAccount("paaysenur@gmail.com", ".adgjmp.");
+    var adress=["aysenuryeter@gmail.com","paaysenur@hotmail.com","paaysenur@gmail.com","kbberkuk@gmail.com"];
+    admin.sendMail(adress);
+    // console.log(admin.email, admin.email_password, admin.service);
