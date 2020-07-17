@@ -4,24 +4,10 @@ export  class Mailing{
     private email_password:string
     private service:string
     private transporter:any
-    // TODO write better identifying function
     private identifyMailService(){
-      var index;
-      for (index = 0; index < this.email.length; index++) {
-        if(this.email.charAt(index) === '@'){
-            index++;
-            break;
-        }
-      }
-      this.service += this.email[index].toUpperCase();
-      index++;
-      while(1){
-          if(this.email[index] === '.'){
-              break;
-          }
-          this.service += this.email[index];
-          index++;
-      }
+      let mail_service = this.email
+      mail_service = mail_service[0].split("@")[1].split(".")[0]
+      this.service = mail_service
     }
 
     constructor(email:string, email_password:string){
@@ -62,6 +48,3 @@ export  class Mailing{
     }
   }
 }
-/*admin = new AdminAccount("paaysenur@gmail.com", ".adgjmp.");
-var adress=["aysenuryeter@gmail.com","paaysenur@hotmail.com","paaysenur@gmail.com"];
-admin.sendMail(adress); */
