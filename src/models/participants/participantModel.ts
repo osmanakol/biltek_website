@@ -1,5 +1,6 @@
 import { UniversityModel } from "../universities/universityModel";
-import { checkSchema,} from "express-validator";
+import { checkSchema} from "express-validator";
+import ParticipantDbModel from "./participantSchema";
 
 export class ParticipantModel {
     private name_surname: string;
@@ -52,6 +53,14 @@ export const ParticipantValidationChain=checkSchema({
         trim:true,
         isEmail:true,
         errorMessage:"Invalid email",
+        custom:{
+            options:async (value:string)=>{
+                await ParticipantDbModel.findOne({email:value}).then(query =>{
+                     if (query)
+                        return Promise.reject('E-mail already exist'); 
+                 });
+            },
+        }
     },
     phone:{
         exists:{
@@ -60,20 +69,18 @@ export const ParticipantValidationChain=checkSchema({
         blacklist:{
             options:['-']
         },
-        /*optional:{
+        optional:{
             options:{nullable:true}
-        },*/
-        custom:{
-            options:(value:string,{req})=>{
-                if(req.body.phone && (value!='' || value!=undefined)){
-                    console.log("buu",value.match('/^[0-9]+$/'))
-                    if(value.match('/^[0-9]+$/'))
+        },
+        /*custom:{
+            options:(value:string)=>{
+                //if(value!='' || value!=undefined){
+                    if(value.match('/^[0-9]+$/') || value.length==0 || value==undefined)
                         return value
-                }
-                
+                //}
             },
             errorMessage:"Invalid Phone Number"
-        },
+        },*/
         
         
     },
