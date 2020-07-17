@@ -1,0 +1,99 @@
+body, html{
+    margin: 0;
+    height: 100vh;
+}
+
+#hompage-header{
+    height:100vh;
+}
+
+.hompage-header-logo{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left:8%;
+}
+
+.hompage-header-logo:hover{
+    width:7%;
+    transition: 1sn;
+}
+
+.hompage-header-ellipse{
+    overflow: hidden;
+    height: 168vh;
+    width: 100vw; 
+    background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
+    border-radius: 50%;
+    position: absolute;
+    top: -40%;
+    transform: translateX(10%);
+}
+
+.hompage-header-column{
+    height: 30vh;
+    display: flex;
+    width: auto;
+    position: relative;
+    transform: translateX(53%);
+}
+
+@keyframes column-move{
+    from{height:0px;}
+}
+
+.hompage-header-column-one{
+    margin: 0px 3%;
+    height: 12vh;
+    width: 4vw;
+    background-color: red;
+    animation: column-move 1s ;
+}
+
+.hompage-header-column-two{
+    height: 14vh;
+    background-color: black;
+    width: 4vw;
+    animation: column-move 1s ;
+}
+
+.hompage-header-column-three{
+    height: 16vh;
+    width: 4vw;
+    margin: 0 3%;
+    background-color: red;
+    animation: column-move 1s ;
+}
+
+.hompage-header-column-four{
+    height: 18vh;
+    width: 4vw;
+    background-color: black;
+    animation: column-move 1s ;
+}
+
+@keyframes content-move{
+    from{transform:translate(55%,0);}
+    to{transform:translate(55%,50%);}
+}
+
+.hompage-header-content{
+    animation: content-move 1s;
+    position: relative;
+    transform:translate(55%,50%);
+}  
+
+.hompage-header-content-schoolname{
+    color:black;
+    font-size: calc(1rem + 0.5vw);
+    margin:0;
+}
+
+.hompage-header-content-clubname{
+    color:white;
+    font-size: calc(3rem + 0.5vw);
+    margin:0;
+    margin-top:1%;
+}
+
