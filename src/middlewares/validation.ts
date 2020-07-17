@@ -7,10 +7,14 @@ export const validate=(validations:ValidationChain[])=>{
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             console.log("error bu\n",errors)
-            return res.status(423).json({
+            res.status(423).json({
                 errors:errors.array()
             });
+            return;
+            
         }
+        console.log("nexte geliyo")
+        
         next();
     };
 }
