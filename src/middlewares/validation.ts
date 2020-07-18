@@ -7,7 +7,7 @@ export const validate=(validations:ValidationChain[])=>{
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             console.log("error bu\n",errors)
-            res.status(423).json({
+            res.status(422).json({
                 errors:errors.array()
             });
         }
