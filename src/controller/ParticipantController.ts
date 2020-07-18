@@ -14,12 +14,18 @@ export class ParticipantController {
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
         console.log("error yok devam")
         const participantObj = new ParticipantModel(req.body.name_surname, req.body.university, req.body.department, req.body.email, req.body.phone)
-        console.log("object is \n", participantObj)
-        const result = await this.participantService.create(participantObj)
-        return res.status(201).json({
-            data: result,
-            state: "Success"
-        })
+        try {
+            const result = await this.participantService.create(participantObj)
+            res.status(201).json({
+                data: result,
+                state: "Success"
+            })
+        } catch (error) {
+            res.status(200).json({
+                state:"Error",
+                message:error.message
+            })   
+        }
     }
 
 
