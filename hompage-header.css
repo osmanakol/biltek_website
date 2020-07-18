@@ -5,19 +5,7 @@ body, html{
 
 #hompage-header{
     height:100vh;
-}
-
-.hompage-header-logo{
-    width: 5%;
-    height: auto;
-    position: absolute;
-    top:2%;
-    left:8%;
-}
-
-.hompage-header-logo:hover{
-    width:7%;
-    transition: 1sn;
+    overflow: hidden;
 }
 
 .hompage-header-ellipse{
@@ -31,12 +19,26 @@ body, html{
     transform: translateX(10%);
 }
 
+.hompage-header-logo{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left:8%;
+    transition: 1sn;
+}
+
+.hompage-header-logo:hover{
+    width:7%;
+   
+}
+
 .hompage-header-column{
     height: 30vh;
     display: flex;
     width: auto;
     position: relative;
-    transform: translateX(53%);
+    transform: translateX(55%);
 }
 
 @keyframes column-move{
@@ -44,56 +46,67 @@ body, html{
 }
 
 .hompage-header-column-one{
-    margin: 0px 3%;
-    height: 12vh;
+    height: 8vh;
     width: 4vw;
-    background-color: red;
+    margin-right: 5%;
+    background-color: white;
     animation: column-move 1s ;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .hompage-header-column-two{
-    height: 14vh;
-    background-color: black;
+    height: 20vh;
     width: 4vw;
+    margin-right: 5%;
+    background-color: white;
     animation: column-move 1s ;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .hompage-header-column-three{
-    height: 16vh;
+    height: 32vh;
     width: 4vw;
-    margin: 0 3%;
-    background-color: red;
+    margin-right: 5%;
+    background-color: white;
     animation: column-move 1s ;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .hompage-header-column-four{
-    height: 18vh;
+    height: 44vh;
     width: 4vw;
-    background-color: black;
+    margin-right: 5%;
+    background-color: white;
     animation: column-move 1s ;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 @keyframes content-move{
     from{transform:translate(55%,0);}
-    to{transform:translate(55%,50%);}
+    to{transform:translate(55%,25%);}
 }
 
 .hompage-header-content{
     animation: content-move 1s;
     position: relative;
-    transform:translate(55%,50%);
+    transform:translate(55%,25%);
 }  
 
 .hompage-header-content-schoolname{
     color:black;
-    font-size: calc(1rem + 0.5vw);
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(0.8rem + 0.5vw);
     margin:0;
 }
 
 .hompage-header-content-clubname{
     color:white;
+    font-family: 'Lato', sans-serif;
     font-size: calc(3rem + 0.5vw);
     margin:0;
-    margin-top:1%;
 }
 
