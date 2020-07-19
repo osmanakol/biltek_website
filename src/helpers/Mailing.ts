@@ -1,15 +1,18 @@
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
+import {MailContent} from "./MailContent"
+import { AttachmentLike } from "nodemailer/lib/mailer";
 export  class Mailing{
     private email:string
     private email_password:string
     private service:string
     private transporter:any
-    private identifyMailService(){
+    private message:MailContent
+    private identifyMailService(){  
       let mail_service = this.email
       mail_service = mail_service[0].split("@")[1].split(".")[0]
       this.service = mail_service
     }
-
+    
     constructor(email:string, email_password:string){
       this.email = email;
       this.email_password = email_password;
@@ -19,16 +22,26 @@ export  class Mailing{
         service: this.service,
         auth: {
             user: this.email, 
-            pass: this.email_password, }
+            pass: this.email_password, } 
         });
     }
-
-    async sendMail(mailArray:string[]){
+    public createMessage(mailArray:string[], html:string){
+      this.message.bcc = mailArray
+      this.message.from = this.email
+      this.message.html = {path: html}
+    }
+    sendMail(mailArray:string[]){
       var uzunluk:number, index:number, email:string
-      for (index = 0 , uzunluk = mailArray.length; index < uzunluk; index++){
-        try{
-          email = mailArray[index];
-          let info =   setTimeout(this.transporter.sendMail({
+      try{
+        this.transporter.sendMail(this.message)
+        console.log("Success")
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
+}
+/*{
             from: this.email , 
             to:email , 
             subject: "Test",
@@ -38,13 +51,4 @@ export  class Mailing{
               filename: "dene.jpg",
               path: "denemail.jpg",
             }]
-          }),
-          2000)
-          console.log("E-posta "+email+" adresine başarıyla gönderildi.")
-        }
-      catch(err){
-        console.log(err)
-      }
-    }
-  }
-}
+          } */
