@@ -14,6 +14,7 @@ body, html{
 
 .homepage-header-ellipse{
     overflow: hidden;
+    transition: 1s;
     height: 258vh;
     width: 145vw; 
     background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
@@ -37,6 +38,10 @@ body, html{
 
 .homepage-header-logo:hover{
     width:7%;
+}
+.homepage-header-logo:hover ~ .homepage-header-ellipse{
+    height: 238vh;
+    width: 176vw;
 }
 
 /*----------------------------
