@@ -18,7 +18,7 @@ export class WebRoutes {
         })
         
         this.router.get("/homepage",(req:Request,res:Response)=>{
-            res.render("site/homepage",{layout:"mainLayout"})
+            res.render("site/homepage",{layout:"homepageLayout"})
         })
 
         return this.router;
