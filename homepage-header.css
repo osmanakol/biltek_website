@@ -2,13 +2,16 @@ body, html{
     margin: 0;
     height: 100vh;
 }
+
 #homepage-header{
     height:100vh;
     overflow: hidden;
 }
+
 /*----------------------------
             Ellipse
 -----------------------------*/
+
 .homepage-header-ellipse{
     overflow: hidden;
     height: 258vh;
@@ -18,9 +21,11 @@ body, html{
     top: -40%;
     transform: translate(9%, -31%);
 }
+
 /*----------------------------
             Logo
 -----------------------------*/
+
 .homepage-header-logo{
     width: 5%;
     height: auto;
@@ -29,82 +34,86 @@ body, html{
     left:10%;
     transition: 1s;
 }
+
 .homepage-header-logo:hover{
     width:7%;
 }
+
 /*----------------------------
             Orbits
 -----------------------------*/
+
 @keyframes orbits-move{
     from{transform: rotate(0deg) translate(50%, -50%);}
     to{transform: rotate(360deg) translate(50%, -50%);}
 }
+
 @keyframes orbits-move-reverse{
     from{transform: rotate(0deg) translate(50%, -50%);}
     to{transform: rotate(-360deg) translate(50%, -50%);}
 }
+
 @keyframes orbital-arrival-move{
     from{width: 0;
     height: 0;}
 }
+
 .homepage-header-orbits{
     right: 0;
     top: 0;
     position: absolute;
     width: 62vw;
-    height: 46.4vw;
+    height: 48vw;
     overflow: hidden;
 }
+
+.homepage-header-orbits > div {
+    position: absolute;
+    border-radius: 100%;
+    border: dashed 3px white;
+    transform: translate(50%, -50%);
+    right: 0;
+    transform-origin: top right;
+}
+
 .homepage-header-orbit-one{
     width: 15vw;
     height: 15vw;
-    position: absolute;
-    border-radius: 100%;
-    border: dashed 3px grey;
-    transform: translate(50%, -50%);
-    right: 0;
     animation: orbits-move 20s infinite forwards linear, orbital-arrival-move 0.25s;
-    transform-origin: top right;
+    opacity: 1;
 }
+
 .homepage-header-orbit-two{
     width: 40vw;
     height: 40vw;
-    position: absolute;
-    border-radius: 100%;
-    border: dashed 3px grey;
-    transform: translate(50%, -50%);
-    right: 0;
+    opacity: 0.8;
     animation: orbits-move-reverse 40s infinite forwards linear, orbital-arrival-move 0.75s;
-    transform-origin: top right;
 }
+
 .homepage-header-orbit-three{
     width: 80vw;
     height: 80vw;
-    position: absolute;
-    border-radius: 100%;
-    border: dashed 3px grey;
-    transform: translate(50%, -50%);
-    right: 0;
+    opacity: 0.5;
     animation: orbits-move 60s infinite forwards linear, orbital-arrival-move 1.25s;
-    transform-origin: top right;
+    
 }
+
 .homepage-header-orbit-four{
     width: 120vw;
     height: 120vw;
-    position: absolute;
-    border-radius: 100%;
-    border: dashed 3px grey;
-    transform: translate(50%, -50%);
-    right: 0;
+    opacity: 0.2;
     animation: orbits-move-reverse 90s infinite forwards linear, orbital-arrival-move 1.5s;
-    transform-origin: top right;
+   
 }
+
 /*----------------------------
             Columns
 -----------------------------*/
+
 @keyframes column-move{
     from{height:0px;}
 }
+
 .homepage-header-column{
     height: 30vh;
     display: flex;
@@ -113,67 +122,66 @@ body, html{
     left:57%;
     top: 0;
 }
+
+.homepage-header-column > div {
+    width: 4vw;
+    background-color: white;
+    animation: column-move 1s ;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
 .homepage-header-column-one{
     height: 6vh;
-    width: 4vw;
-    background-color: white;
-    animation: column-move 1s ;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
 }
+
 .homepage-header-column-two{
     height: 16vh;
-    width: 4vw;
     transform: translate(5vw);
-    background-color: white;
-    animation: column-move 1s ;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
 }
+
 .homepage-header-column-three{
     height: 26vh;
-    width: 4vw;
     transform: translate(10vw);
-    background-color: white;
-    animation: column-move 1s ;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
 }
+
 .homepage-header-column-four{
     height: 36vh;
-    width: 4vw;
     transform: translate(15vw);
-    background-color: white;
-    animation: column-move 1s ;
-    border-bottom-left-radius: 32px;
-    border-bottom-right-radius: 32px;
 }
+
 /*----------------------------
             Content
 -----------------------------*/
+
 @keyframes content-move{
-    from{transform:translate(39%,0);}
-    to{transform:translate(39%,19%);}
+    from{transform:translate(17%,0);}
+    to{transform:translate(17%,25%);}
 }
+
 .homepage-header-content{
     animation: content-move 1s;
     position: absolute;
-    transform:translate(39%,19%);
-    top: 19%;
+    transform:translate(17%,25%);
+    top: 20%;
     right: 25%;
     width: 27vw;
 }
+
+.homepage-header-content > h1 {
+    margin:0;
+    text-align: end;
+}
+
 .homepage-header-content-schoolname{
     color:black;
     font-family: 'Open Sans', sans-serif;
     font-size: calc(0.8rem + 0.5vw);
-    margin:0;
 }
+
 .homepage-header-content-clubname{
     color:white;
     font-family: 'Lato', sans-serif;
-    font-size: calc(4.5rem);
-    margin:0;
-    text-align: end;
-    transform: translate(-15%,-7%);
+    font-size: calc(5rem);
+    transform: translateY(-5%);
 }
