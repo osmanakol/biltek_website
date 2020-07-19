@@ -1,0 +1,92 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+  body{
+     height: 100vh;
+     background-image: linear-gradient(#cbbacc,#2580b3);
+ }
+ /*-------------------------
+    Homepage-Nav-Container
+ --------------------------*/
+.homepage-nav-container{
+    position: absolute;
+    height:15%;
+    width: 100vw;
+    transform: translateY(-75%);
+    transition: transform 500ms ease-in-out;
+}
+
+ .homepage-nav{
+    /*display: block;
+    margin: 0 auto;*/
+    position: relative;
+    width: 78%;
+    left: 15%;
+    background:rgba(255, 255,255,0.5);
+    border-radius: 7px;
+ }
+
+ .homepage-nav-button-group{
+    /*position: relative;
+    top:50%;
+    transform:translateY(-50%);*/
+    padding: 20px;
+ }
+
+ .homepage-nav-button-group a{
+    margin:0 50px;
+    color:black;
+    font-size: calc(0.7rem + 0.6vw);
+    font-family:'Open Sans', sans-serif;
+ }
+
+ /*-------------------
+    HomePage Menu Bar
+  --------------------*/
+
+.homepage-menu-bar{
+    position: relative;
+    width:40px;
+    height: 40px;
+    top:7%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 27px;
+    text-align: center;
+}
+.homepage-menu-bar i{
+    font-size: 27px;
+    margin: 7px;
+    cursor: pointer;
+}
+.homepage-menu-bar >.fa-times{
+    display: none;
+}
+/*-----------------------
+    MENU BAR OPEN MENU
+ ------------------------*/
+ 
+.homepage-nav-openMenu{
+    left:50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width:40px;
+    height: 40px;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+.homepage-nav-openMenu:checked{
+    top:12%;
+}
+.homepage-nav-openMenu:checked ~.homepage-nav-container{
+    transition: transform 500ms ease-in-out;
+    transform: translateY(0%);
+}
+.homepage-nav-openMenu:checked ~.homepage-nav-container>.homepage-menu-bar >.fa-bars{
+    display: none;
+}
+.homepage-nav-openMenu:checked ~ .homepage-nav-container>.homepage-menu-bar >.fa-times{
+    display: inline-block;
+}
+
