@@ -8,12 +8,19 @@ body, html{
     overflow: hidden;
 }
 
-.mobil-hompage-header-column{
+.mobile-homepage-header-menu{
     display:none;
 }
-.mobil-hompage-header-content{
-    display: none;
+.mobile-homepage-header-column{
+    display:none;
 }
+.mobile-homepage-header-content{
+    display:none;
+}
+.mobile-homepage-header-button{
+    display:none;
+}
+
 /*----------------------------
             Ellipse
 -----------------------------*/
@@ -205,6 +212,9 @@ body, html{
     transform: translateY(-4%);
 }
 
+/*----------------------------
+            Responsive
+-----------------------------*/
 @media only screen and (max-width:1250px){
     .homepage-header-content{
         top:22%;
@@ -246,6 +256,9 @@ body, html{
     }
 }
 
+/*----------------------------
+        Mobile header
+-----------------------------*/
 @media only screen and (max-width:768px){
     .homepage-header-logo{
         display:none;
@@ -283,36 +296,100 @@ body, html{
         width: 180vw;
         height: 180vw;
     }
-    .mobil-homepage-header-column{
-    height: 8vh;
-    width: 58vw;
-    position: absolute;
-    display: flex;
-    top: 25%;
-    background: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    .mobile-homepage-header-menu{
+        position: absolute;
+        display: flex;
+        top: 0%;
+        right: 0;
+        overflow: hidden;
     }
-    .mobil-homepage-header-logo{
+    .mobile-homepage-header-menu-area{
+        background: white;
+        overflow: hidden;
+        transform: translate(46%, -40%);
+        height: 30vh;
+        width: 38vw;
+        border-bottom-left-radius: 100%;
+        border-top-left-radius: 100%;
+    }
+    .mobile-homepage-header-menu-icon{
+        position: absolute;
+        top: 16%;
+        right: 16%;
+        font-size: calc(2.5rem);
+        color:#231F20;
+    }
+    /* @keyframes mobile-column-move {
+        from{
+            height: 0;
+            width: 0;
+        }
+    } */
+    .mobile-homepage-header-column{
+        height: 9vh;
+        width: 67vw;
+        position: absolute;
+        display: flex;
+        top: 20%;
+        background: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        animation: mobile-column-move 1s;
+    }
+    .mobile-homepage-header-logo{
         width: 65px;
         height: 65px;
-        transform: translate(113%, 15%);
+        transform: translate(113%, 11%);
     }
-    .mobil-homepage-header-content-schoolname{
-        transform: translate(21%, 15%);
+    .mobile-homepage-header-content-schoolname{
+        transform: translate(25%, 17%);
         font-family: 'Open Sans', sans-serif;
-        font-size: calc(1.5rem);
+        font-size: calc(1.3rem);
+        color:black;
     }
-    .mobil-homepage-header-content{
+    .mobile-homepage-header-content{
         width: 30vw;
         height: 50vh;
         position: absolute;
-        top: 26%;    
+        top: 23%;   
+        display: inherit; 
     }
-    .mobil-homepage-header-content-clubname{
-        transform: translate(24%, 0%);
-        font-size: calc(7rem);
+    .mobile-homepage-header-content-clubname{
+        transform: translate(39%, 0%);
+        font-size: calc(4.5rem);
         font-family: 'Lato', sans-serif;
         color:white;
+    }
+    .mobile-homepage-header-button{
+        height: 7vh;
+        width: 35vw;
+        position: absolute;
+        display: flex;
+        top: 75%;
+        left: 32%;
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+    .mobile-homepage-header-button-content{
+        font-size: calc(2rem);
+        font-family: 'Lato', sans-serif;
+        color: white;
+        top: 6%;
+        transform: translate(50%,20%);
+        margin: 0;
+    }
+    .mobile-homepage-header-button-circle{
+        width: 8vw;
+        height: 7vh;
+        background: white;
+        border-radius: 100%;
+        transform: translate(174%);
+    }
+    .mobile-homepage-header-button-icon{
+        color: #2580b3;
+        position: relative;
+        top: 31%;
+        right: -32%;
+        font-size: calc(1.5rem);
     }
 }
