@@ -8,6 +8,12 @@ body, html{
     overflow: hidden;
 }
 
+.mobil-hompage-header-column{
+    display:none;
+}
+.mobil-hompage-header-content{
+    display: none;
+}
 /*----------------------------
             Ellipse
 -----------------------------*/
@@ -37,7 +43,7 @@ body, html{
 }
 
 .homepage-header-logo:hover{
-    width:7%;
+    width:6%;
 }
 .homepage-header-logo:hover ~ .homepage-header-ellipse{
     height: 238vh;
@@ -160,17 +166,17 @@ body, html{
 -----------------------------*/
 
 @keyframes content-move{
-    from{transform:translate(17%,0);}
-    to{transform:translate(17%,25%);}
+    from{transform:translate(22%,0);}
+    to{transform:translate(22%,25%);}
 }
 
 .homepage-header-content{
     animation: content-move 1s;
     position: absolute;
-    transform:translate(17%,25%);
+    transform:translate(22%,25%);
     top: 20%;
     right: 25%;
-    width: 27vw;
+    width: 25vw;
 }
 
 .homepage-header-content > h1 {
@@ -183,10 +189,130 @@ body, html{
     font-family: 'Open Sans', sans-serif;
     font-size: calc(0.8rem + 0.5vw);
 }
+.homepage-header-content-schoolname::after{
+    display: flex;
+    content: "";
+    border: 1px solid black;
+    width: 368px;
+    position: absolute;
+    right: -1%;
+}
 
 .homepage-header-content-clubname{
     color:white;
     font-family: 'Lato', sans-serif;
     font-size: calc(5rem);
-    transform: translateY(-5%);
+    transform: translateY(-4%);
+}
+
+@media only screen and (max-width:1250px){
+    .homepage-header-content{
+        top:22%;
+    }
+    .homepage-header-content-schoolname{
+        font-size: calc(0.7rem + 0.5vw);
+    }
+    .homepage-header-content-clubname{
+        font-size: calc(4rem);
+    }
+}
+
+@media only screen and (max-width:1246px){
+    .homepage-header-column > div{
+        width: 5vw;
+    } 
+    .homepage-header-content{
+        right: 22%;
+    }
+}
+
+@media only screen and (max-width:1090px){
+    .homepage-header-content{
+        width: 30vw;
+    }
+    .homepage-header-content{
+        right: 24%;
+    }
+}
+@media only screen and (max-width:1010px){
+    .homepage-header-column > div{
+        width: 5.5vw;
+    } 
+}
+
+@media only screen and (max-width:1004px){
+    .homepage-header-content{
+        right: 22%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .homepage-header-logo{
+        display:none;
+    }
+    .homepage-header-column{
+        display: none;
+    }
+    .homepage-header-content{
+        display: none;
+    }
+    .homepage-header-ellipse {
+        height: 130vh;
+        width: 110vw;
+        background: linear-gradient(90deg,#cbbacc 2%,#2580b3);
+        border-radius: 30%;
+        transform: translate(-4%, -30%);
+    }
+    .homepage-header-orbits {
+        width: 100vw;
+        height: 90vw;
+    }
+    .homepage-header-orbit-one {
+        width: 60vw;
+        height: 60vw;
+    }
+    .homepage-header-orbit-two {
+        width: 100vw;
+        height: 100vw;
+    }
+    .homepage-header-orbit-three {
+        width: 140vw;
+        height: 140vw;
+    }
+    .homepage-header-orbit-four {
+        width: 180vw;
+        height: 180vw;
+    }
+    .mobil-homepage-header-column{
+    height: 8vh;
+    width: 58vw;
+    position: absolute;
+    display: flex;
+    top: 25%;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    }
+    .mobil-homepage-header-logo{
+        width: 65px;
+        height: 65px;
+        transform: translate(113%, 15%);
+    }
+    .mobil-homepage-header-content-schoolname{
+        transform: translate(21%, 15%);
+        font-family: 'Open Sans', sans-serif;
+        font-size: calc(1.5rem);
+    }
+    .mobil-homepage-header-content{
+        width: 30vw;
+        height: 50vh;
+        position: absolute;
+        top: 26%;    
+    }
+    .mobil-homepage-header-content-clubname{
+        transform: translate(24%, 0%);
+        font-size: calc(7rem);
+        font-family: 'Lato', sans-serif;
+        color:white;
+    }
 }
