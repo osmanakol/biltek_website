@@ -84,13 +84,13 @@
 
 /*----------------------------
     HOMEPAGE SOCIAL MEDIA BARS
-------------------------------
+------------------------------*/
 .homepage-social-media-bar{
     position: fixed;
     width:11%;
     height: 100vh;
     text-align: center;
-    float:left
+    
 }
 .homepage-social-media-bar-vl{
     position: relative;
@@ -108,16 +108,17 @@
     }
 }
 .homepage-social-media-bar-followus-text{
-    position: relative;
+    position: absolute;
     font-weight: 500;
     font-size: 17px;
-    width: 200px;
-    font-family:'Open Sans', sans-serif;
+    text-align: start;
+    width: max-content;
+    margin: 11px 0;
+    font-family: 'Open Sans', sans-serif;
     transform: rotate(90deg);
-    text-align: center;
-    border:1px solid red;
-    animation:slide-little 1s 1 forwards ease-out;
-    top:9%;
+    border-left: 1px solid transparent;
+    left: 50%;
+    transform-origin: 0 0;
 }
 @keyframes slide-little{
     0%{
@@ -127,7 +128,3 @@
         top:0;
     }
 }
-
-.homepage-social-media-bar-icons{
-    border:1px solid red;
-}*/
