@@ -29,7 +29,8 @@
     /*position: relative;
     top:50%;
     transform:translateY(-50%);*/
-    padding:0 20px;
+    padding:20px 0 20px;
+    text-align: center;
  }
 
  .homepage-nav-button-group a{
@@ -47,7 +48,7 @@
     position: relative;
     width:40px;
     height: 40px;
-    top:7%;
+    top:20%;
     left:50%;
     transform: translateX(-50%);
     background-color: rgba(255,255,255,0.7);
