@@ -15,28 +15,32 @@
  .homepage-nav{
     /*display: block;
     margin: 0 auto;*/
-    position: absolute;
-    width: 78%;
+    width:78%;
     left: 11%;
-    top:-50%;
-    background:rgba(255, 255,255,0.5);
+    top: -50%;
+    background: rgba(255, 255,255,0.5);
     border-radius: 7px;
     transition: all 1s ease-out;
+    position: absolute;
  }
 
  .homepage-nav-button-group{
     /*position: relative;
     top:50%;
     transform:translateY(-50%);*/
-    padding:20px 0 20px;
+    padding: 20px 0 20px;
     text-align: center;
+    display: flex;
  }
 
  .homepage-nav-button-group a{
-     margin:0 55px;
-     color:black;
-     font-size: calc(0.7rem + 0.6vw);
-     font-family:'Open Sans', sans-serif;
+    margin: 0px 22px;
+    color: black;
+    font-size: calc(0.7rem + 0.6vw);
+    font-family: 'Open Sans', sans-serif;
+    width: 22rem;
+    position: relative;
+     
  }
 
  /*-------------------
