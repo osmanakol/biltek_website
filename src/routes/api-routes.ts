@@ -2,16 +2,19 @@ import express, { Router, Request, Response } from "express";
 import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
+import { TeamController } from "../controller/TeamController";
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
     private deparmentController:DepartmentController
+    private teamController:TeamController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
+        this.teamController=new TeamController();
         this.Routes();
     }
 
@@ -24,6 +27,11 @@ export class ApiRoutes {
                     message:"Biltek Website Teams"
                 })
             })
+
+                // ? /api/teams
+                this.router.route('/teams')
+                .post(this.teamController.createTeam);
+
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
