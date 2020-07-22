@@ -1,8 +1,17 @@
-const navlist = document.querySelector("#navlist");
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos < currentScrollPos) {
+    document.getElementById("homepage-social-media-bar-register-btn").style.animation = "disappear-register-button 1s 1 both ease-out";
+  } else if(currentScrollPos==0){
+    document.getElementById("homepage-social-media-bar-register-btn").style.animation = "appear-register-button 1s 1 both ease-out";
+  }
+  prevScrollpos = currentScrollPos;
+}
+/*const navlist = document.querySelector("#navlist");
 const links = navlist.querySelectorAll("li a");
 const wrapper = document.querySelector("#wrapper");
-
-// MOBILENAV JS
+MOBILENAV JS
 menu.addEventListener("click", function () {
     setTimeout(() => {
         menu.classList.toggle("active");
@@ -28,4 +37,4 @@ links.forEach(link => {
             navlist.classList.add("animate-right");
         }, 800);
     });
-});
+});*/
