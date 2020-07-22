@@ -8,10 +8,8 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
-/*const navlist = document.querySelector("#navlist");
-const links = navlist.querySelectorAll("li a");
-const wrapper = document.querySelector("#wrapper");
-MOBILENAV JS
+
+/*MOBILENAV JS
 menu.addEventListener("click", function () {
     setTimeout(() => {
         menu.classList.toggle("active");

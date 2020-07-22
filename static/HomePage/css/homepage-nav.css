@@ -1,9 +1,9 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
- body{
+ /*body{
     height: 105vh;
     background-image: linear-gradient(#cbbacc,#2580b3);
-}
+}*/
 /*-------------------------
     Homepage-Nav-Container
  --------------------------*/
@@ -51,16 +51,6 @@
     display: none;
 }
 .homepage-menu-toggle-icons{
-    /* position: absolute;
-    width:40px;
-    height: 40px;
-    z-index: 999;
-    left:50%;
-    transform: translateX(-50%);
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 27px;
-    text-align: center;
-    transition: all 1s ease-in-out */
     position: absolute;
     top:0;
     width: 6vh;
@@ -71,6 +61,8 @@
     background-color: rgba(255,255,255,0.8);
     border-radius: 40px;
     text-align: center;
+    box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-out;
 }
 
 .homepage-menu-toggle-icons i{
@@ -83,6 +75,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    
+    
 }
 .homepage-menu-toggle-icons >.fa-times{
     display: none;
@@ -116,7 +110,7 @@
 .homepage-social-media-bar-vl{
     position: relative;
     border-left: 2px solid black;
-    height: 7rem;
+    height: 15%;
     left: 50%;
     width: 11%;
     animation: slide-down 500ms 1 forwards ease-out;
@@ -133,13 +127,13 @@
 .homepage-social-media-bar-followus-text{
     position: relative;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 2vh;
     font-family: 'Open Sans', sans-serif;
     left: 50%;
     transform: rotate(90deg);
     transform-origin: 0;
     text-align: start;
-    width:200px; 
+    width:170%; 
     animation: slide-down 1s 1 forwards ease-out;
 }
 
@@ -147,28 +141,32 @@
     position: relative;
     display:block;
     top:21%;
+    height:47%;
 }
 .homepage-social-media-bar-icon{
-    margin:10px 0px;
+    margin:10% 0px;
 }
 
 .homepage-social-media-bar-icon .fab, .fas {
     font-weight: 400;
-    font-size: 15px;
+    /* font-size: 15px; */
+    font-size:2vh;
 } 
 
 
 .homepage-social-media-bar-icon i{
     opacity: 0;
-    padding: 12px 0px;
+    /* padding: 12px 0px; */
+    padding:8.6% 0;
     color: black;
     border: 1px solid transparent;
     border-radius: 32px;
     box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.35);
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
+    width: 6vh;
+    height: 6vh;
     position: relative;
-    top: 50%;
     text-align: center;
     transition: all 1s ease-out;
     animation: slide-left 1s 1s 1 forwards ease-out;
@@ -195,16 +193,6 @@
     bottom: 20%
 }
 .homepage-social-media-bar-register-btn i{
-    /* border:1px solid black;
-    font-family: 'Open Sans', sans-serif;
-    margin:1px 5px;
-    padding: 1px 5px;
-    height: auto;
-    width: 120px;
-    border-radius: 9px;
-    left: 98%;
-    position: relative;
-    z-index: 999; */
     border: 0.7px solid black;
     font-family: 'Open Sans', sans-serif;
     padding: 2px 7px;
