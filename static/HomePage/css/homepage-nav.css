@@ -140,11 +140,8 @@
 
 .homepage-social-media-bar-icons{
     position: absolute;
-    display: block;
     top: 33%;
     left: 50%;
-    height: 50%;
-    width: 50%;
     transform: translateX(-50%);
 }
 .homepage-social-media-bar-icon{
@@ -154,26 +151,28 @@
     animation: slide-left 1s 1s 1 forwards ease-out;
 }
 .homepage-social-media-bar-icon a {
-    position: relative;
-    padding: 10px;
-    color: black;
+    box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 39px;
+    display: block;
+    width: 40px;
+    height: 40px;
 }
 .homepage-social-media-bar-icon i{
-    box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.35);
-    border-radius: 39px;
-    padding:10px;
-    
-    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color:black;
 }
-.homepage-social-media-bar-icon i:hover{
-    transform:scale(1.5);
-    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.35);
+.homepage-social-media-bar-icon a:hover{
+    /* transform:scale(1.5); */
+    box-shadow: 0 9px 21px 0px rgba(0, 0, 0, 0.35);
 }
 
 .homepage-social-media-bar-icon .fab, .fas {
-    font-weight: 400;
     font-size:2vh;
 } 
+
 @keyframes slide-left{
     0%{
         opacity: 1;
