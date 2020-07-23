@@ -154,8 +154,11 @@
     box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
     border-radius: 39px;
     display: block;
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
+    width: 7vh;
+    height: 7vh;
+
 }
 .homepage-social-media-bar-icon i{
     position: absolute;
