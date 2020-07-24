@@ -26,7 +26,7 @@
 }
 
 .about-header-box-one{
-    background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    background: white;
     transform: translate(25%, 10%);
 }
 .about-header-box-two{
@@ -36,9 +36,9 @@
     transform: translate(75%, 20%);
 }
 
-/* .about-header-boxes:hover ~ .about-header-box-one{
+.about-header-boxes:hover .about-header-box-one{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-} */
+} 
 .about-header-boxes > div > p{
     position: absolute;
     width: auto;

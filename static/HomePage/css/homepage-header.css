@@ -53,9 +53,9 @@ body, html{
 .homepage-header-logo:hover{
     width:6%;
 }
-.homepage-header-logo:hover ~ .homepage-header-ellipse{
-    height: 238vh;
-    width: 176vw;
+.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
+    height: 220vh;
+    width: 160vw;
 }
 
 /*----------------------------
