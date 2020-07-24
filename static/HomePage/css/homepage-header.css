@@ -1,0 +1,541 @@
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+#homepage-header{
+    height:100vh;
+    overflow: hidden;
+}
+
+.mobile-homepage-header-menu{
+    display:none;
+}
+.mobile-homepage-header-column{
+    display:none;
+}
+.mobile-homepage-header-content{
+    display:none;
+}
+.mobile-homepage-header-button{
+    display:none;
+}
+
+/*----------------------------
+            Ellipse
+-----------------------------*/
+
+.homepage-header-ellipse{
+    overflow: hidden;
+    transition: 1s;
+    height: 258vh;
+    width: 145vw; 
+    background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
+    border-radius: 50%;
+    top: -40%;
+    transform: translate(9%, -31%);
+}
+
+/*----------------------------
+            Logo
+-----------------------------*/
+
+.homepage-header-logo{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left:10%;
+    transition: 1s;
+}
+
+.homepage-header-logo:hover{
+    width:6%;
+}
+.homepage-header-logo:hover ~ .homepage-header-ellipse{
+    height: 238vh;
+    width: 176vw;
+}
+
+/*----------------------------
+            Orbits
+-----------------------------*/
+
+@keyframes orbits-move{
+    from{transform: rotate(0deg) translate(50%, -50%);}
+    to{transform: rotate(360deg) translate(50%, -50%);}
+}
+
+@keyframes orbits-move-reverse{
+    from{transform: rotate(0deg) translate(50%, -50%);}
+    to{transform: rotate(-360deg) translate(50%, -50%);}
+}
+
+@keyframes orbital-arrival-move{
+    from{width: 0;
+    height: 0;}
+}
+
+
+.homepage-header-orbits{
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 62vw;
+    height: 48vw;
+    /* width: 72rem;
+    height: 58rem; */
+    overflow: hidden;
+}
+.homepage-header-orbits > div {
+    position: absolute;
+    border-radius: 100%;
+    border: dashed 3px white;
+    transform: translate(50%, -50%);
+    right: 0;
+    transform-origin: top right;
+}
+.homepage-header-orbit-one{ 
+    /* width: 20rem;
+    height: 20rem; */
+    width: 15vw;
+    height: 15vw;
+    animation: orbits-move 20s infinite forwards linear, orbital-arrival-move 0.25s;
+    opacity: 1;
+}
+.homepage-header-orbit-two{
+    /* width: 55rem;
+    height: 55rem; */
+    width: 40vw;
+    height: 40vw;
+    opacity: 0.8;
+    animation: orbits-move-reverse 40s infinite forwards linear, orbital-arrival-move 0.75s;
+}
+.homepage-header-orbit-three{
+    /* width: 95rem;
+    height: 95rem; */
+    width: 80vw;
+    height: 80vw;
+    opacity: 0.5;
+    animation: orbits-move 60s infinite forwards linear, orbital-arrival-move 1.25s;
+}
+.homepage-header-orbit-four{
+    /* width: 135rem;
+    height: 135rem; */
+    width: 120vw;
+    height: 120vw;
+    opacity: 0.2;
+    animation: orbits-move-reverse 90s infinite forwards linear, orbital-arrival-move 1.5s;
+}
+
+/*----------------------------
+            Columns
+-----------------------------*/
+
+@keyframes column-move{
+    from{height:0px;}
+}
+
+.homepage-header-column{
+    height: 30vh;
+    display: flex;
+    width: auto;
+    position: absolute;
+    left:57%;
+    top: 0;
+}
+
+.homepage-header-column > div {
+    width: 65px;
+    background-color: white;
+    animation: column-move 1s ;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.homepage-header-column-one{
+    height: 6vh;
+}
+
+.homepage-header-column-two{
+    height: 16vh;
+    transform: translate(5vw);
+}
+
+.homepage-header-column-three{
+    height: 26vh;
+    transform: translate(10vw);
+}
+
+.homepage-header-column-four{
+    height: 36vh;
+    transform: translate(15vw);
+}
+
+/*----------------------------
+            Content
+-----------------------------*/
+
+@keyframes content-move{
+    from{transform:translate(-38%,0);}
+    to{transform:translate(-38%,25%);}
+}
+
+.homepage-header-content{
+    animation: content-move 1s;
+    position: absolute;
+    transform:translate(-38%,25%);
+    top: 20%;
+    left: 62%;
+    width: 25vw;
+}
+
+.homepage-header-content > h1 {
+    margin:0;
+    text-align: end;
+}
+
+.homepage-header-content-schoolname{
+    color:black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(0.8rem + 0.5vw);
+}
+.homepage-header-content-schoolname::after{
+    display: flex;
+    content: "";
+    border: 1px solid black;
+    width: 368px;
+    position: absolute;
+    right: -1%;
+}
+
+.homepage-header-content-clubname{
+    color:white;
+    font-family: 'Lato', sans-serif;
+    font-size: calc(5rem + 0.2vw);
+    transform: translateY(-4%);
+}
+
+/*----------------------------
+            Responsive
+-----------------------------*/
+ @media only screen and (max-width:1250px){
+    .homepage-header-content{
+        top:22%;
+    }
+    .homepage-header-content-schoolname{
+        font-size: calc(0.7rem + 0.5vw);
+    }
+    .homepage-header-content-clubname{
+        font-size: calc(4rem);
+    }
+}
+
+@media only screen and (max-width:1246px){
+    .homepage-header-column > div{
+        width: 5vw;
+    } 
+    
+}
+
+@media only screen and (max-width:1090px){
+    .homepage-header-content{
+        width: 34vw;
+    }
+   
+}
+@media only screen and (max-width:1010px){
+    .homepage-header-column > div{
+        width: 5.5vw;
+    } 
+}
+
+@media only screen and (max-width:1004px){
+   
+}
+
+
+/*----------------------------
+        Mobile header
+-----------------------------*/
+@media only screen and (max-width:768px){
+    .homepage-header-logo{
+        display:none;
+    }
+    .homepage-header-column{
+        display: none;
+    }
+    .homepage-header-content{
+        display: none;
+    }
+    .homepage-header-ellipse {
+        height: 130vh;
+        width: 110vw;
+        background: linear-gradient(90deg,#cbbacc 2%,#2580b3);
+        border-radius: 30%;
+        transform: translate(-4%, -30%);
+    }
+    .homepage-header-orbits {
+        width: 100vw;
+        height: 100%;
+    }
+    .homepage-header-orbit-one {
+        width: 60vw;
+        height: 60vw;
+    }
+    .homepage-header-orbit-two {
+        width: 100vw;
+        height: 100vw;
+    }
+    .homepage-header-orbit-three {
+        width: 140vw;
+        height: 140vw;
+    }
+    .homepage-header-orbit-four {
+        width: 180vw;
+        height: 180vw;
+    }
+    .mobile-homepage-header-menu{
+        position: absolute;
+        display: flex;
+        top: 0%;
+        right: 0;
+        overflow: hidden;
+    }
+    .mobile-homepage-header-menu-area{
+        background: white;
+        overflow: hidden;
+        transform: translate(50%, -50%);
+        height: 240px;
+        width: 240px;
+        border-bottom-left-radius: 100%;
+        border-top-left-radius: 100%;
+    }
+    .mobile-homepage-header-menu-icon{
+        position: absolute;
+        top: 12%;
+        right: 12%;
+        font-size: calc(2rem + 0.8vw);
+        color:#231F20;
+    }
+     @keyframes mobile-column-move {
+        from{
+            height: 0;
+            width: 0;
+          
+        }
+    } 
+
+    .mobile-homepage-header-column{
+        height: 8vh;
+        width: 70vw;
+        position: absolute;
+        display: flex;
+        top: 20%;
+        background: white;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        animation: mobile-column-move 1.5s;
+    }
+    .mobile-hompage-header-column-common{
+        width:100%;
+        height: auto;
+        display: flex;
+    }
+    .mobile-homepage-header-logo{
+        width: auto;
+        height: 6vh;
+        margin-left:15px;
+        margin-right: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
+        animation: mobile-column-move 0.5s;
+    }
+    .mobile-homepage-header-content-schoolname{
+        font-family: 'Open Sans', sans-serif;
+        font-size: calc(1.2rem + 0.5vw);
+        margin-top: auto;
+        margin-bottom: auto;
+        color:black;
+        animation:mobile-column-move 0.5s;
+    }
+    .mobile-homepage-header-content{
+        width: 30vw;
+        height: 50vh;
+        position: absolute;
+        top: 21%;   
+        display: inherit; 
+    }
+    .mobile-homepage-header-content-clubname{
+        transform: translate(39%, 0%);
+        font-size: calc(4.5rem + 0.5vw);
+        font-family: 'Lato', sans-serif;
+        color:white;
+    }
+    .mobile-homepage-header-button{
+        height: 60px;
+        width: 267px;
+        position: absolute;
+        display: flex;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%);
+        border: 1px solid white;
+        border-radius: 15px;
+    }
+    .mobile-homepage-header-button-content{
+        font-size: calc(2rem + 0.2vw);
+        font-family: 'Lato', sans-serif;
+        color: white;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 16%);
+        margin: 0;
+    }
+    .mobile-homepage-header-button-circle{
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 100%;
+        position: relative;
+        left:38%;
+    }
+    .mobile-homepage-header-button-icon{
+        color: #2580b3;
+        position: absolute;
+        font-size: calc(1.5rem + 0.1vw);
+        left: 50%;
+        transform: translate(-50%, 57%);
+    }
+}
+
+@media only screen and (max-width:665px){
+    .mobile-homepage-header-content-schoolname{
+        font-size: calc(1.1rem + 0.5vw);
+    }
+}
+@media only screen and (max-width:581px){
+    .mobile-homepage-header-content-schoolname{
+        font-size: calc(1rem + 0.5vw);
+    }
+    .mobile-homepage-header-menu-area{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width:538px){
+    .mobile-homepage-header-content-schoolname {
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    .mobile-homepage-header-content-clubname{
+        font-size: calc(4rem + 0.5vw);
+    }
+}
+@media only screen and (max-width:390px){
+    .mobile-homepage-header-menu-area{
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media only screen and (max-height:805px){
+    .mobile-homepage-header-button {
+        top:77%;
+    }
+  
+}
+@media only screen and (max-height:769px){
+    .mobile-homepage-header-column{
+        top:15%;
+    }
+    .mobile-homepage-header-content{
+        top:14%;
+    }
+    
+}
+@media only screen and (max-height:643px){
+    .mobile-homepage-header-column {
+        top: 10%;
+    }
+    .mobile-homepage-header-content-schoolname {
+        font-size: calc(0.9rem + 0.5vw);
+    }
+    .mobile-homepage-header-content {
+        top: 9%;
+    }
+    .mobile-homepage-header-content-clubname{
+        font-size: calc(4rem + 0.5vw);
+    }
+}
+
+/*----------------------------
+        Side Screen Header
+-----------------------------*/
+@media only screen and (max-width: 768px) and (max-height: 556px){
+    .mobile-homepage-header-content {
+        width: 95vw;
+    }
+    .mobile-homepage-header-content-clubname {
+        position: relative;
+        transform: translate(-50%, 32%);
+        text-align: center;
+        left: 50%;
+    }
+    .mobile-homepage-header-button {
+        height: 50px;
+        width: 201px;
+        top: 70%;
+        transform: translate(-57%);
+    }
+    .mobile-homepage-header-button-content {
+        font-size: calc(1.5rem + 0.2vw);
+        transform: translate(-50%, 16%);
+    }
+    .mobile-homepage-header-button-circle {
+        width: 50px;
+        height: 50px;
+        left: 35%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 450px){
+    .mobile-homepage-header-content-clubname{
+        transform: translate(-50%, 15%);
+    }
+    .mobile-homepage-header-button{
+        top:75%;
+    }
+}
+@media only screen and (max-width: 768px) and (max-height: 402px){
+    .mobile-homepage-header-content {
+        width: 75vw;
+        left: 10%;
+    }
+    .mobile-homepage-header-content-clubname {
+        font-size: calc(3.5rem + 0.3vw);
+    }
+    .mobile-homepage-header-button{
+        top:70%;
+    }
+}
+
+@media only screen and (max-width: 528px) and (max-height: 556px){
+    .mobile-homepage-header-content {
+        left: 0;
+        width: 100vw;
+    }
+    .mobile-homepage-header-content-clubname {
+        font-size: calc(3.5rem + 0.3vw);
+    }
+}
+@media only screen and (max-width: 444px) and (max-height: 556px){
+    .mobile-homepage-header-content-clubname {
+        font-size: calc(3rem + 0.3vw);
+        transform: translate(-50%, 37%);
+    }
+}
+@media only screen and (max-width: 380px) and (max-height: 556px){
+    .mobile-homepage-header-content-clubname {
+        font-size: calc(2.8rem + 0.3vw);
+    }
+} 
