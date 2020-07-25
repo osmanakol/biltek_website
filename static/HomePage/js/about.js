@@ -6,14 +6,14 @@ function box_one_shorten(){
     setTimeout(() => {
         box_one.classList.remove("move")
         box_two.classList.remove("move")
-    }, 500); 
+    }, 250); 
 }
 function box_one_extend(){
     box_one.classList.toggle("move")
     box_two.classList.toggle("move")
     setTimeout(() => {
         box_one.classList.toggle("extend")
-    }, 500); 
+    }, 250); 
 }
 function box_two_shorten(){
     box_one.classList.remove("extend")
@@ -21,17 +21,18 @@ function box_two_shorten(){
     setTimeout(() => {
         box_two.classList.remove("move")
         box_one.classList.remove("move")
-    }, 500); 
+    }, 250); 
 }
 function box_two_extend(){
     box_two.classList.toggle("move")
     box_one.classList.toggle("move")
     setTimeout(() => {
         box_two.classList.toggle("extend")
-    }, 500);  
+    }, 250);  
 }
-
-
+$(box_one).hover(()=>{box_one_extend()}, ()=>{box_one_shorten()})
+$(box_two).hover(()=>{box_two_extend()}, ()=>{box_two_shorten()})
+/*           Click Version
 box_one.addEventListener("click", ()=>{
     if(box_one.classList.contains("extend")){
          box_one_shorten()
@@ -57,3 +58,4 @@ box_two.addEventListener("click", ()=>{
         box_two_extend()   
     }
 })
+*/

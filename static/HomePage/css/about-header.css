@@ -35,14 +35,14 @@
 
 .about-header-box-one{
     background: white;
-    transition: 1s;
+    transition: 0.5s;
     transform: translate(27%);
 }
 
 .about-header-box-two{
     right: 0;
     bottom: 0;
-    transition: 1s;
+    transition: 0.5s;
     background: white;
     position: absolute;
     transform: translate(-27%);
