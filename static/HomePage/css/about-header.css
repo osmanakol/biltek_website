@@ -35,21 +35,21 @@
 
 .about-header-box-one{
     background: white;
-    transition: 0.5s;
+    transition: 1s;
     transform: translate(27%);
 }
 
 .about-header-box-two{
     right: 0;
     bottom: 0;
-    transition: 0.5s;
+    transition: 1s;
     background: white;
     position: absolute;
     transform: translate(-27%);
 }
-
 .about-header-box-one:hover, .about-header-box-two:hover{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    width:62vw;
 }
 
 .about-header-box-one.move, .about-header-box-two.move{
