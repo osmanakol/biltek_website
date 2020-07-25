@@ -311,7 +311,8 @@ body, html{
         border-bottom-left-radius: 100%;
         border-top-left-radius: 100%;
         box-shadow: 0 0 2px 0 rgba(0,0,0,0.6);
-        z-index: 3
+        z-index: 3;
+        cursor: pointer;
     }
     .mobile-homepage-header-menu-icon{
         position: absolute;
@@ -320,6 +321,7 @@ body, html{
         font-size: calc(2rem + 0.8vw);
         color:#231F20;
         z-index: 3;
+        cursor: pointer;
     }
      @keyframes mobile-column-move {
         from{
