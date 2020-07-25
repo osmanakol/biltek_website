@@ -270,11 +270,11 @@ body, html{
         display: none;
     }
     .homepage-header-ellipse {
-        height: 130vh;
-        width: 110vw;
+        height: 110vh;
+        width: 100vw;
         background: linear-gradient(90deg,#cbbacc 2%,#2580b3);
-        border-radius: 30%;
-        transform: translate(-4%, -30%);
+        border-radius: 10vh;
+        transform: translate(0%, -18%);
     }
     .homepage-header-orbits {
         width: 100vw;

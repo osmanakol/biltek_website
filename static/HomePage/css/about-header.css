@@ -1,6 +1,12 @@
 #about-header{
     height:100vh;
 }
+::-webkit-scrollbar{
+    width: 0;
+}
+::-webkit-scrollbar-thumb{
+    color: red;
+}
 
 .about-header-title{
     width: auto;
@@ -15,30 +21,45 @@
 .about-header-boxes{
     position: absolute;
     top:125%;
+    width: 100%;
+    height: 70vh;
 }
 .about-header-boxes > div{
-    width: 42vw;
+    width: 47vw;
     height: 25vh;
-    margin-bottom: 35px;
     border-radius: 30px;
     box-shadow: 0px 0px 10px black;
+    overflow: hidden;
     
 }
 
 .about-header-box-one{
     background: white;
-    transform: translate(25%, 10%);
-}
-.about-header-box-two{
-    background: white;
-    position: absolute;
-    left: 32%;
-    transform: translate(75%, 20%);
+    transition: 1s;
+    transform: translate(27%);
 }
 
-.about-header-boxes:hover .about-header-box-one{
+.about-header-box-two{
+    right: 0;
+    bottom: 0;
+    transition: 1s;
+    background: white;
+    position: absolute;
+    transform: translate(-27%);
+}
+
+.about-header-box-one:hover, .about-header-box-two:hover{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-} 
+}
+
+.about-header-box-one.move, .about-header-box-two.move{
+    transform: translate(0);
+}
+
+.about-header-box-one.extend, .about-header-box-two.extend{
+    height: 55vh;
+    overflow: scroll;
+}
 .about-header-boxes > div > p{
     position: absolute;
     width: auto;

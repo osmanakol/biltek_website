@@ -1,4 +1,4 @@
-import {Mailing} from "./Mailing"
+import {Mailing} from "./mailing"
 
 try{
     let admin = new Mailing("paaysenur@gmail.com", ".adgjmp.");
