@@ -49,15 +49,17 @@
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
     position: absolute;
     z-index: 2;
-    left: 50%;
-    top: 37%;
-    transform: translate(-50%,-50%);
+    left: 2%;
+    top: 7%;
+    transform: rotate(90deg);
     background: white;
     list-style-type: none;
-    /* margin: 0; */
+    margin: 0;
     padding: 19px 0px;
     width: 96%;
     height: 65%;
+    transform-origin: 100% -20%;
+    transition: all 1s ease-out;
 }
 .homepage-mobil-nav li{
     text-align: center;
@@ -79,7 +81,6 @@
     position: fixed;
     z-index: 2;
     width: 100%;
-    bottom: 3%;
     text-align: center;
 }
 .homepage-mobile-social-media-bar-icons a{
@@ -294,5 +295,8 @@
     }
     .homepge-mobil-responsive-property{
         display:unset;
+    }
+    #homepage-menu-toggle:checked~.homepage-mobil-nav >.homepage-mobil-nav-button-group{
+        transform: rotate(0deg);
     }
 }
