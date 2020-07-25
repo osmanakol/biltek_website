@@ -323,6 +323,15 @@ body, html{
         z-index: 3;
         cursor: pointer;
     }
+    .mobile-homepage-header-menu-icon > .fa-times{
+        display: none;
+    }
+    #homepage-menu-toggle:checked ~ #homepage-header .mobile-homepage-header-menu .mobile-homepage-header-menu-icon > .fa-times{
+        display: unset;
+    }
+    #homepage-menu-toggle:checked ~ #homepage-header .mobile-homepage-header-menu .mobile-homepage-header-menu-icon > .fa-bars{
+        display: none;
+    }
      @keyframes mobile-column-move {
         from{
             height: 0;
