@@ -220,6 +220,11 @@ body, html{
 /*----------------------------
             Responsive
 -----------------------------*/
+@media only screen and (max-width: 1450px){
+    .homepage-header-ellipse{
+        height: 168vh;
+    }
+}
  @media only screen and (max-width:1250px){
     .homepage-header-content{
         top:22%;
@@ -243,6 +248,9 @@ body, html{
     .homepage-header-content{
         width: 34vw;
     }
+    .homepage-header-ellipse{
+        height: 145vh
+    }
    
 }
 @media only screen and (max-width:1010px){
@@ -251,11 +259,22 @@ body, html{
     } 
 }
 
-@media only screen and (max-width:1004px){
-   
+@media only screen and (max-width:850px){
+    .homepage-header-ellipse{
+        height: 120vh;
+    }
 }
 
-
+@media only screen and (max-height:740px){
+    .homepage-header-ellipse{
+        width: 154vw;
+    }
+}
+@media only screen and (max-height:650px){
+    .homepage-header-ellipse{
+        width: 165vw;
+    }
+}
 /*----------------------------
         Mobile header
 -----------------------------*/

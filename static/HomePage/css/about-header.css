@@ -47,9 +47,13 @@
     position: absolute;
     transform: translate(-2.5%);
 }
+
 .about-header-box-one:hover, .about-header-box-two:hover{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
     height:55vh;
+}
+.about-header-box-one:hover > p, .about-header-box-two:hover > p{
+    height: 55vh;
 }
 /*
 .about-header-box-one.move, .about-header-box-two.move{
@@ -62,11 +66,12 @@
 }*/
 .about-header-boxes > div > p{
     position: absolute;
+    transition: 1s;
     width: auto;
-    height: auto;
+    height: 23.5vh;
     left: 10%;
-    top: 10%;
-    font-size: calc(1rem + 0.5vw);
+    margin: 0;
+    overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
 .about-header-boxes > div > img{
