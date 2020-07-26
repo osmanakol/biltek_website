@@ -166,6 +166,7 @@
     width:11%;
     height: 100vh;
     text-align: center;
+    z-index:1;
     
 }
 .homepage-social-media-bar-vl{
@@ -264,14 +265,14 @@
     width: 150px;
     border-radius: 11px;
     position: absolute;
-    z-index: 999;
 }
 .homepage-social-media-bar-register-btn a{
     color:black;
+    position: absolute;
 }
 @keyframes disappear-register-button{
     0%{
-        transform: translate(-60%,60%);
+        transform: translate(90%,60%);
     }
     99%{
         transform: scale(.5);
@@ -288,7 +289,7 @@
         transform: scale(1);
     }
     100%{
-        transform: translate(60%,-60%);
+        transform: translate(-90%,-60%);
     }
 }
 
