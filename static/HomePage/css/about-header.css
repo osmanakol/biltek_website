@@ -36,7 +36,7 @@
 .about-header-box-one{
     background: white;
     transition: 1s;
-    transform: translate(27%);
+    transform: translate(2.5%);
 }
 
 .about-header-box-two{
@@ -45,13 +45,13 @@
     transition: 1s;
     background: white;
     position: absolute;
-    transform: translate(-27%);
+    transform: translate(-2.5%);
 }
 .about-header-box-one:hover, .about-header-box-two:hover{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-    width:62vw;
+    height:55vh;
 }
-
+/*
 .about-header-box-one.move, .about-header-box-two.move{
     transform: translate(0);
 }
@@ -59,7 +59,7 @@
 .about-header-box-one.extend, .about-header-box-two.extend{
     height: 55vh;
     overflow: scroll;
-}
+}*/
 .about-header-boxes > div > p{
     position: absolute;
     width: auto;
