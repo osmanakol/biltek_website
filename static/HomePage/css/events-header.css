@@ -64,11 +64,11 @@
         margin-left: -26px;
     }
     .homepage-date-icon-cros{
-        font-size: 50px;
-        color: darkred;
-        position: absolute;
-        margin-top: 7vh;
-        margin-left: -26px;
+      font-size: 50px;
+      color: red;
+      position: absolute;
+      margin-top: 7vh;
+      margin-left: 95%
     }
     
     .homepage-date-missing-icon-cros{
