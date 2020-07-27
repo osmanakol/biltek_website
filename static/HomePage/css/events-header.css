@@ -73,7 +73,7 @@
     
     .homepage-date-missing-icon-cros{
         font-size: 50px;
-        color: darkred;
+        color: red;
         position: absolute;
         margin-top: 7vh;
         margin-left: -26px;
@@ -163,16 +163,16 @@
     
       .homepage-missing-date-button-for-events {
         position: absolute;
-        background-color: darkred;
+        background-color: red;
         border: none;
         font-size: 22px;
         color: #FFFFFF;
         padding: 14px;
         top: 135%;
         width: 200px;
-        margin-top: 11vh;
+        margin-top: -6vh;
         border-radius: 16px;
-        margin-left: 6vh;
+        margin-left: 38vh;
         text-align: center;
         transition-duration: 0.4s;
         text-decoration: none;
