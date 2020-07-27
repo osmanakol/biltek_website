@@ -199,3 +199,43 @@
         opacity: 1;
         transition: 0s
       }
+
+      .homepage-events-points{
+        color: darkblue;
+        margin-left: 106vh;
+        margin-top: 3vh;
+        font-size: xx-large
+      }
+
+      .homepage-date-time-icon{
+
+        color: black;
+        margin-top: 0vh;
+        margin-left: -6px;
+        font-size: unset;   
+
+      }
+
+      .homepage-events-timeline-information-one{
+        width: 10vw;
+        height: 5vh;
+        box-shadow: 0px 0px 10px black;
+        transform: translate(-70px, 9px);
+        border-radius: 10px
+
+      }
+      .homepage-events-timeline-information-two{
+        width: 10vw;
+        height: 5vh;
+        box-shadow: 0px 0px 10px black;
+        transform: translate(-70px, 9px);
+        border-radius: 10px
+      }
+
+      .homepage-events-timeline-information-three{
+        width: 10vw;
+        height: 5vh;
+        box-shadow: 0px 0px 10px black;
+        transform: translate(-70px, 9px);
+        border-radius: 10px
+      }
