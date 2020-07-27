@@ -55,3 +55,147 @@
         position: absolute; left:181vh; 
         margin-top: 65vh;
     }
+
+    .homepage-register-icon-plus{
+        font-size: 50px;
+        color: darkblue;
+        position: absolute;
+        margin-top: 7vh;
+        margin-left: -26px;
+    }
+    .homepage-date-icon-cros{
+        font-size: 50px;
+        color: darkred;
+        position: absolute;
+        margin-top: 7vh;
+        margin-left: -26px;
+    }
+    
+    .homepage-date-missing-icon-cros{
+        font-size: 50px;
+        color: darkred;
+        position: absolute;
+        margin-top: 7vh;
+        margin-left: -26px;
+    }
+    
+    
+    .homepage-events-register-information{
+        position: absolute;
+        top:125%;
+        width: 33vw;    
+        height: 25vh;
+        margin-bottom: 33px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px black;
+        margin-top: 80vh;
+        background: white;
+        transform: translate(25%, 10%);
+        
+    }
+    
+    .homepage-events-date-missing-information{
+        position: absolute;
+        top:125%;
+        width: 33vw;    
+        height: 25vh;
+        margin-bottom: 33px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px black;
+        margin-top: 124vh;
+        background: white;
+        transform: translate(25%, 10%);
+    
+    }
+    
+    .homepage-events-date-notice{
+        position: absolute;
+        top: 116%;
+        width: 33vw;
+        height: 25vh;
+        margin-bottom: 33px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px black;
+        margin-top: 109vh;
+        background: white;
+        transform: translate(25%, 10%);
+        margin-left: 110vh;
+    
+    }
+    
+    .homepage-register-button-for-events {
+        position: absolute;
+        background-color: darkblue;
+        border: none;
+        font-size: 22px;
+        color: #FFFFFF;
+        padding: 14px;
+        width: 200px;
+        border-radius: 17px;
+        text-align: center;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+        top: 112%;
+      }
+      
+      .homepage-register-button-for-events:after {
+        content: "";
+        background: #f1f1f1;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        border-radius: 17px;
+        transition: all 0.8s
+      }
+      
+      .homepage-register-button-for-events:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+      }
+    
+      .homepage-missing-date-button-for-events {
+        position: absolute;
+        background-color: darkred;
+        border: none;
+        font-size: 22px;
+        color: #FFFFFF;
+        padding: 14px;
+        top: 135%;
+        width: 200px;
+        margin-top: 11vh;
+        border-radius: 16px;
+        margin-left: 6vh;
+        text-align: center;
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+      .homepage-missing-date-button-for-events:after {
+        content: "";
+        background: #f1f1f1;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -120%;
+        opacity: 0;
+        transition: all 0.8s
+      }
+      
+      .homepage-missing-date-button-for-events:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s
+      }
