@@ -237,9 +237,13 @@
 .homepage-social-media-bar-icon .fas {
     font-size:2vh;
 } 
-.homepage-social-media-bar-icon .fas {
-    color:#228b22;
+.homepage-social-media-bar-plus-icon a{
+    background-color:#287042;
 }
+.homepage-social-media-bar-plus-icon i{
+    color: white;
+}
+
 
 @keyframes slide-left{
     0%{
