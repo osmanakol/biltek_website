@@ -260,17 +260,26 @@
     bottom: 20%
 }
 .homepage-social-media-bar-register-btn i{
-    border: 1px solid black;
     font-family: 'Open Sans', sans-serif;
-    padding: 2px 7px;
-    width: 150px;
-    border-radius: 11px;
+    font-size: calc(0.9rem + 0.3vw);
+    font-style: normal;
+    padding: 11px 7px;
+    width: 160px;
+    border-radius: 13px;
     position: absolute;
+    box-shadow: -3px 0 7px 0 rgba(0,0,0,0.5);
+}
+.homepage-social-media-bar-register-btn i:hover{
+    transform: translateZ(50px);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    background-color: white;
+    
 }
 .homepage-social-media-bar-register-btn a{
     color:black;
     position: absolute;
 }
+
 @keyframes disappear-register-button{
     0%{
         transform: translate(90%,60%);
