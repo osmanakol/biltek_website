@@ -29,3 +29,40 @@
     font-size: calc(1rem + 0.5vw);
     font-family: 'Open Sans', sans-serif;
 }
+.homepage-teams-container{
+    position: relative;
+    top: 47%;
+    left: 50%;
+    width: 70%;
+    height: 55%;
+    transform: translate(-50%,-55%);
+    display: flex;
+}
+.homepage-teams-container i{
+    position: relative;
+    top:45%;
+}
+.homepage-team-window{
+    background-color: white;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.6);
+    width: 33.3%;
+    border-radius: 25px;
+    margin: 0 50px;
+    text-align: center;
+    transition: transform .5s ease;
+}
+.homepage-team-window:hover{
+    transform: scale(1.5);
+}
+.homepage-team-window-middle{
+    transform: scale(1.2);
+}
+.homepage-teams-container img{
+    width: 19vh;
+    position: relative;
+    transform: translateY(50%);
+}
+.homepage-teams-container h1{
+    position: relative;
+    top: 30%;
+}
