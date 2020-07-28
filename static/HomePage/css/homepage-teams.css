@@ -66,3 +66,21 @@
     position: relative;
     top: 30%;
 }
+.homepage-teams-gozat-button{
+    position: relative;
+    left: 50%;
+    top: 27%;
+    width: 25vh;
+    transform: translateX(-50%);
+}
+.homepage-teams-gozat-button a {
+    position: relative;
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 21px;
+    text-decoration: none;
+    color: black;
+}
