@@ -1,0 +1,25 @@
+#homepage-teams{
+    height: 100vh;
+    overflow: hidden;
+}
+.homepage-teams-background-columns{
+    position: absolute;
+    width: 19%;
+    height: 100vh;
+}
+.homepage-teams-background-columns-left{
+    transform: translate(-35%,25%);
+}
+.homepage-teams-background-columns-right{
+    right: 0;
+    transform: translate(50%,-15%);
+}
+.homepage-teams-background-column{
+    position: relative;
+    border-radius: 37px;
+    margin: 70px 0;
+    padding: 23px 0;
+    transform: rotate(-33deg);
+    background: rgba(0,0,0,0.11);
+    width: 100%;
+}
