@@ -23,3 +23,9 @@
     background: rgba(0,0,0,0.11);
     width: 100%;
 }
+.homepage-teams-header-text{
+    text-align: center;
+    transform: translateY(7vh);
+    font-size: calc(1rem + 0.5vw);
+    font-family: 'Open Sans', sans-serif;
+}
