@@ -25,18 +25,16 @@
     height: 70vh;
 }
 .about-header-boxes > div{
-    width: 47vw;
+    width: 43vw;
     height: 25vh;
     border-radius: 30px;
     box-shadow: 0px 0px 10px black;
-    overflow: hidden;
-    
 }
 
 .about-header-box-one{
     background: white;
     transition: 1s;
-    transform: translate(2.5%);
+    transform: translate(28% , 15%);
 }
 
 .about-header-box-two{
@@ -45,16 +43,23 @@
     transition: 1s;
     background: white;
     position: absolute;
-    transform: translate(-2.5%);
+    transform: translate(-28% , -15%);
 }
 
 .about-header-box-one:hover, .about-header-box-two:hover{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-    height:55vh;
+    height:37vh;
 }
 .about-header-box-one:hover > p, .about-header-box-two:hover > p{
-    height: 55vh;
+    height: auto;
 }
+.about-header-box-one:hover ~ .about-header-box-two{
+ transform:translate(-4%);
+}
+.about-header-box-two:hover ~ .about-header-box-one{
+ transform:translate(4%);
+}
+
 /*
 .about-header-box-one.move, .about-header-box-two.move{
     transform: translate(0);
@@ -67,10 +72,10 @@
 .about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
-    width: auto;
-    height: 23.5vh;
+    width: 27vw;
+    height: 21vh;
     left: 10%;
-    margin: 0;
+    margin: 25px;
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }

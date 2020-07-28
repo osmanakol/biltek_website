@@ -29,7 +29,7 @@ body, html{
 .homepage-header-ellipse{
     overflow: hidden;
     transition: 1s;
-    height: 200vh;
+    height: 220vh;
     width: 145vw; 
     background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
     border-radius: 50%;
@@ -54,7 +54,6 @@ body, html{
     width:6%;
 }
 .homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
-    height: 220vh;
     width: 160vw;
 }
 
@@ -220,11 +219,11 @@ body, html{
 /*----------------------------
             Responsive
 -----------------------------*/
-@media only screen and (max-width: 1450px){
+/* @media only screen and (max-width: 1450px){
     .homepage-header-ellipse{
         height: 168vh;
     }
-}
+} */
  @media only screen and (max-width:1250px){
     .homepage-header-content{
         top:22%;
@@ -248,18 +247,21 @@ body, html{
     .homepage-header-content{
         width: 34vw;
     }
-    .homepage-header-ellipse{
+    /* .homepage-header-ellipse{
         height: 145vh
-    }
+    } */
    
 }
 @media only screen and (max-width:1010px){
     .homepage-header-column > div{
-        width: 5.5vw;
+        width: 6vw;
     } 
+    .homepage-header-column-four{
+        display: none;
+    }
 }
 
-@media only screen and (max-width:850px){
+/* @media only screen and (max-width:850px){
     .homepage-header-ellipse{
         height: 120vh;
     }
@@ -274,7 +276,7 @@ body, html{
     .homepage-header-ellipse{
         width: 165vw;
     }
-}
+} */
 /*----------------------------
         Mobile header
 -----------------------------*/
