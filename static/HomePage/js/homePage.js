@@ -8,30 +8,31 @@ var currentScrollPos = window.pageYOffset;
   /*prevScrollpos = currentScrollPos;*/
 }
 
-/*MOBILENAV JS
-menu.addEventListener("click", function () {
-    setTimeout(() => {
-        menu.classList.toggle("active");
-    }, 600);
-    navlist.classList.toggle("animate-right");
-});
+var current_order=0
 
-wrapper.addEventListener("click", function () {
-    setTimeout(() => {
-        menu.classList.remove("active");
-    }, 200);
-    setTimeout(() => {
-        navlist.classList.add("animate-right");
-    }, 0);
-});
 
-links.forEach(link => {
-    link.addEventListener("click", function () {
-        setTimeout(() => {
-            menu.classList.remove("active");
-        }, 1000);
-        setTimeout(() => {
-            navlist.classList.add("animate-right");
-        }, 800);
-    });
-});*/
+function homepageTeamsChangeFunc(direction){
+        if(direction== 0){//right
+            document.getElementsByClassName("homepage-team-window-previous")[0].style.order=current_order
+            document.getElementsByClassName("homepage-team-window-middle")[0].style.order=current_order+1
+            document.getElementsByClassName("homepage-team-window-next")[0].style.order=current_order-1
+            //document.getElementsByClassName("homepage-team-window-next")[0].style.backgroundColor="red";
+            current_order+=1;
+            if(current_order>1){
+                current_order=-1;
+            }
+            console.log("if co",current_order)
+        }
+        else if(direction==1){//left
+            document.getElementsByClassName("homepage-team-window-next")[0].order=current_order+1
+            document.getElementsByClassName("homepage-team-window-previous")[0].order=current_order+1
+            document.getElementsByClassName("homepage-team-window-middle")[0].order=current_order-1;
+            //document.getElementsByClassName("homepage-team-window-next")[0].style.backgroundColor="white"
+            current_order-=1;
+            if(current_order<-1){
+                current_order=1;
+            }
+            console.log("else co,",current_order);
+        }
+        
+}

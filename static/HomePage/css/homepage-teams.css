@@ -38,9 +38,19 @@
     transform: translate(-50%,-55%);
     display: flex;
 }
-.homepage-teams-container i{
+.homepage-teams-buttons{
     position: relative;
-    top:45%;
+    top:50%;
+    cursor: pointer;
+}
+.homepage-teams-left-button{
+    position: relative;
+    left: 13%;
+    cursor: pointer;
+}
+.homepage-teams-right-button{
+    position: relative;
+    left: 87%;
 }
 .homepage-team-window{
     background-color: white;
@@ -54,8 +64,14 @@
 .homepage-team-window:hover{
     transform: scale(1.5);
 }
+.homepage-team-window-previous{
+    transform: skewY(-21deg)scale(0.9);
+}
 .homepage-team-window-middle{
     transform: scale(1.2);
+}
+.homepage-team-window-next{
+    transform: skewY(21deg)scale(0.9);
 }
 .homepage-teams-container img{
     width: 19vh;
