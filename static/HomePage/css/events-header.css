@@ -398,3 +398,59 @@ grid-row:1 / 2 span;
   height: 4px;
   top: calc(50% - 2px);
 }
+
+/* -----------RESPONSİVE--------------*/
+
+@media screen and (max-width: 1190px){
+
+  .homepage-events-timeline-information-two {
+    transform: translate(0%, -999%);
+
+  }
+}
+
+@media screen and (max-width: 990px){
+
+.homepage-events-date-notice{
+  transform: translate(17%, 132%);
+ 
+}
+.homepage-events-date-missing-information{
+  transform: translate(-14%, 234%);
+}
+.homepage-events-register-information {
+  
+  transform: translate(-14%,38%);
+} 
+}
+@media screen and (max-width: 850px){
+  .homepage-events-points{
+    font-size:27px ;
+  }
+  .homepage-events-timeline-information-one{
+    transform: translate(0%,268%);
+  }
+  .homepage-events-timeline-information-two{
+    transform: translate(0%, -938%);
+
+  }
+  .homepage-events-timeline-information-three{
+    transform: translate(0%, -317%);
+
+  }
+}
+@media screen and (max-width: 900px){
+  .homepage-events-timeline-information-two{
+    transform: translate(0%, -1015%);
+  }
+}
+@media screen and (max-width: 800px){
+  .homepage-events-points{
+    font-size:25px ;    
+
+  }
+  .homepage-events-timeline-information-two {
+
+    transform: translate(0%, -938%);
+  }
+}
