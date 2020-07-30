@@ -92,3 +92,43 @@
 .about-header-box-two-eye{
     right: 7%;
 }
+
+/*----------------------------
+        Mobile About
+-----------------------------*/
+@media only screen and (max-width:768px){
+    .about-header-boxes{
+        display: contents;
+        top: 130%;
+        width: auto;
+    }
+    .about-header-boxes > div{
+        width: 45vw;
+        height: 18vh;
+        position: relative;
+        left: 50%;
+        top: 30%;
+    }
+    .about-header-boxes > div > img{
+        width: 9vw;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%);
+    }
+    .about-header-box-one{
+        transform: translate(-50% , 15%);
+    }
+    .about-header-box-two{
+        transform: translate(-50%, 100%);
+    }
+    .about-header-boxes > div > p{
+        width: 30vw;
+        height: 13vh; 
+    }
+    .about-header-box-one:hover, .about-header-box-two:hover{
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    }
+
+}
