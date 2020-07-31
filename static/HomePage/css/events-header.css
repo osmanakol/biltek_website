@@ -1,4 +1,5 @@
 #homepage-events{
+  display: none;
     width: 100vw;}
     .homepage-events-bigEllipse-pro{
         overflow-x: hidden;

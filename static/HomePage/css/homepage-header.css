@@ -261,7 +261,7 @@ body, html{
     }
 }
 
-/* @media only screen and (max-width:850px){
+@media only screen and (max-width:850px){
     .homepage-header-ellipse{
         height: 120vh;
     }
@@ -276,7 +276,7 @@ body, html{
     .homepage-header-ellipse{
         width: 165vw;
     }
-} */
+} 
 /*----------------------------
         Mobile header
 -----------------------------*/

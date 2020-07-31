@@ -1,5 +1,5 @@
 #about-header{
-    height:100vh;
+    height:auto;
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -46,36 +46,25 @@
     transform: translate(-28% , -15%);
 }
 
-.about-header-box-one:hover, .about-header-box-two:hover{
+.about-header-box-one.extend, .about-header-box-two.extend{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
     height:37vh;
 }
-.about-header-box-one:hover > p, .about-header-box-two:hover > p{
-    height: auto;
-}
-.about-header-box-one:hover ~ .about-header-box-two{
- transform:translate(-4%);
-}
-.about-header-box-two:hover ~ .about-header-box-one{
- transform:translate(4%);
+
+.about-header-box-one.move{
+    transform:translate(4%, 15%);
+} 
+.about-header-box-two.move{
+    transform: translate(-4%, -15%);
 }
 
-/*
-.about-header-box-one.move, .about-header-box-two.move{
-    transform: translate(0);
-}
-
-.about-header-box-one.extend, .about-header-box-two.extend{
-    height: 55vh;
-    overflow: scroll;
-}*/
 .about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
-    width: 27vw;
-    height: 21vh;
+    width: 75%;
+    height: 90%;
     left: 10%;
-    margin: 25px;
+    margin: 0;
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
@@ -100,32 +89,39 @@
     .about-header-boxes{
         display: contents;
         top: 130%;
-        width: auto;
+        width: 100vh;
     }
     .about-header-boxes > div{
-        width: 45vw;
-        height: 18vh;
+        width: 100vw;
+        height: 33vh;
         position: relative;
+        box-shadow: none;
         left: 50%;
+        border: none;
+        text-align: center;
         top: 30%;
+        overflow: visible;
     }
     .about-header-boxes > div > img{
         width: 9vw;
         height: auto;
         position: absolute;
         left: 50%;
-        top: -50%;
+        top: -25%;
         transform: translate(-50%);
     }
     .about-header-box-one{
         transform: translate(-50% , 15%);
     }
     .about-header-box-two{
-        transform: translate(-50%, 100%);
+        transform: translate(-50%, 25%);
     }
     .about-header-boxes > div > p{
-        width: 30vw;
-        height: 13vh; 
+        width: 70vw;
+        margin: 0;
+        height: 22vh; 
+        transform: translate(-50%, 10%);
+        left: 50%;
     }
     .about-header-box-one:hover, .about-header-box-two:hover{
         background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
