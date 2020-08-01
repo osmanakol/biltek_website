@@ -65,12 +65,15 @@
     transform: scale(1.5);
 }
 .homepage-team-window-previous{
+    order: 0;
     transform: skewY(-21deg)scale(0.9);
 }
 .homepage-team-window-middle{
+    order:1;
     transform: scale(1.2);
 }
 .homepage-team-window-next{
+    order:2;
     transform: skewY(21deg)scale(0.9);
 }
 .homepage-teams-container img{

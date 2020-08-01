@@ -12,27 +12,18 @@ var current_order=0
 
 
 function homepageTeamsChangeFunc(direction){
-        if(direction== 0){//right
-            document.getElementsByClassName("homepage-team-window-previous")[0].style.order=current_order
-            document.getElementsByClassName("homepage-team-window-middle")[0].style.order=current_order+1
-            document.getElementsByClassName("homepage-team-window-next")[0].style.order=current_order-1
-            //document.getElementsByClassName("homepage-team-window-next")[0].style.backgroundColor="red";
-            current_order+=1;
-            if(current_order>1){
-                current_order=-1;
-            }
-            console.log("if co",current_order)
+        if(direction==0){//right
+            document.getElementsByClassName("homepage-team-window-previous")[0].style.order=(current_order+1)%3;
+            document.getElementsByClassName("homepage-team-window-middle")[0].style.order=(current_order+2)%3;
+            document.getElementsByClassName("homepage-team-window-next")[0].style.order=(current_order+3)%3;
+            
+            console.log("if co",current_order);
         }
-        else if(direction==1){//left
-            document.getElementsByClassName("homepage-team-window-next")[0].order=current_order+1
-            document.getElementsByClassName("homepage-team-window-previous")[0].order=current_order+1
-            document.getElementsByClassName("homepage-team-window-middle")[0].order=current_order-1;
-            //document.getElementsByClassName("homepage-team-window-next")[0].style.backgroundColor="white"
-            current_order-=1;
-            if(current_order<-1){
-                current_order=1;
-            }
+        else {//left
+            document.getElementsByClassName("homepage-team-window-next")[0].order=(current_order+2)%3;
+            document.getElementsByClassName("homepage-team-window-previous")[0].order=(current_order+1)%3;
+            document.getElementsByClassName("homepage-team-window-middle")[0].order=(current_order+3)%3;
             console.log("else co,",current_order);
         }
-        
+        current_order+=1;
 }
