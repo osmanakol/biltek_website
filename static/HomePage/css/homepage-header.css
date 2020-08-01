@@ -50,12 +50,6 @@ body, html{
     transition: 1s;
 }
 
-.homepage-header-logo:hover{
-    width:6%;
-}
-.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
-    width: 160vw;
-}
 
 /*----------------------------
             Orbits
@@ -280,6 +274,15 @@ body, html{
 /*----------------------------
         Mobile header
 -----------------------------*/
+@media only screen and (min-width:768px){
+    
+.homepage-header-logo:hover{
+    width:6%;
+}
+.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
+    width: 160vw;
+}
+}
 @media only screen and (max-width:768px){
     .homepage-header-logo{
         display:none;
