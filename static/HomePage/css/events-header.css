@@ -100,7 +100,7 @@ background: white;
 
    .homepage-events-points{
     color: darkblue;
-    font-size: 30px;
+    font-size: 39px;
   }
 
   .homepage-date-time-icon{
@@ -113,29 +113,23 @@ background: white;
   }
 
   .homepage-events-timeline-information-one{
-    
-    height: 5vh;
+        
+    height: 45px;
     box-shadow: 0px 0px 10px black;
-    transform: translate(0px, 9px);
     border-radius: 10px;
-    transform: translate(0%,240%);
+    
   }
   .homepage-events-timeline-information-two{
-    height: 5vh;
+    height: 45px;
     box-shadow: 0px 0px 10px black;
-    transform: translate(0px, 9px);
     border-radius: 10px;
-    transform: translate(0%, -872%);
   }
 
   .homepage-events-timeline-information-three{
-    height: 5vh;
+    height: 45px;
     box-shadow: 0px 0px 10px black;
-    transform: translate(0px, 9px);
     border-radius: 10px;
-    transform: translate(0%, -280%);
   }
-
 
   /*----------------------BUTON-1---------------------------*/
       .main-hr {
