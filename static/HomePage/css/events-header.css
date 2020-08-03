@@ -8,10 +8,8 @@
 }
 
 .homepage-events-grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
- 
-   height: 45px;
+  
 }
 
 
@@ -44,7 +42,7 @@
     grid-row: 12}
 
   .homepage-events-grid-item7{
-  grid-column:10 / span 3;
+  grid-column:10 / span 4;
   grid-row: 6 / span 4;}
 
   .homepage-events-grid-item8{
@@ -65,37 +63,41 @@
   border-radius: 50%;
   position: absolute;
   transform: translate(-30%,1%);
+z-index: -1;
   
 }
 
 /* ----- İNFORMATİON BOX ------ */
 
 .homepage-events-register-information{
-  position: absolute;
-  width: 27vw;
-  height: 23vh;
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 21px;
   box-shadow: 0px 0px 10px black;
   background: white;
+  padding: 1px;
 }
 
 .homepage-events-date-missing-information{
-  position: absolute;
-width: 28vw;
-height: 25vh;
-border-radius: 21px;
-box-shadow: 0px 0px 10px black;
-background: white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 21px;
+  box-shadow: 0px 0px 10px black;
+  background: white;
+  padding: 1px;
 
 }
 
 .homepage-events-date-notice{
-  position: absolute;
-  width: 27vw;
-  height: 25vh;
+  position: relative;
+  width: 100%;
+  height: 100%;
   border-radius: 21px;
   box-shadow: 0px 0px 10px black;
   background: white;
+  padding: 1px;
 }
   
    /* ----- TİMELİNE ------ */
@@ -141,14 +143,16 @@ background: white;
       }
       .homepage-item1-icon-btn {
         width: 50px;
-        height: 50px;
-        border: 1px solid #cdcdcd;
-        background: darkblue;
-        border-radius: 25px;
-        overflow: hidden;
-        position: relative;
-        transition: width 0.2s ease-in-out;
-        transform: translate(-14vw, 8vh);
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: darkblue;
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    transition: width 0.2s ease-in-out;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
 
       }
       .homepage-item1-add-btn:hover {
@@ -236,12 +240,14 @@ background: white;
   background: red;
   border-radius: 25px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   transition: width 0.2s ease-in-out;
-  transform: translate(-14vw, 7vh);
+  left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 .homepage-item1-add-btn-red:hover {
-  width: 120px;
+  width: 140px;
 }
 .homepage-item1-add-btn-red::before,
 .homepage-item1-add-btn-red::after {
@@ -326,12 +332,14 @@ background: white;
   background: red;
   border-radius: 25px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   transition: width 0.2s ease-in-out;
-  transform: translate(14vw, 8vh);
+  right: 0;
+  top: 50%;
+  transform: translate(50%,-50%);
 }
 .homepage-item6-add-btn-miss:hover {
-  width: 120px;
+  width: 140px;
 }
 .homepage-item6-add-btn-miss::before,
 .homepage-item6-add-btn-miss::after {
@@ -414,59 +422,127 @@ background: white;
     display: none;
   }
   .homepage-events-register-information{
-    width: 54%;
-    height: 21%;
+    width: 100%;
+    height: 100%;
   }
-
-  #homepage-events-grid-item2 {
+  .homepage-item1-icon-btn{
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    
+  }
+  .homepage-events-grid-item2 {
     grid-column: 4 / span 8;
-    grid-row: 2/ span 3
+    grid-row: 1/ span 3;
   }
 
   .homepage-events-date-missing-information{
-    width: 54%;
-    height: 21%;
+    width: 100%;
+    height: 100%;
   }
+  .homepage-item1-icon-btn-red{
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+
 
   .homepage-events-grid-item3{
     grid-column: 4 / span 8;
-    grid-row: 6/ span 4;
+    grid-row: 5/ span 3;
   }
 
   .homepage-events-date-notice{
-    width: 54%;
-    height: 21%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
+  
   .homepage-events-grid-item7{
     grid-column: 4 / span 8;
-    grid-row: 10 / span 3
+    grid-row: 9 / span 3
   }
 
   .homepage-events-grid-item4{
     grid-column: 6/ span 4;
-    grid-row: 1/ span 2;
+    grid-row: 1/ span 1;
   }
 
   .homepage-events-timeline-information-one{
-    transform: translate(1px, 32px);
-  }
+    top: 0;
+    transform: translate(0%, -50%);  }
 
   .homepage-events-grid-item5{
     grid-column: 6/ span 4;
-    grid-row: 5 / span 2;
+    grid-row: 5 / span 1;
   }
   .homepage-events-timeline-information-two{
-    transform: translate(1px, 34px);
-
+    top: 0;
+    transform: translate(0%, -50%);
   }
 
   .homepage-events-grid-item6{
     grid-column: 6/ span 4;
-    grid-row: 9/ span 2;
+    grid-row: 9/ span 1;
   }
   .homepage-events-timeline-information-three {
-    transform: translate(1px, 32px);
+    top: 0;
+    transform: translate(0%, -50%);
+  }
+
+  .homepage-item6-icon-btn-miss{
+    bottom: 0;
+    transform: translate(-50%,50%);
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .homepage-events-grid-item2 {
+    grid-column: 3 / span 10;
+  }
+  .homepage-events-grid-item4 {
+    grid-column: 5/ span 6;
+  }
+
+  .homepage-events-grid-item3{
+    grid-column: 3 / span 10;
+  }
+
+  .homepage-events-grid-item5{
+    grid-column: 5/ span 6;
+  }
+  .homepage-events-grid-item7{
+    grid-column: 3 / span 10;
+  }
+  .homepage-events-grid-item6{
+    grid-column: 5/ span 6;
 
   }
+
+
+}
+
+@media screen and (max-width: 400px){
+  .homepage-events-grid-item2 {
+    grid-column: 3 / span 10;
+  }
+  .homepage-events-grid-item4 {
+    grid-column: 5/ span 6;
+  }
+
+  .homepage-events-grid-item3{
+    grid-column: 3 / span 10;
+  }
+
+  .homepage-events-grid-item5{
+    grid-column: 5/ span 6;
+  }
+  .homepage-events-grid-item7{
+    grid-column: 3 / span 10;
+  }
+  .homepage-events-grid-item6{
+    grid-column: 5/ span 6;
+
+  }
+
 
 }
