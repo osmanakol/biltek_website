@@ -26,19 +26,19 @@
     grid-row: 10/ span 4;}
 
   .homepage-events-grid-item4{
-  grid-column: 7/ span 2;
+  grid-column: 7/ span 3;
   grid-row: 3;}
 
   .homepage-events-grid-item5{
-  grid-column:7/ span 2;
+  grid-column:7/ span 3;
   grid-row: 7;}
 
   .homepage-events-grid-item0{
-    grid-column: 7/ span 2;
+    grid-column: 7/ span 3; 
     grid-row: 1/ span 14;}
 
   .homepage-events-grid-item6{
-    grid-column:7/ span 2;
+    grid-column:7/ span 3;
     grid-row: 12}
 
   .homepage-events-grid-item7{
@@ -50,8 +50,22 @@
   grid-row: 1/ span 14;}
 
   .homepage-events-grid-for-timeline-button{
-    grid-column: 7 / span 2;
+    grid-column: 7 / span 3;
     grid-row: 14;
+}
+.homepage-events-grid-for-medium-ellipse{
+  grid-column: 9 / span 4;
+  grid-row: 10 / span 5;
+}
+
+.homepage-events-grid-for-subsmall-ellipse{
+  grid-column: 13 / span 1;
+  grid-row: 10 / span 2;
+}
+
+.homepage-events-grid-for-small-ellipse{
+  grid-column: 13 / span 2;
+    grid-row: 12 / span 3;
 }
 
 
@@ -68,23 +82,20 @@
   border-radius: 50%;
   position: absolute;
   transform: translate(-30%,1%);
-z-index: -1;
+  z-index: -1;
   
 }
-/*
+
 .homepage-events-mediumElips{
 background-color: #45597e;
-height: 300px;
-width: 300px;
+height: 30%;
+width: 24%;
 background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 position: absolute;
-transform: translate(5%, 60vh);
+z-index: -1;
 }
 
-.homepage-events-smallElips-pro{
-  overflow-x: hidden;
-}
 .homepage-events-smallElips{
 background-color: #45597e;
 height: 210px;
@@ -93,10 +104,9 @@ background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 border-radius: 50%;
 position: absolute;
-transform: translate(19vw, 85vh); 
-}
+  }
 
-.homepage-events-smallElips-2{
+.homepage-events-subsmallElips{
 background-color: #45597e;
 height: 70px;
 width: 70px;
@@ -104,9 +114,9 @@ background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 border-radius: 50%;
 position: absolute;
-transform: translate(33vw, 75vh);
 }
-*/
+
+
 
 /* ----- İNFORMATİON BOX ------ */
 
@@ -163,18 +173,29 @@ transform: translate(33vw, 75vh);
     height: 45px;
     box-shadow: 0px 0px 10px black;
     border-radius: 10px;
+    background: white;
+    padding: 7px;
+
     
   }
   .homepage-events-timeline-information-two{
     height: 45px;
     box-shadow: 0px 0px 10px black;
     border-radius: 10px;
+    background: white;
+    padding: 7px;
+
+
   }
 
   .homepage-events-timeline-information-three{
     height: 45px;
     box-shadow: 0px 0px 10px black;
     border-radius: 10px;
+    background: white;
+    padding: 7px;
+
+
   }
 
   /*----------------------BUTON-1---------------------------*/
@@ -463,6 +484,18 @@ transform: translate(33vw, 75vh);
   .homepage-events-points{
     display: none;
   }
+  .homepage-events-mediumElips{
+    display: none;
+  }
+
+  .homepage-events-smallElips{
+    display: none;
+  }
+
+  .homepage-events-subsmallElips{
+    display: none;
+  }
+
   .homepage-events-register-information{
     width: 100%;
     height: 100%;
@@ -541,6 +574,7 @@ transform: translate(33vw, 75vh);
     top: auto;
   }
   .homepage-events-grid-for-timeline-button{
+    grid-column: 6 / span 4;
     grid-row: 13;
   }
 
@@ -568,7 +602,6 @@ transform: translate(33vw, 75vh);
     grid-column: 5/ span 6;
 
   }
-
 
 }
 
