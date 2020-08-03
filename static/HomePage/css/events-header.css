@@ -49,6 +49,11 @@
   grid-column: 14 / span 1;
   grid-row: 1/ span 14;}
 
+  .homepage-events-grid-for-timeline-button{
+    grid-column: 7 / span 2;
+    grid-row: 14;
+}
+
 
 /* ----- ELLİPSE ------ */
 
@@ -112,7 +117,8 @@ z-index: -1;
     color: black;
     margin-top: 0vh;
     margin-left: 1px;
-    font-size: unset;   
+    font-size: unset;
+    font-size: 35px;   
 
   }
 
@@ -428,6 +434,8 @@ z-index: -1;
   .homepage-item1-icon-btn{
     bottom: 0;
     transform: translate(-50%, 50%);
+    left: auto;
+    top: auto;
     
   }
   .homepage-events-grid-item2 {
@@ -442,6 +450,8 @@ z-index: -1;
   .homepage-item1-icon-btn-red{
     bottom: 0;
     transform: translate(-50%, 50%);
+    left: auto;
+    top: auto;
   }
 
 
@@ -491,6 +501,11 @@ z-index: -1;
   .homepage-item6-icon-btn-miss{
     bottom: 0;
     transform: translate(-50%,50%);
+    right: auto;
+    top: auto;
+  }
+  .homepage-events-grid-for-timeline-button{
+    grid-row: 13;
   }
 
 }
@@ -523,26 +538,33 @@ z-index: -1;
 
 @media screen and (max-width: 400px){
   .homepage-events-grid-item2 {
-    grid-column: 3 / span 10;
+    grid-column: 2 / span 12;
   }
   .homepage-events-grid-item4 {
-    grid-column: 5/ span 6;
+    grid-column: 4/ span 8;
   }
 
   .homepage-events-grid-item3{
-    grid-column: 3 / span 10;
+    grid-column: 2 / span 12;
   }
 
   .homepage-events-grid-item5{
-    grid-column: 5/ span 6;
+    grid-column: 4/ span 8;
   }
   .homepage-events-grid-item7{
-    grid-column: 3 / span 10;
+    grid-column: 2 / span 12;
   }
   .homepage-events-grid-item6{
-    grid-column: 5/ span 6;
+    grid-column: 4/ span 8;
 
   }
 
 
+}
+
+.homepage-date-time-icon.fa{
+  display: inline-block;
+  border-radius: 45px;
+  box-shadow: 0px 0px 9px #0e0e0e;
+  padding: 9px 16px;
 }
