@@ -26,19 +26,19 @@
     grid-row: 10/ span 4;}
 
   .homepage-events-grid-item4{
-  grid-column: 7/ span 3;
+  grid-column: 7/ span 2;
   grid-row: 3;}
 
   .homepage-events-grid-item5{
-  grid-column:7/ span 3;
+  grid-column:7/ span 2;
   grid-row: 7;}
 
-  .homepage-events-grid-item0{
-    grid-column: 7/ span 3; 
+  .homepage-events-grid-for-timeline-points{
+    grid-column: 7/ span 2;
     grid-row: 1/ span 14;}
 
   .homepage-events-grid-item6{
-    grid-column:7/ span 3;
+    grid-column:7/ span 2;
     grid-row: 12}
 
   .homepage-events-grid-item7{
@@ -50,7 +50,7 @@
   grid-row: 1/ span 14;}
 
   .homepage-events-grid-for-timeline-button{
-    grid-column: 7 / span 3;
+    grid-column: 7 / span 2;
     grid-row: 14;
 }
 .homepage-events-grid-for-medium-ellipse{
@@ -158,6 +158,13 @@ position: absolute;
     font-size: 39px;
   }
 
+  .homepage-date-time-icon.fa{
+    display: inline-block;
+    border-radius: 45px;
+    box-shadow: 0px 0px 9px #0e0e0e;
+    padding: 9px 16px;
+  }
+  
   .homepage-date-time-icon{
 
     color: black;
@@ -628,12 +635,6 @@ position: absolute;
 
   }
 
-
 }
 
-.homepage-date-time-icon.fa{
-  display: inline-block;
-  border-radius: 45px;
-  box-shadow: 0px 0px 9px #0e0e0e;
-  padding: 9px 16px;
-}
+
