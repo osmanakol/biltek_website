@@ -72,6 +72,12 @@
   .homepage-teams-container .card-body{
       height:100px;
   }
+  .homepage-teams-container.carousel-control-prev {
+    left: -10%;
+}
+.homepage-teams-container.carousel-control-next {
+    right: -10%;
+}
 
 /*.homepage-teams-gozat-button{
     position: relative;
