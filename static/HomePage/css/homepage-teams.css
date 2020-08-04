@@ -72,10 +72,10 @@
   .homepage-teams-container .card-body{
       height:100px;
   }
-  .homepage-teams-container.carousel-control-prev {
+  .homepage-teams-container .carousel-control-prev {
     left: -10%;
 }
-.homepage-teams-container.carousel-control-next {
+.homepage-teams-container .carousel-control-next {
     right: -10%;
 }
 
