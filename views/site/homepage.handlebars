@@ -60,40 +60,69 @@
     <div class="homepage-teams-header-text">
         Takımlarımız
     </div>
-    <div class="homepage-teams-buttons">
-        <i class="fas fa-angle-double-left homepage-teams-left-button" onclick="homepageTeamsChangeFunc(0)"></i>
-        <i class="fas fa-angle-double-right homepage-teams-right-button" onclick="homepageTeamsChangeFunc(1)"></i>
-    </div>
-    {{!-- <div class="homepage-teams-container">
-        <div class="homepage-team-window homepage-team-window-previous">
-            <img src="/img/aybulogo.png" alt="">
-            <h1>Lorem ipsum pre</h1>
-        </div>
-        <div class="homepage-team-window homepage-team-window-middle">
-            <img src="/img/aybulogo.png" alt="">
-            <h1>Lorem ipsum mid</h1>
-        </div>
-        <div class="homepage-team-window homepage-team-window-next">
-            <img src="/img/aybulogo.png" alt="">
-            <h1>Lorem ipsum next</h1>
-        </div>
-    </div>--}}
+    {{!-- <div class="homepage-teams-buttons">
+        <a class="fas fa-angle-double-left homepage-teams-left-button" href="#myCarousel"></a>
+        <a class="fas fa-angle-double-right homepage-teams-right-button" href="#myCarousel"></a>
+    </div> --}}
     <div class="homepage-teams-container">
-        <div class="homepage-team-content">
-            <div class="homepage-team-item">
-                <img src="/img/aybulogo.png" alt="">
-                <h1>Lorem ipsum pre</h1>
-            </div>
-            <div class="homepage-team-item">
-                <img src="/img/aybulogo.png" alt="">
-                <h1>Lorem ipsum mid</h1>
-            </div>
-            <div class="homepage-team-item">
-                <img src="/img/aybulogo.png" alt="">
-                <h1>Lorem ipsum next</h1>
-            </div>
+        <div id="homepage-team-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class=" card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-1">
+                                <div class="card-body"><h5 class="card-title">Team 1</h5></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-2">
+                                <div class="card-body"><h5 class="card-title">Team 2</h5></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-3">
+                                <div class="card-body"><h5 class="card-title">Team 3</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--carousel-item-->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-4">
+                                <div class="card-body"><h5 class="card-title">Team 4</h5></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-5">
+                                <div class="card-body"><h5 class="card-title">Team 5</h5></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-6">
+                                <div class="card-body"><h5 class="card-title">Team 6</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--carousel-item-->
+            </div> <!--carousel-inner-->
+            <a class="carousel-control-prev" href="#homepage-team-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#homepage-team-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </div>
+        
+    </div><!--container-->
     {{!-- <div class="homepage-teams-gozat-button">
         <a href="">Göz at</a>
     </div> --}}
