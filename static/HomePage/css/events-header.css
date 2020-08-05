@@ -11,8 +11,6 @@
   text-align: center;
   
 }
-
-
   .homepage-events-grid-item1 {
   grid-column: 1 / span 1;
   grid-row:1/ span 14 ;}
@@ -53,20 +51,7 @@
     grid-column: 7 / span 2;
     grid-row: 14;
 }
-.homepage-events-grid-for-medium-ellipse{
-  grid-column: 9 / span 4;
-  grid-row: 10 / span 5;
-}
 
-.homepage-events-grid-for-subsmall-ellipse{
-  grid-column: 13 / span 1;
-  grid-row: 10 / span 2;
-}
-
-.homepage-events-grid-for-small-ellipse{
-  grid-column: 13 / span 2;
-    grid-row: 12 / span 3;
-}
 
 
 /* ----- ELLİPSE ------ */
@@ -94,7 +79,7 @@ background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 position: absolute;
 z-index: -1;
-}
+right: 0;}
 
 .homepage-events-smallElips{
 background-color: #45597e;
@@ -104,6 +89,7 @@ background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 border-radius: 50%;
 position: absolute;
+right: 0;
   }
 
 .homepage-events-subsmallElips{
@@ -114,6 +100,7 @@ background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 border-radius: 50%;
 position: absolute;
+right: 0;
 }
 
 
