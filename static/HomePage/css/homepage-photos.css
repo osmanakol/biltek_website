@@ -1,0 +1,32 @@
+#homepage-photos{
+    height: 100vh;
+}
+.homepage-photos-gallery{
+    position: relative;
+    width: 40%;
+    height: 90%;
+    left: 9%;
+    float: left;
+}
+.homepage-photos-background-circle{
+    position: relative;
+    background-color: #45597e;
+    background: linear-gradient(30deg,#cbbacc 10%,rgba(37, 128, 179,.7));
+    opacity: .7;
+    top:5%;
+    left: 50%;
+    width: 50%;
+    height: 90%;
+    border-radius: 50%;
+}
+.homepage-photos-show-area{
+    position: relative;
+    border: 1px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50%;
+    width: 70%;
+    z-index: 2;
+    border-radius: 10px;
+}
