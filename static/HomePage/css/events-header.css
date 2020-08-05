@@ -211,7 +211,7 @@ position: absolute;
         border: none;
         border-top: 1px solid #c3c3c3;
       }
-      .homepage-item1-icon-btn {
+      .homepage-item2-icon-btn {
         width: 50px;
     height: 50px;
     border: 1px solid #cdcdcd;
@@ -225,11 +225,11 @@ position: absolute;
     transform: translate(-50%,-50%);
 
       }
-      .homepage-item1-add-btn:hover {
+      .homepage-item2-add-btn:hover {
         width: 120px;
       }
-      .homepage-item1-add-btn::before,
-      .homepage-item1-add-btn::after {
+      .homepage-item2-add-btn::before,
+      .homepage-item2-add-btn::after {
         transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
         content: "";
         position: absolute;
@@ -238,35 +238,35 @@ position: absolute;
         top: calc(50% - 2px);
         background: white;
       }
-      .homepage-item1-add-btn::after {
+      .homepage-item2-add-btn::after {
         right: 14px;
         overflow: hidden;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
       }
-      .homepage-item1-add-btn::before {
+      .homepage-item2-add-btn::before {
         left: 14px;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
       }
-      .homepage-item1-icon-btn:focus {
+      .homepage-item2-icon-btn:focus {
         outline: none;
       }
-      .btn-txt {
+      .homepage-item2-btn-text {
         opacity: 0;
         transition: opacity 0.2s;
         color: white;
       }
-      .homepage-item1-add-btn:hover::before,
-      .homepage-item1-add-btn:hover::after {
+      .homepage-item2-add-btn:hover::before,
+      .homepage-item2-add-btn:hover::after {
         width: 4px;
         border-radius: 2px;
       }
-      .homepage-item1-add-btn:hover .btn-txt {
+      .homepage-item2-add-btn:hover .btn-txt {
         opacity: 1;
       }
-      .homepage-item1-add-icon::after,
-      .homepage-item1-add-icon::before {
+      .homepage-item2-add-icon::after,
+      .homepage-item2-add-icon::before {
         transition: all 0.2s ease-in-out;
         content: "";
         position: absolute;
@@ -276,22 +276,22 @@ position: absolute;
         background: white;
         overflow: hidden;
       }
-      .homepage-item1-add-icon::before {
+      .homepage-item2-add-icon::before {
         left: 22px;
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
       }
-      .homepage-item1-add-icon::after {
+      .homepage-item2-add-icon::after {
         right: 22px;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
       }
-      .homepage-item1-add-btn:hover .homepage-item1-add-icon::before {
+      .homepage-item2-add-btn:hover .homepage-item2-add-icon::before {
         left: 15px;
         height: 4px;
         top: calc(50% - 2px);
       }
-      .homepage-item1-add-btn:hover .homepage-item1-add-icon::after {
+      .homepage-item2-add-btn:hover .homepage-item2-add-icon::after {
         right: 15px;
         height: 4px;
         top: calc(50% - 2px);
@@ -303,7 +303,7 @@ position: absolute;
   border: none;
   border-top: 1px solid #c3c3c3;
 }
-.homepage-item1-icon-btn-red {
+.homepage-item3-icon-btn-red {
   width: 50px;
   height: 50px;
   border: 1px solid #cdcdcd;
@@ -316,11 +316,11 @@ position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
 }
-.homepage-item1-add-btn-red:hover {
+.homepage-item3-add-btn-red:hover {
   width: 140px;
 }
-.homepage-item1-add-btn-red::before,
-.homepage-item1-add-btn-red::after {
+.homepage-item3-add-btn-red::before,
+.homepage-item3-add-btn-red::after {
   transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   content: "";
   position: absolute;
@@ -329,35 +329,35 @@ position: absolute;
   top: calc(50% - 2px);
   background: white;
 }
-.homepage-item1-add-btn-red::after {
+.homepage-item3-add-btn-red::after {
   right: 14px;
   overflow: hidden;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.homepage-item1-add-btn-red::before {
+.homepage-item3-add-btn-red::before {
   left: 14px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.homepage-item1-icon-btn-red:focus {
+.homepage-item3-icon-btn-red:focus {
   outline: none;
 }
-.btn-txt{
+.homepage-item3-btn-text{
   opacity: 0;
   transition: opacity 0.2s;
   color: white;
 }
-.homepage-item1-add-btn-red:hover::before,
-.homepage-item1-add-btn-red:hover::after {
+.homepage-item3-add-btn-red:hover::before,
+.homepage-item3-add-btn-red:hover::after {
   width: 4px;
   border-radius: 2px;
 }
-.homepage-item1-add-btn-red:hover .btn-txt {
+.homepage-item3-add-btn-red:hover .btn-txt {
   opacity: 1;
 }
-.homepage-item1-add-icon-red::after,
-.homepage-item1-add-icon-red::before {
+.homepage-item3-add-icon-red::after,
+.homepage-item3-add-icon-red::before {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
@@ -367,22 +367,22 @@ position: absolute;
   background: white;
   overflow: hidden;
 }
-.homepage-item1-add-icon-red::before {
+.homepage-item3-add-icon-red::before {
   left: 22px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.homepage-item1-add-icon-red::after {
+.homepage-item3-add-icon-red::after {
   right: 22px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.homepage-item1-add-btn-red:hover .homepage-item1-add-icon-red::before {
+.homepage-item3-add-btn-red:hover .homepage-item3-add-icon-red::before {
   left: 15px;
   height: 4px;
   top: calc(50% - 2px);
 }
-.homepage-item1-add-btn-red:hover .homepage-item1-add-icon-red::after {
+.homepage-item3-add-btn-red:hover .homepage-item3-add-icon-red::after {
   right: 15px;
   height: 4px;
   top: calc(50% - 2px);
@@ -395,7 +395,7 @@ position: absolute;
   border: none;
   border-top: 1px solid #c3c3c3;
 }
-.homepage-item6-icon-btn-miss {
+.homepage-item7-icon-btn-miss {
   width: 50px;
   height: 50px;
   border: 1px solid #cdcdcd;
@@ -408,11 +408,11 @@ position: absolute;
   top: 50%;
   transform: translate(50%,-50%);
 }
-.homepage-item6-add-btn-miss:hover {
+.homepage-item7-add-btn-miss:hover {
   width: 140px;
 }
-.homepage-item6-add-btn-miss::before,
-.homepage-item6-add-btn-miss::after {
+.homepage-item7-add-btn-miss::before,
+.homepage-item7-add-btn-miss::after {
   transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
   content: "";
   position: absolute;
@@ -421,35 +421,35 @@ position: absolute;
   top: calc(50% - 2px);
   background: white;
 }
-.homepage-item6-add-btn-miss::after {
+.homepage-item7-add-btn-miss::after {
   right: 14px;
   overflow: hidden;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.homepage-item6-add-btn-miss::before {
+.homepage-item7-add-btn-miss::before {
   left: 14px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.homepage-item6-icon-btn-miss:focus {
+.homepage-item7-icon-btn-miss:focus {
   outline: none;
 }
-.btn-txt {
+.homepage-item7-btn-text {
   opacity: 0;
   transition: opacity 0.2s;
   color: white;
 }
-.homepage-item6-add-btn-miss:hover::before,
-.homepage-item6-add-btn-miss:hover::after {
+.homepage-item7-add-btn-miss:hover::before,
+.homepage-item7-add-btn-miss:hover::after {
   width: 4px;
   border-radius: 2px;
 }
-.homepage-item6-add-btn-miss:hover .btn-txt {
+.homepage-item7-add-btn-miss:hover .btn-txt {
   opacity: 1;
 }
-.homepage-item6-add-icon-miss::after,
-.homepage-item6-add-icon-miss::before {
+.homepage-item7-add-icon-miss::after,
+.homepage-item7-add-icon-miss::before {
   transition: all 0.2s ease-in-out;
   content: "";
   position: absolute;
@@ -459,22 +459,22 @@ position: absolute;
   background: white;
   overflow: hidden;
 }
-.homepage-item6-add-icon-miss::before {
+.homepage-item7-add-icon-miss::before {
   left: 22px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
-.homepage-item6-add-icon-miss::after {
+.homepage-item7-add-icon-miss::after {
   right: 22px;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.homepage-item6-add-btn-miss:hover .homepage-item6-add-icon-miss::before {
+.homepage-item7-add-btn-miss:hover .homepage-item7-add-icon-miss::before {
   left: 15px;
   height: 4px;
   top: calc(50% - 2px);
 }
-.homepage-item6-add-btn-miss:hover .homepage-item6-add-icon-miss::after {
+.homepage-item7-add-btn-miss:hover .homepage-item7-add-icon-miss::after {
   right: 15px;
   height: 4px;
   top: calc(50% - 2px);
@@ -507,7 +507,7 @@ position: absolute;
     width: 100%;
     height: 100%;
   }
-  .homepage-item1-icon-btn{
+  .homepage-item2-icon-btn{
     bottom: 0;
     transform: translate(-50%, 50%);
     left: auto;
@@ -523,7 +523,7 @@ position: absolute;
     width: 100%;
     height: 100%;
   }
-  .homepage-item1-icon-btn-red{
+  .homepage-item3-icon-btn-red{
     bottom: 0;
     transform: translate(-50%, 50%);
     left: auto;
@@ -574,7 +574,7 @@ position: absolute;
     transform: translate(0%, -50%);
   }
 
-  .homepage-item6-icon-btn-miss{
+  .homepage-item7-icon-btn-miss{
     bottom: 0;
     transform: translate(-50%,50%);
     right: auto;
