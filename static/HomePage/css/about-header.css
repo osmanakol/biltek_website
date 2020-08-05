@@ -1,5 +1,6 @@
 #about-header{
-    height:auto;
+    height: 100vh;
+    width: 100vw;
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -10,26 +11,26 @@
 
 .about-header-title{
     width: auto;
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%);
+    position: relative;
+    top: 10%;
+    text-align: center;
     font-size: calc(1.5rem + 0.6vw);
     font-family: 'Noto Sans', sans-serif;
 }  
 
 .about-header-boxes{
-    position: absolute;
-    top:125%;
+    position: relative;
+    top: 20%;
     width: 100%;
-    height: 70vh;
+    height: 80%;
 }
 .about-header-boxes > div{
     width: 43vw;
     height: 25vh;
     border-radius: 30px;
+    position: absolute;
     box-shadow: 0px 0px 10px black;
-}
+ }
 
 .about-header-box-one{
     background: white;
@@ -42,17 +43,21 @@
     bottom: 0;
     transition: 1s;
     background: white;
-    position: absolute;
     transform: translate(-28% , -15%);
 }
-
+.about-header-box-one-content{
+    left: 12%
+}
+.about-header-box-two-content{
+    left: 15%
+}
 .about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
-    width: 75%;
+    width: 68%;
     height: 90%;
-    left: 10%;
     margin: 0;
+    text-align: center;
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }

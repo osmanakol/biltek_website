@@ -10,7 +10,6 @@ const box_two = document.querySelector(".about-header-box-two")
 function box_one_shorten(){
     box_one.classList.remove("extend")
     setTimeout(() => {
-        box_one.classList.remove("move")
         box_two.classList.remove("move")
     }, 100); 
 }
@@ -24,7 +23,6 @@ function box_two_shorten(){
     box_one.classList.remove("extend")
     box_two.classList.remove("extend")
     setTimeout(() => {
-        box_two.classList.remove("move")
         box_one.classList.remove("move")
     }, 100); 
 }
