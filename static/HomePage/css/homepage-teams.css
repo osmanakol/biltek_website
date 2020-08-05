@@ -24,18 +24,19 @@
     width: 100%;
 }
 .homepage-teams-header-text{
+    position: relative;
     text-align: center;
-    transform: translateY(7vh);
+    top: 15%;
     font-size: calc(1rem + 0.5vw);
     font-family: 'Open Sans', sans-serif;
 }
 .homepage-teams-container {
     position: relative;
-    top: 47%;
+    top: 50%;
     left: 50%;
     width: 70%;
     height: 60%;
-    transform: translate(-50%,-55%);
+    transform: translate(-50%,-50%);
     display: flex;
   }
   .homepage-teams-container .carousel{
@@ -97,7 +98,7 @@
 .homepage-teams-gozat-button{
     position: relative;
     left: 50%;
-    top: 17%;
+    top: 20%;
     width: 25vh;
     transform: translateX(-50%);
     transition: all 250ms ease-out;
