@@ -29,31 +29,12 @@
     font-size: calc(1rem + 0.5vw);
     font-family: 'Open Sans', sans-serif;
 }
-
-.homepage-teams-buttons{
-    position: relative;
-    top:50%;
-    cursor: pointer;
-}
-.homepage-teams-left-button{
-    position: relative;
-    left: 13%;
-    cursor: pointer;
-}
-.homepage-teams-right-button{
-    position: relative;
-    left: 87%;
-}
-.homepage-teams-left-button:hover,
-.homepage-teams-right-button:hover{
-    transform: scale(1.7);
-}
 .homepage-teams-container {
     position: relative;
     top: 47%;
     left: 50%;
     width: 70%;
-    height: 55%;
+    height: 60%;
     transform: translate(-50%,-55%);
     display: flex;
   }
@@ -64,25 +45,48 @@
     height: 100%;
     text-align: center;
   }
+  .homepage-teams-container .card{
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35), 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+    background-color: white; 
+    height: 50vh;
+  }
 
   .homepage-teams-container img{
-      width: 70px;
-      padding: 60px 0;
+      width: 100px;
+      padding: 50px 0 40px;
   }
   .homepage-teams-container .card-body{
       height:100px;
   }
-  .homepage-teams-container .carousel-control-prev {
-    left: -10%;
+  .homepage-teams-container .carousel-control-prev,
+  .homepage-teams-container .carousel-control-next{
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+ .homepage-teams-container .carousel-control-prev {
+    left: -7%;
+    
 }
 .homepage-teams-container .carousel-control-next {
-    right: -10%;
+    right: -7%;
+    
+}
+.homepage-teams-control-button{
+    color: black;
+    transition: all 250ms ease-out;
+}
+.homepage-teams-control-button:hover{
+    transform: scale(1.7);
 }
 
-/*.homepage-teams-gozat-button{
+.homepage-teams-gozat-button{
     position: relative;
     left: 50%;
-    top: 27%;
+    top: 17%;
     width: 25vh;
     transform: translateX(-50%);
 }
@@ -90,10 +94,10 @@
     position: relative;
     display: block;
     border: 1px solid black;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-size: calc(0.9rem + 0.4vw);
     border-radius: 21px;
     text-decoration: none;
     color: black;
-}*/
+}
