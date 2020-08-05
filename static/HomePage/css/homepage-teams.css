@@ -8,18 +8,18 @@
     height: 100vh;
 }
 .homepage-teams-background-columns-left{
-    transform: translate(-35%,25%);
+    transform:translate(-80%,25%);
 }
 .homepage-teams-background-columns-right{
     right: 0;
-    transform: translate(50%,-15%);
+    overflow: hidden;
 }
 .homepage-teams-background-column{
     position: relative;
     border-radius: 37px;
     margin: 70px 0;
     padding: 23px 0;
-    transform: rotate(-33deg);
+    transform: rotate(-33deg) translate(50%,-15%);
     background: rgba(0,0,0,0.11);
     width: 100%;
 }
@@ -57,7 +57,18 @@
   }
   .homepage-teams-container .card-body{
       height:100px;
+      padding-left: 0;
+      padding-right: 0;
   }
+  /* .homepage-team-social-medias{
+      background:linear-gradient(30deg,#cbbacc 10%,#2580b3);
+  } */
+  .homepage-team-social-medias a{
+    text-decoration: none;
+    margin:0 5px;
+    color:black;
+  }
+
   .homepage-teams-container .carousel-control-prev,
   .homepage-teams-container .carousel-control-next{
     opacity: 1;
@@ -89,6 +100,7 @@
     top: 17%;
     width: 25vh;
     transform: translateX(-50%);
+    transition: all 250ms ease-out;
 }
 .homepage-teams-gozat-button a {
     position: relative;
@@ -97,7 +109,13 @@
     padding: 5px 10px;
     text-align: center;
     font-size: calc(0.9rem + 0.4vw);
+    font-family: 'Open Sans', sans-serif;
     border-radius: 21px;
     text-decoration: none;
     color: black;
+    
+}
+.homepage-teams-gozat-button:hover{
+    letter-spacing: 5px;
+    width: 30vh;
 }
