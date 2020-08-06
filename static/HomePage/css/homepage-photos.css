@@ -10,11 +10,14 @@
     float: left;
 }
 .homepage-photos-photo-area{
-    height: 150px;
+    height: 130px;
     margin: 10px;
     border-radius: 7px;
     box-shadow: 5px 5px 17px 0 #777;
     cursor: pointer;
+}
+.homepage-photos-photo-area img{
+    width: 100%;
 }
 
 .homepage-photos-background-circle{
