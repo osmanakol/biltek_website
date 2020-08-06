@@ -297,24 +297,20 @@
     0%{
         transform: translate(90%,60%);
     }
-    99%{
-        transform: scale(.5) rotate(180deg);
-    }
     100%{
-        opacity: 0;display: none;
+        transform: scale(.5) rotate(180deg);
+        opacity: 0;
     }
 }
 @keyframes appear-register-button{
     0%{
-       opacity: 1;display:block
+       opacity: 1;
     }
     1%{
         transform:rotate(180deg)
     }
-    99%{
-        transform: scale(1);
-    }
     100%{
+        transform: scale(1);
         transform: translate(-90%,-60%);
     }
 }
