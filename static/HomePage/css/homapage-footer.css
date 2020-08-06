@@ -14,4 +14,24 @@
     border: 22px solid black;
     transform: translateY(-50%);
   }
-  
+  .homepage-footer-aybu-text{
+    padding: 30px;
+    }
+    .homepage-footer-aybu-text h3{
+      color: white;
+      text-align: center;
+    }
+    .homepage-footer-aybu-text h1{
+      font-size: 50px;
+      color: white;
+      text-align: center;
+    }
+    .homepage-footer-aybu-text h5{
+      color: white;
+      text-align: center;
+    
+    }
+    .homepage-footer-copyright-icon{
+      color: white;
+    }
+    
