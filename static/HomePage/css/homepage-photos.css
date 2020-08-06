@@ -13,13 +13,13 @@
     height: 150px;
     margin: 10px;
     border-radius: 7px;
-    box-shadow: 5px 5px 17px 0 rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 17px 0 #777;
+    cursor: pointer;
 }
 
 .homepage-photos-background-circle{
     position: relative;
-    background-color: #45597e;
-    background: linear-gradient(30deg,rgba(203, 186, 204,0.7) 10%,rgba(37, 128, 179,.7));
+    background: linear-gradient(30deg,rgba(203, 186, 204,0.7) 10%,rgba(37, 128, 179,.5));
     top:7%;
     left: 50%;
     width: 50%;

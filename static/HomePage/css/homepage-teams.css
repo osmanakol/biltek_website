@@ -106,7 +106,6 @@
 .homepage-teams-gozat-button a {
     position: relative;
     display: block;
-    border: 1px solid black;
     padding: 5px 10px;
     text-align: center;
     font-size: calc(0.9rem + 0.4vw);
@@ -114,8 +113,9 @@
     border-radius: 21px;
     text-decoration: none;
     color: black;
-    
+    box-shadow: 10px 5px 30px #777;
 }
+
 .homepage-teams-gozat-button:hover{
     letter-spacing: 5px;
     width: 30vh;
