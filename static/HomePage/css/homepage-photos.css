@@ -6,14 +6,21 @@
     width: 40%;
     height: 90%;
     left: 9%;
+    top: 7%;
     float: left;
 }
+.homepage-photos-photo-area{
+    height: 150px;
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 17px 0 rgba(0,0,0,0.7);
+}
+
 .homepage-photos-background-circle{
     position: relative;
     background-color: #45597e;
-    background: linear-gradient(30deg,#cbbacc 10%,rgba(37, 128, 179,.7));
-    opacity: .7;
-    top:5%;
+    background: linear-gradient(30deg,rgba(203, 186, 204,0.7) 10%,rgba(37, 128, 179,.7));
+    top:7%;
     left: 50%;
     width: 50%;
     height: 90%;
@@ -21,7 +28,6 @@
 }
 .homepage-photos-show-area{
     position: relative;
-    border: 1px solid;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -29,4 +35,11 @@
     width: 70%;
     z-index: 2;
     border-radius: 10px;
+}
+.homepage-photos-show-area img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    
 }
