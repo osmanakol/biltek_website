@@ -269,6 +269,20 @@
     position: absolute;
     box-shadow: -3px 0 7px 0 rgba(0,0,0,0.5);
 }
+
+
+/*.homepage-social-media-bar-register-btn i 
+== 
+.homepage-social-media-bar-register-btn-a-content */
+
+.homepage-social-media-bar-register-btn-a-content{
+    display: block;
+}
+.homepage-social-media-bar-register-btn-a-content.active{
+    display: none;
+}
+
+
 .homepage-social-media-bar-register-btn i:hover{
     transform: translateZ(50px);
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
@@ -279,7 +293,6 @@
     color:black;
     position: absolute;
 }
-
 @keyframes disappear-register-button{
     0%{
         transform: translate(90%,60%);
@@ -288,12 +301,12 @@
         transform: scale(.5) rotate(180deg);
     }
     100%{
-        opacity: 0;
+        opacity: 0;display: none;
     }
 }
 @keyframes appear-register-button{
     0%{
-       opacity: 1;
+       opacity: 1;display:block
     }
     1%{
         transform:rotate(180deg)
