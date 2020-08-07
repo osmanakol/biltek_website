@@ -31,7 +31,7 @@
     width: 100%;
 }
 .homepage-teams-background-column.right{
-    transform: rotate(-33deg) translate(50%,90%);
+    transform: rotate(-33deg) translate(40%,90%);
 }
 
 /*---------------------
@@ -148,7 +148,7 @@
     border-radius: 7px;
     text-decoration: none;
     color: black;
-    box-shadow: 10px 5px 30px #777;
+    box-shadow: 3px 3px 15px #777;
 }
 
 .homepage-teams-gozat-button:hover{
