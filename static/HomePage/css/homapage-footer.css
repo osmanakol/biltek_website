@@ -20,15 +20,18 @@
     }
     .homepage-footer-aybu-text h3{
       color: white;
+      font-family: inherit;
       text-align: center;
     }
     .homepage-footer-aybu-text h1{
       font-size: 50px;
+      font-family: sans-serif;
       color: white;
       text-align: center;
     }
     .homepage-footer-aybu-text h5{
       color: white;
+      font-family: monospace;
       text-align: center;
     
     }
