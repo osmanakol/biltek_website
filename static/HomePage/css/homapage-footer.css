@@ -1,7 +1,8 @@
 #homepage-footer{
-    width: 100vw;
-    height: 50vh;
-    background-color: black;
+     width: 100vw;
+    height: 30vh;
+    background-color: white; 
+   
   }
   .homepage-logo-circle{
     width: 13%;
@@ -12,10 +13,10 @@
   .homepage-footer-aybulogo{
     border-radius: 50%;
     border: 22px solid black;
-    transform: translateY(-50%);
   }
   .homepage-footer-aybu-text{
-    padding: 30px;
+    padding: 80px 30px 1px 30px;
+    background-color: black;
     }
     .homepage-footer-aybu-text h3{
       color: white;
