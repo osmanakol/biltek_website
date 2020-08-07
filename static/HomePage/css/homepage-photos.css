@@ -1,6 +1,13 @@
 #homepage-photos{
     height: 100vh;
 }
+.homepage-photos-header{
+    position: relative;
+    text-align: center;
+    top: 5%;
+    font-size: calc(1rem + 0.5vw);
+    font-family: 'Open Sans', sans-serif;
+}
 .homepage-photos-gallery{
     position: relative;
     width: 40%;
@@ -11,9 +18,9 @@
 }
 .homepage-photos-photo-area{
     height: 130px;
-    margin: 10px;
+    margin: 17px;
     border-radius: 7px;
-    box-shadow: 5px 5px 17px 0 #777;
+    /* box-shadow: 5px 5px 17px 0 #777; */
     cursor: pointer;
 }
 .homepage-photos-photo-area img{
@@ -22,7 +29,7 @@
 
 .homepage-photos-background-circle{
     position: relative;
-    background: linear-gradient(30deg,rgba(203, 186, 204,0.7) 10%,rgba(37, 128, 179,.5));
+    background: linear-gradient(30deg,rgba(203, 186, 204,0.7),rgba(37, 128, 179,.3),rgba(255,255,255,0.7));
     top:7%;
     left: 50%;
     width: 50%;
@@ -49,4 +56,13 @@
 @keyframes move-photo{
     0%{transform: translate(-50%);opacity: 0;}
     100%{transform: translate(0%);opacity: 1;}
+}
+
+@media screen and (max-width:769px){
+    .homepage-photos-background-circle{
+        display: none;
+    }
+    .homepage-photos-gallery{
+        width: 80%;
+    }
 }
