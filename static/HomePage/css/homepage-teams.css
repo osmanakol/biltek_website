@@ -2,6 +2,9 @@
     height: 100vh;
     overflow: hidden;
 }
+/*---------------------------
+    BACKGROUND PROPERTY
+-----------------------------*/
 .homepage-teams-background-columns{
     position: absolute;
     width: 19%;
@@ -30,12 +33,22 @@
 .homepage-teams-background-column.right{
     transform: rotate(-33deg) translate(50%,90%);
 }
+
+/*---------------------
+    HEADER TEXT
+----------------------*/
 .homepage-teams-header-text{
     position: relative;
     text-align: center;
     top: 15%;
     font-size: calc(1rem + 0.5vw);
     font-family: 'Open Sans', sans-serif;
+}
+/*----------------------
+    HOMEPAGE TEAMS
+-----------------------*/
+#homepage-team-mobile-carousel{
+    display: none;
 }
 .homepage-teams-container {
     position: relative;
@@ -52,6 +65,14 @@
   .homepage-teams-container .carousel-inner {
     height: 100%;
     text-align: center;
+    overflow: visible
+  }
+  .homepage-teams-responsive-team-container-inner{
+    height: 100%;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
   .homepage-teams-container .card{
     box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35), 12px 0 20px -12px rgba(0, 0, 0, 0.35);
@@ -67,14 +88,21 @@
       height:100px;
       padding-left: 0;
       padding-right: 0;
+      padding-bottom:0 ;
   }
-  /* .homepage-team-social-medias{
-      background:linear-gradient(30deg,#cbbacc 10%,#2580b3);
-  } */
+   .homepage-team-social-medias{
+    background-color: black;
+    height: 15%;
+    width: -webkit-fill-available;
+    bottom: 0;
+    position: absolute;
+  } 
   .homepage-team-social-medias a{
     text-decoration: none;
-    margin:0 5px;
-    color:black;
+    margin: 0 5px;
+    color: white;
+    top: 2vh;
+    position: relative;
   }
 
   .homepage-teams-container .carousel-control-prev,
@@ -95,7 +123,7 @@
     
 }
 .homepage-teams-control-button{
-    color: black;
+    color: white;
     transition: all 250ms ease-out;
 }
 .homepage-teams-control-button:hover{
@@ -117,7 +145,7 @@
     text-align: center;
     font-size: calc(0.9rem + 0.4vw);
     font-family: 'Open Sans', sans-serif;
-    border-radius: 21px;
+    border-radius: 7px;
     text-decoration: none;
     color: black;
     box-shadow: 10px 5px 30px #777;
@@ -126,4 +154,16 @@
 .homepage-teams-gozat-button:hover{
     letter-spacing: 5px;
     width: 30vh;
+}
+
+/*---------------
+    RESPONSIVE
+------------------*/
+@media screen and (max-width:769px){
+    #homepage-team-carousel{
+        display:none;
+    }
+    #homepage-team-mobile-carousel{
+        display: unset;
+    }
 }

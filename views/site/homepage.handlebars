@@ -46,7 +46,7 @@
 {{!-- Takımlarımız--}}
 <section id="homepage-teams">
     <div class="homepage-teams-columns-overflow-property">
-    <div class="homepage-teams-background-columns homepage-teams-background-columns-left">
+        <div class="homepage-teams-background-columns homepage-teams-background-columns-left">
             <div class="homepage-teams-background-column"></div>
             <div class="homepage-teams-background-column"></div>
             <div class="homepage-teams-background-column"></div>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="homepage-teams-columns-overflow-property">
-    <div class="homepage-teams-background-columns homepage-teams-background-columns-right">
+        <div class="homepage-teams-background-columns homepage-teams-background-columns-right">
             <div class="homepage-teams-background-column right"></div>
             <div class="homepage-teams-background-column right"></div>
             <div class="homepage-teams-background-column right"></div>
@@ -65,11 +65,11 @@
         Takımlarımız
     </div>
     <div class="homepage-teams-container">
-        <div id="homepage-team-carousel" class="carousel slide"data-interval="false">
-            <div class="carousel-inner">
+        <div id="homepage-team-carousel" class="carousel slide" data-interval="false">
+            <div class="carousel-inner homepage-teams-container-inner">
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class=" card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-1">
                                 <div class="card-body">
@@ -88,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-2">
                                 <div class="card-body">
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-3">
                                 <div class="card-body">
@@ -127,11 +127,12 @@
                             </div>
                         </div>
                     </div>
-                </div><!--carousel-item-->
+                </div>
+                <!--/carousel-item-->
 
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-4">
                                 <div class="card-body">
@@ -150,7 +151,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-5">
                                 <div class="card-body">
@@ -169,7 +170,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4">
                             <div class="card">
                                 <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-6">
                                 <div class="card-body">
@@ -189,17 +190,147 @@
                             </div>
                         </div>
                     </div>
-                </div><!--carousel-item-->
-                
-            </div> <!--carousel-inner-->
+                </div>
+                <!--/carousel-item-->
+            </div>
+            <!--/carousel-inner-->
             <a class="carousel-control-prev" href="#homepage-team-carousel" role="button" data-slide="prev">
-                <i class="fas fa-angle-double-left homepage-teams-control-button" aria-hidden="true"></i>
+                <i class="carousel-control-prev-icon homepage-teams-control-button bg-dark border border-dark rounded-circle"
+                    aria-hidden="true"></i>
             </a>
             <a class="carousel-control-next" href="#homepage-team-carousel" role="button" data-slide="next">
-                <i class="fas fa-angle-double-right homepage-teams-control-button" aria-hidden="true"></i>
+                <i class="carousel-control-next-icon homepage-teams-control-button bg-dark border border-dark rounded-circle"
+                    aria-hidden="true"></i>
             </a>
         </div>
-    </div><!--container-->
+        <div id="homepage-team-mobile-carousel" class="carousel slide" data-interval="false">
+            <div class=" carousel-inner homepage-teams-responsive-team-container-inner">
+                <div class="carousel-item active">
+                    <div class="card">
+                        <img class=" card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 1</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div> {{!-- /card-body --}}
+                    </div> {{!-- /card --}}
+                </div> {{!--/carousel-item--}}
+                <div class="carousel-item">
+                    <div class="card">
+                        <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 2</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 3</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 4</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 5</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card">
+                        <img class="card-img-top mx-auto d-block" src="/img/aybulogo.png" alt="team-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Team 6</h5>
+                            <div class="homepage-team-social-medias">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> {{!--/mobile-carousel-inner--}}
+            <a class="carousel-control-prev" href="#homepage-team-mobile-carousel" role="button" data-slide="prev">
+                <i class="carousel-control-prev-icon homepage-teams-control-button bg-dark border border-dark rounded-circle"
+                    aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#homepage-team-mobile-carousel" role="button" data-slide="next">
+                <i class="carousel-control-next-icon homepage-teams-control-button bg-dark border border-dark rounded-circle"
+                    aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <!--/container-->
     <div class="homepage-teams-gozat-button">
         <a href="">Göz at</a>
     </div>
@@ -259,3 +390,4 @@
     </div>
 
 </section>
+{{!-- /Fotoğraflar --}}
