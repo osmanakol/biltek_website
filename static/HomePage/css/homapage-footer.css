@@ -2,19 +2,41 @@
      width: 100vw;
     height: 30vh;
     background-color: white; 
-   
   }
+ 
   .homepage-logo-circle{
     text-align: center;
     transform: translateY(50%);
   }
   .homepage-footer-aybulogo{
     border-radius: 50%;
-    border: 22px solid black;
+    border: 22px solid #001345;
   }
   .homepage-footer-aybu-text{
     padding: 80px 30px 1px 30px;
     background-color: black;
+    animation :color-change infinite 10s ;  
+    }
+    /* color changing effect on footer*/
+    @keyframes color-change {
+      0%{
+  background: #001345;
+      }
+  20%{
+  background: #001856;
+  }
+  40%{
+  background: #001e6c;
+  }
+  60%{
+  background: #002587;
+  }
+  80%{
+  background: #002ea9;
+  }
+  100%{
+  background:  #0024be;
+  }
     }
     .homepage-footer-aybu-text h3{
       color: white;
