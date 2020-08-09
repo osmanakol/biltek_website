@@ -541,7 +541,9 @@ right: 0;
 
   .homepage-events-timeline-information-one{
     top: 0;
-    transform: translate(0%, -50%);  }
+    transform: translate(0%, -50%); 
+    padding: 3px;
+   }
 
   .homepage-events-grid-item5{
     grid-column: 6/ span 4;
@@ -550,6 +552,7 @@ right: 0;
   .homepage-events-timeline-information-two{
     top: 0;
     transform: translate(0%, -50%);
+    padding: 3px;
   }
 
   .homepage-events-grid-item6{
@@ -559,6 +562,7 @@ right: 0;
   .homepage-events-timeline-information-three {
     top: 0;
     transform: translate(0%, -50%);
+    padding: 3px;
   }
 
   .homepage-item7-icon-btn-miss{
