@@ -1,5 +1,5 @@
-const box_one = document.querySelector(".about-header-box-one")
-const box_two = document.querySelector(".about-header-box-two")
+const box_one = document.querySelector(".homepage-about-header-box-one")
+const box_two = document.querySelector(".homepage-about-header-box-two")
 
 
 
