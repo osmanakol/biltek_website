@@ -62,10 +62,6 @@
   .homepage-teams-container .carousel{
     width: 100%;
   }
-  .homepage-teams-container .carousel-inner {
-    height: 100%;
-    text-align: center;
-  }
   .homepage-teams-responsive-team-container-inner{
     height: 100%;
     width: 70%;
@@ -128,7 +124,37 @@
 .homepage-teams-control-button:hover{
     transform: scale(1.7);
 }
+.homepge-team-cards{
+    align-items: center;
+    justify-content: center;
+    border:1px solid;
+    width: 100%;
+    display: flex;
 
+}
+.homepge-team-card{
+    height: 50vh;
+    width: 50vh;
+    border:1px solid;
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+.homepge-team-card:nth-child(1) {
+    transform: scale(0.85);
+    z-index: -1;
+}
+.homepge-team-card:nth-child(3) {
+
+    transform: scale(0.85);
+    z-index: -1;
+}
+  
+
+.homepge-team-card--hide{
+    display: none;
+}
 .homepage-teams-gozat-button{
     position: relative;
     left: 50%;
@@ -159,7 +185,7 @@
     RESPONSIVE
 ------------------*/
 @media screen and (max-width:769px){
-    #homepage-team-carousel{
+    .homepage-team-cards{
         display:none;
     }
     #homepage-team-mobile-carousel{
