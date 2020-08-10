@@ -1,4 +1,4 @@
-#about-header{
+#homepage-about-header{
     height: 100vh;
     width: 100vw;
 }
@@ -9,22 +9,22 @@
     color: red;
 }
 
-.about-header-title{
+.homepage-about-header-title{
     width: auto;
     position: relative;
-    top: 10%;
+    top: 25%;
     text-align: center;
     font-size: calc(1.5rem + 0.6vw);
     font-family: 'Noto Sans', sans-serif;
 }  
 
-.about-header-boxes{
+.homepage-about-header-boxes{
     position: relative;
-    top: 20%;
+    top: 25%;
     width: 100%;
     height: 80%;
 }
-.about-header-boxes > div{
+.homepage-about-header-boxes > div{
     width: 43vw;
     height: 25vh;
     border-radius: 30px;
@@ -32,99 +32,85 @@
     box-shadow: 0px 0px 10px black;
  }
 
-.about-header-box-one{
+.homepage-about-header-box-one{
     background: white;
     transition: 1s;
     transform: translate(28% , 15%);
 }
 
-.about-header-box-two{
+.homepage-about-header-box-two{
     right: 0;
     bottom: 0;
     transition: 1s;
     background: white;
     transform: translate(-28% , -15%);
 }
-.about-header-box-one-content{
+.homepage-about-header-box-one-content{
     left: 12%
 }
-.about-header-box-two-content{
+.homepage-about-header-box-two-content{
     left: 15%
 }
-.about-header-boxes > div > p{
+.homepage-about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
     width: 68%;
     height: 90%;
-    margin: 0;
+    margin: 15px 0;
     text-align: center;
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
-.about-header-boxes > div > img{
+.homepage-about-header-boxes > div > img{
     width: 6vw;
     height: auto;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-.about-header-box-one-mission{
+.homepage-about-header-box-one-mission{
     left: 80%;
 }
-.about-header-box-two-eye{
+.homepage-about-header-box-two-eye{
     right: 7%;
 }
 
 /*----------------------------
         Mobile About
 -----------------------------*/
-@media only screen and (min-width:768px){
-    
-.about-header-box-one.extend, .about-header-box-two.extend{
-    background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-    height:37vh;
-}
 
-.about-header-box-one.move{
-    transform:translate(4%, 15%);
-} 
-.about-header-box-two.move{
-    transform: translate(-4%, -15%);
-}
-
-}
 @media only screen and (max-width:768px){
-    .about-header-boxes{
-        display: contents;
-        top: 130%;
-        width: 100vh;
+    .homepage-about-header-title{
+        top:14%;
     }
-    .about-header-boxes > div{
+    .homepage-about-header-boxes{
+        display: contents;
+    }
+    .homepage-about-header-boxes > div{
         width: 100vw;
-        height: 33vh;
         position: relative;
         box-shadow: none;
         left: 50%;
         border: none;
         text-align: center;
-        top: 30%;
+        top: 23%;
         overflow: visible;
     }
-    .about-header-boxes > div > img{
+    .homepage-about-header-boxes > div > img{
         width: 9vw;
         height: auto;
         position: absolute;
         left: 50%;
-        top: -25%;
+        top:-25%;
         transform: translate(-50%);
     }
-    .about-header-box-one{
+    .homepage-about-header-box-one{
         transform: translate(-50% , 15%);
     }
-    .about-header-box-two{
-        transform: translate(-50%, 25%);
+    .homepage-about-header-box-two{
+        transform: translate(-50%, 50%);
     }
-    .about-header-boxes > div > p{
+    .homepage-about-header-boxes > div > p{
         width: 70vw;
         margin: 0;
         height: 22vh; 
@@ -132,4 +118,30 @@
         left: 50%;
     }
 
+}
+
+@media only screen and (max-width:768px) and (max-height:670px){
+    .homepage-about-header-boxes > div > img{
+        top:-32%;
+    }
+}
+@media only screen and (max-width:768px) and (max-height:568px){
+    .homepage-about-header-boxes > div > img{
+        top:-37%;
+    }
+}
+@media only screen and (max-width:768px) and (max-height:500px){
+    .homepage-about-header-boxes > div > img{
+        top:-42%;
+    }
+}
+@media only screen and (max-width:550px){
+    .homepage-about-header-boxes > div > img{
+        width: 11vw;
+    }
+}
+@media only screen and (max-width:440px){
+    .homepage-about-header-boxes > div > img{
+        width: 13vw;
+    }
 }
