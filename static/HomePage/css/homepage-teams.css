@@ -52,9 +52,9 @@
 }
 .homepage-teams-container {
     position: relative;
-    top: 50%;
+    top: 45%;
     left: 52%;
-    width: 70%;
+    width: 80%;
     height: 60%;
     transform: translate(-50%,-50%);
     display: flex;
@@ -64,16 +64,17 @@
   }
   .homepage-teams-responsive-team-container-inner{
     height: 100%;
-    width: 70%;
+    width: 65%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
   }
-  .homepage-teams-container .card{
+  .card{
     box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35), 12px 0 20px -12px rgba(0, 0, 0, 0.35);
     background-color: white; 
     height: 50vh;
     width: -webkit-fill-available;
+    text-align: center;
   }
 
   .homepage-teams-container img{
@@ -125,10 +126,27 @@
 .homepage-teams-control-button:hover{
     transform: scale(1.7);
 }
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+  }
+  .swiper-button-prev{
+      color:black;
+      left:0%;
+  }
+  .swiper-button-next{
+      color: black;
+  }
 /*---------------------------------
     HOMEPAGE MULTIPLE TEAMS
 -----------------------------------*/
-.homepage-team-cards{
+/* .homepage-team-cards{
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -173,7 +191,7 @@
 }
 .homepage-teams--hide .fa-angle-right{
     left:97%;
-}
+}*/
 .homepage-teams-gozat-button{
     position: relative;
     left: 50%;
@@ -201,7 +219,7 @@
 }
 /*-------------------------------
         TEAMS ANIMATION
----------------------------------*/
+---------------------------------
 
 .homepage-team-move-out-left {
     animation: moveOutLeft 0.5s ease-in-out;
@@ -265,7 +283,7 @@
     to {
         transform: scale(0.85) translateX(0);
     }
-}
+} */
 
 /*---------------
     RESPONSIVE
