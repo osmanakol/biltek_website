@@ -202,18 +202,18 @@
 
 
 .move-to-position2-from-left {
-    animation: moveToP2Left 0.5s ease-in-out;
+    animation: moveToLeft 0.5s ease-in-out;
 }
 
 
 .move-to-position1-from-left{
-    animation: moveToP1Left 0.5s ease-in-out;
+    animation: moveToLeft 0.5s ease-in-out;
 }
 .move-to-position2-from-right{
-    animation: moveToP2Right 0.5s ease-in-out;
+    animation: moveToRight 0.5s ease-in-out;
 }
 .move-to-position1-from-right{
-    animation: moveToP1Right 0.5s ease-in-out;
+    animation: moveToRight 0.5s ease-in-out;
 }
 
 @keyframes moveOutLeft {
@@ -245,17 +245,7 @@
         opacity: 0;
     }
 }
-
-@keyframes moveToP2Left {
-    from {
-        transform: scale(1) translateX(50%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-
-@keyframes moveToP1Left {
+@keyframes moveToLeft {
     from {
         transform: scale(0.85) translateX(100%);
     }
@@ -265,18 +255,9 @@
 }
 
 
-@keyframes moveToP1Right {
+@keyframes moveToRight {
     from {
         transform: scale(0.85) translateX(-100%);
-    }
-    to {
-        transform: scale(0.85) translateX(0);
-    }
-}
-
-@keyframes moveToP2Right {
-    from {
-        transform: scale(1) translateX(-50%);
     }
     to {
         transform: scale(0.85) translateX(0);
