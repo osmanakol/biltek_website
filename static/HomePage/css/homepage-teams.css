@@ -44,16 +44,16 @@
     font-size: calc(1rem + 0.5vw);
     font-family: 'Open Sans', sans-serif;
 }
-/*----------------------
-    HOMEPAGE TEAMS
------------------------*/
+/*--------------------------
+    HOMEPAGE MOBILE TEAMS
+---------------------------*/
 #homepage-team-mobile-carousel{
     display: none;
 }
 .homepage-teams-container {
     position: relative;
     top: 50%;
-    left: 50%;
+    left: 52%;
     width: 70%;
     height: 60%;
     transform: translate(-50%,-50%);
@@ -73,6 +73,7 @@
     box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35), 12px 0 20px -12px rgba(0, 0, 0, 0.35);
     background-color: white; 
     height: 50vh;
+    width: -webkit-fill-available;
   }
 
   .homepage-teams-container img{
@@ -124,6 +125,9 @@
 .homepage-teams-control-button:hover{
     transform: scale(1.7);
 }
+/*---------------------------------
+    HOMEPAGE MULTIPLE TEAMS
+-----------------------------------*/
 .homepage-team-cards{
     align-items: center;
     justify-content: center;
@@ -136,8 +140,6 @@
 .homepage-team-card{
     height: 50vh;
     width: 60vh;
-    box-shadow: 0px 0px 2rem 0px #888888;
-    background-color: white;
     display: flex;
     justify-content: center;
     transform:translateX(0) scale(1);
@@ -148,9 +150,9 @@
         z-index: -1;
 }
     
-    .homepage-team-card:nth-child(1) {
-        transform: scale(0.85);
-    }
+.homepage-team-card:nth-child(1) {
+    transform: scale(0.85);
+}
 
 .homepage-team-card--hide{
     display: none;
@@ -165,6 +167,12 @@
 }
 .homepage-teams--hide > i:hover{
     transform: scale(1.5) translateY(-50%);
+}
+.homepage-teams--hide .fa-angle-left{
+    left:-5%;
+}
+.homepage-teams--hide .fa-angle-right{
+    left:97%;
 }
 .homepage-teams-gozat-button{
     position: relative;
@@ -191,6 +199,9 @@
     letter-spacing: 5px;
     width: 30vh;
 }
+/*-------------------------------
+        TEAMS ANIMATION
+---------------------------------*/
 
 .homepage-team-move-out-left {
     animation: moveOutLeft 0.5s ease-in-out;
@@ -221,10 +232,6 @@
         transform: scale(0.85) translateX(0%);
         opacity: 1;
     }
-    50% {
-        transform: scale(0.5) translateX(-50%);
-        opacity: 0.5;
-    }
     100% {
         transform: scale(0.25) translateX(-150%);
         opacity: 0;
@@ -235,10 +242,6 @@
     0% {
         transform: scale(0.85) translateX(0%);
         opacity: 1;
-    }
-    50% {
-        transform: scale(0.5) translateX(50%);
-        opacity: 0.5;
     }
     100% {
         transform: scale(0.25) translateX(150%);
@@ -263,7 +266,6 @@
         transform: scale(0.85) translateX(0);
     }
 }
-
 
 /*---------------
     RESPONSIVE
