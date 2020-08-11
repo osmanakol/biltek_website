@@ -1,4 +1,4 @@
-
+/*
 function turnLeft() {
     const cards = document.querySelectorAll(".homepage-team-card");
     const cardNode = cards[0];
@@ -38,4 +38,21 @@ function turnRight() {
         cards[1].className = "homepage-team-card move-to-position3-from-right";
     }, 500);
 
-}
+}*/
+var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 40,
+      stretch:0,
+      depth: 300,
+      modifier: 1,
+      slideShadows : true
+    },
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+  });
