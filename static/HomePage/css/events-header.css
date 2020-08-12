@@ -1,3 +1,7 @@
+#homepage-events-part{
+  position: relative;
+}
+
 /* ----- GRİD ------ */
 .homepage-events-grid-container {
   display: grid;
@@ -73,34 +77,39 @@
 
 .homepage-events-mediumElips{
 background-color: #45597e;
-height: 30%;
-width: 24%;
+height: 200px;
+width: 200px;
 background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
 border-radius: 50%;
 position: absolute;
 z-index: -1;
-right: 0;}
+right: 0;
+bottom: 0;}
 
 .homepage-events-smallElips{
-background-color: #45597e;
-height: 210px;
-width: 210px;
-background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-border-radius: 50%;
-border-radius: 50%;
-position: absolute;
-right: 0;
+  background-color: #45597e;
+  height: 160px;
+  width: 160px;
+  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
+  border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-23vw, -9vh);
   }
 
 .homepage-events-subsmallElips{
-background-color: #45597e;
-height: 70px;
-width: 70px;
-background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-border-radius: 50%;
-border-radius: 50%;
-position: absolute;
-right: 0;
+  background-color: #45597e;
+  height: 70px;
+  width: 70px;
+  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
+  border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-6vh, -26vh);
 }
 
 
