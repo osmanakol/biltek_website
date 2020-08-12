@@ -20,12 +20,15 @@
     height: 130px;
     margin: 17px;
     border-radius: 7px;
-    /* box-shadow: 5px 5px 17px 0 #777; */
+    box-shadow: 5px 5px 17px 0 #777;
     cursor: pointer;
 }
 .homepage-photos-photo-area img{
+    height: 100%;
     width: 100%;
+    transition: all 0.3s ease-out;
 }
+
 
 .homepage-photos-background-circle{
     position: relative;
@@ -51,7 +54,16 @@
     top:0;
     left:0;
     width: 100%;
+    border-radius: 0;
+    transition: all 0.3s;
     
+}
+.homepage-photos-show-area img:hover{
+    border-radius: 25% 0 25% 25%; 
+}
+
+.homepage-photos-photo-area:hover img{
+    transform: scale(1.2, 1.2);
 }
 @keyframes move-photo{
     0%{transform: translate(-50%);opacity: 0;}
