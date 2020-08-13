@@ -65,26 +65,33 @@
     position: absolute;
     transition: 1s;
     width: 68%;
-    height: 90%;
+    height: 75%;
     margin: 15px 0;
     text-align: center;
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
-.homepage-about-header-boxes > div > img{
+.homepage-about-header-box-one-mission,.homepage-about-header-box-two-eye{
     width: 6vw;
     height: auto;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transition: .5s;
 }
 .homepage-about-header-box-one-mission{
-    left: 80%;
+    left: 65%;
+    transform: translate(95%,-300%) scale(2.5);
 }
 .homepage-about-header-box-two-eye{
     right: 7%;
+    transform: translate(370%,215%) scale(2.5);
 }
-
+.homepage-about-header-box-one-mission.active{
+    transform: translate(-300%,-250%) scale(1);
+}
+.homepage-about-header-box-two-eye.active{
+    transform: translate(715%,130%) scale(1);
+}
 /*----------------------------
         Mobile About
 -----------------------------*/
