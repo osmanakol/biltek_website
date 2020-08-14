@@ -13,8 +13,11 @@
 }
 
 .footer-logo{
-    width: 10vh;
-    height: 10vh;
+    width: 5vw;
+    height: 5vw;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 .footer-title::before{
@@ -23,8 +26,9 @@
     position: absolute;
     height: 84%;
     background: black;
-    left: 35%;
-    top: 0;
+    left: 5.7vw;
+    top: 50%;
+    transform: translateY(-50%);
     width: 3px;
 }
 .footer-title{
