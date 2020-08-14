@@ -76,20 +76,32 @@
 
 .homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
     transform: translate(-50%, 0px);
+    transition: 1s;
     position: absolute;
     width: 15vw;
     height: 3vh;
     border-radius: 25px;
     color: white;
-    top: 87%;
+    top: 87%;  
+    opacity: 0;
     background: linear-gradient(0deg, rgba(26,252,255,1) 0%, rgba(24,226,137,1) 52%, rgba(60,95,252,1) 100%);
 }
 
 .homepage-about-header-box-one-more-button{
     left: 46%;
 }
+
 .homepage-about-header-box-two-more-button{
     left: 49%;
+}
+
+/*                BOX BUTTON ANIMATIONS              */
+div:hover > .homepage-about-header-box-one-more-button{
+    opacity: 1;
+}
+
+div:hover > .homepage-about-header-box-two-more-button{
+    opacity: 1;
 }
 
 /*                BOX IMAGE PROPERTIES              */
