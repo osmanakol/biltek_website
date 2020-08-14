@@ -10,33 +10,25 @@ function box_one_shorten(){
     box_one.classList.remove("extend")
     box_two.classList.remove("extend")
     arrow.classList.toggle("active")
-    setTimeout(() => {
-        box_two.classList.remove("move")
-    }, 100); 
+    box_two.classList.remove("move")
 }
 
 function box_one_extend(){
     box_two.classList.toggle("move")
     arrow.classList.toggle("active") 
-    setTimeout(() => {
-        box_one.classList.toggle("extend")
-    }, 100); 
+    box_one.classList.toggle("extend")
 }
 
 function box_two_shorten(){
     box_two.classList.remove("extend")
     eye.classList.toggle("active")
-    setTimeout(() => {
-        box_one.classList.remove("move")
-    }, 100); 
+    box_one.classList.remove("move")
 }
 
 function box_two_extend(){
     box_one.classList.toggle("move")
     eye.classList.toggle("active")
-    setTimeout(() => {
-        box_two.classList.toggle("extend")
-    }, 100);  
+    box_two.classList.toggle("extend")
 }
 
 $(box_one).hover(()=>{box_one_extend()}, ()=>{box_one_shorten()})

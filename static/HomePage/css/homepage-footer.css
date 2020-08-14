@@ -1,0 +1,40 @@
+#footer{
+    width: 100%;
+    height: 15vh;
+    background: transparent;
+}
+.footer-titleAndLogo{
+    width: 20%;
+    height: 80%;
+    left: 50%;
+    display: flex;
+    position: relative;
+    transform: translate(-50%);
+}
+
+.footer-logo{
+    width: 10vh;
+    height: 10vh;
+}
+
+.footer-title::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 84%;
+    background: black;
+    left: 35%;
+    top: 0;
+    width: 3px;
+}
+.footer-title{
+    padding: 10px 20px;
+}
+.footer-black-line{
+    bottom: 0;
+    width: 100%;
+    background: black;
+    color: azure;
+    height: 45%;
+    text-align: center;
+}
