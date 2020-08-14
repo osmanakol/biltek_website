@@ -17,7 +17,9 @@
     font-size: calc(1.5rem + 0.6vw);
     font-family: 'Noto Sans', sans-serif;
 }  
-
+/*
+        BOX PROPERTIES
+*/
 .homepage-about-header-boxes{
     position: relative;
     top: 25%;
@@ -35,32 +37,41 @@
 .homepage-about-header-box-one{
     background: white;
     transition: 1s;
-    transform: translate(28% , 15%);
+    left: 11%;
+    top: 14%;
 }
 
 .homepage-about-header-box-two{
-    right: 0;
-    bottom: 0;
+    right: 11%;
+    bottom: 9%;
     transition: 1s;
     background: white;
-    transform: translate(-28% , -15%);
 }
+/*
+            BOX  ANIMATIONS
+*/
 .homepage-about-header-box-one.extend, .homepage-about-header-box-two.extend{
     background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
     height:35vh;
 }
+
 .homepage-about-header-box-one.move{
-    transform:translate(4%, 15%);
+    left: 2%;
 } 
+
 .homepage-about-header-box-two.move{
-    transform: translate(-4%, -15%);
+    right: 2%;
 }
+
+/*            BOX PARAPGRAPH PROPERTIES            */
 .homepage-about-header-box-one-content{
     left: 12%
 }
+
 .homepage-about-header-box-two-content{
     left: 15%
 }
+
 .homepage-about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
@@ -71,27 +82,53 @@
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
+/*                BOX BUTTON PROPERTIES              */
+.homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
+    transform: translate(-50%, 0px);
+    position: absolute;
+    width: 15vw;
+    height: 3vh;
+    border-radius: 25px;
+    color: white;
+    top: 87%;
+    background: linear-gradient(0deg, rgba(26,252,255,1) 0%, rgba(24,226,137,1) 52%, rgba(60,95,252,1) 100%);
+}
+
+.homepage-about-header-box-one-more-button{
+    left: 46%;
+}
+.homepage-about-header-box-two-more-button{
+    left: 49%;
+}
+
+/*                BOX IMAGE PROPERTIES              */
 .homepage-about-header-box-one-mission,.homepage-about-header-box-two-eye{
     width: 6vw;
     height: auto;
-    position: relative;
-    top: 50%;
+    position: absolute;
     transition: .5s;
 }
+
 .homepage-about-header-box-one-mission{
-    left: 65%;
-    transform: translate(95%,-300%) scale(2.5);
+    left: 70%;
+    top: 29.6%;
+    transform: translate(0%,-50%) scale(2.5);
 }
+
 .homepage-about-header-box-two-eye{
-    right: 7%;
-    transform: translate(370%,215%) scale(2.5);
+    right: 70%;
+    bottom: 24.6%;
+    transform: translate(0px, 50%) scale(2.5);
 }
+
+/*             BOX IMAGE ANIMATIONS                 */
 .homepage-about-header-box-one-mission.active{
     transform: translate(-300%,-250%) scale(1);
 }
 .homepage-about-header-box-two-eye.active{
     transform: translate(715%,130%) scale(1);
 }
+
 /*----------------------------
         Mobile About
 -----------------------------*/
