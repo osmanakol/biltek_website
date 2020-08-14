@@ -47,21 +47,9 @@
     transition: 1s;
     background: white;
 }
-/*
-            BOX  ANIMATIONS
-*/
-.homepage-about-header-box-one.extend, .homepage-about-header-box-two.extend{
-    background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-    height:35vh;
-}
 
-.homepage-about-header-box-one.move{
-    left: 2%;
-} 
 
-.homepage-about-header-box-two.move{
-    right: 2%;
-}
+
 
 /*            BOX PARAPGRAPH PROPERTIES            */
 .homepage-about-header-box-one-content{
@@ -72,6 +60,7 @@
     left: 15%
 }
 
+/*      div > p is paragraphs you see in boxes(both)           */
 .homepage-about-header-boxes > div > p{
     position: absolute;
     transition: 1s;
@@ -82,7 +71,9 @@
     overflow: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
+
 /*                BOX BUTTON PROPERTIES              */
+
 .homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
     transform: translate(-50%, 0px);
     position: absolute;
@@ -112,21 +103,46 @@
 .homepage-about-header-box-one-mission{
     left: 70%;
     top: 29.6%;
-    transform: translate(0%,-50%) scale(2.5);
+    transform: translate(0%,-50%) scale(2.2);
 }
 
 .homepage-about-header-box-two-eye{
     right: 70%;
     bottom: 24.6%;
-    transform: translate(0px, 50%) scale(2.5);
+    transform: translate(0px, 50%) scale(2.2);
 }
 
-/*             BOX IMAGE ANIMATIONS                 */
-.homepage-about-header-box-one-mission.active{
-    transform: translate(-300%,-250%) scale(1);
-}
-.homepage-about-header-box-two-eye.active{
-    transform: translate(715%,130%) scale(1);
+/*
+                    BOX HOVER EFFECT
+*/
+
+@media only screen and (min-width:768px){
+    /*              BOX ANIMATIONS                      */
+    
+    .homepage-about-header-box-one.extend, .homepage-about-header-box-two.extend{
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+        height:35vh;
+    }
+    .homepage-about-header-box-one.move{
+        left: 2%;
+    } 
+    
+    .homepage-about-header-box-two.move{
+        right: 2%;
+    }
+
+    /*             BOX IMAGE ANIMATIONS                 */
+    .homepage-about-header-box-one-mission.active{
+        transform: translate(0%,-50%) scale(1);
+        top: 35.85%;
+        left: 46.5%;
+    }
+
+    .homepage-about-header-box-two-eye.active{
+        transform: translate(0%,50%) scale(1);
+        bottom: 30.85%;
+        right: 51%;
+    }
 }
 
 /*----------------------------
