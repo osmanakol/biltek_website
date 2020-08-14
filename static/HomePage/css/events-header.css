@@ -59,13 +59,15 @@
 
 
 /* ----- ELLİPSE ------ */
+.homepage-events-all-ellipse{
+  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
+  border-radius: 50%;
+  position: absolute;
+}
 
 .homepage-events-bigEllipse{
   height: 104vh;
   width: 89vw;
-  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-  border-radius: 50%;
-  position: absolute;
   transform: translate(-47%,-4%);
   z-index: -1;
 }
@@ -73,9 +75,6 @@
 .homepage-events-mediumElipse{
  height: 200px;
  width: 200px;
- background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
- border-radius: 50%;
- position: absolute;
  z-index: -1;
  right: 0;
  bottom: 0;}
@@ -83,9 +82,6 @@
 .homepage-events-smallElipse{
   height: 160px;
   width: 160px;
-  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-  border-radius: 50%;
-  position: absolute;
   right: 0;
   bottom: 0;
   transform: translate(-23vw, -9vh);
@@ -94,9 +90,6 @@
 .homepage-events-subsmallElipse{
   height: 70px;
   width: 70px;
-  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-  border-radius: 50%;
-  position: absolute;
   right: 0;
   bottom: 0;
   transform: translate(-6vh, -26vh);
