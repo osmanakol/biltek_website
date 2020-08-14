@@ -95,14 +95,7 @@
     left: 49%;
 }
 
-/*                BOX BUTTON ANIMATIONS              */
-div:hover > .homepage-about-header-box-one-more-button{
-    opacity: 1;
-}
 
-div:hover > .homepage-about-header-box-two-more-button{
-    opacity: 1;
-}
 
 /*                BOX IMAGE PROPERTIES              */
 .homepage-about-header-box-one-mission,.homepage-about-header-box-two-eye{
@@ -154,6 +147,15 @@ div:hover > .homepage-about-header-box-two-more-button{
         transform: translate(0%,50%) scale(1);
         bottom: 30.85%;
         right: 51%;
+    }
+    
+    /*                BOX BUTTON ANIMATIONS              */
+    div:hover > .homepage-about-header-box-one-more-button{
+        opacity: 1;
+    }
+
+    div:hover > .homepage-about-header-box-two-more-button{
+        opacity: 1;
     }
 }
 
