@@ -3,7 +3,8 @@ const box_two = document.querySelector(".homepage-about-header-box-two")
 const arrow = document.querySelector(".homepage-about-header-box-one-mission")
 const eye = document.querySelector(".homepage-about-header-box-two-eye")
 const buttons = document.querySelectorAll(".about-button")
-
+const box_one_hover = document.querySelectorAll(".homepage-about-header-box-one-hover")
+const box_two_hover = document.querySelectorAll(".homepage-about-header-box-two-hover")
 
 /*  Vertical extend hover*/
 function box_one_shorten(){
@@ -31,8 +32,8 @@ function box_two_extend(){
     box_two.classList.toggle("extend")
 }
 
-$(box_one).hover(()=>{box_one_extend()}, ()=>{box_one_shorten()})
-$(box_two).hover(()=>{box_two_extend()}, ()=>{box_two_shorten()})
+$(box_one_hover).hover(()=>{box_one_extend()}, ()=>{box_one_shorten()})
+$(box_two_hover).hover(()=>{box_two_extend()}, ()=>{box_two_shorten()})
 
 
 /*  FOR ABOUT BOX TOOLTIPS */
