@@ -87,17 +87,18 @@
     height: 4vh;
     border-radius: 25px;
     border-color: azure;
-    top: 87%;  
     opacity: 0;
     background: white;
 }
 
 .homepage-about-header-box-one-more-button{
     left: 46%;
+    top: 87%;
 }
 
 .homepage-about-header-box-two-more-button{
     left: 49%;
+    top: 83.5%;
 }
 
 .homepage-about-header-button-title{
@@ -108,7 +109,39 @@
     font-size: calc(0.7rem + 0.8vh);
     font-family: 'Lato', sans-serif;
 }
-
+/*                      BUTTON TOOLTIP PROPERTIES            */
+.homepage-about-header-box-one-tooltip, .homepage-about-header-box-two-tooltip{
+    opacity: 0;
+    position: absolute;
+    top: 87%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    transition: opacity 0.25s, top 0.25s;
+  }
+  .homepage-about-header-box-one-tooltip{
+    left: 46%;
+  }
+  .homepage-about-header-box-two-tooltip{
+    left: 49%;
+  }
+  
+  .homepage-about-header-box-one-tooltip .content,.homepage-about-header-box-two-tooltip .content {
+    background: black;
+    color: white;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25rem;
+  }
+  
+  .homepage-about-header-box-one-tooltip .triangle, .homepage-about-header-box-two-tooltip .triangle{
+    position: absolute;
+    background: black;
+    color: white;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, 50%) rotate(45deg);
+    left: 50%;
+    bottom: 0;
+  }
 /*                BOX IMAGE PROPERTIES              */
 .homepage-about-header-box-one-mission,.homepage-about-header-box-two-eye{
     width: 3vw;
@@ -144,6 +177,8 @@
     .homepage-about-header-box-one-hover:hover, .homepage-about-header-box-two-hover:hover{
         height: 35vh;
     }
+
+    
     .homepage-about-header-box-one.move{
         left: 2%;
     } 
@@ -182,8 +217,14 @@
     div:hover > .homepage-about-header-box-two-more-button{
         opacity: 1;
     }
+    .homepage-about-header-box-one-tooltip.appear,.homepage-about-header-box-two-tooltip.appear{
+        opacity: 1;
+    }
+    .homepage-about-header-box-one-tooltip.appear{top: 68%;}
+    .homepage-about-header-box-two-tooltip.appear{top: 65%;}
 }
 
+  
 /*----------------------------
         Mobile About
 -----------------------------*/
