@@ -33,6 +33,7 @@
 }
 .footer-title{
     padding: 10px 20px;
+    margin: auto;
 }
 .footer-black-line{
     bottom: 0;
@@ -41,4 +42,9 @@
     color: azure;
     height: 45%;
     text-align: center;
+}
+.footer-black-line-title{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% , 50%);
 }
