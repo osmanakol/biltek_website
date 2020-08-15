@@ -81,7 +81,7 @@
 }
 
 .homepage-events-bigEllipse{
-  height: 104vh;
+  height: 100%;
   width: 89vw;
   transform: translate(-47%,-4%);
   z-index: -1;
@@ -476,37 +476,9 @@
 /*---------------------- ELLİPSE RESPONSİVE PART---------------------------*/
 
 }
-@media screen and (max-width: 1200px)
-{
-  .homepage-events-bigEllipse{
-    height: 112vh;
-
-  }
-
-}
-@media screen and (max-width: 1100px)
-{
-  .homepage-events-bigEllipse{
-    height: 119vh;
-
-  }
-
-}
-
-@media screen and (max-width: 1000px)
-{
-  .homepage-events-bigEllipse{
-    height: 127vh;
-
-  }
-
-}
 
 @media screen and (max-width: 800px)
 {
-  .homepage-events-bigEllipse{
-    height: 134vh;
-  }
   .homepage-events-grid-item-for-ellipse{
     grid-column: 11 / span 4;
     grid-row: 10 / span 3;
