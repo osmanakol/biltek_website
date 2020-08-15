@@ -27,46 +27,33 @@
     height: 80%;
 }
 
-.homepage-about-header-box-one{
+.homepage-about-header-box-one, .homepage-about-header-box-two{
     background: white;
     transition: 1s;
-    left: 11%;
-    top: 14%;
-    width: 43vw;
-    height: 25vh;
-    border-radius: 30px;
-    position: absolute;
     box-shadow: 0px 0px 10px black;
 }
-.homepage-about-header-box-one-hover{
-    left: 11%;
-    top: 14%;
+.homepage-about-header-box-one-hover, .homepage-about-header-box-two-hover{
     background:transparent;
+}
+
+.homepage-about-header-box-one,.homepage-about-header-box-one-hover{
     width: 43vw;
     height: 25vh;
     border-radius: 30px;
     position: absolute;
-}
-.homepage-about-header-box-two{
-    right: 11%;
-    bottom: 9%;
-    transition: 1s;
-    background: white;
+    left: 11%;
+    top: 14%;
+} 
+
+.homepage-about-header-box-two, .homepage-about-header-box-two-hover{
     width: 43vw;
     height: 25vh;
     border-radius: 30px;
     position: absolute;
-    box-shadow: 0px 0px 10px black;
-}
-.homepage-about-header-box-two-hover{
     right: 11%;
     bottom: 9%;
-    background: transparent;
-    width: 43vw;
-    height: 25vh;
-    border-radius: 30px;
-    position: absolute
 }
+
 
 /*            BOX PARAPGRAPH PROPERTIES            */
 .homepage-about-header-box-one-content{
@@ -154,7 +141,7 @@
         height:35vh;
     }
     .homepage-about-header-box-one-hover:hover, .homepage-about-header-box-two-hover:hover{
-        height: 34vh;
+        height: 35vh;
     }
     .homepage-about-header-box-one.move{
         left: 2%;
@@ -171,19 +158,20 @@
         top: 35.85%;
         left: 46.5%;
     }
-    .homepage-about-header-box-one-mission.active ~ .homepage-about-header-box-two-eye{
-       right:43%;
+    .homepage-about-header-box-one-mission.move{
+        left:43%;
     }
+   
     .homepage-about-header-box-two-eye.active{
         width: 6vw;
         transform: translate(0%,50%) scale(1);
         bottom: 30.85%;
         right: 46.5%;
     }
-    
-    .homepage-about-header-box-two-eye.active ~ .homepage-about-header-box-one-mission{
-        left:43%;
-    }
+    .homepage-about-header-box-two-eye.move{
+        right:43%;
+     }
+   
 
     /*                BOX BUTTON ANIMATIONS              */
     div:hover > .homepage-about-header-box-one-more-button{
@@ -205,6 +193,9 @@
     }
     .homepage-about-header-boxes{
         display: contents;
+    }
+    .homepage-about-header-box-one-hover, .homepage-about-header-box-two-hover{
+        display: none;
     }
     .homepage-about-header-boxes > div{
         width: 100vw;

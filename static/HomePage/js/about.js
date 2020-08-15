@@ -12,24 +12,28 @@ function box_one_shorten(){
     box_two.classList.remove("extend")
     arrow.classList.toggle("active")
     box_two.classList.remove("move")
+    eye.classList.toggle("move")
 }
 
 function box_one_extend(){
     box_two.classList.toggle("move")
     arrow.classList.toggle("active") 
     box_one.classList.toggle("extend")
+    eye.classList.toggle("move")
 }
 
 function box_two_shorten(){
     box_two.classList.remove("extend")
     eye.classList.toggle("active")
     box_one.classList.remove("move")
+    arrow.classList.toggle("move")
 }
 
 function box_two_extend(){
     box_one.classList.toggle("move")
     eye.classList.toggle("active")
     box_two.classList.toggle("extend")
+    arrow.classList.toggle("move")
 }
 
 $(box_one_hover).hover(()=>{box_one_extend()}, ()=>{box_one_shorten()})
