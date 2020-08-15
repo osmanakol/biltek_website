@@ -338,7 +338,7 @@ body, html{
         width: 70vw;
         position: absolute;
         display: flex;
-        top: 20%;
+        top: 13%;
         background: white;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -454,7 +454,7 @@ body, html{
 }
 @media only screen and (max-height:769px){
     .mobile-homepage-header-column{
-        top:15%;
+        top:6%;
     }
     .mobile-homepage-header-content{
         top:14%;
@@ -462,15 +462,11 @@ body, html{
     
 }
 @media only screen and (max-height:643px){
-    .mobile-homepage-header-column {
-        top: 10%;
-    }
+    
     .mobile-homepage-header-content-schoolname {
         font-size: calc(0.9rem + 0.5vw);
     }
-    .mobile-homepage-header-content {
-        top: 9%;
-    }
+   
     .mobile-homepage-header-content-clubname{
         font-size: calc(4rem + 0.5vw);
     }
