@@ -81,28 +81,20 @@
 
 .homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
     transform: translate(-50%, 0px);
-    outline: none;
+    left:50%;
+    top:85%;
     transition: 1s;
     position: absolute;
     width: 15vw;
     height: 4vh;
     border-radius: 25px;
+    border-color: transparent;
     opacity: 0;
-    border: none;
     background: white;
 }
+
 .homepage-about-header-box-one-more-button:focus, .homepage-about-header-box-two-more-button:focus{
     outline: 0;
-}
-
-.homepage-about-header-box-one-more-button{
-    left: 46%;
-    top: 87%;
-}
-
-.homepage-about-header-box-two-more-button{
-    left: 49%;
-    top: 83.5%;
 }
 
 .homepage-about-header-button-title{
@@ -118,15 +110,10 @@
     opacity: 0;
     position: absolute;
     top: 87%;
+    left:50%;
     white-space: nowrap;
     transform: translateX(-50%);
     transition: opacity 0.25s, top 0.25s;
-  }
-  .homepage-about-header-box-one-tooltip{
-    left: 46%;
-  }
-  .homepage-about-header-box-two-tooltip{
-    left: 49%;
   }
   
   .homepage-about-header-box-one-tooltip .content,.homepage-about-header-box-two-tooltip .content {
