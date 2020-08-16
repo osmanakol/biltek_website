@@ -58,12 +58,13 @@
 
 /*            BOX PARAPGRAPH PROPERTIES            */
 .homepage-about-header-box-one-content{
-    left: 12%
+    left: 12%;
 }
 
 .homepage-about-header-box-two-content{
     left: 20%
 }
+
 
 /*      div > p is paragraphs you see in boxes(both)           */
 .homepage-about-header-boxes > div > p{
@@ -73,7 +74,8 @@
     height: 75%;
     margin: 15px 0;
     text-align: center;
-    overflow: hidden;
+    overflow-y:scroll;
+    overflow-x: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -160,7 +162,9 @@
 
 @media only screen and (min-width:768px){
     /*              BOX ANIMATIONS                      */
-    
+    .mobile-homepage-about-header-box-one-content,.mobile-homepage-about-header-box-two-content {
+        display:none
+    }
     .homepage-about-header-box-one.extend, .homepage-about-header-box-two.extend{
         background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
         height:35vh;
@@ -168,13 +172,18 @@
     .homepage-about-header-box-one-hover:hover, .homepage-about-header-box-two-hover:hover{
         height: 35vh;
     }
-
-    
-    .homepage-about-header-box-one.move{
+    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar{
+        width: 10px;
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    }
+    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar-thumb,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar-thumb{
+        background-color: white;
+    }
+    .homepage-about-header-box-one.move,.homepage-about-header-box-one-hover.move{
         left: 2%;
     } 
     
-    .homepage-about-header-box-two.move{
+    .homepage-about-header-box-two.move,.homepage-about-header-box-two-hover.move{
         right: 2%;
     }
 
@@ -246,7 +255,13 @@
     .homepage-about-header-box-two{
         top: 20%;
     }
-
+    .mobile-homepage-about-header-box-one-content::-webkit-scrollbar,.mobile-homepage-about-header-box-two-content::-webkit-scrollbar{
+        width: 10px;
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    }
+    .mobile-homepage-about-header-box-one-content::-webkit-scrollbar-thumb,.mobile-homepage-about-header-box-two-content::-webkit-scrollbar-thumb{
+        background-color: white;
+    }
     .homepage-about-header-box-two-eye , .homepage-about-header-box-one-mission{
         width: 9vw;
         height: auto;
