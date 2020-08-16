@@ -81,14 +81,18 @@
 
 .homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
     transform: translate(-50%, 0px);
+    outline: none;
     transition: 1s;
     position: absolute;
     width: 15vw;
     height: 4vh;
     border-radius: 25px;
-    border-color: azure;
     opacity: 0;
+    border: none;
     background: white;
+}
+.homepage-about-header-box-one-more-button:focus, .homepage-about-header-box-two-more-button:focus{
+    outline: 0;
 }
 
 .homepage-about-header-box-one-more-button{
