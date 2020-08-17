@@ -132,6 +132,10 @@ function submit_validation() {
                 }
             }
             //TODO ,ERROR EKLENECEK
+            ,error(res) {
+
+                sweetAlert(res.errors, "warning", "", false, false, 1500);
+            }
 
 
 

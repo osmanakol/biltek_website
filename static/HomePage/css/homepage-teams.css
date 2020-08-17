@@ -1,0 +1,184 @@
+#homepage-teams{
+    height: 100vh;
+    overflow: hidden;
+}
+/*---------------------------
+    BACKGROUND PROPERTY
+-----------------------------*/
+.homepage-teams-background-columns{
+    position: absolute;
+    width: 19%;
+    height: 100vh;
+}
+.homepage-teams--columns-overflow-property{
+    overflow-x: hidden;
+}
+.homepage-teams-background-columns-left{
+    transform:translate(-80%,25%);
+}
+.homepage-teams-background-columns-right{
+    right: 0;
+    overflow: hidden;
+    transform: translate(0px, -5%);
+}
+.homepage-teams-background-column{
+    position: relative;
+    border-radius: 37px;
+    margin: 70px 0;
+    padding: 23px 0;
+    transform: rotate(-33deg) translate(50%,-15%);
+    background: rgba(0,0,0,0.11);
+    width: 100%;
+}
+.homepage-teams-background-column.right{
+    transform: rotate(-33deg) translate(40%,90%);
+}
+
+/*---------------------
+    HEADER TEXT
+----------------------*/
+.homepage-teams-header-text{
+    position: relative;
+    text-align: center;
+    top: 15%;
+    font-size: calc(1rem + 0.5vw);
+    font-family: 'Open Sans', sans-serif;
+}
+/*--------------------------
+    HOMEPAGE MOBILE TEAMS
+---------------------------*/
+#homepage-team-mobile-carousel{
+    display: none;
+}
+.homepage-teams-container {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    width: 80%;
+    height: 60%;
+    transform: translate(-50%,-50%);
+    display: flex;
+  }
+  .homepage-teams-container .carousel{
+    width: 100%;
+  }
+  .homepage-teams-responsive-team-container-inner{
+    height: 100%;
+    width: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .card{
+    box-shadow: -12px 0 20px -12px rgba(0, 0, 0, 0.35), 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+    background-color: white; 
+    height: 50vh;
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+
+  .homepage-teams-container img{
+      width: 100px;
+      padding: 40px 0 20px;
+  }
+  .homepage-teams-container .card-body{
+      height:100px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom:0 ;
+  }
+   .homepage-team-social-medias{
+    background-color: black;
+    height: 15%;
+    width: -webkit-fill-available;
+    bottom: 0;
+    position: absolute;
+  } 
+  .homepage-team-social-medias a{
+    text-decoration: none;
+    margin: 0 5px;
+    color: white;
+    top: 2vh;
+    position: relative;
+  }
+
+  .homepage-teams-container .carousel-control-prev,
+  .homepage-teams-container .carousel-control-next{
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+ .homepage-teams-container .carousel-control-prev {
+    left: -7%;
+    
+}
+.homepage-teams-container .carousel-control-next {
+    right: -7%;
+    
+}
+.homepage-teams-control-button{
+    color: white;
+    transition: all 250ms ease-out;
+}
+.homepage-teams-control-button:hover{
+    transform: scale(1.7);
+}
+/*---------------------------------
+    HOMEPAGE MULTIPLE TEAMS
+-----------------------------------*/
+.homepage-teams-container .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+.homepage-teams-container .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+  }
+ .homepage-teams-container .swiper-button-prev,
+ .homepage-teams-container  .swiper-button-next{
+      color:black;
+      
+  }
+
+.homepage-teams-gozat-button{
+    position: relative;
+    left: 50%;
+    top: 20%;
+    width: 25vh;
+    transform: translateX(-50%);
+    transition: all 250ms ease-out;
+}
+.homepage-teams-gozat-button a {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: calc(0.9rem + 0.4vw);
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 7px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 3px 3px 15px #777;
+}
+
+.homepage-teams-gozat-button:hover{
+    letter-spacing: 5px;
+    width: 30vh;
+}
+
+/*---------------
+    RESPONSIVE
+------------------*/
+@media screen and (max-width:769px){
+    .homepage-teams--hide{
+        display:none;
+    }
+    #homepage-team-mobile-carousel{
+        display: unset;
+    }
+}
