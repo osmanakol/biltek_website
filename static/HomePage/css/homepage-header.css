@@ -1,6 +1,5 @@
 body, html{
     margin: 0;
-    height: 100vh;
 }
 
 #homepage-header{
@@ -50,12 +49,6 @@ body, html{
     transition: 1s;
 }
 
-.homepage-header-logo:hover{
-    width:6%;
-}
-.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
-    width: 160vw;
-}
 
 /*----------------------------
             Orbits
@@ -82,9 +75,7 @@ body, html{
     top: 0;
     position: absolute;
     width: 62vw;
-    height: 140%;
-    /* width: 72rem;
-    height: 58rem; */
+    height: 150%;
     overflow: hidden;
 }
 .homepage-header-orbits > div {
@@ -96,32 +87,24 @@ body, html{
     transform-origin: top right;
 }
 .homepage-header-orbit-one{ 
-    /* width: 20rem;
-    height: 20rem; */
     width: 15vw;
     height: 15vw;
     animation: orbits-move 20s infinite forwards linear, orbital-arrival-move 0.25s;
     opacity: 1;
 }
 .homepage-header-orbit-two{
-    /* width: 55rem;
-    height: 55rem; */
     width: 40vw;
     height: 40vw;
     opacity: 0.8;
     animation: orbits-move-reverse 40s infinite forwards linear, orbital-arrival-move 0.75s;
 }
 .homepage-header-orbit-three{
-    /* width: 95rem;
-    height: 95rem; */
     width: 80vw;
     height: 80vw;
     opacity: 0.5;
     animation: orbits-move 60s infinite forwards linear, orbital-arrival-move 1.25s;
 }
 .homepage-header-orbit-four{
-    /* width: 135rem;
-    height: 135rem; */
     width: 120vw;
     height: 120vw;
     opacity: 0.2;
@@ -187,7 +170,7 @@ body, html{
     transform:translate(-38%,25%);
     top: 20%;
     left: 62%;
-    width: 25vw;
+    width: 30vw;
 }
 
 .homepage-header-content > h1 {
@@ -219,12 +202,15 @@ body, html{
 /*----------------------------
             Responsive
 -----------------------------*/
-/* @media only screen and (max-width: 1450px){
+@media only screen and (max-width: 1420px) and (min-height: 700px){
     .homepage-header-ellipse{
-        height: 168vh;
+        height: 165vh;
     }
-} */
- @media only screen and (max-width:1250px){
+}
+ @media only screen and (max-width:1250px) and (min-width: 1366px){
+     .homepage-header-ellipse{
+         height: 175vh;
+     }
     .homepage-header-content{
         top:22%;
     }
@@ -245,12 +231,8 @@ body, html{
 
 @media only screen and (max-width:1090px){
     .homepage-header-content{
-        width: 34vw;
+        width: 37vw;
     }
-    /* .homepage-header-ellipse{
-        height: 145vh
-    } */
-   
 }
 @media only screen and (max-width:1010px){
     .homepage-header-column > div{
@@ -260,26 +242,29 @@ body, html{
         display: none;
     }
 }
-
-/* @media only screen and (max-width:850px){
+@media only screen and (max-width: 950px){
     .homepage-header-ellipse{
-        height: 120vh;
+        height: 202vh;
     }
 }
 
-@media only screen and (max-height:740px){
-    .homepage-header-ellipse{
-        width: 154vw;
-    }
-}
 @media only screen and (max-height:650px){
     .homepage-header-ellipse{
         width: 165vw;
     }
-} */
+} 
 /*----------------------------
         Mobile header
 -----------------------------*/
+@media only screen and (min-width:768px){
+    
+.homepage-header-logo:hover{
+    width:6%;
+}
+.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
+    width: 160vw;
+}
+}
 @media only screen and (max-width:768px){
     .homepage-header-logo{
         display:none;
@@ -367,7 +352,7 @@ body, html{
         width: 70vw;
         position: absolute;
         display: flex;
-        top: 20%;
+        top: 13%;
         background: white;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -441,7 +426,8 @@ body, html{
         position: absolute;
         font-size: calc(1.5rem + 0.1vw);
         left: 50%;
-        transform: translate(-50%, 57%);
+        top:50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -482,7 +468,7 @@ body, html{
 }
 @media only screen and (max-height:769px){
     .mobile-homepage-header-column{
-        top:15%;
+        top:6%;
     }
     .mobile-homepage-header-content{
         top:14%;
@@ -490,15 +476,11 @@ body, html{
     
 }
 @media only screen and (max-height:643px){
-    .mobile-homepage-header-column {
-        top: 10%;
-    }
+    
     .mobile-homepage-header-content-schoolname {
         font-size: calc(0.9rem + 0.5vw);
     }
-    .mobile-homepage-header-content {
-        top: 9%;
-    }
+   
     .mobile-homepage-header-content-clubname{
         font-size: calc(4rem + 0.5vw);
     }

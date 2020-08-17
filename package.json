@@ -49,6 +49,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.4",
     "@types/nodemailer": "^6.4.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",

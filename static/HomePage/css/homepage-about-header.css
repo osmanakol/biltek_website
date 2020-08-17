@@ -1,0 +1,334 @@
+#homepage-about-header{
+    height: 100vh;
+    width: 100vw;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+::-webkit-scrollbar-thumb{
+    color: red;
+}
+
+.homepage-about-header-title{
+    width: auto;
+    position: relative;
+    top: 15%;
+    text-align: center;
+    font-size: calc(1.5rem + 0.6vw);
+    font-family: 'Noto Sans', sans-serif;
+}  
+/*
+        BOX PROPERTIES
+*/
+.homepage-about-header-boxes{
+    position: relative;
+    top: 14.5%;
+    width: 100%;
+    height: 80%;
+}
+
+.homepage-about-header-box-one, .homepage-about-header-box-two{
+    background: white;
+    transition: 1s;
+    box-shadow: 0px 0px 10px black;
+}
+.homepage-about-header-box-one-hover, .homepage-about-header-box-two-hover{
+    background:transparent;
+    transition: 1s;
+}
+
+.homepage-about-header-box-one,.homepage-about-header-box-one-hover{
+    width: 43vw;
+    height: 25vh;
+    border-radius: 30px;
+    position: absolute;
+    left: 11%;
+    top: 14%;
+} 
+
+.homepage-about-header-box-two, .homepage-about-header-box-two-hover{
+    width: 43vw;
+    height: 25vh;
+    border-radius: 30px;
+    position: absolute;
+    right: 11%;
+    bottom: 9%;
+}
+
+
+/*            BOX PARAPGRAPH PROPERTIES            */
+.homepage-about-header-box-one-content{
+    left: 12%;
+}
+
+.homepage-about-header-box-two-content{
+    left: 20%
+}
+
+
+/*      div > p is paragraphs you see in boxes(both)           */
+.homepage-about-header-boxes > div > p{
+    position: absolute;
+    transition: 1s;
+    width: 68%;
+    height: 75%;
+    margin: 15px 0;
+    text-align: center;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/*                BOX BUTTON PROPERTIES              */
+
+.homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
+    transform: translate(-50%, 0px);
+    left:50%;
+    top:85%;
+    transition: 1s;
+    position: absolute;
+    width: 15vw;
+    height: 4vh;
+    border-radius: 25px;
+    border-color: transparent;
+    opacity: 0;
+    background: white;
+}
+
+.homepage-about-header-box-one-more-button:focus, .homepage-about-header-box-two-more-button:focus{
+    outline: 0;
+}
+
+.homepage-about-header-button-title{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: calc(0.7rem + 0.8vh);
+    font-family: 'Lato', sans-serif;
+}
+/*                      BUTTON TOOLTIP PROPERTIES            */
+.homepage-about-header-box-one-tooltip, .homepage-about-header-box-two-tooltip{
+    opacity: 0;
+    position: absolute;
+    top: 87%;
+    left:50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    transition: opacity 0.25s, top 0.25s;
+  }
+  
+  .homepage-about-header-box-one-tooltip .content,.homepage-about-header-box-two-tooltip .content {
+    background: black;
+    color: white;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25rem;
+  }
+  
+  .homepage-about-header-box-one-tooltip .triangle, .homepage-about-header-box-two-tooltip .triangle{
+    position: absolute;
+    background: black;
+    color: white;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, 50%) rotate(45deg);
+    left: 50%;
+    bottom: 0;
+  }
+/*                BOX IMAGE PROPERTIES              */
+.homepage-about-header-box-one-mission,.homepage-about-header-box-two-eye{
+    width: 3vw;
+    height: auto;
+    position: absolute;
+    transition: 1s;
+}
+
+.homepage-about-header-box-one-mission{
+    left: 53%;
+    top: 29.6%;
+    transform: translate(0%,-50%) scale(2.2);
+}
+
+.homepage-about-header-box-two-eye{
+    right: 53%;
+    bottom: 24.6%;
+    transform: translate(0px, 50%) scale(2.2);
+}
+
+
+/*
+                    BOX HOVER EFFECT
+*/
+
+@media only screen and (min-width:768px){
+    /*              BOX ANIMATIONS                      */
+    .mobile-homepage-about-header-box-one-content,.mobile-homepage-about-header-box-two-content {
+        display:none
+    }
+    .homepage-about-header-box-one.extend, .homepage-about-header-box-two.extend{
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+        height:35vh;
+    }
+    .homepage-about-header-box-one-hover:hover, .homepage-about-header-box-two-hover:hover{
+        height: 35vh;
+    }
+    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar{
+        width: 10px;
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    }
+    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar-thumb,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar-thumb{
+        background-color: white;
+    }
+    .homepage-about-header-box-one.move,.homepage-about-header-box-one-hover.move{
+        left: 2%;
+    } 
+    
+    .homepage-about-header-box-two.move,.homepage-about-header-box-two-hover.move{
+        right: 2%;
+    }
+
+    /*             BOX IMAGE ANIMATIONS                 */
+    .homepage-about-header-box-one-mission.active{
+        width: 6vw;
+        transform: translate(0%,-50%) scale(1);
+        top: 35.85%;
+        left: 46.5%;
+    }
+    .homepage-about-header-box-one-mission.move{
+        left:43%;
+    }
+   
+    .homepage-about-header-box-two-eye.active{
+        width: 6vw;
+        transform: translate(0%,50%) scale(1);
+        bottom: 30.85%;
+        right: 46.5%;
+    }
+    .homepage-about-header-box-two-eye.move{
+        right:43%;
+     }
+   
+
+    /*                BOX BUTTON ANIMATIONS              */
+    div:hover > .homepage-about-header-box-one-more-button{
+        opacity: 1;
+    }
+
+    div:hover > .homepage-about-header-box-two-more-button{
+        opacity: 1;
+    }
+    .homepage-about-header-box-one-tooltip.appear,.homepage-about-header-box-two-tooltip.appear{
+        opacity: 1;
+    }
+    .homepage-about-header-box-one-tooltip.appear{top: 68%;}
+    .homepage-about-header-box-two-tooltip.appear{top: 65%;}
+}
+
+  
+/*----------------------------
+        Mobile About
+-----------------------------*/
+
+@media only screen and (max-width:768px){
+    .homepage-about-header-title{
+        top:0%;
+    }
+    .homepage-about-header-boxes{
+        display: contents;
+    }
+    .homepage-about-header-box-one-hover, .homepage-about-header-box-two-hover{
+        display: none;
+    }
+    .homepage-about-header-boxes > div{
+        width: 100vw;
+        position: relative;
+        box-shadow: none;
+        left: 50%;
+        border: none;
+        text-align: center;
+        overflow: visible;
+    }
+    .homepage-about-header-box-one{
+        top: 10%;
+    }
+
+    .homepage-about-header-box-two{
+        top: 20%;
+    }
+    .mobile-homepage-about-header-box-one-content::-webkit-scrollbar,.mobile-homepage-about-header-box-two-content::-webkit-scrollbar{
+        width: 10px;
+        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
+    }
+    .mobile-homepage-about-header-box-one-content::-webkit-scrollbar-thumb,.mobile-homepage-about-header-box-two-content::-webkit-scrollbar-thumb{
+        background-color: white;
+    }
+    .homepage-about-header-box-two-eye , .homepage-about-header-box-one-mission{
+        width: 9vw;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .homepage-about-header-box-one-mission {
+        top: 110%;
+    }
+
+    .homepage-about-header-box-two-eye{ 
+        top: 156%;
+    }
+
+    .homepage-about-header-box-one{
+        transform: translate(-50% , 15%);
+    }
+
+    .homepage-about-header-box-two{
+        transform: translate(-50%, 50%);
+    }
+
+    .homepage-about-header-boxes > div > p{
+        width: 70vw;
+        margin: 0;
+        height: 22vh; 
+        transform: translate(-50%, 10%);
+        left: 50%;
+    }
+    .homepage-about-header-box-one-more-button,.homepage-about-header-box-two-more-button{
+        opacity: 1;
+        left: 50%;
+        border: 3px solid black;
+        background: white;
+        border-radius: 7px;
+        color: black;
+        text-align: center;
+        top: 100%;
+        height: 4vh;
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width:768px) and (max-height:670px){
+    .homepage-about-header-boxes > div > img{
+        top:-32%;
+    }
+}
+@media only screen and (max-width:768px) and (max-height:568px){
+    .homepage-about-header-boxes > div > img{
+        top:-37%;
+    }
+}
+@media only screen and (max-width:768px) and (max-height:500px){
+    .homepage-about-header-boxes > div > img{
+        top:-42%;
+    }
+}
+@media only screen and (max-width:550px){
+    .homepage-about-header-boxes > div > img{
+        width: 11vw;
+    }
+}
+@media only screen and (max-width:440px){
+    .homepage-about-header-boxes > div > img{
+        width: 13vw;
+    }
+}
