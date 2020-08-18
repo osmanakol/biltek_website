@@ -257,31 +257,30 @@ body, html{
         Mobile header
 -----------------------------*/
 @media only screen and (min-width:768px){
-    
-.homepage-header-logo:hover{
-    width:6%;
-}
-.homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
-    width: 160vw;
-}
-}
-@media only screen and (max-width:768px){
-    .homepage-header-logo{
-        display:none;
+    .homepage-header-logo:hover{
+        width:6%;
     }
-    .homepage-header-column{
-        display: none;
+    .homepage-header-logo:hover ~ .hompage-header-ellipse-property >.homepage-header-ellipse{
+        width: 160vw;
     }
-    .homepage-header-content{
-        display: none;
     }
-    .homepage-header-ellipse {
-        height: 110vh;
-        width: 100vw;
-        background: linear-gradient(90deg,#cbbacc 2%,#2580b3);
-        border-radius: 10vh;
-        transform: translate(0%, -18%);
-    }
+    @media only screen and (max-width:768px){
+        .homepage-header-logo{
+            display:none;
+        }
+        .homepage-header-column{
+            display: none;
+        }
+        .homepage-header-content{
+            display: none;
+        }
+        .homepage-header-ellipse {
+            height: 110vh;
+            width: 100vw;
+            background: linear-gradient(90deg,#cbbacc 2%,#2580b3);
+            border-radius: 5vh;
+            transform: translate(0%, -18%);
+        }
     .homepage-header-orbits {
         width: 100vw;
         height: 100%;
@@ -402,7 +401,10 @@ body, html{
         left: 50%;
         transform: translate(-50%);
         border: 1px solid white;
-        border-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
     .mobile-homepage-header-button-content{
         font-size: calc(2rem + 0.2vw);
@@ -414,12 +416,12 @@ body, html{
         margin: 0;
     }
     .mobile-homepage-header-button-circle{
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
         background: white;
         border-radius: 100%;
         position: relative;
-        left:38%;
+        left:36%;
     }
     .mobile-homepage-header-button-icon{
         color: #2580b3;

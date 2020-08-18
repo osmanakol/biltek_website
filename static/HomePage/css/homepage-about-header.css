@@ -1,14 +1,6 @@
 #homepage-about-header{
     height: 100vh;
-    width: 100vw;
 }
-::-webkit-scrollbar{
-    width: 0;
-}
-::-webkit-scrollbar-thumb{
-    color: red;
-}
-
 .homepage-about-header-title{
     width: auto;
     position: relative;
@@ -26,7 +18,6 @@
     width: 100%;
     height: 80%;
 }
-
 .homepage-about-header-box-one, .homepage-about-header-box-two{
     background: white;
     transition: 1s;
@@ -36,7 +27,6 @@
     background:transparent;
     transition: 1s;
 }
-
 .homepage-about-header-box-one,.homepage-about-header-box-one-hover{
     width: 43vw;
     height: 25vh;
@@ -45,7 +35,6 @@
     left: 11%;
     top: 14%;
 } 
-
 .homepage-about-header-box-two, .homepage-about-header-box-two-hover{
     width: 43vw;
     height: 25vh;
@@ -54,18 +43,16 @@
     right: 11%;
     bottom: 9%;
 }
-
-
 /*            BOX PARAPGRAPH PROPERTIES            */
 .homepage-about-header-box-one-content{
     left: 12%;
 }
-
 .homepage-about-header-box-two-content{
     left: 20%
 }
-
-
+.homepage-about-header-box-one-content::-webkit-scrollbar,.homepage-about-header-box-two-content::-webkit-scrollbar{
+    width: 0;
+}
 /*      div > p is paragraphs you see in boxes(both)           */
 .homepage-about-header-boxes > div > p{
     position: absolute;
@@ -78,9 +65,7 @@
     overflow-x: hidden;
     font-family: 'Noto Sans', sans-serif;
 }
-
 /*                BOX BUTTON PROPERTIES              */
-
 .homepage-about-header-box-one-more-button, .homepage-about-header-box-two-more-button{
     transform: translate(-50%, 0px);
     left:50%;
@@ -94,11 +79,9 @@
     opacity: 0;
     background: white;
 }
-
 .homepage-about-header-box-one-more-button:focus, .homepage-about-header-box-two-more-button:focus{
     outline: 0;
 }
-
 .homepage-about-header-button-title{
     position: absolute;
     left: 50%;
@@ -117,14 +100,12 @@
     transform: translateX(-50%);
     transition: opacity 0.25s, top 0.25s;
   }
-  
   .homepage-about-header-box-one-tooltip .content,.homepage-about-header-box-two-tooltip .content {
     background: black;
     color: white;
     padding: 0.5em 0.75em;
     border-radius: 0.25rem;
   }
-  
   .homepage-about-header-box-one-tooltip .triangle, .homepage-about-header-box-two-tooltip .triangle{
     position: absolute;
     background: black;
@@ -142,24 +123,19 @@
     position: absolute;
     transition: 1s;
 }
-
 .homepage-about-header-box-one-mission{
     left: 53%;
     top: 29.6%;
     transform: translate(0%,-50%) scale(2.2);
 }
-
 .homepage-about-header-box-two-eye{
     right: 53%;
     bottom: 24.6%;
     transform: translate(0px, 50%) scale(2.2);
 }
-
-
 /*
                     BOX HOVER EFFECT
 */
-
 @media only screen and (min-width:768px){
     /*              BOX ANIMATIONS                      */
     .mobile-homepage-about-header-box-one-content,.mobile-homepage-about-header-box-two-content {
@@ -172,21 +148,12 @@
     .homepage-about-header-box-one-hover:hover, .homepage-about-header-box-two-hover:hover{
         height: 35vh;
     }
-    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar{
-        width: 10px;
-        background: linear-gradient(140deg,#89f7fe 30%,#6ab0ff);
-    }
-    .homepage-about-header-box-one-hover:hover ~ .homepage-about-header-box-one-content::-webkit-scrollbar-thumb,.homepage-about-header-box-two-hover:hover ~ .homepage-about-header-box-two-content::-webkit-scrollbar-thumb{
-        background-color: white;
-    }
     .homepage-about-header-box-one.move,.homepage-about-header-box-one-hover.move{
         left: 2%;
     } 
-    
     .homepage-about-header-box-two.move,.homepage-about-header-box-two-hover.move{
         right: 2%;
     }
-
     /*             BOX IMAGE ANIMATIONS                 */
     .homepage-about-header-box-one-mission.active{
         width: 6vw;
@@ -197,7 +164,6 @@
     .homepage-about-header-box-one-mission.move{
         left:43%;
     }
-   
     .homepage-about-header-box-two-eye.active{
         width: 6vw;
         transform: translate(0%,50%) scale(1);
@@ -207,13 +173,10 @@
     .homepage-about-header-box-two-eye.move{
         right:43%;
      }
-   
-
     /*                BOX BUTTON ANIMATIONS              */
     div:hover > .homepage-about-header-box-one-more-button{
         opacity: 1;
     }
-
     div:hover > .homepage-about-header-box-two-more-button{
         opacity: 1;
     }
@@ -223,7 +186,6 @@
     .homepage-about-header-box-one-tooltip.appear{top: 68%;}
     .homepage-about-header-box-two-tooltip.appear{top: 65%;}
 }
-
   
 /*----------------------------
         Mobile About
