@@ -20,7 +20,7 @@
  padding: 0%;
 }
 .homepage-photos-photo-area{
-    height: 130px;
+    height:80%;
     margin: 17px;
     border-radius: 7px;
     box-shadow: 5px 5px 17px 0 #777;
@@ -152,6 +152,9 @@
     }
 }
 @media screen and (max-width:400px){
+    #homepage-photos{
+        height: auto;
+    }
     .homepage-photos-gallery .row{
         display: block;
     }
