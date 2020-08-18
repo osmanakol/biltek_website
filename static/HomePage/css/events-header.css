@@ -5,9 +5,8 @@
 .homepage-events-header-line{
   position: relative;
     text-align: center;
-    top: 15%;
-    font-size: calc(1rem + 0.5vw);
-    font-family: 'Open Sans', sans-serif;
+    font-family: cursive;
+
 }
 
 /* ----- GRİD ------ */
@@ -91,7 +90,7 @@
 .homepage-events-bigEllipse{
   height: 100%;
   width: 89vw;
-  transform: translate(-47%,-4%);
+  transform: translate(-47%,3%);
   z-index: -1;
 }
 
@@ -162,6 +161,17 @@
     transform: translate(0px, 24px);
   }
   
+
+  /* ------------ DATE PART---------------*/
+
+.homepage-events-joint-date-content{
+  font-family: monospace;
+  position: relative;
+  top: 9px;
+  font-size: 18px;
+}
+
+
   /*---------------------- BUTTON PARTS---------------------------*/
   
     .main-hr {
@@ -289,6 +299,10 @@
 
  /*---------------------- MOBİL RESPONSİVE PART---------------------------*/
 
+ .homepage-events-header-line{
+   transform: translate(10px, -9px);
+
+ }
  @media screen and (max-width: 1190px){
 
   .homepage-events-grid-item2 {
