@@ -9,6 +9,11 @@
 
 }
 
+
+.homepage-events-register-information img{
+  height: 100%;
+    width: 100%;
+}
 /* ----- GRİD ------ */
 .homepage-events-grid-container {
   display: grid;
