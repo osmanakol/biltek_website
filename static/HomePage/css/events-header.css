@@ -8,7 +8,7 @@
   grid-gap: 10px;
   padding: 10px;
   grid-template-columns: repeat(17, 1fr);
-  grid-template-rows: repeat(17, minmax(45px, auto));
+  grid-template-rows: repeat(14, minmax(45px, auto));
 }
 
 .homepage-events-grid-container > div {
