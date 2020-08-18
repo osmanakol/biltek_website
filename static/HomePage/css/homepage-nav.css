@@ -335,3 +335,9 @@
         transform: rotate(0deg);
     }
 }
+@media screen and (max-width:375px){
+    .homepage-mobile-social-media-bar-icons {
+        margin:17px -50px;
+    }
+
+}
