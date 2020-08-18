@@ -10,7 +10,7 @@
 
  .homepage-nav{
     background: rgba(244, 244,244,0.7);
-    position: absolute;
+    position: fixed;
     width: 78%;
     left: 11%;
     border-radius: 7px;
@@ -20,23 +20,28 @@
  }
 
  .homepage-nav-button-group{
-    padding: 30px 0;
+    /* padding: 30px 0; */
     text-align: center;
     display: flex;
- }
+}
 
  .homepage-nav-button-group a{
-    margin: 0px 22px;
+    margin: 0px 22px 0;
     color: black;
     font-size: calc(0.7rem + 0.6vw);
     font-family: 'Open Sans', sans-serif;
     width: 22rem;
     position: relative;
     text-decoration: none;
+    display: grid;
+    height: 80px;
+    align-items: center;
      
- }
+}
+
  .homepage-nav-button-group a:hover{
-     text-decoration: underline;
+    background-color:white;
+    border-radius: 3px;
  }
  /*---------------------
     HOMEPAGE MOBILE NAV
@@ -109,7 +114,7 @@
     display: none;
 }
 .homepage-menu-toggle-icons{
-    position: absolute;
+    position: fixed;
     top:0;
     width: 6vh;
     height: 6vh;
@@ -157,7 +162,7 @@
 
 
 /*----------------------------
-    HOMEPAGE SOCIAL MEDIA BARS
+   HOMEPAGE SOCIAL MEDIA BARS
 ------------------------------*/
 .homepage-social-media-bar{
     position: fixed;
