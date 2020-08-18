@@ -19,7 +19,6 @@
 .homepage-teams-background-columns-right{
     right: 0;
     overflow: hidden;
-    transform: translate(0px, -5%);
 }
 .homepage-teams-background-column{
     position: relative;
@@ -31,7 +30,7 @@
     width: 100%;
 }
 .homepage-teams-background-column.right{
-    transform: rotate(-33deg) translate(40%,90%);
+    transform: rotate(-33deg) translate(50%,15%);
 }
 
 /*---------------------
