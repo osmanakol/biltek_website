@@ -5,8 +5,8 @@
     position: relative;
     text-align: center;
     top: 5%;
-    font-size: calc(1rem + 0.5vw);
-    font-family: 'Open Sans', sans-serif;
+    font-size: calc(1.5rem + 0.6vw);
+    font-family: 'Noto Sans', sans-serif;
 }
 .homepage-photos-gallery{
     position: relative;

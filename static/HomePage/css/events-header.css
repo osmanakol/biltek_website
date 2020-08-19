@@ -3,9 +3,11 @@
 }
 
 .homepage-events-header-line{
-  position: relative;
+    position: relative;
+    /* top: 15%; */
     text-align: center;
-    font-family: cursive;
+    font-size: calc(1.5rem + 0.6vw);
+    font-family: 'Noto Sans', sans-serif;
 
 }
 
@@ -304,10 +306,10 @@
 
  /*---------------------- MOBİL RESPONSİVE PART---------------------------*/
 
- .homepage-events-header-line{
+ /* .homepage-events-header-line{
    transform: translate(10px, -9px);
 
- }
+ } */
  @media screen and (max-width: 1190px){
 
   .homepage-events-grid-item2 {
