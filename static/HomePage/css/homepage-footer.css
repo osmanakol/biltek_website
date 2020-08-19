@@ -78,6 +78,11 @@
     .footer-titleAndLogo{
         width: 61vw;
     }
+    .footer-area{
+        height: unset;
+        width: unset;
+        position: unset;
+    }
 }
 @media only screen and (max-width:365px){
     .footer-titleAndLogo{
