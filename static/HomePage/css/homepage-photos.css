@@ -1,6 +1,6 @@
-#homepage-photos{
+ #homepage-photos{
     height: 100vh;
-}
+} 
 .homepage-photos-header{
     position: relative;
     text-align: center;
@@ -11,7 +11,7 @@
 .homepage-photos-gallery{
     position: relative;
     width: 40%;
-    height: 90%;
+    /* height: 90%; */
     left: 9%;
     top: 7%;
     float: left;
@@ -39,7 +39,8 @@
     top:7%;
     left: 50%;
     width: 50%;
-    height: 90%;
+    /* height: 90%; */
+    height: 38vw;
     border-radius: 50%;
 }
 .homepage-photos-show-area{
@@ -129,6 +130,9 @@
     }
 }
 @media screen and (max-width:769px){
+    #homepage-photos{
+        height: auto;
+    }
     .homepage-photos-photo-area{
         margin:17px;
     }
@@ -151,9 +155,6 @@
     }
 }
 @media screen and (max-width:400px){
-    #homepage-photos{
-        height: auto;
-    }
     .homepage-photos-gallery .row{
         display: block;
     }
