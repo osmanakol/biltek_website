@@ -13,6 +13,7 @@
 
 
 .homepage-events-register-information img{
+  border-radius: 20px;
   height: 100%;
     width: 100%;
 }
@@ -105,15 +106,12 @@
   height: 227px;
   width: 227px;
   z-index: -1;
-  /* right: 0; */
-  /* bottom: 0; */
   position: relative;}
 
 .homepage-events-smallElipse{
   height: 161px;
   width: 156px;
   right: 0;
-  /* bottom: 0; */
   position: relative;
   }
 
@@ -172,7 +170,7 @@
   /* ------------ DATE PART---------------*/
 
 .homepage-events-joint-date-content{
-  font-family: monospace;
+  font-family: 'Noto Sans', sans-serif;
   position: relative;
   top: 9px;
   font-size: 18px;
@@ -306,8 +304,12 @@
 
  /*---------------------- MOBİL RESPONSİVE PART---------------------------*/
 
- /* .homepage-events-header-line{
-   transform: translate(10px, -9px);
+ /* .width: auto;
+  position: relative;
+  top: 15%;
+  text-align: center;
+  font-size: calc(1.5rem + 0.6vw);
+  font-family: 'Noto Sans', sans-serif;
 
  } */
  @media screen and (max-width: 1190px){
@@ -384,6 +386,10 @@
     left: auto;
     top: auto;
     
+  }
+
+  .homepage-events-header-line{
+    transform: translateY(-16px);
   }
 
   .homepage-events-missing-register-btn-right-side{
