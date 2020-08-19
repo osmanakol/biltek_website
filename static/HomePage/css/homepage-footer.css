@@ -33,8 +33,13 @@
 
 
 .footer-title{
-    padding: 10px 20px;
-    margin: auto;
+    /* padding: 10px 20px;
+    margin: auto; */
+    width: inherit;
+    /* padding: 10px 17px; */
+    display: grid;
+    align-items: center;
+    text-align: center;
     font-size: calc(0.7rem + 0.6vw);
     font-family: 'Alata', sans-serif;
 }
