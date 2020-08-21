@@ -221,6 +221,7 @@
     width: 7vh;
     height: 7vh;
     background: white;
+    transition: all 0.7s;
 
 }
 .homepage-social-media-bar-icon i{
@@ -229,10 +230,26 @@
     top: 50%;
     transform: translate(-50%,-50%);
     color:black;
+    transition: all 0.7s;
 }
 .homepage-social-media-bar-icon a:hover{
-    /* transform:scale(1.5); */
+    transform:scale(1.5);
     box-shadow: 0 9px 21px 0px rgba(0, 0, 0, 0.35);
+}
+.homepage-social-media-bar-icon:hover i{
+    color:white;
+}
+.homepage-social-media-bar-linkedin-icon:hover a{
+    background:  #0e76a8;
+}
+.homepage-social-media-bar-instagram-icon:hover a{
+    background:  linear-gradient(60deg,#fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.homepage-social-media-bar-twitter-icon:hover a{
+    background:  #1DA1F2;
+}
+.homepage-social-media-bar-youtube-icon:hover a{
+    background:  #FF0000;
 }
 
 .homepage-social-media-bar-icon .fab,
