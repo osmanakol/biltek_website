@@ -166,7 +166,7 @@
 ------------------------------*/
 .homepage-social-media-bar{
     position: fixed;
-    width:11%;
+    width:8%;
     height: 100vh;
     text-align: center;
     z-index:1;
@@ -218,8 +218,8 @@
     box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
     border-radius: 39px;
     display: block;
-    width: 7vh;
-    height: 7vh;
+    width: 6vh;
+    height: 6vh;
     background: white;
     transition: all 0.7s;
 
