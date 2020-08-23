@@ -30,18 +30,20 @@ export const ParticipantValidationChain = checkSchema({
         errorMessage: "Name_surname propertysi eksik",
         trim: true,
         escape: true,
-        isAlpha: {
-            errorMessage: "Invalid name_surname"
-        },
+
         isLength: {
-            options: { min: 5, max: 30 },
-            errorMessage: "Minimum 5 characters required!"
+            options: { min: 3 },
+            errorMessage: "Minimum 3 characters required!"
         },
         customSanitizer: {
             options: (value: string, { req }) => {
                 if (req.body.name_surname)
                     return value.toUpperCase()
             }
+        },
+        notEmpty: {
+            options: { ignore_whitespace: true },
+            errorMessage: "Ad Soyad kısmı boş bırakılamaz"
         }
     },
     email: {
@@ -51,14 +53,14 @@ export const ParticipantValidationChain = checkSchema({
         trim: true,
         isEmail: true,
         errorMessage: "Invalid email",
-       /* custom: {
-            options: async (value: string) => {
-                await ParticipantDbModel.findOne({ email: value }).then(query => {
-                    if (query)
-                        return Promise.reject('E-mail already exist');
-                });
-            },
-        }*/
+        /* custom: {
+             options: async (value: string) => {
+                 await ParticipantDbModel.findOne({ email: value }).then(query => {
+                     if (query)
+                         return Promise.reject('E-mail already exist');
+                 });
+             },
+         }*/
     },
     phone: {
         exists: {
@@ -84,10 +86,18 @@ export const ParticipantValidationChain = checkSchema({
     },
     university: {
         exists: true,
-        errorMessage: "University property eksik"
+        errorMessage: "University property eksik",
+        notEmpty: {
+            options: { ignore_whitespace: true },
+            errorMessage: "Üniversite kısmı boş bırakılamaz"
+        }
     },
     department: {
         exists: true,
-        errorMessage: "Department property eksik"
+        errorMessage: "Department property eksik",
+        notEmpty: {
+            options: { ignore_whitespace: true },
+            errorMessage: "Bölüm kısmı boş bırakılamaz"
+        }
     }
 })
