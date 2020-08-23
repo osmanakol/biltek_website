@@ -29,7 +29,7 @@ ParticipantSchema.pre<IParticipant>('save', function (_next) {
         }
         else {
             console.log("aynısından var")
-            _next(new Error("Aynı mailden var"))
+            _next(new Error("Mail adresiniz sistemimizde mevcut"))
         }
     })
 })
