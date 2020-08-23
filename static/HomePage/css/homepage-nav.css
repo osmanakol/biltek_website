@@ -87,10 +87,10 @@
     letter-spacing: 0;
     transition: all 200ms ease;
 }
-.homepage-mobil-nav li> a:hover{
+/* .homepage-mobil-nav li> a:hover{
     letter-spacing: 2px;
     transform: scale(1.5);
-}
+} */
 .homepage-mobile-social-media-bar-icons{
     text-align: center;
     margin: 17px 0;
@@ -351,7 +351,7 @@
     .homepge-mobil-responsive-property{
         display:unset;
     }
-    #homepage-menu-toggle:checked~.homepage-mobil-nav >.homepage-mobil-nav-button-group{
+    #homepage-menu-toggle:checked~ #homepage-nav .homepage-mobil-nav >.homepage-mobil-nav-button-group{
         transform: rotate(0deg);
     }
 }
