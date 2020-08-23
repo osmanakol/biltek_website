@@ -3,6 +3,9 @@
  /*-------------------------
     Homepage-Nav
  --------------------------*/
+ .homepage-nav{
+     overflow: hidden;
+ }
 #homepage-menu-toggle{
     position:absolute;
     z-index: 999;
