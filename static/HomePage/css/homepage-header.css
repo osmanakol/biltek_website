@@ -256,7 +256,7 @@ body, html{
 /*----------------------------
         Mobile header
 -----------------------------*/
-@media only screen and (min-width:768px){
+@media only screen and (min-width:769px){
     .homepage-header-logo:hover{
         width:6%;
     }
@@ -264,6 +264,22 @@ body, html{
         width: 160vw;
     }
     }
+@media only screen and (min-width:769px) and (max-height:610px){
+    #homepage-header{
+        height:120vh;
+    }
+
+}
+@media only screen and (min-width:769px) and (max-height:460px){
+    #homepage-header{
+        height:130vh;
+    }
+}
+@media only screen and (min-width:769px) and (max-height:400px){
+    #homepage-header{
+        height:140vh;
+    }
+}
     @media only screen and (max-width:768px){
         .homepage-header-logo{
             display:none;
@@ -274,6 +290,7 @@ body, html{
         .homepage-header-content{
             display: none;
         }
+        
         .homepage-header-ellipse {
             height: 110vh;
             width: 100vw;
@@ -288,18 +305,22 @@ body, html{
     .homepage-header-orbit-one {
         width: 60vw;
         height: 60vw;
+        animation: orbits-move 20s infinite forwards linear;
     }
     .homepage-header-orbit-two {
         width: 100vw;
         height: 100vw;
+        animation: orbits-move 40s infinite forwards linear;
     }
     .homepage-header-orbit-three {
         width: 140vw;
         height: 140vw;
+        animation: orbits-move 60s infinite forwards linear;
     }
     .homepage-header-orbit-four {
         width: 180vw;
         height: 180vw;
+        animation: orbits-move 90s infinite forwards linear;
     }
     .mobile-homepage-header-menu{
         position: absolute;
@@ -345,7 +366,11 @@ body, html{
           
         }
     } 
-
+   @keyframes mobil-schoolname-move{
+       from{
+           color: transparent;
+       }
+   }
     .mobile-homepage-header-column{
         height: 8vh;
         width: 70vw;
@@ -369,7 +394,7 @@ body, html{
         margin-right: 5px;
         margin-top: auto;
         margin-bottom: auto;
-        animation: mobile-column-move 0.5s;
+        animation: mobile-column-move 1s;
     }
     .mobile-homepage-header-content-schoolname{
         font-family: 'Open Sans', sans-serif;
@@ -377,7 +402,7 @@ body, html{
         margin-top: auto;
         margin-bottom: auto;
         color:black;
-        animation:mobile-column-move 0.5s;
+        animation:mobil-schoolname-move 2s;
     }
     .mobile-homepage-header-content{
         width: 30vw;
