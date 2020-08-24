@@ -1,0 +1,82 @@
+/*------------------------------------*\
+	Register-Modal
+\*------------------------------------*/
+
+.modal-back {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  }
+  
+  .register-modal,
+  .w-c-reg-modal,
+  .w-w-c-reg-modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: auto;
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 10px;
+    z-index: 4;
+    /* transform: ; */
+    transition: 0.2s;
+  }
+  
+  .reg-modal-header {
+    margin: 5px 0 0 0;
+  }
+  
+  .register-form {
+    margin-top: 25px;
+  }
+  
+  @media only screen and (max-width: 991px) {
+    .register-modal {
+      width: 90%;
+    }
+  }
+  
+  /*------------------------------------*\
+      Register-Modal
+  \*------------------------------------*/
+
+
+  /* --  Buttons  -- */
+
+.main-btn,
+.outline-btn {
+  display: inline-block;
+  padding: 10px 35px;
+  margin: 3px;
+  border: 2px solid white;
+  border-radius: 30px;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+
+.main-btn {
+  display: block;
+  margin: 0 auto 0 auto;
+  background: #6195ff;
+  color: #fff;
+}
+
+
+.outline-btn {
+  background: transparent;
+  color: #6195ff !important;
+  border-color: #6195ff;
+}
+
+.main-btn:hover,
+.outline-btn:hover {
+  opacity: 0.8;
+}

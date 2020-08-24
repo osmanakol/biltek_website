@@ -41,11 +41,85 @@
     <div class="mobile-homepage-header-button">
         <h1 class="mobile-homepage-header-button-content">Kayıt Ol</h1>
         <div class="mobile-homepage-header-button-circle">
-            <div class="mobile-homepage-header-button-icon"> <i class="fas fa-plus"></i></div>
+            <div class="mobile-homepage-header-button-icon"> <a href="#" id="mobile-homepage-header-register-btn-a"
+                    onclick="getUniversity()">
+                <i class="fas fa-plus"></i></a> </div>
         </div>
     </div>
 </section>
 {{!-- Header --}}
+
+{{!-- Register Modal --}}
+<div class="modal-back"></div>
+
+
+<div class="register-modal" id="myModal">
+    <div class="container">
+        <div class="section-header text-center">
+            <div class="reg-modal-header title">
+                <h2>Kayıt Ol</h2>
+            </div>
+            <di class="row">
+                <div class="col-md-10 offset-md-1">
+                    <form action="/addParticipants" id="addParticipants" class="form-group register-form" method="POST">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center" id="nameSurname"
+                                        name="nameSurname" placeholder="İsim Soyisim *" autofocus required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="email" id="email-1" name="email"
+                                        class="form-email form-control register-form-input text-center"
+                                        onkeydown="e_mail_validation()" placeholder="Email *" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control text-center" id="phoneNumber"
+                                        name="phoneNumber" placeholder="Telefon">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select name="university" id="university" onchange="getDepartmentsById()"
+                                        class="form-control" required>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <select name="department" id="departmant" class="form-control" required>
+
+                                    </select>
+                                </div>
+                            </div>
+                            {{!-- <div class="col-12">
+								<div class="form-group">
+									<select name="sinif" id="sinif" class="form-control" required>
+										<option value="Hazırlık">Hazırlık</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="Mezun">Mezun</option>
+									</select>
+								</div>
+							</div> --}}
+                        </div>
+                        <button class="main-btn" type="button" onclick="submit_validation();">Kayıt Ol</button>
+                    </form>
+                </div>
+        </div>
+        </di>
+    </div>
+</div>
+{{!-- Register Modal --}}
 
 {{!-- About --}}
 <section id="homepage-about-header">
@@ -129,7 +203,7 @@
         </div>
     </div>
 
-   
+
 </section>
 {{!-- About --}}
 
@@ -148,11 +222,12 @@
         <!-- Grid for information box(register)  > Item-2-->
         <div class="homepage-events-grid-item2">
             <div class="homepage-events-register-information">
-                 <img class="homepage-events-photo-for-register-box" src="/img/event-one.PNG" >
+                <img class="homepage-events-photo-for-register-box" src="/img/event-one.PNG">
                 <div style="text-align: center;">
                     <button class="homepage-events-not-expired-register-btn homepage-events-register-btn">
                         <div class="homepage-events-register-part-icon-btn"></div>
-                        <div class="btn-txt homepage-events-register-content-btn">TARİH GEÇTİ</div>{{!-- KAYIT OL butonu olacak şimdilik deneme için tarih geçti yapıldı --}}
+                        <div class="btn-txt homepage-events-register-content-btn">TARİH GEÇTİ</div>
+                        {{!-- KAYIT OL butonu olacak şimdilik deneme için tarih geçti yapıldı --}}
 
                     </button>
                 </div>
@@ -163,7 +238,7 @@
 
         <div class="homepage-events-grid-item3">
             <div class="homepage-events-register-information">
-                <img class="homepage-events-photo-for-missing-box" src="/img/event-two.PNG" >
+                <img class="homepage-events-photo-for-missing-box" src="/img/event-two.PNG">
                 <div style="text-align: center;">
                     <button class="homepage-events-missing-register-btn homepage-events-register-btn">
                         <div class="homepage-events-register-part-icon-btn"></div>
@@ -199,7 +274,7 @@
         <!-- Grid for information box(missing-register) > item-7 -->
         <div class="homepage-events-grid-item7">
             <div class="homepage-events-register-information">
-                <img class="homepage-events-photo-for-register-box" src="/img/event-three.PNG" >
+                <img class="homepage-events-photo-for-register-box" src="/img/event-three.PNG">
                 <div style="text-align: center;">
                     <button class="homepage-events-missing-register-btn-right-side homepage-events-register-btn">
                         <div class="homepage-events-register-part-icon-btn"></div>
@@ -212,7 +287,8 @@
         <!-- Grid for Timeline information box-top > item-4 -->
         <div class="homepage-events-grid-item4">
             <div class="homepage-events-timeline-info-box">
-                <div class="homepage-events-joint-date-content   homepage-events-content-date-for-register ">09.05.2020</div>
+                <div class="homepage-events-joint-date-content   homepage-events-content-date-for-register ">09.05.2020
+                </div>
             </div>
         </div>
 
@@ -228,7 +304,8 @@
 
         <div class="homepage-events-grid-item6">
             <div class="homepage-events-timeline-info-box">
-                <div class="homepage-events-joint-date-content   homepage-events-content-date-for-missing-box ">27.04.2020</div>
+                <div class="homepage-events-joint-date-content   homepage-events-content-date-for-missing-box ">
+                    27.04.2020</div>
             </div>
         </div>
 
@@ -434,7 +511,8 @@
                 </div> {{!--/carousel-item--}}
                 <div class="carousel-item">
                     <div class="card">
-                        <img class="card-img-top mx-auto d-block" src="https://pbs.twimg.com/profile_images/964215903490596866/D1xyfJdR_400x400.jpg" alt="">
+                        <img class="card-img-top mx-auto d-block"
+                            src="https://pbs.twimg.com/profile_images/964215903490596866/D1xyfJdR_400x400.jpg" alt="">
                         <div class="card-body">
                             <h5 class="card-title">BiltekCyber Ekibi</h5>
                             <div class="homepage-team-social-medias">
@@ -457,7 +535,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Bozkurt Roket Takımı</h5>
                             <div class="homepage-team-social-medias">
-                               <a href="https://www.instagram.com/bozkurt_rocket/">
+                                <a href="https://www.instagram.com/bozkurt_rocket/">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://twitter.com/BozkurtRoket">
@@ -476,7 +554,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Hilal Roket Takımı</h5>
                             <div class="homepage-team-social-medias">
-                               <a href="https://www.instagram.com/hilal_roket/">
+                                <a href="https://www.instagram.com/hilal_roket/">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://twitter.com/Hilal_Roket">
