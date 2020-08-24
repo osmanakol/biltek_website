@@ -59,14 +59,32 @@
     z-index: 2;
     left: 2%;
     top: 7%;
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     background: white;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 96%;
+    display:none;
     transform-origin: 100% -20%;
-    transition: all 1s ease-out;
+    animation:disappear-mobile-nav 1s 1 ease-out;
+}
+@keyframes disappear-mobile-nav{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes appear-mobile-nav{
+    0%{
+        display: block;
+        transform:rotate(90deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
 }
 .homepage-mobil-nav li{
     text-align: center;
@@ -352,7 +370,8 @@
         display:unset;
     }
     #homepage-menu-toggle:checked~ #homepage-nav .homepage-mobil-nav >.homepage-mobil-nav-button-group{
-        transform: rotate(0deg);
+        display: block;
+        animation:appear-mobile-nav 1s 1 forwards ease-out;
     }
 }
 @media screen and (max-width:375px){
