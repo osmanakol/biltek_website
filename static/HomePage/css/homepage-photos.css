@@ -1,5 +1,5 @@
 #homepage-photos {
-    height: 100vh;
+    /* height: 100vh; */
     padding: 76px 30px;
   }
   .homepage-photos-header {
@@ -11,7 +11,7 @@
   }
   .homepage-photos-content {
     display: flex;
-    height: 100%;
+    /* height: 100%; */
   }
   .homepage-photos-gallery {
     position: relative;

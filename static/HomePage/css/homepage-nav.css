@@ -167,17 +167,17 @@
 }
 
 
-#homepage-menu-toggle:checked ~.homepage-menu-toggle-icons >.fa-times{
+#homepage-menu-toggle:checked ~#homepage-nav .homepage-menu-toggle-icons >.fa-times{
     display: inline-block;
 }
-#homepage-menu-toggle:checked ~.homepage-menu-toggle-icons >.fa-bars{
+#homepage-menu-toggle:checked ~#homepage-nav .homepage-menu-toggle-icons >.fa-bars{
     display:none;
 }
-#homepage-menu-toggle:checked ~ .homepage-nav{
+#homepage-menu-toggle:checked ~ #homepage-nav .homepage-nav{
     transform: translateY(0);
     box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.5);
 }
-#homepage-menu-toggle:checked ~ .homepage-menu-toggle-icons{
+#homepage-menu-toggle:checked ~#homepage-nav .homepage-menu-toggle-icons{
     top:101px;
 }
 
