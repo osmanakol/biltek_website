@@ -9,7 +9,7 @@
   },
   "scripts": {
     "deployment": "ts-node-dev --respawn src/server.ts",
-    "start": "node dist/src/server.js",
+    "start": "node dist/server.js",
     "dev": "nodemon  -r dotenv/config --exec ts-node src/server.ts",
     "build": "tsc --outDir dist",
     "dev:debug": "ts-node-dev --inspect --respawn src/server.ts"
