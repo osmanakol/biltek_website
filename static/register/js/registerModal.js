@@ -66,7 +66,7 @@ function getUniversity() {
                 $.each(universityList.data, (i, d) => {
                     $('#university').append('<option value="' + d._id + '">' + d.universityName + '</option>')
                 })
-                $("#university").prop("selectedIndex",-1)
+                $("#university").prop("selectedIndex",0)
             }
         }
     })
@@ -88,7 +88,7 @@ function getDepartmentsById() {
                 $.each(departmentList.data, (i, d) => {
                     $('#departmant').append('<option value="">' + d.departmentName + '</option>')
                 })
-                $("#departmant").prop('selectedIndex',-1)
+                $("#departmant").prop('selectedIndex',0)
             }
         }
     })
@@ -115,10 +115,10 @@ function submit_validation() {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
         console.log(email.val())
     }
-    else if (school.index() === -1) {
+    else if (school.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
     }
-    else if (department.index() === -1) {
+    else if (department.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen bölümünüzü seçtiğinizden emin olun!!", true, false);
     }
     else {
