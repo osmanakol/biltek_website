@@ -14,6 +14,9 @@ export class WebRoutes {
         this.router.get("/comingSoon", (req: Request, res: Response) => {
             res.render("site/comingSoon", { layout: "comingSoonLayout" })
         })
+        this.router.get("/admin", (req:Request, res:Response) =>{
+            res.render("site/admin", {layout:"adminpanelLayout"})
+        })
 
         return this.router;
     }
