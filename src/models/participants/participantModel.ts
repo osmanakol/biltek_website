@@ -25,6 +25,9 @@ export class ParticipantModel {
 }
 
 export const ParticipantValidationChain = checkSchema({
+    isMobilePhone:{
+        errorMessage:"Lütfen geçerli bir telefon numarasını yazınız"
+    },
     name_surname: {
         exists: true,
         errorMessage: "Name_surname propertysi eksik",
