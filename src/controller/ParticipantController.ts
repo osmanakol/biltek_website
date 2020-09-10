@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { ParticipantService } from "../services/ParticipantService";
 import { ParticipantModel } from "../models/participants/participantModel";
-import { UniversityModel } from "../models/universities/universityModel";
-import { validationResult } from "express-validator";
 
 export class ParticipantController {
     private participantService: ParticipantService;
@@ -12,7 +10,6 @@ export class ParticipantController {
     }
 
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
-        console.log("error yok devam")
         const participantObj = new ParticipantModel(req.body.name_surname, req.body.university, req.body.department, req.body.email, req.body.phone)
         try {
             const result = await this.participantService.create(participantObj)
