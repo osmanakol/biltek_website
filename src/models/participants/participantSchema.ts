@@ -1,6 +1,7 @@
 import { Document, Model, model, Schema } from "mongoose";
 import { ParticipantModel } from "./participantModel";
 import { response } from "express";
+import { logger } from "../../middlewares/logger";
 
 export interface IParticipant extends Document, ParticipantModel {
 
@@ -17,18 +18,17 @@ const ParticipantSchema: Schema = new Schema({
 })
 
 ParticipantSchema.pre<IParticipant>('save', function (_next) {
-    console.log("geldim lo")
+    //console.log("geldim lo")
     ParticipantDbModel.findOne({ email: this.email }, { email: 1, _id: 0 }, (err) => {
         if (err)
             _next(err)
     }).then((res) => {
-        console.log(res)
         if (res === null) {
-            console.log("hatasız geldim")
+            logger.info(`A participant is registered`)
             _next()
         }
         else {
-            console.log("aynısından var")
+            logger.warn(`Mail is already registered`)
             _next(new Error("Mail adresiniz sistemimizde mevcut"))
         }
     })

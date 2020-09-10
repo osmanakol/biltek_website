@@ -10,7 +10,7 @@ export class UniversityService {
     }
 
     public create = async (item: UniversityModel) => {
-        console.log("Service");
+        //console.log("Service");
         const result = await this.repository.create(item);
         return result;
     }
@@ -37,7 +37,7 @@ export class UniversityService {
     }
 
     public findAll = async ()=>{
-        console.log("Service")
+        //console.log("Service")
         const result = await this.repository.findAll();
         return result;
     }
