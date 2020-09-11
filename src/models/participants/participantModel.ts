@@ -72,15 +72,15 @@ export const ParticipantValidationChain = checkSchema({
         exists: {
             errorMessage: "Phone property eksik"
         },
-        /*isMobilePhone:{
+        isMobilePhone:{
             errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
             options:"tr-TR"
-        },*/
+        },
         blacklist: {
             options: ['-']
         },
         optional: {
-            options: { nullable: true }
+            options: { nullable: true,checkFalsy:true }
         }
         
        
