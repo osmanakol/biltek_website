@@ -54,12 +54,12 @@ function getEventList() {
 
             }
             else {
-                $('#events-form-event-select').empty();
+                // $('#events-form-event-select').empty();
                 const eventList = $.parseJSON(JSON.stringify(res));
                 $.each(eventList.data, (i, d) => {
                     $('#events-form-event-select').append('<option value="' + d._id + '">' + d.eventName + '</option>')
                 })
-                $("#events-form-event-select").prop('selectedIndex', -1)
+                $("#events-form-event-select").prop('selectedIndex', 0)
             }
         }
     })
@@ -84,7 +84,7 @@ function submit_validation() {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
         console.log(email.val())
     }
-    else if (events.index() === -1) {
+    else if (events.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen etkinlik seçmeyi unutmayınız!!!", true, false);
     }
     else if (school.index() === 0) {
