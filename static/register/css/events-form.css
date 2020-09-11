@@ -7,19 +7,24 @@ body{
 .events-form{
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    top: 0;
+    transform: translate(-50%,0%);
     width: 400px;
-    height: 493px;
-    border: 1px solid purple;
+    height: 612px;
+    border: 1px solid #2580b3;
     border-radius: 30px;
     background-color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /*               Event Form Title             */
 .events-form-title{
     font-size: 30px;
     text-align: center;
+}
+.events-form-title>h2{
+    margin-bottom: 12px;
 }
 
 /*           Event Form Content             */
@@ -36,20 +41,20 @@ body{
     margin-bottom:25px;
     position: relative;
 }
-#events-form-event-select>option{
+#events-form-event-select>option,.events-form-content-information>select>option{
     height: 50px;
     cursor: pointer;
     font-size: calc(0.8rem + 0.9vh);
 }
 
-.events-form-content-information>input,#events-form-event-select{
+.events-form-content-information>input,#events-form-event-select,.events-form-content-information>select{
     height: 50px;
     width: -webkit-fill-available;
     padding: 0 20px;
-    border: 1px solid purple;
+    border: 1px solid #2580b3;
     border-radius: 9px;
     font-size: 15px;
-    text-align: center;
+    text-align-last: center;
     cursor: pointer;
 }
 
@@ -59,7 +64,7 @@ body{
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.events-form-content-information>span,#events-form-event-select{
+.events-form-content-information>span,#events-form-event-select,.events-form-content-information>select{
     color: gray;
     cursor: pointer;
 }
@@ -68,7 +73,7 @@ body{
     left: 20%;
     font-size: 15px;
     padding: 5px 10px;
-    background-color: purple;
+    background-color: #2580b3;
     border-radius: 5px;
     color: white;
     
@@ -81,12 +86,14 @@ body{
     height: 44px;
     position: fixed;
     left:50% ;
-    transform: translateX(-50%);
-    background-color: purple;
+    bottom: 0;
+    transform: translate(-50%,50%);
+    background-color: #2580b3;
     font-size: 20px;
     color: white;
     cursor: pointer;
     border-radius: 10px;
+    border: none;
 }
 .events-form-content-information>input:focus,.events-form-content-information>select:focus,.events-form-button:focus{
     outline:0;
@@ -148,21 +155,9 @@ body{
 
 
   /*        Responsive       */
-  @media only screen and (min-width:450px) and (max-height:560px){
-    .events-form{
-        margin-top: 6%;
-        margin-bottom: 4%;
-    }
-  } 
-  @media only screen and (min-width:450px) and (max-height:460px){
-    .events-form{
-        margin-top: 15%;
-    }
-  }
+
    @media only screen and (min-width:450px) and (max-height:386px){
-    .events-form{
-        margin-top: 23%;
-    }
+    
     .events-form-left-circles-three {
         top: 90%;
     }
@@ -174,51 +169,22 @@ body{
   @media only screen and (max-width:450px){
     .events-form{
         width: 330px;
-        height: 473px;
+        height: 597px;
     }
     .events-form-title {
         font-size: 27px;
     }
  
   }
-  @media only screen and (max-width:450px) and (max-height:490px){
-    .events-form{
-        margin-top: 12%;
-        margin-bottom: 11%;
-    }
-  }
-  @media only screen and (max-width:450px) and (max-height:435px){
-    .events-form{
-        margin-top: 25%;
-    }
-  }
-  @media only screen and (max-width:450px) and (max-height:345px){
-    .events-form{
-        margin-top: 32%;
-    }
-  }
+
   @media only screen and (max-width:380px){
     .events-form{
         width: 295px;
-        height: 460px;
+        height: 585px;
     }
     .events-form-title {
         font-size: 25px;
     }
   }
-  @media only screen and (max-width:380px) and (max-height:540px){
-    .events-form{
-        margin-top: 14%;
-        margin-bottom: 16%;
-    }
-  }
-  @media only screen and (max-width:380px) and (max-height:540px){
-    .events-form{
-        margin-top: 27%;
-    }
-  }
-  @media only screen and (max-width:380px) and (max-height:540px){
-    .events-form{
-        margin-top: 34%;
-    }
-  }
+
+ 
