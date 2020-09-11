@@ -15,7 +15,7 @@ export class WebRoutes {
             res.render("site/comingSoon", { layout: "comingSoonLayout" })
         })
         this.router.get("/event/register", (req: Request, res: Response) => {
-            res.render("site/eventsform", { layout: "EventsFormLayout" })
+            res.render("site/EventsForm", { layout: "EventsFormLayout" })
         })
 
         return this.router;
