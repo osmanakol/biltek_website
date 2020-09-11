@@ -83,12 +83,6 @@
     border-radius: 0;
     transition: all 0.3s;
   }
-  .homepage-photos-show-area img:hover {
-    border-radius: 25% 0 25% 25%;
-  }
-  .homepage-photos-photo-area:hover img {
-    transform: scale(1.2, 1.2);
-  }
   @keyframes move-photo {
     0% {
       transform: translate(-50%);
@@ -143,9 +137,20 @@
       transform: scale(1);
     }
   }
+  /* #closeModal{
+    cursor: pointer;
+  } */
   /*---------------------
           RESPONSIVE
   ----------------------*/
+@media screen and (min-width:769px){
+  .homepage-photos-show-area img:hover {
+    border-radius: 25% 0 25% 25%;
+  }
+  .homepage-photos-photo-area:hover img {
+    transform: scale(1.2, 1.2);
+  }
+}
   @media screen and (max-width: 1024px) {
     .homepage-photos-photo-area {
       margin: 17px 10px;

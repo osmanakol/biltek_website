@@ -1,5 +1,10 @@
 import { checkSchema } from "express-validator"
 
+
+export interface IEvent{
+    event_id:string,
+    isJoin:boolean
+}
 export class ParticipantModel {
     private name_surname: string;
     public university: string;
@@ -7,15 +12,16 @@ export class ParticipantModel {
     public email: string;
     public date: string;
     public phone?: string;
+    public events? :IEvent[]
 
-    constructor(name_surname: string, university: string, department: string, email: string, phone?: string, date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
+    constructor(name_surname: string, university: string, department: string, email: string,phone?: string,events?:IEvent[] , date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
         this.name_surname = name_surname;
         this.university = university;
         this.department = department;
         this.email = email;
         this.phone = phone;
         this.date = date;
-
+        this.events = events
     }
 
     public get FullName(): string {
@@ -72,6 +78,10 @@ export const ParticipantValidationChain = checkSchema({
         optional: {
             options: { nullable: true }
         },
+        isMobilePhone:{
+            errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
+            options:"tr-TR"
+        }
         /*custom:{
             options:(value:string)=>{
                 //if(value!='' || value!=undefined){

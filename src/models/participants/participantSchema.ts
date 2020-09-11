@@ -13,7 +13,12 @@ const ParticipantSchema: Schema = new Schema({
     department: { type: String, required: 'Department is required parameter' },
     email: { type: String, required: 'Email is a required parameter', trim: true },
     phone: { type: String },
-    date: { type: String, required: "Date is a required parameter", default: new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" }) }
+    date: { type: String, required: "Date is a required parameter", default: new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" }) },
+    events:[{
+        _id:false,
+        event_id:{type:Schema.Types.ObjectId,ref:"events"},
+        isJoin:{type:Boolean}
+    }]
 })
 
 ParticipantSchema.pre<IParticipant>('save', function (_next) {
@@ -33,7 +38,6 @@ ParticipantSchema.pre<IParticipant>('save', function (_next) {
         }
     })
 })
-
 
 const ParticipantDbModel: Model<IParticipant> = model('participants', ParticipantSchema);
 
