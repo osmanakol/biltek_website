@@ -6,7 +6,7 @@ export interface IEvent{
     isJoin:boolean
 }
 export class ParticipantModel {
-    private name_surname: string;
+    public name_surname: string;
     public university: string;
     public department: string;
     public email: string;
@@ -72,16 +72,18 @@ export const ParticipantValidationChain = checkSchema({
         exists: {
             errorMessage: "Phone property eksik"
         },
+        /*isMobilePhone:{
+            errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
+            options:"tr-TR"
+        },*/
         blacklist: {
             options: ['-']
         },
         optional: {
             options: { nullable: true }
-        },
-        isMobilePhone:{
-            errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
-            options:"tr-TR"
         }
+        
+       
         /*custom:{
             options:(value:string)=>{
                 //if(value!='' || value!=undefined){

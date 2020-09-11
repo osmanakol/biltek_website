@@ -64,7 +64,7 @@ export class ApiRoutes {
 
         this.router.route('/event/participant/add')
             .get()
-            .post(this.participantController.addEvent)
+            .post(validate(ParticipantValidationChain),this.participantController.addEvent)
         return this.router;
     }
 } 

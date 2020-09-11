@@ -11,7 +11,7 @@ export class EventController {
 
     public create = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.eventService.create(new EventModel(req.body.eventName, req.body.speaker, req.body.img, req.body.time, req.body.topic,req.body.isActive))
+            const result = await this.eventService.create(new EventModel(req.body.eventName, req.body.speaker, req.body.img, req.body.time, req.body.topic,req.body.url,req.body.isActive))
 
             res.json({
                 data: result,

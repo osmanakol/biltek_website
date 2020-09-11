@@ -1,48 +1,48 @@
- <div class="events-form-circles">
-        <div class="events-form-left-circles-one"></div>
-        <div class="events-form-left-circles-two"></div>
-        <div class="events-form-left-circles-three"></div>
-        <div class="events-form-right-circles-one"></div>
-        <div class="events-form-right-circles-two"></div>
-        <div class="events-form-right-circles-three"></div>
+<div class="events-form-circles">
+    <div class="events-form-left-circles-one"></div>
+    <div class="events-form-left-circles-two"></div>
+    <div class="events-form-left-circles-three"></div>
+    <div class="events-form-right-circles-one"></div>
+    <div class="events-form-right-circles-two"></div>
+    <div class="events-form-right-circles-three"></div>
+</div>
+<div class="events-form">
+    <div class="events-form-title">
+        <h2>Kayıt Ol</h2>
     </div>
-    <div class="events-form">
-        <div class="events-form-title">
-            <h2>Kayıt Ol</h2>
-        </div>
-        <div class="events-form-content">
-            <div class="events-form-conctent-form">
-                <form>
-                    <div class="events-form-content-information">
-                        <select name="events" id="events-form-event-select" required="">
-                          
-                        </select>
-                    </div>
-                    <div class="events-form-content-information">
-                        <input type="text" required="" name="">
-                        <span>İsim Soyisim*</span>
-                    </div>
-                    <div class="events-form-content-information">
-                        <input type="email" required="" name="">
-                        <span>Email*</span>
-                    </div>
-                    <div class="events-form-content-information">
-                        <input type="tel" required="" name="">
-                        <span>Telefon</span>
-                    </div>
-                    <div class="events-form-content-information">
-                    <select name="university"  onchange=""  required="">
+    <div class="events-form-content">
+        <div class="events-form-conctent-form">
+            <form>
+                <div class="events-form-content-information">
+                    <select id="events-form-event-select" name="events" required="">
+
+                    </select>
+                </div>
+                <div class="events-form-content-information">
+                    <input id="name_surname" type="text" required="" name="">
+                    <span>İsim Soyisim*</span>
+                </div>
+                <div class="events-form-content-information">
+                    <input id="email" type="email" required="" name="">
+                    <span>Email*</span>
+                </div>
+                <div class="events-form-content-information">
+                    <input id="phoneNumber" type="tel" required="" name="">
+                    <span>Telefon</span>
+                </div>
+                <div class="events-form-content-information">
+                    <select id="university" name="university" onchange="getDepartmentsById()" required="">
                         <option value="" disabled="" selected="">Üniversiteniz*</option>
-                        </select>
-                     </div> 
-                      <div class="events-form-content-information">
-                          <select name="department" required="">
-                               <option value="" disabled="" selected="">Bölümünüz*</option>
-                         </select>
-                      </div>  
-                    
-                </form>
-                <button class="events-form-button" type="button" onclick="">Kayıt Ol</button>
-            </div>
+                    </select>
+                </div>
+                <div class="events-form-content-information">
+                    <select id="department" name="department" required="">
+                        <option value="" disabled="" selected="">Bölümünüz*</option>
+                    </select>
+                </div>
+
+            </form>
+            <button class="events-form-button" type="button" onclick="submit_validation()">Kayıt Ol</button>
         </div>
     </div>
+</div>

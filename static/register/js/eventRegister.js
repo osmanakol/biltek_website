@@ -1,6 +1,49 @@
 $(document).ready(() => {
     getEventList()
+    getUniversity()
 })
+
+
+function getUniversity() {
+    $.ajax({
+        url: "/api/university",
+        type: "GET",
+        success(res) {
+            if (typeof res.error !== "undefined") {
+
+            }
+            else {
+                const universityList = $.parseJSON(JSON.stringify(res));
+
+                $.each(universityList.data, (i, d) => {
+                    $('#university').append('<option value="' + d._id + '">' + d.universityName + '</option>')
+                })
+                $("#university").prop("selectedIndex",0)
+            }
+        }
+    })
+}
+
+function getDepartmentsById() {
+
+    $.ajax({
+        url: `/api/departments?universityId=${$('#university option:selected').val()}`,
+        type: "GET",
+        success(res) {
+            if (typeof res.error !== "undefined") {
+
+            }
+            else {
+                $('#department').empty();
+                const departmentList = $.parseJSON(JSON.stringify(res));
+                $.each(departmentList.data, (i, d) => {
+                    $('#department').append('<option value="">' + d.departmentName + '</option>')
+                })
+                $("#department").prop('selectedIndex',0)
+            }
+        }
+    })
+}
 
 function getEventList() {
     $.ajax({
@@ -23,15 +66,13 @@ function getEventList() {
 }
 
 function submit_validation() {
-
-
     /**Get user input */
     const email = $("#email");
-    const nameSurname = $("#nameSurname");
+    const nameSurname = $("#name_surname");
     const phone = $("#phoneNumber");
     const events = $("#events-form-event-select option:selected");
-    const department = $("# option:selected")
-    const school = $("# option:selected")
+    const department = $("#department option:selected")
+    const school = $("#university option:selected")
     const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
     /**Get user input */
 
@@ -44,7 +85,7 @@ function submit_validation() {
         console.log(email.val())
     }
     else if (events.index() === -1) {
-        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen etkinlik seçmeyi unutmayınız!!!", true, false);
     }
     else if (school.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
@@ -75,9 +116,9 @@ function submit_validation() {
 
 
                     sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-                    $(".modal-back").css("display", "none");
-                    $(".register-modal").css("transform", "translate(-50%,-50%) scale(0)");
-                    $("#addParticipants")[0].reset();
+                    // $(".modal-back").css("display", "none");
+                    // $(".register-modal").css("transform", "translate(-50%,-50%) scale(0)");
+                    // $("#addParticipants")[0].reset();
                 }
             }
             //TODO ,ERROR EKLENECEK
@@ -88,8 +129,6 @@ function submit_validation() {
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
             }
         })
-
-
     }
 }
 

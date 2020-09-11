@@ -10,8 +10,9 @@ const EventSchema: Schema = new Schema({
     topic: { type: String, required: true },
     speaker: { type: String, trim: true, required: true },
     img: { type: String, required: true },
+    url: { type: String, required: true },
     isActive: { type: Boolean, default: false, required: true },
-    time:{
+    time: {
         _id: false,
         startTime: { type: Date },
         finishTime: { type: Date }
