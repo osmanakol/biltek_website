@@ -43,5 +43,11 @@ export class ParticipantService {
         return result;
     }
 
+    public addEvent = async(eventId:string,participant:ParticipantModel) =>{
+        console.log("Add Event")
+        const result = await this.repository.addEvent(eventId,participant);
+        return result;
+    }
+
      
 }
