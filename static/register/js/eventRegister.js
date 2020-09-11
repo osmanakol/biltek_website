@@ -1,4 +1,8 @@
-function getEventList(){
+$(document).ready(() => {
+    getEventList()
+})
+
+function getEventList() {
     $.ajax({
         url: `/api/event`,
         type: "GET",
@@ -7,12 +11,12 @@ function getEventList(){
 
             }
             else {
-                $('#events').empty();
+                $('#events-form-event-select').empty();
                 const eventList = $.parseJSON(JSON.stringify(res));
                 $.each(eventList.data, (i, d) => {
-                    $('#events').append('<option value="'+ d.eventId +'">' + d.eventName + '</option>')
+                    $('#events-form-event-select').append('<option value="' + d._id + '">' + d.eventName + '</option>')
                 })
-                $("#events").prop('selectedIndex',0)
+                $("#events-form-event-select").prop('selectedIndex', -1)
             }
         }
     })
@@ -22,10 +26,12 @@ function submit_validation() {
 
 
     /**Get user input */
-    const email = $("#email-1");
+    const email = $("#email");
     const nameSurname = $("#nameSurname");
     const phone = $("#phoneNumber");
-    const events = $("#events option:selected");
+    const events = $("#events-form-event-select option:selected");
+    const department = $("# option:selected")
+    const school = $("# option:selected")
     const emailPattern = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$/
     /**Get user input */
 
@@ -37,8 +43,14 @@ function submit_validation() {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
         console.log(email.val())
     }
-    else if (events.index() === 0) {
+    else if (events.index() === -1) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
+    }
+    else if (school.index() === 0) {
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
+    }
+    else if (department.index() === 0) {
+        sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen bölümünüzü seçtiğinizden emin olun!!", true, false);
     }
     else {
         //save data in database
@@ -46,7 +58,7 @@ function submit_validation() {
             url: `/api/event/participant/add`,
             type: "POST",
             data: {
-                "eventId":"",
+                "eventId": events.val(),
                 "name_surname": nameSurname.val(),
                 "university": school.text(),
                 "department": department.text(),
@@ -70,14 +82,11 @@ function submit_validation() {
             }
             //TODO ,ERROR EKLENECEK
             , error(res) {
-                if(Array.isArray(res.responseJSON.errors))
+                if (Array.isArray(res.responseJSON.errors))
                     sweetAlert(res.responseJSON.errors[0].msg, "warning", "", false, false, 1500);
-                else    
+                else
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
             }
-
-
-
         })
 
 
