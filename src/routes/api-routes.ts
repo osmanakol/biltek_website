@@ -4,16 +4,19 @@ import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
 import{ParticipantValidationChain} from "../models/participants/participantModel"
+import { EventController } from "../controller/EventController";
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
-    private deparmentController:DepartmentController
+    private deparmentController:DepartmentController;
+    private eventController:EventController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
+        this.eventController = new EventController();
         this.Routes();
     }
 
@@ -50,10 +53,18 @@ export class ApiRoutes {
             .post(this.deparmentController.createMany)
             .put(this.deparmentController.update)
             .delete(this.deparmentController.delete);
-            
+        // ? Routes /api/departments
         this.router.route('/departments')
             .get(this.deparmentController.getDepartmentsByUniversityId);
+        
+        this.router.route('/event')
+            .get(this.eventController.findAll)
+            .post(this.eventController.create)
+            .put(this.eventController.update)
 
+        this.router.route('/event/participant/add')
+            .get()
+            .post(this.participantController.addEvent)
         return this.router;
     }
 } 
