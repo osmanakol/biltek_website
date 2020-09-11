@@ -4,16 +4,19 @@ import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
 import{ParticipantValidationChain} from "../models/participants/participantModel"
+import { TeamController } from "../controller/TeamController";
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
     private deparmentController:DepartmentController
+    private teamController:TeamController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
+        this.teamController=new TeamController();
         this.Routes();
     }
 
@@ -32,6 +35,10 @@ export class ApiRoutes {
             .post(validate(ParticipantValidationChain),this.participantController.createParticipant)
             .put(this.participantController.updateParticipant)
             .delete(this.participantController.deleteParticipant);
+
+             // ? /api/teams
+             this.router.route('/teams')
+             .post(this.teamController.createTeam);
 
         // ? Routes /api/university
         this.router.route('/university')
