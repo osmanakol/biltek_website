@@ -3,7 +3,7 @@ import { TeamService } from "../services/TeamServices";
 import { TeamsModel } from "../models/teams/teamsModel";
 
 
-export class TeamController {
+export class TeamsController {
     private teamService: TeamService;
 
     constructor() {
