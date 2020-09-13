@@ -2,6 +2,7 @@ body{
     height: 100vh;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    background-color: white;
 }
 
 .events-form{
@@ -44,7 +45,7 @@ body{
 #events-form-event-select>option,.events-form-content-information>select>option{
     height: 50px;
     cursor: pointer;
-    font-size: calc(0.8rem + 0.9vh);
+    font-size: calc(0.6rem + 0.9vh);
 }
 
 .events-form-content-information>input,#events-form-event-select,.events-form-content-information>select{
@@ -54,15 +55,14 @@ body{
     border: 1px solid #2580b3;
     border-radius: 9px;
     font-size: 15px;
-    text-align-last: center;
     cursor: pointer;
 }
 
 .events-form-content-information>span{
     position: absolute;
-    left: 50%;
+    left: 6.5%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
 }
 .events-form-content-information>span,#events-form-event-select,.events-form-content-information>select{
     color: gray;
@@ -70,7 +70,7 @@ body{
 }
 .events-form-content-information>input:focus~span,.events-form-content-information>input:valid~span{
     top: -3px;
-    left: 20%;
+    left: 5%;
     font-size: 15px;
     padding: 5px 10px;
     background-color: #2580b3;
