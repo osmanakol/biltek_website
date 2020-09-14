@@ -4,16 +4,20 @@ import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
 import{ParticipantValidationChain} from "../models/participants/participantModel"
+import {MailingController} from "../helpers/MailingController"
+
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
-    private deparmentController:DepartmentController
+    private deparmentController:DepartmentController;
+    private mailingController:MailingController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
+        this.mailingController = new MailingController();
         this.Routes();
     }
 
@@ -26,6 +30,14 @@ export class ApiRoutes {
                     message:"Biltek Website Teams"
                 })
             })
+        // ? Routes /api/mailing
+        this.router.route("/mailing")
+            .get(this.mailingController.createMailer)
+            .post(this.mailingController.createMail)
+            .put(this.mailingController.sendMail)
+            .delete(this.mailingController.sendManyMail)
+
+
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
