@@ -129,6 +129,7 @@
     text-align: center;
     box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.2);
     transition: all 1s ease-out;
+    cursor: pointer;
 }
 
 .homepage-menu-toggle-icons i{
