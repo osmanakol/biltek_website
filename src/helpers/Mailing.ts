@@ -12,12 +12,19 @@ export  class Mailing{
         this.message.to = receiver
     }
     private identifyMailService(){  
+      try
+      {
       let mail_service = this.email
       mail_service = mail_service.split("@")[1].split(".")[0]
       this.service = mail_service
+    }catch(error){
+      return error
+    }
     }
     
     public openMailer(email:string, email_password:string){
+      //try{
+      console.log("Creating/Updating Mailer")
       this.email = email;
       this.email_password = email_password;
       this.service = ""
@@ -28,42 +35,52 @@ export  class Mailing{
             user: this.email, 
             pass: this.email_password, } 
         });
+      /*} catch(error){
+        return error
+      }*/
     }
     public closeMailer(){
-      this.email = ""
-      this.email_password = ""
-      this.service = ""
+      try{
+        console.log("Closing Mailer")
+      this.email = null
+      this.email_password = null
+      this.service = null
       this.transporter.close()
+    }catch(error){
+      return error
+    }
+
     }
     public createMessage(receiver:string, html:string, subject:string){
+      try
+      {
       this.message = new MailContent()
       this.message.to = receiver
       this.message.from = this.email
       this.message.subject = subject
       this.message.html = {path: html}
+    }catch(error){
+      return error
+    }
     }
 
     public sendMail(){
       try{
-        setTimeout(() => {
-          this.transporter.sendMail(this.message)
-          console.log("Mail Succesfully send to " + this.message.to + "adress")
-        }, 3000);
-        return 1
+        this.message.bcc = null
+        this.transporter.sendMail(this.message)
+        console.log("Mail Succesfully send to " + this.message.to + " adress")
       } catch(error){
-            return 0
+            return error
         }
     }
 
-    public async sendManyMail(receivers:string[]){
-      for(let mail of receivers){
-          console.log(mail)
-          setTimeout(() =>{
-            this.message.to = mail
-          },3000)
-          
-          var sent = await  this.sendMail()
-          if(sent){ continue}
+    public sendManyMail(receivers:string[]){
+      try{
+      this.message.bcc = receivers
+      this.message.to = null
+      this.transporter.sendMail(this.message)
+      } catch(error){
+        return error
       }
     }
 

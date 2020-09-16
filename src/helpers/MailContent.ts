@@ -2,7 +2,8 @@ import Mail, { Attachment, AttachmentLike } from "nodemailer/lib/mailer/index"
 import { Url } from "url"
 export class MailContent implements Mail.Options{
     public from:string
-    public to:string
+    public to?:string
+    public bcc?: string[]
     public html: string | AttachmentLike
     public subject:string
     public attachments?:Attachment[]

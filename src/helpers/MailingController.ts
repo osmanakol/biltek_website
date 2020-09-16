@@ -9,8 +9,9 @@ export class MailingController{
     }
     public createMailer = async (req: Request, res:Response, next: NextFunction) => {
         try{
-        this.mailing.openMailer(req.body.email, req.body.password)
+        const result = await this.mailing.openMailer(req.body.email, req.body.password)
         res.json({
+                data: result,
                 state: "Success"
             })
         } catch (error){
@@ -85,33 +86,5 @@ export class MailingController{
             })
         }
     }
-    /*
-    public delete = async (req:Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.mailing.delete(req.body._id);
-            res.status(200).json({
-                data: result,
-                state: "Success"
-            })
-        } catch (error) {
-            res.json({
-                err: error,
-                state: "Error"
-            })
-        }
-    }
-    public update = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.mailing.update(req.body.email, req.body.password);
-            res.status(200).json({
-                result: result,
-                state: "Success"
-            })
-        } catch (error) {
-            res.json({
-                err: error,
-                state: "Error"
-            })
-        }
-    }*/
+    
 }
