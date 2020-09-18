@@ -1,9 +1,8 @@
 import { Document, Model, model, Schema } from "mongoose";
 import { ParticipantModel } from "./participantModel";
-import { response } from "express";
 
 export interface IParticipant extends Document, ParticipantModel {
-
+    addEvent():Document
 }
 
 
@@ -39,7 +38,40 @@ ParticipantSchema.pre<IParticipant>('save', function (_next) {
     })
 })
 
-const ParticipantDbModel: Model<IParticipant> = model('participants', ParticipantSchema);
+/*ParticipantSchema.methods.addEvent = function(eventId:string,participant:ParticipantModel):IParticipant{
+    ParticipantDbModel.findOne({email:participant.email},{_id:1,events:1},(err)=>{
+        if(err)
+            return err.message
+    }).then((res) => {
+        if(res === null){
+            console.log("if a geldim")
+            const event = new Array()
+            event.push({
+                event_id:eventId,
+                isJoin:false
+            })
+            const createNew:ParticipantModel = new ParticipantModel(participant.name_surname,participant.university,participant.department,participant.email,participant.phone,new Array(...event));
+            const result = ParticipantDbModel.create(createNew)
+            return result;
+        }
+        else{
+            const event:IEvent = {
+                event_id:eventId,
+                isJoin:false
+            }
+            var data = res.toObject().events.filter((event:any)=>event.event_id == eventId)
+            if(data.length == 0){
+                const result = ParticipantDbModel.findOneAndUpdate({email:participant.email},{$push:{events:event}})
+                return result;
+            }
+            else{
 
+            }
+        }
+    })
+}*/
+
+
+const ParticipantDbModel: Model<IParticipant> = model('participants', ParticipantSchema);
 
 export default ParticipantDbModel 
