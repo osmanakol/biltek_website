@@ -1,10 +1,7 @@
 import { Document, Model, model, Schema } from "mongoose";
 import { ParticipantModel } from "./participantModel";
-<<<<<<< HEAD
 import { response } from "express";
 import { logger } from "../../middlewares/logger";
-=======
->>>>>>> EventsForm
 
 export interface IParticipant extends Document, ParticipantModel {
     addEvent():Document
