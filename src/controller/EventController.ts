@@ -55,4 +55,19 @@ export class EventController {
             })
         }
     }
+
+    public getByActiveEvent = async (req:Request,res:Response,next:NextFunction) =>{
+        try {
+            const result = await this.eventService.getByActiveEvent(req.query.isActive as unknown as boolean)
+            res.json({
+                state:"Success",
+                data:result
+            })
+        } catch (error) {
+            res.json({
+                state:"Error",
+                err:error
+            })
+        }
+    }
 }
