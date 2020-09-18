@@ -47,7 +47,7 @@ function getDepartmentsById() {
 
 function getEventList() {
     $.ajax({
-        url: `/api/event`,
+        url: `/api/event/isActive?isActive=true`,
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {

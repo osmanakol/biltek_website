@@ -26,4 +26,9 @@ export class EventService{
         const result = await this.repository.findAll()
         return result;
     }
+
+    public getByActiveEvent = async (isActive:boolean) =>{
+        const result = await this.repository.getByActiveEvent(isActive);
+        return result;
+    }
 }
