@@ -26,7 +26,7 @@ export class TeamsController {
 
     public createManyParticipant = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.teamService.createMany(new Array<TeamsModel>(...req.body.participants))
+            const result = await this.teamService.createMany(new Array<TeamsModel>(...req.body.teams))
             res.status(201).json({
                 data: result,
                 state: "Success"
@@ -40,20 +40,23 @@ export class TeamsController {
     }
 
     public updateParticipant = async (req: Request, res: Response, next: NextFunction) => {
-        try {
-            const result = await this.teamService.update(req.body._id, new TeamsModel(req.body.name, req.body.surName, req.body.universityId, req.body.departmentId, req.body.email))
-            res.status(200).json({
-                data: result,
-                state: "Success"
-            })
-        } catch (error) {
-            res.json({
-                err: error,
-                state: "Error"
-            })
-        }
-    }
+    
+            const result = await this.teamService.update(req.body._id, new TeamsModel(req.body.teamName,req.body.teamMember,req.body.foundationYear,req.body.isActive)).then((result) => {
 
+                res.status(201).json({
+                    data: result,
+                    status: "Success"
+
+            })
+         
+        }).catch(err => {
+            res.json({
+                err: err,
+                status: "Failed"
+            })
+        })
+    
+}
     public deleteParticipant = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const result = await this.teamService.delete(req.body._id)
@@ -102,4 +105,3 @@ export class TeamsController {
 
 
    
-}
