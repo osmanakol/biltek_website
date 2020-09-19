@@ -13,6 +13,11 @@ interface ITeamMember {
     year: number
     role: role;
 }
+interface ITeamofParticipants{
+    teams_id:string,
+    isJoin:boolean
+    }
+    
 
 export class TeamsModel {
     constructor(public teamName: string, public teamMember: ITeamMember[], 
