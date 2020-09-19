@@ -14,6 +14,7 @@ const ParticipantSchema: Schema = new Schema({
     email: { type: String, required: 'Email is a required parameter', trim: true },
     phone: { type: String },
     date: { type: String, required: "Date is a required parameter", default: new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" }) }
+    
 })
 
 ParticipantSchema.pre<IParticipant>('save', function (_next) {

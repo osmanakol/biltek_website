@@ -1,4 +1,5 @@
 import { checkSchema } from "express-validator"
+import { ITeamofParticipants } from "../teams/teamsModel";
 
 export class ParticipantModel {
     private name_surname: string;
@@ -7,14 +8,16 @@ export class ParticipantModel {
     public email: string;
     public date: string;
     public phone?: string;
+    public team_of_participants?:ITeamofParticipants[]; 
 
-    constructor(name_surname: string, university: string, department: string, email: string, phone?: string, date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
+    constructor(name_surname: string, university: string, department: string, email: string, phone?: string,team_of_participants?:ITeamofParticipants[] ,date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
         this.name_surname = name_surname;
         this.university = university;
         this.department = department;
         this.email = email;
         this.phone = phone;
         this.date = date;
+        this.team_of_participants=team_of_participants;
 
     }
 
