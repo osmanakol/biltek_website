@@ -1,19 +1,19 @@
 import { ParticipantModel } from "../participants/participantModel"
 
 
-interface IProject {
+export interface IProject {
     projectName: string;
     description: string;
     year: number;
 }
 type role = "Leader" | "Member"
 
-interface ITeamMember {
+export interface ITeamMember {
     teamMember: ParticipantModel;
     year: number
     role: role;
 }
-interface ITeamofParticipants{
+export interface ITeamofParticipants{
     teams_id:string,
     isJoin:boolean
     }
