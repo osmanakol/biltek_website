@@ -59,7 +59,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "express-validator": "^6.6.0",
-    "moment": "^2.27.0",
+    "moment": "^2.28.0",
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
     "winston": "^3.3.3"
