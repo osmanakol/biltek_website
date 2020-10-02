@@ -1,4 +1,4 @@
-# biltek_website
+# biltek - An Amazing Project
 Science and Technology Club Website 
 
 
