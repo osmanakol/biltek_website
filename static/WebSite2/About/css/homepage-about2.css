@@ -1,0 +1,116 @@
+/*          About            */
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#about {
+    width: 1120px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 80px 0;
+}
+
+/* .homepage-about-title{
+    text-align: center;
+    font-size: 30pt;
+    top: 5%;
+    position: relative;
+} */
+
+.homepage-about-area {
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.homepage-about-area>div>img {
+    width: 240px;
+    height: 240px;
+    margin: auto 0;
+}
+
+/*         About Content          */
+
+.homepage-about-mission, .homepage-about-vision {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin: 80px 0;
+}
+
+.homepage-about-text-area {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-about-title-area {
+    width: fit-content;
+}
+
+.homepage-about-vision-title, .homepage-about-vision-text {
+    text-align: end;
+}
+
+.homepage-about-vision-title, .homepage-about-mission-title {
+    font-size: 24pt;
+    margin: 0;
+}
+
+/*          Title Lines          */
+
+.homepage-about-mission-title, .homepage-about-vision-title::after {
+    color: #83036B;
+}
+
+.homepage-about-vision-title, .homepage-about-mission-title::after {
+    color: #F2424C;
+}
+
+.homepage-about-mission-title::after, .homepage-about-vision-title::after {
+    height: 10px;
+    width: 100%;
+    display: block;
+    content: "";
+    border-top: 3px solid;
+}
+
+/*          Responsive           */
+
+@media only screen and (max-width:1112px) {
+    #about {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    #about {
+        width: 80%;
+    }
+    .homepage-about-mission, .homepage-about-vision {
+        display: contents;
+    }
+    .homepage-about-area>div>img {
+        display: none;
+    }
+    .homepage-about-title-area {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .homepage-about-text-area>p, .homepage-about-title-area>h3 {
+        text-align: center;
+    }
+    .homepage-about-text-area {
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width:420px) {
+    #about {
+        width: 90%;
+    }
+}
