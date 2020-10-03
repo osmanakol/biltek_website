@@ -11,7 +11,7 @@ const timeformat={
   'format': 'YYYY-MM-DD HH:mm:ss',
   'dateformat':'YYYY-MM-DD'
 }
-const currentDate=moment().format(timeformat.dateformat)
+//const currentDate=moment().format(timeformat.dateformat)
 
 const logConfiguration = {
   'transports': [
@@ -29,7 +29,7 @@ const logConfiguration = {
         timestamp(timeformat),
         printf(status => `[${status.timestamp}] ${status.level.toLocaleUpperCase()}: ${status.message}`)
       ),
-      filename: path.join("logs",'%DATE%combined.log'),
+      filename: path.join("logs",'combined.log'),
       maxFiles:'7d'
       //maxsize: 5242880, //5MB
 
@@ -70,4 +70,4 @@ morgan.token('date', ()=> {
 
  //çıktı formati
 export const httpLogger=morgan('[:date] :remote-addr - :remote-user ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent',
-{stream:fs.createWriteStream(path.join("logs", `${currentDate}-access.log`),{ flags: 'a+'})})
+{stream:fs.createWriteStream(path.join("logs", "access.log"),{ flags: 'a+'})})
