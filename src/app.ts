@@ -5,8 +5,13 @@ import { ApiRoutes } from "./routes/api-routes";
 import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
-import {httpLogger } from "./middlewares/logger"; 
+import {httpLogger, logger } from "./middlewares/logger"; 
+import {errorhandler, NotFoundError } from "./middlewares/errorhandler";
   
+process.on('uncaughtException', err => {
+    logger.error('There was an uncaught error', err)
+    //process.exit(1)
+})
 class App {
     public app: Application
     public router: express.Router
@@ -41,6 +46,11 @@ class App {
         this.app.use("/",new WebRoutes(this.webrouter).Routes())
         // ? http://aybubiltek.com/api
         this.app.use('/api', new ApiRoutes(this.router).Routes())
+        //catch 404 errors
+        this.app.use((err,res,next)=>next(new NotFoundError()))
+        //user-facing error handling middleware using
+        this.app.use(errorhandler)
+        
     }
 
     private mongoSetup = () => {

@@ -1,4 +1,5 @@
 import { Request,Response,NextFunction } from "express"
+import { logger } from "./logger"
 
 
 export enum ErrorType{
@@ -29,42 +30,26 @@ abstract class UserFacingError extends Error {
       case ErrorType.NOT_FOUND:
       case ErrorType.NO_DATA:
       case ErrorType.NO_ENTRY:
-        return res.json({
-          errors:{
-            status:ResponseStatus.NOT_FOUND,
-            message:err.message,
-            type:err.type
-          }
-        })
+        return this.errorsOutput(err,res,ResponseStatus.NOT_FOUND)
       case ErrorType.INTERNAL:
-        return res.json({
-          errors:{
-            status:ResponseStatus.INTERNAL_ERROR,
-            message:err.message,
-            type:err.type
-          }
-        })
+        return this.errorsOutput(err,res,ResponseStatus.INTERNAL_ERROR)
       case ErrorType.UNAUTHORIZED:
-        return res.json({
-          errors:{
-            status:ResponseStatus.UNAUTHORIZED,
-            message:err.message,
-            type:err.type
-          }
-        })
+        return this.errorsOutput(err,res,ResponseStatus.UNAUTHORIZED)
       case ErrorType.BAD_REQUEST:
-        return res.json({
-          errors:{
-            status:ResponseStatus.BAD_REQUEST,
-            message:err.message,
-            type:err.type
-          }
-        })
+        return this.errorsOutput(err,res,ResponseStatus.BAD_REQUEST)
     }
+  }
+
+  private static errorsOutput(err:UserFacingError,res:Response,resStatus:ResponseStatus){
+    return res.json({
+      status:resStatus,
+      message:err.message,
+      type:err.type
+    })
   }
 }
 
-class NotFoundError extends UserFacingError{
+export class NotFoundError extends UserFacingError{
   constructor(message="Not Found"){
     super(ErrorType.NOT_FOUND,message);
   }
@@ -87,4 +72,14 @@ class BadRequestError extends UserFacingError{
   }
 }
 
+//error handling middleware
 
+export const errorhandler=function (err:Error,req:Request,res:Response,next:NextFunction){
+  console.log("res.status,",res.statusCode)
+  if(err instanceof UserFacingError)
+      UserFacingError.handle(err,res)
+  else{
+      logger.error(err)
+      UserFacingError.handle(new InternalError(),res)
+  }
+}
