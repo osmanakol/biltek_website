@@ -13,7 +13,7 @@ class Connection {
             useCreateIndex: true,
             useFindAndModify: true,
             autoIndex:true
-        }).then(() => { logger.info("Connected to Mongo DB") }).catch(() => { logger.error("Could not connect to Mongo DB") })
+        }).then(() => { logger.info("Connected to Mongo DB") }).catch((err) => { logger.error("Could not connect to Mongo DB:",err) })
     }
 }
 // *export class object
