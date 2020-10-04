@@ -1,0 +1,119 @@
+
+#homepage-part-of-header{
+    height: 100vh;
+    padding: 80px;
+}
+
+.homepage-nav{
+    top: -8%;
+    left: 3%;
+    height: 12vh;
+    position: relative;
+    display: flex;
+}
+.homepage-part-group-navbar{
+    position: relative;
+    left: 51%;
+    font-size: 20px;
+    top: 24%;
+}
+
+
+.homepage-header-aybu-logo{
+    width: 5%;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left:10%;
+    transition: 1s;
+}
+
+.homepage-header-main-photo{
+    top: 0%;
+    transform: translate(-5%,-27%);
+    left: 0%;
+    position: fixed;
+}
+
+.homepage-header-content{
+    position: relative;
+}
+.homepage-header-content-schoolname{
+    color: green;
+    font-size: 16px;
+}
+.homepage-header-content-clubname{
+    color: green;
+    font-size: 30px;}
+
+
+      .homepage-header-flex-container-social-media-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 40%;
+        
+      }
+      .homepage-header-flex-container-social-media-button > div {
+        box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+        border-radius: 39px;
+        display: block;
+        width: 4vh;
+        height: 4vh;
+        background: white;
+        transition: all 0.7s;
+        margin-right: 20px;
+      }
+      .homepage-header-commond-icon{
+        position: relative;
+        transition: width 0.2s ease-in-out;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+          }
+      .fa-instagram{
+        color: black;
+      }
+      .fa-twitter{
+        color: #00CCFF;
+      }
+      .fa-youtube{
+        color: black;
+      }
+      .fa-linkedin-in{
+        color: #0066CC	;
+      }
+
+      .homepage-header-register-button a {
+        box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+        border-radius: 50px;
+        display: inline-block;
+        width: 10vh;
+        height: 10vh;
+        background: white;
+        transition: all 0.7s;
+        position: relative;
+        top: 50%;
+        right: -50%
+        
+    }
+    .homepage-header-register-button .fas {
+        position: relative;
+        transition: width 0.2s ease-in-out;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: red;
+        font-size: 3vh;
+    }
+
+
+    .homepage-part-group-navbar > a{
+      padding: 3px;
+      text-decoration: none;
+    }
+    a:hover
+{
+    text-decoration: underline;
+}
