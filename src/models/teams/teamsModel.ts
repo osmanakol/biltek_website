@@ -6,22 +6,9 @@ export interface IProject {
     description: string;
     year: number;
 }
-type role = "Leader" | "Member"
-
-export interface ITeamMember {
-    teamMember: ParticipantModel;
-    year: number
-    role: role;
-}
-export interface ITeamofParticipants{
-    teams_id:string,
-    isJoin:boolean
-    }
-    
-
 export class TeamsModel {
-    constructor(public teamName: string, public teamMember: ITeamMember[], 
-        public foundationYear: number = new Date().getFullYear(), public isActive: boolean = true) {
+    constructor(public teamName: string,
+        public foundationYear: number = new Date().getFullYear(), public logo: string, public isActive: boolean = false) {
 
     }
 
