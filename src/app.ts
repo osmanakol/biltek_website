@@ -1,10 +1,12 @@
 import bodyParser from "body-parser";
-import express, { Application } from "express";
+import express, { Application} from "express";
 import connection from "./models/configuration/connection";
 import { ApiRoutes } from "./routes/api-routes";
 import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
+import {httpLogger } from "./middlewares/logger"; 
+  
 class App {
     public app: Application
     public router: express.Router
@@ -34,6 +36,7 @@ class App {
 
 
     private routeConfig = () => {
+        this.app.use(httpLogger)
         // ? http://aybubiltek.com/
         this.app.use("/",new WebRoutes(this.webrouter).Routes())
         // ? http://aybubiltek.com/api

@@ -1,5 +1,6 @@
 import app from "./app";
 import { HOST,PORT } from "./config";
+import { logger } from "./middlewares/logger";
  /**
   * @param port
   * @param host
@@ -7,5 +8,7 @@ import { HOST,PORT } from "./config";
   */
 const port2 = PORT || 3003;
 app.listen(port2,()=>{
-    console.log(`Server Çalışıyor, http://${HOST}:${PORT}`)
+  logger.info("winston and morgan module is using for logging")
+  logger.info("http requests logs are in access.log file")
+  logger.info(`Server Çalışıyor, http://${HOST}:${PORT}`)
 });

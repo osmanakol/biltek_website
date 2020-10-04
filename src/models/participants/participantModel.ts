@@ -9,16 +9,22 @@ export interface ITeamMember {
     team_id:string
 }
 
+export interface IEvent{
+    event_id:string,
+    isJoin:boolean
+}
 export class ParticipantModel {
-    private name_surname: string;
+    public name_surname: string;
     public university: string;
     public department: string;
     public email: string;
     public date: string;
     public phone?: string;
+    public events? :IEvent[]
     public teams?:ITeamMember[]
+  
 
-    constructor(name_surname: string, university: string, department: string, email: string, phone?: string,teams?:ITeamMember[],date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
+    constructor(name_surname: string, university: string, department: string, email: string,phone?: string,events?:IEvent[],teams?:ITeamMember[] , date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
         this.name_surname = name_surname;
         this.university = university;
         this.department = department;
@@ -26,6 +32,7 @@ export class ParticipantModel {
         this.phone = phone;
         this.date = date;
         this.teams = teams
+        this.events = events
     }
 
     public get FullName(): string {
@@ -76,12 +83,18 @@ export const ParticipantValidationChain = checkSchema({
         exists: {
             errorMessage: "Phone property eksik"
         },
+        isMobilePhone:{
+            errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
+            options:"tr-TR"
+        },
         blacklist: {
             options: ['-']
         },
         optional: {
-            options: { nullable: true }
-        },
+            options: { nullable: true,checkFalsy:true }
+        }
+        
+       
         /*custom:{
             options:(value:string)=>{
                 //if(value!='' || value!=undefined){
