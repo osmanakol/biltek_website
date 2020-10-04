@@ -6,7 +6,8 @@ import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger, logger } from "./middlewares/logger"; 
-import {errorhandler, NotFoundError } from "./middlewares/errorhandler";
+import { errorhandler } from "./middlewares/errorhandler";
+import { NotFoundError } from "./utils/userFacingError";
   
 process.on('uncaughtException', err => {
     logger.error('There was an uncaught error', err)

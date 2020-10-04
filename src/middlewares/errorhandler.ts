@@ -1,4 +1,8 @@
 import { Request,Response,NextFunction } from "express"
+import { BaseError } from "../utils/baseError"
+
+/*
+import { Request,Response,NextFunction } from "express"
 import { logger } from "./logger"
 
 
@@ -22,7 +26,7 @@ enum ResponseStatus {
 
 abstract class UserFacingError extends Error {
   constructor(public type:ErrorType,public message:string){
-    super(type)
+    super(message)
   }
 
   public static handle(err:UserFacingError,res:Response):Response{
@@ -82,4 +86,20 @@ export const errorhandler=function (err:Error,req:Request,res:Response,next:Next
       logger.error(err)
       UserFacingError.handle(new InternalError(),res)
   }
+}*/
+export const errorhandler=function(err:Error,req:Request,res:Response,next:NextFunction){
+  if(err instanceof BaseError){
+    res.status(err.statusCode)
+    console.log(res.statusCode)
+    return res.json({
+      statusCode:err.statusCode,
+      message:err.toString()
+      //stack:err.stack,
+    })
+  }
+  return res.status(500).json({
+    status:"noluyo bilmiyom",
+    message:err.message,
+    stack:err.stack
+  })
 }
