@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+}
+#footer{
+    width: 100vw;
+    height: 50vh;
+ }
+.footer-club-logo{
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: white solid 11px;
+    bottom: 150%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.footer-background-photo{
+    width: 100vw;
+    height: 100vh;
+    bottom: 0%;
+}
+.footer-container{
+    width: 80vw;
+    height: 25vh;
+    text-align: center;
+    transform: translate(-50%);
+    left: 50%;
+    bottom: -78%;
+    position: absolute;
+    color: white;
+}
+.footer-social-media-box{
+    text-align: center;
+    margin: 17px 0;
+    z-index: 2;
+}
+.footer-social-media-box a{
+    text-decoration: none;
+    padding: 9px;
+    position: relative;
+    width: 5%;
+    height: 5%;
+    display: inline-block;
+    font-size: calc(1.5rem + 0.5vw);
+    background: white;
+    margin: 10px;
+    border-radius: 100%;
+    color: black;
+}
+
+.footer-social-media-box::after{
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+.fa-linkedin-in{
+    color: #0072b1;
+}
+.fa-twitter{
+    color: #1DA1F2;
+}
