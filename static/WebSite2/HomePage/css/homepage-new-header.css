@@ -57,6 +57,26 @@ body{
     width: 100%;
     height: 100%;
   }
+
+  /* ------
+   CONTENT PART
+          ------- */
+
+.homepage-header-contents{
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+  }
+  .homepage-header-content-schoolname{
+      color: white;
+      font-size: 20px;
+  }
+  .homepage-header-content-clubname{
+      color: white;
+      font-size: 36px;}
+  
+  
   
   
     
