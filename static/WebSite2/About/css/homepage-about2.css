@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-#about {
+.homepage-about {
     width: 1120px;
     position: relative;
     left: 50%;
@@ -47,8 +47,13 @@ body {
     height: 100%;
 }
 
-.homepage-about-title-area {
+.homepage-about-left-title-area, .homepage-about-right-title-area {
     width: fit-content;
+}
+
+.homepage-about-right-title-area {
+    display: block;
+    margin-left: auto;
 }
 
 .homepage-about-vision-title, .homepage-about-vision-text {
@@ -80,14 +85,14 @@ body {
 
 /*          Responsive           */
 
-@media only screen and (max-width:1112px) {
-    #about {
+@media only screen and (max-width:1180px) {
+    .homepage-about {
         width: 90%;
     }
 }
 
 @media only screen and (max-width:768px) {
-    #about {
+    .homepage-about {
         width: 80%;
     }
     .homepage-about-mission, .homepage-about-vision {
@@ -96,12 +101,11 @@ body {
     .homepage-about-area>div>img {
         display: none;
     }
-    .homepage-about-title-area {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+    .homepage-about-left-title-area, .homepage-about-right-title-area {
+        margin: auto;
+        display: block;
     }
-    .homepage-about-text-area>p, .homepage-about-title-area>h3 {
+    .homepage-about-text-area>p {
         text-align: center;
     }
     .homepage-about-text-area {
@@ -110,7 +114,7 @@ body {
 }
 
 @media only screen and (max-width:420px) {
-    #about {
+    .homepage-about {
         width: 90%;
     }
 }
