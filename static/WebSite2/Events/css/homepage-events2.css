@@ -2,11 +2,12 @@
 body {
     height: 110vh;
     margin: 0;
-    background-color: #FBFBFB;
     text-align: center;
 }
-
-#events {
+#events{
+    background-color: #FBFBFB;
+}
+.homepage-events {
     width: 1120px;
     height: 900px;
     position: relative;
@@ -70,6 +71,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 12px;
 }
 
 .homepage-events-one-time {
@@ -93,7 +95,7 @@ body {
 .homepage-events-timeline-points>dt {
     font-size: 46px;
     margin: 20px 0;
-    opacity: 50%;
+    opacity: 20%;
 }
 
 /*          Button           */
@@ -134,6 +136,7 @@ body {
     width: 105px;
     border-radius: 50px;
     height: 45px;
+    transition: width 0.2s ease-in-out;
 }
 
 .homepage-events-grid>div>button:hover>.button-plus-icon {
@@ -147,13 +150,13 @@ body {
 
 /*          Responsive           */
 @media only screen and (max-width:1112px) {
-    #events {
+    .homepage-events {
         width: 1000px;
     }
 }
 
 @media only screen and (max-width:992px) {
-    #events {
+    .homepage-events {
         width: 80%;
     }
     .homepage-events-box-one, .homepage-events-box-two, .homepage-events-box-three {
@@ -178,6 +181,7 @@ body {
         top: 0;
         transform: translate(0, 50%);
         grid-column: 10 / 17;
+        padding: 3px;
     }
     .homepage-events-one-time {
         grid-row: 3 / 4;
@@ -200,7 +204,7 @@ body {
 }
 
 @media only screen and (max-width:550px) {
-    #events {
+    .homepage-events {
         width: 90%;
     }
 }
