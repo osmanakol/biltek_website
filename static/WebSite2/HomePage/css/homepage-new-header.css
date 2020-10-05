@@ -75,6 +75,56 @@ body{
   .homepage-header-content-clubname{
       color: white;
       font-size: 36px;}
+
+
+      /* ------
+    SOCİAL MEDİA PART
+          ------- */
+
+          .homepage-header-flex-container-social-media-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transform: translate(50%,50%);
+            right: 50%;
+            bottom: 32%;
+            font-size: 16pt;
+            
+          }
+          .homepage-header-flex-container-social-media-button > div {
+            box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+            border-radius: 39px;
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: white;
+            transition: all 0.7s;
+            margin-right: 20px;
+          }
+         
+    
+          .homepage-header-commond-icon{
+            position: relative;
+            transition: width 0.2s ease-in-out;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+              }
+          .fa-instagram{
+            color: black;
+          }
+          .fa-twitter{
+            color: #00CCFF;
+          }
+          .fa-youtube{
+            color: black;
+          }
+          .fa-linkedin-in{
+            color: #0066CC  ;
+          }
+    
+    
   
   
   
