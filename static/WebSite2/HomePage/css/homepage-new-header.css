@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    }
+    
+    .homepage-header-part{
+        margin: 0;
+        padding: 80px;
+    }
+
+    /* ------
+    NAVBAR PART
+          ------- */
+
+.homepage-header-part-of-navbar{
+    width: -webkit-fill-available;
+    height: 10vh;
+    position: absolute;
+    display: flex;
+    padding: 10px 320px;
+    z-index: 99;
+       
+}
+.homepage-header-part-group-navbar{
+    position: relative;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    
+}
+
+.homepage-header-part-group-navbar>a{
+  font-family: sans-serif;
+  color: white;
+  margin-right: 32px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.homepage-header-part-group-navbar>a:hover
+{
+text-decoration: underline;
+}
+
+.homepage-header-navbar-aybu-logo{
+    height: 100%;
+    transition: 1s;
+}
+
+    
