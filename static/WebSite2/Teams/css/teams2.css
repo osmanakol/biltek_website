@@ -1,0 +1,42 @@
+ #teams{
+    width: 100vw;
+    height: 60vh;
+    padding: 80px 0px;
+    border: slateblue dotted 3px;
+}
+.swiper-container {
+    width: 80vw;
+    height: 50vh;
+}
+.swiper-slide{
+    display: block;
+}
+.swiper-slide > img{
+    transition: 250ms;
+}
+.swiper-slide:hover > img{
+    transform: scale(1.15);
+}
+.logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-border{
+    width:  200px;
+    height: 200px;
+}
+.team-photo{
+    width: 135px;
+    height: 135px;
+    position: absolute;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;   
+}
+.Homepage-teams-header{
+    text-align: center;
+    margin-bottom: 57px;
+}
