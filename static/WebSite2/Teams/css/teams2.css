@@ -2,7 +2,6 @@
     width: 100vw;
     height: 60vh;
     padding: 80px 0px;
-    border: slateblue dotted 3px;
 }
 .swiper-container {
     width: 80vw;
@@ -11,10 +10,10 @@
 .swiper-slide{
     display: block;
 }
-.swiper-slide > img{
+.logo-box  img{
     transition: 250ms;
 }
-.swiper-slide:hover > img{
+.logo-box:hover img{
     transform: scale(1.15);
 }
 .logo-box{
@@ -38,5 +37,6 @@
 }
 .Homepage-teams-header{
     text-align: center;
-    margin-bottom: 57px;
+    margin-bottom: 90px;
+    font-size: 40px;
 }
