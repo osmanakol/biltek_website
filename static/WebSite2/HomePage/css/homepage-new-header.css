@@ -11,7 +11,7 @@ body{
         NAVBAR PART
               ------- */
     
-.homepage-header-part-of-navbar{
+.homepage-header-navbar{
   width: -webkit-fill-available;
   height: 82px;
   position: relative;
@@ -165,7 +165,24 @@ body{
     }
 
 
+  /* ------
+     RESPONSİVE
+          ------- */          
     
+    @media screen and (max-width: 1300px) {
+      .header-navbar-main{    
+        width: 90%;
+      
+      }
+    }
+
+    @media screen and (max-width: 968px) {
+      .homepage-header-navbar{
+
+        display: none;
+      
+      }
+    }
     
   
   
