@@ -11,15 +11,24 @@ body{
         NAVBAR PART
               ------- */
     
-    .homepage-header-part-of-navbar{
-        width: -webkit-fill-available;
-        height: 10vh;
-        position: absolute;
-        display: flex;
-        padding: 10px 320px;
-        z-index: 99;
-           
-    }
+.homepage-header-part-of-navbar{
+  width: -webkit-fill-available;
+  height: 82px;
+  position: relative;
+  display: flex;
+  z-index: 99;
+  width: 100%;
+       
+}
+
+.header-navbar-main{
+  width: 1090px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
     .homepage-header-part-group-navbar{
         position: relative;
         font-size: 20px;
