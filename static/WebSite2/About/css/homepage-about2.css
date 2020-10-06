@@ -12,7 +12,9 @@ body {
     transform: translate(-50%);
     padding: 80px 0;
 }
-
+.mobile-homepage-about-vision-icon{
+    display: none;
+}
 /* .homepage-about-title{
     text-align: center;
     font-size: 30pt;
@@ -27,7 +29,7 @@ body {
     transform: translate(-50%);
 }
 
-.homepage-about-area>div>img {
+.homepage-about-mission-icon,.homepage-about-vision-icon {
     width: 240px;
     height: 240px;
     margin: auto 0;
@@ -89,6 +91,9 @@ body {
     .homepage-about {
         width: 90%;
     }
+    .homepage-about-vision-text{
+        text-align: inherit;
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -98,8 +103,15 @@ body {
     .homepage-about-mission, .homepage-about-vision {
         display: contents;
     }
-    .homepage-about-area>div>img {
+   
+    .homepage-about-vision-icon {
         display: none;
+    }
+    .homepage-about-mission-icon,.mobile-homepage-about-vision-icon {
+        width: 190px;
+        height: 190px;
+        display: block;
+        margin: auto;
     }
     .homepage-about-left-title-area, .homepage-about-right-title-area {
         margin: auto;
@@ -109,7 +121,7 @@ body {
         text-align: center;
     }
     .homepage-about-text-area {
-        padding: 20px 0;
+        padding: 0 0 25px 0;
     }
 }
 
