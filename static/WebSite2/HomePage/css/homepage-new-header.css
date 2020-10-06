@@ -91,7 +91,7 @@ body{
     SOCİAL MEDİA PART
           ------- */
 
-          .homepage-header-flex-container-social-media-button {
+          .homepage-header-social-media-button {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -102,7 +102,7 @@ body{
             font-size: 16pt;
             
           }
-          .homepage-header-flex-container-social-media-button > div {
+          .homepage-header-social-media-button > div {
             box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
             border-radius: 39px;
             display: block;
