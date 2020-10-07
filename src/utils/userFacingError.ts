@@ -20,8 +20,18 @@ enum ResponseStatus {
   
 
 export class BadRequestError extends UserFacingError{
-    constructor(message?:string){
+    constructor(message="Bad Request"){
         super(message,ResponseStatus.BAD_REQUEST)
+    }
+}
+export class AuthFailureError extends UserFacingError{
+    constructor(message="Unauthorized access,"){
+        super(message,ResponseStatus.UNAUTHORIZED)
+    }
+}
+export class ForbiddenError extends UserFacingError{
+    constructor(message="Permission denied"){
+        super(message,ResponseStatus.FORBIDDEN)
     }
 }
 export class NotFoundError extends UserFacingError{
@@ -31,9 +41,9 @@ export class NotFoundError extends UserFacingError{
 }
 
 export class InternalError extends UserFacingError{
-    constructor(message?:string){
+    constructor(message="Internal Server Error"){
         super(message,ResponseStatus.INTERNAL_ERROR);
     }
 }
-//TODO: other user-facing error class wil be added 
+// other user-facing error class could be added 
  

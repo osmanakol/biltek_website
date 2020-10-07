@@ -23,7 +23,10 @@ export abstract class BaseError extends Error{
 
     //* error output for production environment
     private static prodErrorOutp(err:BaseError){
-        return { message:err.toString() }
+        return { 
+            statusCode:err.statusCode,
+            message:err.toString() 
+        }
     }
     public static handle(err:BaseError,res:Response):Response{
         let errorOutp;
