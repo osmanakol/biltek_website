@@ -5,14 +5,9 @@ import { ApiRoutes } from "./routes/api-routes";
 import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
-import {httpLogger, logger } from "./middlewares/logger"; 
+import {httpLogger} from "./middlewares/logger"; 
 import { errorhandler } from "./middlewares/errorhandler";
-import { NotFoundError } from "./utils/userFacingError";
-  
-process.on('uncaughtException', err => {
-    logger.error('There was an uncaught error', err)
-    //process.exit(1)
-})
+import { NotFoundError } from "./utils/userFacingError"; 
 class App {
     public app: Application
     public router: express.Router

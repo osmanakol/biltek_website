@@ -89,13 +89,7 @@ export const errorhandler=function (err:Error,req:Request,res:Response,next:Next
 }*/
 export const errorhandler=function(err:Error,req:Request,res:Response,next:NextFunction){
   if(err instanceof BaseError){
-    res.status(err.statusCode)
-    console.log(res.statusCode)
-    return res.json({
-      statusCode:err.statusCode,
-      message:err.toString()
-      //stack:err.stack,
-    })
+    return BaseError.handle(err,res)
   }
   return res.status(500).json({
     status:"noluyo bilmiyom",
