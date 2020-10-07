@@ -1,4 +1,5 @@
 import {Response} from "express"
+import { environment } from "../config";
 //*general error class, every error class types are inherited from this*/
 
 export abstract class BaseError extends Error{
@@ -30,10 +31,10 @@ export abstract class BaseError extends Error{
     }
     public static handle(err:BaseError,res:Response):Response{
         let errorOutp;
-        if( process.env.NODE_ENV === 'development'){
+        if(environment === 'development'){
             errorOutp=this.devErrorOutp(err);
         }
-        else if(process.env.NODE_ENV === 'production'){
+        else if(environment === 'production'){
             errorOutp=this.prodErrorOutp(err);
         }
         return res.status(err.statusCode).json(errorOutp)

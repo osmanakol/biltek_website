@@ -6,8 +6,8 @@ import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger} from "./middlewares/logger"; 
-import { errorhandler } from "./middlewares/errorhandler";
-import { NotFoundError } from "./utils/userFacingError"; 
+import { errorhandler, notFoundHandler } from "./middlewares/errorhandler";
+
 class App {
     public app: Application
     public router: express.Router
@@ -42,8 +42,8 @@ class App {
         this.app.use("/",new WebRoutes(this.webrouter).Routes())
         // ? http://aybubiltek.com/api
         this.app.use('/api', new ApiRoutes(this.router).Routes())
-        //catch 404 errors
-        this.app.use((err,res,next)=>next(new NotFoundError()))
+        //handle 404 response
+        this.app.use(notFoundHandler)
         //user-facing error handling middleware using
         this.app.use(errorhandler)
         
