@@ -9,19 +9,21 @@ export class TeamsController {
     constructor() {
         this.teamService = new TeamService()
     }
-    public createTeam = async (req: Request, res: Response, next: NextFunction) => {
 
-        const result = await this.teamService.create(new TeamsModel(req.body.teamName,req.body.teamMember,req.body.foundationYear,req.body.isActive)).then((result) => {
+    public createTeam = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const result = await this.teamService.create(new TeamsModel(req.body.teamName, req.body.logo, req.body.foundationYear, req.body.isActive))
             res.status(201).json({
                 data: result,
                 status: "Success"
             })
-        }).catch(err => {
+        }
+        catch (error) {
             res.json({
-                err: err,
-                status: "Failed"
+                err: error,
+                status: "Error"
             })
-        })
+        }
     }
 
     public createManyParticipant = async (req: Request, res: Response, next: NextFunction) => {
@@ -40,23 +42,23 @@ export class TeamsController {
     }
 
     public updateParticipant = async (req: Request, res: Response, next: NextFunction) => {
-    
-            const result = await this.teamService.update(req.body._id, new TeamsModel(req.body.teamName,req.body.teamMember,req.body.foundationYear,req.body.isActive)).then((result) => {
 
-                res.status(201).json({
-                    data: result,
-                    status: "Success"
+        const result = await this.teamService.update(req.body._id, new TeamsModel(req.body.teamName, req.body.teamMember, req.body.foundationYear, req.body.isActive)).then((result) => {
+
+            res.status(201).json({
+                data: result,
+                status: "Success"
 
             })
-         
+
         }).catch(err => {
             res.json({
                 err: err,
                 status: "Failed"
             })
         })
-    
-}
+
+    }
     public deleteParticipant = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const result = await this.teamService.delete(req.body._id)
@@ -104,4 +106,4 @@ export class TeamsController {
 }
 
 
-   
+

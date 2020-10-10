@@ -40,7 +40,7 @@ export class ApiRoutes {
             // .delete(this.participantController.deleteParticipant);
 
              // ? /api/teams
-             this.router.route('/teams')
+        this.router.route('/teams')
            .post(this.teamController.createTeam);
 
         // ? Routes /api/university

@@ -7,11 +7,7 @@ export interface IProject {
     year: number;
 }
 export class TeamsModel {
-    constructor(public teamName: string,
-        public foundationYear: number = new Date().getFullYear(), public logo: string, public isActive: boolean = false) {
+    constructor(public teamName: string, public logo: string, public isActive: boolean = false,public foundationYear: number = new Date().getFullYear()) {
 
     }
-
-
-
 }
