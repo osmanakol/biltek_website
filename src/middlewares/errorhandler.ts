@@ -1,7 +1,7 @@
 import { Request,Response,NextFunction } from "express"
 import { environment } from "../config"
-import { BaseError } from "../utils/baseError"
-import { InternalError, NotFoundError } from "../utils/userFacingError"
+import { BaseError, ErrorType } from "../utils/baseError"
+import { UserFacingError } from "../utils/userFacingError"
 import { logger } from "./logger"
 
 export const errorhandler=function(err:Error,req:Request,res:Response,next:NextFunction){
@@ -13,10 +13,10 @@ export const errorhandler=function(err:Error,req:Request,res:Response,next:NextF
       logger.error(`${err}`)
       return res.status(500).json(err.message)
     }
-    BaseError.handle(new InternalError(),res)
+    BaseError.handle(UserFacingError.throw(ErrorType.INTERNAL),res)
   }
 }
 
 export const notFoundHandler=function(req:Request,res:Response,next:NextFunction){
-  next(new NotFoundError("Page not found"))
+  next(UserFacingError.throw(ErrorType.NOT_FOUND))
 }

@@ -1,49 +1,29 @@
-import {UserFacingError} from "./baseError"
-
-/*enum ErrorType{
-    UNAUTHORIZED = 'AuthFailureError',
-    INTERNAL = 'InternalError',
-    NOT_FOUND = 'NotFoundError',
-    NO_ENTRY = 'NoEntryError',
-    NO_DATA = 'NoDataError',
-    BAD_REQUEST = 'BadRequestError',
-    FORBIDDEN = 'ForbiddenError'
-  }
-*/
-enum ResponseStatus {
-    BAD_REQUEST = 400,
-    UNAUTHORIZED = 401,
-    FORBIDDEN = 403,
-    NOT_FOUND = 404,
-    INTERNAL_ERROR = 500,
-}
-  
-
-export class BadRequestError extends UserFacingError{
-    constructor(message="Bad Request"){
-        super(message,ResponseStatus.BAD_REQUEST)
+import { BaseError, ErrorType, ResponseStatus } from "./baseError";
+export class UserFacingError extends BaseError{
+    constructor(type:ErrorType,statusCode:ResponseStatus){
+        super(type,statusCode)
+    }
+    static throw(type:ErrorType):BaseError{
+        let statusCode:ResponseStatus
+        switch(type){
+            case ErrorType.BAD_REQUEST:
+                statusCode=ResponseStatus.BAD_REQUEST
+                break
+            case ErrorType.FORBIDDEN:
+                statusCode=ResponseStatus.FORBIDDEN
+                break
+            case ErrorType.INTERNAL:
+                statusCode=ResponseStatus.INTERNAL_ERROR
+                break
+            case ErrorType.NOT_FOUND:
+            case ErrorType.NO_DATA:
+            case ErrorType.NO_ENTRY:
+                statusCode=ResponseStatus.NOT_FOUND
+                break
+            case ErrorType.UNAUTHORIZED:
+                statusCode=ResponseStatus.UNAUTHORIZED
+                break
+        }
+        return new UserFacingError(type,statusCode);
     }
 }
-export class AuthFailureError extends UserFacingError{
-    constructor(message="Unauthorized access,"){
-        super(message,ResponseStatus.UNAUTHORIZED)
-    }
-}
-export class ForbiddenError extends UserFacingError{
-    constructor(message="Permission denied"){
-        super(message,ResponseStatus.FORBIDDEN)
-    }
-}
-export class NotFoundError extends UserFacingError{
-    constructor(message="Not Found"){
-        super(message,ResponseStatus.NOT_FOUND)
-    }
-}
-
-export class InternalError extends UserFacingError{
-    constructor(message="Internal Server Error"){
-        super(message,ResponseStatus.INTERNAL_ERROR);
-    }
-}
-// other user-facing error class could be added 
- 
