@@ -291,13 +291,13 @@ body{
   }
 
   @media screen and (max-width: 1200px) {
-    .homepage-navbar{
+    .header-navbar-main{
       width: 90%;
   }
   }
   
   @media screen and (max-width: 992px) {
-    .homepage-header-part-of-navbar{
+    .header-navbar-main{
      display: none;
   }
   
