@@ -1,80 +1,7 @@
-<<<<<<< HEAD
-import { NextFunction, Request, Response } from "express";
-import fs from "fs";
-
-export class TeamController {
-    public create = async (req: Request, res: Response, next: NextFunction) => {
-        /*console.log(req.body.data)
-        fs.appendFile(__dirname + "/../pages/register/team-register-data.json",JSON.stringify(req.body.data),(err)=>{
-            if (err) {
-                res.status(400).json({
-                    msg: "Bir hata oluştu",
-                    state: "Error",
-                    err: err.message
-                })
-            }
-            res.status(201).json({
-                state: "Success"
-            })
-        })*/
-        /*var file = fs.createWriteStream(__dirname + "/../pages/register/team-register-data.json", { flags: 'a' })
-        file.write(JSON.stringify(req.body.data), (err) => {
-            if (err) {
-                res.status(400).json({
-                    msg: "Bir hata oluştu",
-                    state: "Error",
-                    err: err.message
-                })
-            }
-            res.status(201).json({
-                state: "Success"
-            })
-        })
-        file.end("\n")*/
-        try {
-            let checkState
-            var state =  fs.open(__dirname + "/../pages/register/team-register-data.json", "a+",(err,fd)=>{
-                if(err){
-                    res.status(400).json({
-                        state:"Error",
-                        msg:"Bir sorun oluştu"
-                    })
-                }
-                fs.write(fd, JSON.stringify(req.body.data , null, 4) + ",",(err)=>{
-                    console.log(fd)
-                    if(err){
-                        res.status(400).json({
-                            state:"Error",
-                            msg:"Bir sorun oluştu"
-                        })
-                    }
-                    fs.close(fd,(err)=>{
-                        if(err){
-                            res.status(400).json({
-                                state:"Error",
-                                msg:"Bir sorun oluştu"
-                            })
-                        }
-                        res.status(201).json({
-                            state:"Success"
-                        })
-                    })
-                })
-            });
-            console.log(state)
-            console.log("JSON data is saved.");
-        } catch (error) {
-            res.status(400).json({
-                state:"Error",
-                msg:"Bir hata oluştu"
-            })
-        }
-    }
-}
-=======
 import { Request, Response, NextFunction } from "express";
 import { TeamService } from "../services/TeamServices";
 import { TeamsModel } from "../models/teams/teamsModel";
+import { TModel } from "../models/tModel";
 
 
 export class TeamsController {
@@ -82,6 +9,25 @@ export class TeamsController {
 
     constructor() {
         this.teamService = new TeamService()
+    }
+
+    public create = async (req:Request,res:Response,next:NextFunction) => {
+        try {
+            console.log(req.body)
+            const result = await this.teamService.add(new TModel(req.body.name_surname,req.body.department,req.body.email,req.body.team,req.body.sinif,req.body.university))
+            console.log(result)
+            res.status(201).json({
+                data: result,
+                status: "Success"
+            })
+        } catch (error) {
+            console.log(error)
+            res.json({
+                err: error,
+                status: "Error",
+                msg:"Bir hata oluştu"
+            })
+        }
     }
 
     public createTeam = async (req: Request, res: Response, next: NextFunction) => {
@@ -181,4 +127,3 @@ export class TeamsController {
 
 
 
->>>>>>> teamsModule
