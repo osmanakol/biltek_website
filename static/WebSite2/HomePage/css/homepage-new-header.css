@@ -134,6 +134,13 @@ body{
             color: #0066CC  ;
           }
 
+          .homepage-header-social-media-button > .hompage-icons-part a{
+            display: block;
+            height: 60px;
+            border-radius: 39px;
+          }
+          
+
           /* ------
       REGISTER BUTTON PART
           ------- */
