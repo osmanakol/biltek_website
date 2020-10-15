@@ -1,5 +1,5 @@
-$(document).ready(()=>{
-    
+$(document).ready(() => {
+
     getDepartmentsById()
 })
 function getDepartmentsById() {
@@ -17,16 +17,16 @@ function getDepartmentsById() {
                 $.each(departmentList.data, (i, d) => {
                     $('#department').append('<option value="">' + d.departmentName + '</option>')
                 })
-                $("#department").prop('selectedIndex',-1)
+                $("#department").prop('selectedIndex', -1)
             }
         }
     })
 }
 
-function fillClass(){
+function fillClass() {
     $('#class').empty();
-    
-    
+
+
     $('#class').append('<option value="Hazırlık">' + "Hazırlık" + '</option>')
     $('#class').append('<option value="1">' + "1" + '</option>')
     $('#class').append('<option value="2">' + "2" + '</option>')
@@ -34,17 +34,17 @@ function fillClass(){
     $('#class').append('<option value="4">' + "4" + '</option>')
     $('#class').append('<option value="5">' + "5" + '</option>')
     $('#class').append('<option value="6">' + "6" + '</option>')
-    $("#class").prop('selectedIndex',-1)
+    $("#class").prop('selectedIndex', -1)
 }
 
 
-function fillTeam(){
+function fillTeam() {
     $('#teams').empty();
-    
+
     $('#teams').append('<option value="Tasarım">' + "Tasarım" + '</option>')
     $('#teams').append('<option value="Roket">' + "Roket" + '</option>')
     $('#teams').append('<option value="Siber Güvenlik">' + "Siber Güvenlik" + '</option>')
-    $("#teams").prop('selectedIndex',-1)
+    $("#teams").prop('selectedIndex', -1)
 }
 
 function submit_validation() {
@@ -81,12 +81,14 @@ function submit_validation() {
             url: `/api/teams/participant/add`,
             type: "POST",
             data: {
-              "data":{  "name_surname": nameSurname.val(),
+
+                "name_surname": nameSurname.val(),
                 "university": school.text(),
                 "department": department.text(),
                 "email": email.val(),
-                "class":classes.val(),
-                "teams":teams.val()}
+                "sinif": classes.val(),
+                "team": teams.val()
+
             },
 
 
