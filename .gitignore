@@ -3,6 +3,10 @@ node_modules
 .vscode
 dist
 package-lock.json
+<<<<<<< HEAD
 *.log
 *.log.*
 *audit.json
+=======
+logs
+>>>>>>> teamsModule
