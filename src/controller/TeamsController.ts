@@ -22,10 +22,10 @@ export class TeamsController {
             })
         } catch (error) {
             console.log(error)
-            res.json({
+            res.status(400).json({
                 err: error,
                 status: "Error",
-                msg:"Bir hata oluştu"
+                msg:error.message
             })
         }
     }
@@ -117,7 +117,7 @@ export class TeamsController {
                 state: "Success"
             })
         } catch (error) {
-            res.json({
+            res.status(400).json({
                 err: error,
                 state: "Error"
             })
