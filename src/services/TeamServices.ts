@@ -17,6 +17,10 @@ export class TeamService {
         return result
     }
 
+    public get = async ()=>{
+        const result = await this.tRepository.findAll()
+        return result;
+    }
 
     public create = async (item: TeamsModel) => {
 

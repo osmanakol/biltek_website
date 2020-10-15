@@ -77,6 +77,7 @@ export class ApiRoutes {
             .post(validate(ParticipantValidationChain), this.participantController.addEvent)
         this.router.route('/teams/participant/add')
             .post(this.teamController.create)
+            .get(this.teamController.get)
         return this.router;
     }
 } 

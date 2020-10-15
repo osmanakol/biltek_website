@@ -109,6 +109,23 @@ export class TeamsController {
         }
     }
 
+    public get = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const result = await this.teamService.get()
+            res.json({
+                data: result,
+                state: "Success"
+            })
+        } catch (error) {
+            res.json({
+                err: error,
+                state: "Error"
+            })
+        }
+    }
+
+
+
     public findById = async (req: Request, res: Response, next: NextFunction) => {
         try {
             const result = await this.teamService.findById(req.body._id)
