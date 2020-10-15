@@ -29,7 +29,7 @@ body{
   transform: translateX(-50%);
 }
 
-    .homepage-header-part-group-navbar{
+    .homepage-header-group-navbar{
         position: relative;
         font-size: 20px;
         display: flex;
@@ -38,7 +38,7 @@ body{
         
     }
     
-    .homepage-header-part-group-navbar>a{
+    .homepage-header-group-navbar>a{
       font-family: sans-serif;
       color: white;
       margin-right: 32px;
@@ -46,7 +46,7 @@ body{
       text-decoration: none;
     }
     
-    .homepage-header-part-group-navbar>a:hover
+    .homepage-header-group-navbar>a:hover
     {
     text-decoration: underline;
     }
@@ -166,7 +166,7 @@ body{
     }
 
 /* MOBİL NAVBAR  */
-.homepage-mobil-navbar{
+.homepage-header-mobil-navbar{
   border-radius: 31px;
   position: fixed;
   transform: translate(50%);
@@ -188,7 +188,7 @@ body{
  
 */
 
-.smallnavbar{
+.header-mobil-navbar-main{
   border-radius: 31px;
   position: relative;
   z-index: 2;
@@ -201,7 +201,7 @@ body{
 
 }
 
-.homepage-mobil-navbar li > a{
+.homepage-header-mobil-navbar li > a{
   display: block;
   text-decoration: none;
   color: black;
@@ -215,14 +215,14 @@ body{
 
 }
 
-.homepage-mobil-navbar li{
+.homepage-header-mobil-navbar li{
   text-align: center;
   top: 0;
   position: relative;
 
 }
 
-.homepage-mobil-navbar li:hover{
+.homepage-header-mobil-navbar li:hover{
   background-color:#f0f0f0;
 
 }
@@ -232,7 +232,7 @@ body{
   transform: translateY(44px);
 }
 
-.navbarphoto{
+.mobil-navbar-photo{
   position: fixed;
   bottom: 0%;
   right: 50%;
@@ -251,7 +251,7 @@ body{
 
 }
 
-.navbarphoto i {
+.mobil-navbar-photo i {
   font-size: 35px;  
   cursor: pointer;
   position: absolute;
@@ -263,7 +263,7 @@ body{
 
 
 
-.homepage-mobil-navbar li>hr{
+.homepage-header-mobil-navbar li>hr{
   display: block;
   unicode-bidi: isolate;
   margin-block-start: -1px;
@@ -279,11 +279,15 @@ body{
 /* RESPONSİVE */ 
 
 @media screen and (max-width: 9999px) {
-  .homepage-mobil-navbar{
+  .homepage-header-mobil-navbar{
     display: none;
     }
 
     .homepage-mobil-navbar-logo{
+      display: none;
+    }
+
+    .mobil-navbar-photo{
       display: none;
     }
 
@@ -303,17 +307,21 @@ body{
   .homepage-mobil-navbar-logo{
     display: inline;
   }
+
+  .mobil-navbar-photo{
+    display: inline;
+  }
   
   }
   
   @media screen and (max-width: 600px) {
-    .smallnavbar{
+    .header-mobil-navbar-main{
       height: 250px;
       width: 300px;
       padding: 20px 0 161px;
   
     }
-    .homepage-mobil-navbar li>hr{
+    .homepage-header-mobil-navbar li>hr{
   
       margin-inline-start: 90px;
       margin-inline-end: 90px;
@@ -323,12 +331,12 @@ body{
 
 
   @media screen and (max-width: 500px) {
-    .smallnavbar{
+    .header-mobil-navbar-main{
       height: 200px;
      
     }
 
-    .homepage-mobil-navbar li > a{
+    .homepage-header-mobil-navbar li > a{
       line-height: 39px;
 
   }
