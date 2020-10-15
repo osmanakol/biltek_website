@@ -165,30 +165,164 @@ body{
         font-size: 30px;
     }
 
+/* MOBİL NAVBAR  */
+.homepage-mobil-navbar{
+  border-radius: 31px;
+  position: fixed;
+  transform: translate(50%);
+  right: 50%;
+  background: #fbfbfb;
+  bottom: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  overflow: hidden;
+  transition: all 1s;
+  z-index: 100;
 
-  /* ------
-     RESPONSİVE
-          ------- */          
+}  
+
+/*
+.see-navbar{
+
+  height: auto !important;
+}
+ 
+*/
+
+.smallnavbar{
+  border-radius: 31px;
+  position: relative;
+  z-index: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0 110px;
+  height: 300px;
+  width: 350px;
+  
+
+}
+
+.homepage-mobil-navbar li > a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 3;
+  letter-spacing: 0;
+  transition: all 200ms ease;
+  border-radius: 29px;
+
+}
+
+.homepage-mobil-navbar li{
+  text-align: center;
+  top: 0;
+  position: relative;
+
+}
+
+.homepage-mobil-navbar li:hover{
+  background-color:white;
+  border-radius: 31px;
+
+}
+
+.homepage-menu-toggle {
+  position: relative;
+  transform: translateY(44px);
+}
+
+.navbarphoto{
+  position: fixed;
+  bottom: 0%;
+  right: 50%;
+  width: 200px;
+  height: 100px;
+  transform: translate(50%);
+  z-index: 100;
+}
     
-    @media screen and (max-width: 1300px) {
-      .header-navbar-main{    
-        width: 90%;
-      
-      }
+.homepage-mobil-navbar-logo{
+ 
+  position: relative;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+
+}
+
+.navbarphoto i {
+  font-size: 35px;  
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-50%,101%);
+  left: 50%;
+  color: white;
+}
+
+
+
+
+.homepage-mobil-navbar li>hr{
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: -0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 120px;
+  margin-inline-end: 120px;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  position: relative;
+ transform: translateY(7px);
+}
+
+/* RESPONSİVE */ 
+
+@media screen and (max-width: 9999px) {
+  .homepage-mobil-navbar{
+    display: none;
     }
 
-    @media screen and (max-width: 968px) {
-      .homepage-header-navbar{
-
-        display: none;
-      
-      }
+    .homepage-mobil-navbar-logo{
+      display: none;
     }
-    
-  
-  
-  
-  
-    
 
-    
+  }
+
+  @media screen and (max-width: 1200px) {
+    .homepage-navbar{
+      width: 90%;
+  }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .homepage-header-part-of-navbar{
+     display: none;
+  }
+  
+  .homepage-mobil-navbar-logo{
+    display: inline;
+  }
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+    .smallnavbar{
+      height: 250px;
+      width: 300px;
+      padding: 20px 0 161px;
+  
+    }
+    .homepage-mobil-navbar li>hr{
+  
+      margin-inline-start: 90px;
+      margin-inline-end: 90px;
+    }
+  
+  }
+  
+
+
+  
+  
