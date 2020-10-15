@@ -34,7 +34,7 @@ export class ApiRoutes {
             })
         // ? Routes /api/participant
         this.router.route('/participant')
-            //.get(this.participantController.findAll)
+            .get(this.participantController.findAll)
             .post(validate(ParticipantValidationChain), this.participantController.createParticipant)
         //.put(this.participantController.updateParticipant)
         //.delete(this.participantController.deleteParticipant);
@@ -77,6 +77,7 @@ export class ApiRoutes {
             .post(validate(ParticipantValidationChain), this.participantController.addEvent)
         this.router.route('/teams/participant/add')
             .post(this.teamController.create)
+            .get(this.teamController.get)
         return this.router;
     }
 } 

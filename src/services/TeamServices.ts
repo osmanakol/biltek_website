@@ -13,10 +13,14 @@ export class TeamService {
     constructor() { }
 
     public add = async (item:TModel)=>{
-        const result = await this.tRepository.create(item)
+        const result = await this.tRepository.fid(item)
         return result
     }
 
+    public get = async ()=>{
+        const result = await this.tRepository.findAll()
+        return result;
+    }
 
     public create = async (item: TeamsModel) => {
 

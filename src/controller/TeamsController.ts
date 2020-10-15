@@ -22,10 +22,10 @@ export class TeamsController {
             })
         } catch (error) {
             console.log(error)
-            res.json({
+            res.status(400).json({
                 err: error,
                 status: "Error",
-                msg:"Bir hata oluştu"
+                msg:error.message
             })
         }
     }
@@ -108,6 +108,23 @@ export class TeamsController {
             })
         }
     }
+
+    public get = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const result = await this.teamService.get()
+            res.json({
+                data: result,
+                state: "Success"
+            })
+        } catch (error) {
+            res.status(400).json({
+                err: error,
+                state: "Error"
+            })
+        }
+    }
+
+
 
     public findById = async (req: Request, res: Response, next: NextFunction) => {
         try {
