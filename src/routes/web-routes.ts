@@ -37,6 +37,15 @@ export class WebRoutes {
         this.router.get("/contact", (req: Request, res: Response) => {
             res.render("site/contact", { layout: "contactLayout" })
         })
+
+        //authentication attempts
+        this.router.get("/register", (req: Request, res: Response) => {
+            res.render("site/authRegister", { layout: "homepageLayout" })
+        })
+        this.router.get("/login", (req: Request, res: Response) => {
+            res.render("site/authLogon", { layout: "homepageLayout" })
+        })
+
         return this.router;
     }
 }
