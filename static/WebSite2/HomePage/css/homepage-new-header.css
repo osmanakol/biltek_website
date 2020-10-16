@@ -320,6 +320,19 @@ body{
   }
   
   }
+  @media screen and (max-width: 700px) {
+    .homepage-header-contents{
+      top: 29%;
+    }
+  
+  }
+
+  @media screen and (max-width: 650px) {
+    .homepage-header-contents{
+      top: 27%;
+    }
+  
+  }
   
   @media screen and (max-width: 600px) {
     .header-mobil-navbar-main{
@@ -332,6 +345,19 @@ body{
   
       margin-inline-start: 90px;
       margin-inline-end: 90px;
+    }
+
+    .homepage-header-social-media-button{
+      bottom: 28%;
+    }
+    .homepage-header-contents{
+      top: 28%;
+    }
+    .homepage-header-content-schoolname{
+      font-size: 15px;
+    }
+    .homepage-header-content-clubname{
+      font-size: 32px;
     }
   
   }
@@ -347,9 +373,69 @@ body{
       line-height: 39px;
 
   }
-  
-  }
 
   
   
+  }
+
+  @media screen and (max-width: 490px) {
+    .homepage-header-contents{
+      top: 26%;
+    }
   
+    .homepage-header-content-clubname{
+      font-size: 27px;
+    }
+    
+  
+  }
+
+  @media screen and (max-width: 450px) {
+    .homepage-header-content-s{
+      font-size: 14px;
+    }
+
+    .homepage-header-social-media-button > div{
+
+      width: 50px;
+      height: 50px;
+
+    }
+
+    .homepage-header-social-media-button > .hompage-icons-part a{
+      height: 50px;
+
+    }
+  
+  }
+
+
+  @media screen and (max-width: 385px) {
+    .homepage-header-register-button a{
+      width: 90px;
+    height: 90px;
+    }
+
+    .homepage-header-content-schoolname {
+      font-size: 13px;
+    }
+
+    .homepage-header-content-clubname{
+      font-size: 22px;
+
+    }
+
+    .homepage-header-social-media-button{
+      bottom: 26%;
+
+    }
+
+    .mobil-navbar-photo {
+       height: 86px;
+    }
+
+    
+  }
+
+  
+ 

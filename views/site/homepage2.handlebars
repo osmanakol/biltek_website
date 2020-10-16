@@ -25,7 +25,7 @@
 
 </div>
 
-<div  class="homepage-header-mobil-navbar">  
+<div id="mobilll" class="homepage-header-mobil-navbar">  
     <ul class="header-mobil-navbar-main">   
         <li><a href="#homepage-header">Anasayfa</a>
             <hr>
@@ -118,6 +118,13 @@
             $(".homepage-header-mobil-navbar").toggle();
         });
     });
+
+    $(window).resize(function() {
+  var width = $(window).width();
+  if (width > 992){
+    document.getElementById("mobilll").style.display = "none";
+  }
+});
 
 </script>   
 
