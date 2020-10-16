@@ -25,8 +25,10 @@
 
 </div>
 
-<div id="mobilll" class="homepage-header-mobil-navbar">  
-    <ul class="header-mobil-navbar-main">   
+{{!-- MOBİL NAVBAR --}}
+
+<div id="mobilll" class="homepage-header-mobil-navbar">
+    <ul class="header-mobil-navbar-main">
         <li><a href="#homepage-header">Anasayfa</a>
             <hr>
         </li>
@@ -48,21 +50,21 @@
     </ul>
 </div>
 
-<div class="mobil-navbar-photo"> <img class="homepage-mobil-navbar-logo" src="/WebSite2/img/mobilnavbarfoto.png">  
+<div class="mobil-navbar-photo"> <img class="homepage-mobil-navbar-logo" src="/WebSite2/img/mobilnavbarfoto.png">
 
     <i class="fa fa-bars" aria-hidden="true"></i>
 
 </div>
 
 
-
+{{!-- HEADER --}}
 
 <section id="header">
     <div class="homepage-header-part">
-        <img  class="homepage-header-main-photo" src="/WebSite2/img/header background triangle.png">
+        <img class="homepage-header-main-photo" src="/WebSite2/img/header background triangle.png">
 
         {{!-- NAMES --}}
-        <div id="homepage-header-mobil-contents"  class="homepage-header-contents">
+        <div id="homepage-header-mobil-contents" class="homepage-header-contents">
             <div align="center" class="homepage-header-content-schoolname">
                 <p>Ankara Yıldırım Beyazıt Üniversitesi</p>
             </div>
@@ -72,7 +74,7 @@
         </div>
 
         {{!-- REGİSTER-BUTTON --}}
-        <div  class="homepage-header-register-button">
+        <div class="homepage-header-register-button">
             <a href="#" id="header-plus-button" onclick="getUniversity()">
                 <i class="fas fa-plus"></i>
             </a>
@@ -112,6 +114,8 @@
 
 </section>
 
+{{!-- JS PART --}}
+
 <script>
     $(document).ready(function () {
         $(".fa-bars").click(function () {
@@ -119,14 +123,14 @@
         });
     });
 
-    $(window).resize(function() {
-  var width = $(window).width();
-  if (width > 992){
-    document.getElementById("mobilll").style.display = "none";
-  }
-});
+    $(window).resize(function () {
+        var width = $(window).width();
+        if (width > 992) {
+            document.getElementById("mobilll").style.display = "none";
+        }
+    });
 
-</script>   
+</script>
 
 
 
