@@ -1,13 +1,10 @@
 import { environment } from "../config"
 import {Response} from "express"
-import { UserFacingError } from "./userFacingError"
 
 
 //*general error class, every error class types are inherited from this*/
 
 export enum ResponseStatus {
-    SUCCESS=200,
-    CREATED=201,
     BAD_REQUEST = 400,
     UNAUTHORIZED = 401,
     FORBIDDEN = 403,
@@ -23,10 +20,12 @@ export enum ErrorType{
     BAD_REQUEST = 'BadRequestError',
     FORBIDDEN = 'ForbiddenError'
 }
-export abstract class BaseError extends Error implements IThrow{
+export abstract class BaseError extends Error{
     statusCode: ResponseStatus
-    constructor(type:ErrorType,statusCode:ResponseStatus){
-        super(type)
+    type:ErrorType
+    constructor(type:ErrorType,statusCode:ResponseStatus,message?:string){
+        super(message||type)
+        this.type=type
         this.statusCode=statusCode
         Error.captureStackTrace(this,BaseError)
     }
@@ -40,6 +39,7 @@ export abstract class BaseError extends Error implements IThrow{
     private static devErrorOutp(err:BaseError){
         return {
             statusCode:err.statusCode,
+            message:err.message || err.type,
             stack:err.stack
         }
     }

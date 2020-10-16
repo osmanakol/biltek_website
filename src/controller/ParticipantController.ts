@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { ParticipantService } from "../services/ParticipantService";
 import { ParticipantModel } from "../models/participants/participantModel";
+import { BaseError, ErrorType } from "../utils/baseError";
+import { DatabaseError } from "../utils/dbError";
 
 export class ParticipantController {
     private participantService: ParticipantService;
@@ -18,10 +20,7 @@ export class ParticipantController {
                 state: "Success"
             })
         } catch (error) {
-            res.status(400).json({
-                state:"Error",
-                message:error.message
-            })   
+            BaseError.handle(DatabaseError.throw(ErrorType.BAD_REQUEST,error.message),res)  
         }
     }
 
