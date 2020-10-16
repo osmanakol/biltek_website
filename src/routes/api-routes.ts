@@ -33,7 +33,7 @@ export class ApiRoutes {
         // ? Routes /api/participant
         this.router.route('/participant')
             //.get(this.participantController.findAll)
-            .post(validate(ParticipantValidationChain),this.participantController.createParticipant,sendNotificationMail())
+            .post(validate(ParticipantValidationChain),sendNotificationMail(),this.participantController.createParticipant)
              //.put(this.participantController.updateParticipant)
              //.delete(this.participantController.deleteParticipant);
 
