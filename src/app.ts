@@ -6,7 +6,8 @@ import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger } from "./middlewares/logger"; 
-  
+import "bcrypt"
+const users = []
 class App {
     public app: Application
     public router: express.Router

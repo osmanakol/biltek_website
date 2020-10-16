@@ -40,10 +40,10 @@ export class WebRoutes {
 
         //authentication attempts
         this.router.get("/register", (req: Request, res: Response) => {
-            res.render("site/authRegister", { layout: "homepageLayout" })
+            res.render("site/authRegister", { layout: "authenticationLayout" })
         })
         this.router.get("/login", (req: Request, res: Response) => {
-            res.render("site/authLogon", { layout: "homepageLayout" })
+            res.render("site/authLogon", { layout: "authenticationLayout" })
         })
 
         return this.router;
