@@ -1,4 +1,4 @@
-import {UserFacingError} from "./baseError"
+import {ResponseStatus, UserFacingError} from "./baseError"
 
 /*enum ErrorType{
     UNAUTHORIZED = 'AuthFailureError',
@@ -10,14 +10,7 @@ import {UserFacingError} from "./baseError"
     FORBIDDEN = 'ForbiddenError'
   }
 */
-enum ResponseStatus {
-    BAD_REQUEST = 400,
-    UNAUTHORIZED = 401,
-    FORBIDDEN = 403,
-    NOT_FOUND = 404,
-    INTERNAL_ERROR = 500,
-}
-  
+
 
 export class BadRequestError extends UserFacingError{
     constructor(message="Bad Request"){

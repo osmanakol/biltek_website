@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { ParticipantService } from "../services/ParticipantService";
 import { ParticipantModel } from "../models/participants/participantModel";
+import { DatabaseError } from "../utils/databaseError";
 
 export class ParticipantController {
     private participantService: ParticipantService;
@@ -11,7 +12,8 @@ export class ParticipantController {
 
     public createParticipant = async (req: Request, res: Response, next: NextFunction) => {
         const participantObj = new ParticipantModel(req.body.name_surname, req.body.university, req.body.department, req.body.email, req.body.phone)
-        try {
+        DatabaseError.tryCatch(req,res,this.participantService.create,participantObj)
+        /*try {
             const result = await this.participantService.create(participantObj)
             res.status(201).json({
                 data: result,
@@ -22,12 +24,14 @@ export class ParticipantController {
                 state:"Error",
                 message:error.message
             })   
-        }
+        }*/
     }
 
 
     public createManyParticipant = async (req: Request, res: Response, next: NextFunction) => {
-        try {
+
+        DatabaseError.tryCatch(req,res,this.participantService.createMany,new Array<ParticipantModel>(...req.body.participants))
+        /*try {
             const result = await this.participantService.createMany(new Array<ParticipantModel>(...req.body.participants))
             res.status(201).json({
                 data: result,
@@ -38,7 +42,7 @@ export class ParticipantController {
                 err: error,
                 state: "Error"
             })
-        }
+        }*/
     }
 
     public updateParticipant = async (req: Request, res: Response, next: NextFunction) => {

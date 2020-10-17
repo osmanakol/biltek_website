@@ -1,5 +1,18 @@
 import {Response} from "express"
 import { environment } from "../config";
+
+export enum ResponseStatus {
+    SUCCESS=200,
+    CREATED=201,
+    BAD_REQUEST = 400,
+    UNAUTHORIZED = 401,
+    FORBIDDEN = 403,
+    NOT_FOUND = 404,
+    INTERNAL_ERROR = 500,
+}
+  
+
+
 //*general error class, every error class types are inherited from this*/
 
 export abstract class BaseError extends Error{
@@ -25,7 +38,7 @@ export abstract class BaseError extends Error{
     //* error output for production environment
     private static prodErrorOutp(err:BaseError){
         return { 
-            statusCode:err.statusCode,
+            //statusCode:err.statusCode,
             message:err.toString() 
         }
     }
@@ -41,5 +54,4 @@ export abstract class BaseError extends Error{
     }
 }
 
-export abstract class DatabaseError extends BaseError{}
 export abstract class UserFacingError extends BaseError{}
