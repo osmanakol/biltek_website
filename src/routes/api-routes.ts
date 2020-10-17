@@ -5,18 +5,20 @@ import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
 import{ParticipantValidationChain} from "../models/participants/participantModel"
 import { EventController } from "../controller/EventController";
-
+import {hash} from "bcrypt"
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
     private deparmentController:DepartmentController;
     private eventController:EventController;
+    public users:any;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
         this.eventController = new EventController();
+        this.users = [];
         this.Routes();
     }
 
@@ -70,9 +72,21 @@ export class ApiRoutes {
             .post(validate(ParticipantValidationChain),this.participantController.addEvent)
         // auth attempts
         this.router.route("/register")
-            .post()
+            .post( async (req:Request, res:Response, next:NextFunction) =>{
+                    this.users.push({
+                        name:req.body.name,
+                        passHash:await hash(req.body.password, 10)
+                        })
+                    console.log(this.users)
+                    res.json({
+                        data: req.body,
+                        state: "Success"
+                    })                
+            })
         this.router.route("/login")
-            .post()
+            .post( async (req:Request, res:Response, next:NextFunction) => {
+                console.log("og")
+            })
         
         return this.router;
     }

@@ -1,15 +1,13 @@
-const bcrypt = require("bcrypt")
-
 function submit_user() {
     const name = $("#name");
-    const passHash = bcrypt.hash($("#password"), 10);
+    const pass = $("#password");
     //TODO input check
     $.ajax({
         url: `/api/register`,
         type: "POST",
         data: {
             "name": name.val(),
-            "password": passHash.val()
+            "password": pass.val()
         },
     success(res) {
         if(typeof res.error !== "undefined"){
