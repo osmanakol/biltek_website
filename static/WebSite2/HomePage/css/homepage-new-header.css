@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 body{
     margin: 0;
+    font-family: "Open Sans" , sans-serif;
     }
     
     .header2 {
@@ -34,7 +37,7 @@ body{
 
     .homepage-header-group-navbar{
         position: relative;
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         align-items: center;
         margin-left: auto;
@@ -42,7 +45,7 @@ body{
     }
     
     .homepage-header-group-navbar>a{
-      font-family: sans-serif;
+      
       color: white;
       margin-right: 32px;
       padding: 3px;
