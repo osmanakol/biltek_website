@@ -2,9 +2,12 @@ body{
     margin: 0;
     }
     
-    .homepage-header-part{
-        margin: 0;
-        padding: 80px;
+    .header2 {
+      width: 100%;
+      height: 100vh;
+      background-image: url("/WebSite2/img/header background.png");
+      background-size: cover;
+      background-position: center;
     }
     
     /* ------
@@ -14,7 +17,7 @@ body{
 .homepage-header-navbar{
   width: -webkit-fill-available;
   height: 82px;
-  position: relative;
+  position: absolute;
   display: flex;
   z-index: 99;
   width: 100%;
@@ -56,121 +59,112 @@ body{
         transition: 1s;
         padding: 10px;
     }
-
-    /* ------
-    IMAGE PART
-          ------- */
-.homepage-header-main-photo{
-    top: -6%;
-    left: 0%;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* ------
-   CONTENT PART
-          ------- */
-
-.homepage-header-contents{
-    position: absolute;
-    left: 50%;
-    top: 32%;
-    transform: translate(-50%,-50%);
-  }
-  .homepage-header-content-schoolname{
-      color: white;
-      font-size: 20px;
-  }
-  .homepage-header-content-clubname{
-      color: white;
-      font-size: 36px;}
-
-
-      /* ------
-    SOCİAL MEDİA PART
-          ------- */
-
-          .homepage-header-social-media-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            transform: translate(50%,50%);
-            right: 50%;
-            bottom: 32%;
-            font-size: 16pt;
-            
-          }
-          .homepage-header-social-media-button > div {
-            box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
-            border-radius: 39px;
-            display: block;
-            width: 60px;
-            height: 60px;
-            background: white;
-            transition: all 0.7s;
-            margin-right: 20px;
-          }
-         
     
-          .homepage-header-commond-icon{
-            position: relative;
-            transition: width 0.2s ease-in-out;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-              }
-          .fa-instagram{
-            color: black;
-          }
-          .fa-twitter{
-            color: #00CCFF;
-          }
-          .fa-youtube{
-            color: black;
-          }
-          .fa-linkedin-in{
-            color: #0066CC  ;
-          }
 
-          .homepage-header-social-media-button > .hompage-icons-part a{
-            display: block;
-            height: 60px;
-            border-radius: 39px;
-          }
-          
+  
+  /* CONTENT PART */
 
-          /* ------
-      REGISTER BUTTON PART
-          ------- */
+  .header-content {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    height: 600px;
+  }
+  
+  .header-head {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .school-name {
+    font-size: calc(0.5rem + 0.9vw);
+  }
+  
+  .club-name {
+    font-size: calc(1rem + 2.7vw);
+    margin: 0 auto;
+  }
+  
+  .header-head p {
+    color: white;
+  }
 
       
-      .homepage-header-register-button a {
-        box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
-        border-radius: 50px;
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        background: white;
-        transition: all 0.7s;
-        position: absolute;
-        top: 50%;
-        right: -50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        
+    /* SOCİAL MEDİA PART  */
+
+    .header-social-btn {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .header-social-btn a {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin: 0 10px;
+      text-decoration: none;
+
+    }
+    
+    .header-social-btn a i {
+      font-size: x-large;
     }
 
-    .homepage-header-register-button .fas {
-        position: relative;
-        transition: width 0.2s ease-in-out;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        color: red;
-        font-size: 30px;
+    .fa-instagram{
+      color: black;
     }
+    .fa-twitter{
+      color: #00CCFF;
+    }
+    .fa-youtube{
+      color: black;
+    }
+    .fa-linkedin-in{
+      color: #0066CC  ;
+    }
+
+
+    /* REGISTER BUTTON PART  */
+
+
+  .header-reg-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.reg-btn {
+  width: 125px;
+  height: 125px;
+  border: none;
+  background-color: white;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  outline: unset;
+  cursor: pointer;
+}
+
+.reg-btn i {
+  font-size: 40px;
+  color: #f2424c;
+}
+
 
 /* MOBİL NAVBAR  */
 .homepage-header-mobil-navbar{
@@ -261,8 +255,6 @@ body{
 }
 
 
-
-
 .homepage-header-mobil-navbar li>hr{
   display: block;
   unicode-bidi: isolate;
@@ -275,6 +267,9 @@ body{
   border-width: 1px;
   position: relative;
 }
+
+
+
 
 /* RESPONSİVE */ 
 
@@ -313,122 +308,159 @@ body{
   }
   
   }
-  @media screen and (max-width: 700px) {
-    .homepage-header-contents{
-      top: 29%;
-    }
-  
-  }
 
-  @media screen and (max-width: 650px) {
-    .homepage-header-contents{
-      top: 27%;
+
+  @media screen and (max-height: 850px) {
+    .header-content {
+      height: 468px;
     }
   
+    .school-name {
+      margin: 7px;
+    }
   }
-  
+ 
   @media screen and (max-width: 600px) {
     .header-mobil-navbar-main{
-      height: 250px;
+      height: 250px;                                               
       width: 300px;
       padding: 20px 0 161px;
   
     }
-    .homepage-header-mobil-navbar li>hr{
-  
+    .homepage-header-mobil-navbar li > hr {
       margin-inline-start: 90px;
       margin-inline-end: 90px;
     }
+  
+  }
 
-    .homepage-header-social-media-button{
-      bottom: 28%;
+  @media screen and (max-width: 1440px) and (max-height: 600px) {
+    .header-content {
+      height: 408px;
     }
-    .homepage-header-contents{
-      top: 28%;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .header-content {
+      height: 70%;
     }
-    .homepage-header-content-schoolname{
-      font-size: 15px;
+  
+    .school-name {
+      font-size: calc(0.5rem + 1.3vw);
+      margin: 16px;
     }
-    .homepage-header-content-clubname{
+  
+    .club-name {
+      font-size: calc(1rem + 3.1vw);
+    }
+  
+    .header-social-btn {
+      bottom: 38px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) and (max-height: 600px) {
+    .reg-btn {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .reg-btn i {
+      font-size: 27px;
+    }
+  
+    .header-social-btn a {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .header-social-btn a i {
+      font-size: inherit;
+    }
+  
+    .mobil-navbar-photo {
+      width: 150px;
+      height: 75px;
+    }
+  
+    .mobil-navbar-photo i {
+      font-size: 29px;
+    }
+    .header-mobil-navbar-main {
+      padding: 15px 0 95px;
+    }
+  }
+  
+  @media screen and (max-width: 992px) and (max-height: 520px) {
+    .header-content {
+      height: 93%;
+    }
+  
+    .header-social-btn {
+      bottom: 75px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header-content {
+      width: 60%;
+    }
+  
+    .club-name {
+      font-size: calc(1.4rem + 3.1vw);
+    }
+  
+    .reg-btn {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .reg-btn i {
       font-size: 32px;
     }
   
-  }
-
-
-  @media screen and (max-width: 500px) {
-    .header-mobil-navbar-main{
-      height: 200px;
-     
+    .header-social-btn {
+      bottom: 70px;
     }
-
-    .homepage-header-mobil-navbar li > a{
-      line-height: 39px;
-
   }
-
   
-  
-  }
-
-  @media screen and (max-width: 490px) {
-    .homepage-header-contents{
-      top: 26%;
+  @media screen and (max-width: 768px) and (max-height: 674px) {
+    .header-content {
+      height: 88%;
     }
   
-    .homepage-header-content-clubname{
-      font-size: 27px;
+    .header-social-btn {
+      bottom: 98px;
     }
-    
-  
   }
-
-  @media screen and (max-width: 450px) {
-    .homepage-header-content-s{
-      font-size: 14px;
-    }
-
-    .homepage-header-social-media-button > div{
-
-      width: 50px;
-      height: 50px;
-
-    }
-
-    .homepage-header-social-media-button > .hompage-icons-part a{
-      height: 50px;
-
+  
+  @media screen and (max-width: 768px) and (max-height: 512px) {
+    .header-content {
+      width: 80%;
     }
   
+    .header-social-btn {
+      bottom: 25px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) and (max-height: 420px) {
+    .header-content {
+      height: 78%;
+    }
+  
+    .school-name {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 538px) {
+    .header-content {
+      width: 320px;
+    }
   }
 
 
-  @media screen and (max-width: 385px) {
-    .homepage-header-register-button a{
-      width: 90px;
-    height: 90px;
-    }
-
-    .homepage-header-content-schoolname {
-      font-size: 13px;
-    }
-
-    .homepage-header-content-clubname{
-      font-size: 22px;
-
-    }
-
-    .homepage-header-social-media-button{
-      bottom: 26%;
-
-    }
-
-    .mobil-navbar-photo {
-       height: 86px;
-    }
-
-    
-  }
 
   
  
