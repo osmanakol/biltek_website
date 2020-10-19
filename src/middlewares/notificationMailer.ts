@@ -5,7 +5,6 @@ import nodemailer from "nodemailer";
 export const sendNotificationMail = () => { 
     return async (req:Request,res:Response,next:NextFunction)=>{
         try{
-            console.log("bu bele olmamalıydı")
             let mailer = nodemailer.createTransport({
                 service: process.env.MAIL.split("@")[1].split(".")[0],
             auth: {
