@@ -6,6 +6,8 @@ import {validate} from "../middlewares/validation";
 import{ParticipantValidationChain} from "../models/participants/participantModel"
 import { EventController } from "../controller/EventController";
 import {hash} from "bcrypt"
+import "passport"
+
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
@@ -73,7 +75,8 @@ export class ApiRoutes {
         // auth attempts
         this.router.route("/register")
             .post( async (req:Request, res:Response, next:NextFunction) =>{
-                    this.users.push({
+                    try{
+                        this.users.push({
                         name:req.body.name,
                         passHash:await hash(req.body.password, 10)
                         })
@@ -81,11 +84,15 @@ export class ApiRoutes {
                     res.json({
                         data: req.body,
                         state: "Success"
-                    })                
+                    })
+                    res.redirect("/login")  
+                }catch{
+                    res.redirect("/register")
+                }              
             })
         this.router.route("/login")
             .post( async (req:Request, res:Response, next:NextFunction) => {
-                console.log("og")
+                
             })
         
         return this.router;

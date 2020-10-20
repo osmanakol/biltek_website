@@ -7,7 +7,21 @@ import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger } from "./middlewares/logger"; 
 import "bcrypt"
-const users = []
+import * as passport from "passport"
+import {initalize} from "./middlewares/authentication"
+function getName(name:any, users:any){
+    return users.find((user:any) => user.name === name)
+}
+function getId(id:any, users:any){
+    return users.find((user:any) => user.id === id)
+}
+
+
+const users: any[] = []
+initalize(passport, getName, getId, users)
+
+
+
 class App {
     public app: Application
     public router: express.Router
