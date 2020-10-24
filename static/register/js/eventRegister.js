@@ -4,25 +4,25 @@ $(document).ready(() => {
 })
 
 
-// function getUniversity() {
-//     $.ajax({
-//         url: "/api/university",
-//         type: "GET",
-//         success(res) {
-//             if (typeof res.error !== "undefined") {
+function getUniversity() {
+    $.ajax({
+        type: "GET",
+        url: `/api/university`,
+        success(res) {
+            if (typeof res.error !== "undefined") {
 
-//             }
-//             else {
-//                 const universityList = $.parseJSON(JSON.stringify(res));
+            }
+            else {
+                const universityList = $.parseJSON(JSON.stringify(res));
 
-//                 $.each(universityList.data, (i, d) => {
-//                     $('#university').append('<option value="' + d._id + '">' + d.universityName + '</option>')
-//                 })
-//                 $("#university").prop("selectedIndex",0)
-//             }
-//         }
-//     })
-// }
+                $.each(universityList.data, (i, d) => {
+                    $('#university').append('<option value="' + d._id + '">' + d.universityName + '</option>')
+                })
+                $("#university").prop("selectedIndex", 0)
+            }
+        }
+    })
+}
 
 function getDepartmentsById() {
 
@@ -39,7 +39,7 @@ function getDepartmentsById() {
                 $.each(departmentList.data, (i, d) => {
                     $('#department').append('<option value="">' + d.departmentName + '</option>')
                 })
-                $("#department").prop('selectedIndex',0)
+                $("#department").prop('selectedIndex', 0)
             }
         }
     })
@@ -59,7 +59,7 @@ function getEventList() {
                 $.each(eventList.data, (i, d) => {
                     $('#events-form-event-select').append('<option value="' + d._id + '">' + d.eventName + '</option>')
                 })
-                $("#events-form-event-select").prop('selectedIndex', 0)
+                $("#events-form-event-select").prop('selectedIndex', -1)
             }
         }
     })
@@ -84,7 +84,7 @@ function submit_validation() {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
         console.log(email.val())
     }
-    else if (events.index() === 0) {
+    else if (events.index() === -1) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen etkinlik seçmeyi unutmayınız!!!", true, false);
     }
     else if (school.index() === 0) {
@@ -123,8 +123,12 @@ function submit_validation() {
             }
             //TODO ,ERROR EKLENECEK
             , error(res) {
-                if (Array.isArray(res.responseJSON.errors))
-                    sweetAlert(res.responseJSON.errors[0].msg, "warning", "", false, false, 1500);
+                console.log(res)
+                if (res.responseJSON.msg){
+                    console.log(res)
+                    sweetAlert(res.responseJSON.msg, "warning", "", false, false, 1500);
+                    
+                }
                 else
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
             }

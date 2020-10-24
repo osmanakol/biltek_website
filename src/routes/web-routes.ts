@@ -14,13 +14,14 @@ export class WebRoutes {
         this.router.get("/comingSoon", (req: Request, res: Response) => {
             res.render("site/comingSoon", { layout: "comingSoonLayout" })
         })
-        // this.router.get("/event/register", (req: Request, res: Response) => {
-        //     res.render("site/EventsForm", { layout: "EventsFormLayout", data:teams })
-        // })
+        
+        this.router.get("/event/register", (req: Request, res: Response) => {
+             res.render("site/EventsForm", { layout: "EventsFormLayout", data:teams })
+         })
 
-        this.router.get("/teams/register", (req: Request, res: Response) => {
-            res.render("site/EventsForm", { layout: "EventsFormLayout", data: teams })
-        })
+        // this.router.get("/teams/register", (req: Request, res: Response) => {
+        //     res.render("site/EventsForm", { layout: "EventsFormLayout", data: teams })
+        // })
 
         //Website 2
         this.router.get("/home2", (req: Request, res: Response) => {
