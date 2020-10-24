@@ -6,6 +6,7 @@ import { validate } from "../middlewares/validation";
 import { ParticipantValidationChain } from "../models/participants/participantModel"
 import { TeamsController } from "../controller/TeamsController";
 import { EventController } from "../controller/EventController";
+import { sendNotificationMail } from "../middlewares/notificationMailer"
 
 export class ApiRoutes {
     private participantController: ParticipantController;
@@ -41,7 +42,11 @@ export class ApiRoutes {
 
         // ? /api/teams
         this.router.route('/teams')
-            .post(this.teamController.createTeam);
+            //.post(this.teamController.createTeam);
+            //.get(this.participantController.findAll)
+            .post(validate(ParticipantValidationChain),this.participantController.createParticipant,sendNotificationMail())
+             //.put(this.participantController.updateParticipant)
+             //.delete(this.participantController.deleteParticipant);
 
         // ? Routes /api/university
         this.router.route('/university')

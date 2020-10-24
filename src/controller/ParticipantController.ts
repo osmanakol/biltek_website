@@ -17,6 +17,7 @@ export class ParticipantController {
                 data: result,
                 state: "Success"
             })
+            next()
         } catch (error) {
             res.status(400).json({
                 state:"Error",
