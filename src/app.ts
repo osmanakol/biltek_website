@@ -6,9 +6,7 @@ import {WebRoutes} from "./routes/web-routes";
 import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger } from "./middlewares/logger"; 
-import "bcrypt"
-import * as passport from "passport"
-import {initalize} from "./middlewares/authentication"
+import {initalize} from "./middlewares/authentication-config"
 function getName(name:any, users:any){
     return users.find((user:any) => user.name === name)
 }
@@ -18,7 +16,7 @@ function getId(id:any, users:any){
 
 
 const users: any[] = []
-initalize(passport, getName, getId, users)
+
 
 
 

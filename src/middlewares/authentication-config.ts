@@ -1,5 +1,6 @@
 import {Strategy} from  "passport-local"
-import {compare} from "bcrypt"
+import {compare, hash} from "bcrypt"
+import  "passport-jwt"
 
 export function initalize(passport:any, getUserByName:Function, getUserById:Function, users:any){
     const authenticateUser = (name:string, pass:string, done:Function) => {
@@ -8,7 +9,7 @@ export function initalize(passport:any, getUserByName:Function, getUserById:Func
             return done(null, false, {message: 'user does not exist'})
         }
         try{
-            if(compare(pass, user.pass)){
+            if(compare(hash(pass, 10), user.pass)){
                 return done(null, user)
             }else {
                 return done(null, false, {message: 'Password wrong'})
