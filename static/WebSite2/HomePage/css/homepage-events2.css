@@ -9,7 +9,7 @@ body {
 }
 .homepage-events {
     width: 1120px;
-    height: 900px;
+    height: auto;
     position: relative;
     left: 50%;
     transform: translate(-50%);
