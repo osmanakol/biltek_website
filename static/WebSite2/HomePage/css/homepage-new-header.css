@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    }
+    
+    .homepage-header-part{
+        margin: 0;
+        padding: 80px;
+    }
+    
+    /* ------
+        NAVBAR PART
+              ------- */
+    
+.homepage-header-navbar{
+  width: -webkit-fill-available;
+  height: 82px;
+  position: relative;
+  display: flex;
+  z-index: 99;
+  width: 100%;
+       
+}
+
+.header-navbar-main{
+  width: 1090px;
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+    .homepage-header-part-group-navbar{
+        position: relative;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        
+    }
+    
+    .homepage-header-part-group-navbar>a{
+      font-family: sans-serif;
+      color: white;
+      margin-right: 32px;
+      padding: 3px;
+      text-decoration: none;
+    }
+    
+    .homepage-header-part-group-navbar>a:hover
+    {
+    text-decoration: underline;
+    }
+    
+    .homepage-header-navbar-aybu-logo{
+        height: 100%;
+        transition: 1s;
+        padding: 10px;
+    }
+
+    /* ------
+    IMAGE PART
+          ------- */
+.homepage-header-main-photo{
+    top: -6%;
+    left: 0%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ------
+   CONTENT PART
+          ------- */
+
+.homepage-header-contents{
+    position: absolute;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%,-50%);
+  }
+  .homepage-header-content-schoolname{
+      color: white;
+      font-size: 20px;
+  }
+  .homepage-header-content-clubname{
+      color: white;
+      font-size: 36px;}
+
+
+      /* ------
+    SOCİAL MEDİA PART
+          ------- */
+
+          .homepage-header-social-media-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transform: translate(50%,50%);
+            right: 50%;
+            bottom: 32%;
+            font-size: 16pt;
+            
+          }
+          .homepage-header-social-media-button > div {
+            box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+            border-radius: 39px;
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: white;
+            transition: all 0.7s;
+            margin-right: 20px;
+          }
+         
+    
+          .homepage-header-commond-icon{
+            position: relative;
+            transition: width 0.2s ease-in-out;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+              }
+          .fa-instagram{
+            color: black;
+          }
+          .fa-twitter{
+            color: #00CCFF;
+          }
+          .fa-youtube{
+            color: black;
+          }
+          .fa-linkedin-in{
+            color: #0066CC  ;
+          }
+
+          /* ------
+      REGISTER BUTTON PART
+          ------- */
+
+      
+      .homepage-header-register-button a {
+        box-shadow: 0 3px 7px 0px rgba(0, 0, 0, 0.35);
+        border-radius: 50px;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: white;
+        transition: all 0.7s;
+        position: absolute;
+        top: 50%;
+        right: -50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+
+    .homepage-header-register-button .fas {
+        position: relative;
+        transition: width 0.2s ease-in-out;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: red;
+        font-size: 30px;
+    }
+
+
+  /* ------
+     RESPONSİVE
+          ------- */          
+    
+    @media screen and (max-width: 1300px) {
+      .header-navbar-main{    
+        width: 90%;
+      
+      }
+    }
+
+    @media screen and (max-width: 968px) {
+      .homepage-header-navbar{
+
+        display: none;
+      
+      }
+    }
+    
+  
+  
+  
+  
+    
+
+    
