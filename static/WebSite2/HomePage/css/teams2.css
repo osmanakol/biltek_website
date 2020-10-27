@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.teams {
+    width: 100%;
+    height: auto;
+}
+
+.teams-content {
+    width: 1120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1130px) {
+    .teams-content {
+        width: 992px;
+    }
+}
+
+@media screen and (max-width: 1002px) {
+    .teams-content {
+        width: 767px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .teams-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .teams-content {
+        width: 90%;
+    }
+    .team-box {
+        margin: 20px 10px !important;
+    }
+}
+
+.teams-flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-box {
+    background-color: white;
+    width: 310px;
+    /* height: 410px; */
+    box-shadow: 0 0 85px rgba(0, 0, 0, 0.1);
+    margin: 30px;
+}
+
+.team-box-head {
+    /* height: 240px; */
+    padding: 30px 0;
+}
+
+.team-photo {
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+.team-name {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.teams-social {
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #7e006d, #f2424c);
+}
+
+.team-social-btn {
+    width: 50px;
+    height: 50px;
+    background-color: unset;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.team-social-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.team-social-btn i {
+    color: white;
+    font-size: 18pt;
+}
+
+.Homepage-teams-header {
+    text-align: center;
+    /* margin-bottom: 90px; */
+    font-size: 40px;
+}
