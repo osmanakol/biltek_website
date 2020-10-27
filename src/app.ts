@@ -7,15 +7,10 @@ import exphbs  from "express-handlebars";
 import { staticFile } from "./config";
 import {httpLogger } from "./middlewares/logger"; 
 import {initalize} from "./middlewares/authentication-config"
-function getName(name:any, users:any){
-    return users.find((user:any) => user.name === name)
-}
-function getId(id:any, users:any){
-    return users.find((user:any) => user.id === id)
-}
+import passport from "passport"
+import { AdminController } from "./controller/AdminController"
 
 
-const users: any[] = []
 
 
 
@@ -32,6 +27,7 @@ class App {
         this.config();
         this.routeConfig();
         this.mongoSetup();
+        this.passportConfig();
     }
 
     private handlebars = ()=>{
@@ -42,11 +38,16 @@ class App {
     private config = () => {
         this.app.use(express.static(staticFile));
         this.app.use(bodyParser.json());
+        this.app.use(passport.initialize())
         this.app.use(bodyParser.urlencoded({
             extended: true
         }));
     }
 
+    private passportConfig = () => {
+        const config = new AdminController()
+        initalize(passport,config.findByName , config.findById)
+    }
 
     private routeConfig = () => {
         this.app.use(httpLogger)

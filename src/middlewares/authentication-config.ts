@@ -1,15 +1,15 @@
 import {Strategy} from  "passport-local"
-import {compare, hash} from "bcrypt"
-import  "passport-jwt"
+import {compare} from "bcrypt"
 
-export function initalize(passport:any, getUserByName:Function, getUserById:Function, users:any){
+
+export function initalize(passport:any, getUserByName:any, getUserById:any){
     const authenticateUser = (name:string, pass:string, done:Function) => {
-        const user = getUserByName(name, users)
+        const user = getUserByName(name)
         if(user == null){
             return done(null, false, {message: 'user does not exist'})
         }
         try{
-            if(compare(hash(pass, 10), user.pass)){
+            if(compare(pass, user.pass)){
                 return done(null, user)
             }else {
                 return done(null, false, {message: 'Password wrong'})
@@ -19,7 +19,7 @@ export function initalize(passport:any, getUserByName:Function, getUserById:Func
                 return done(err);
         }
     }
-    passport.use( new Strategy({usernameField:'Name'}, authenticateUser))
+    passport.use( new Strategy({usernameField:'name', passwordField:"passHash"}, authenticateUser))
     passport.serializeUser((user:any, done:any) => done(null, user.id))
-    passport.deserializeUser((id:any, done:any) => {return done(null, getUserById(id, users)) })
+    passport.deserializeUser((id:any, done:any) => {return done(null, getUserById(id)) })
 }

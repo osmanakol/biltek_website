@@ -1,5 +1,5 @@
 import { Request, Response ,NextFunction } from "express"
-import  passport from"passport"
+import  passport from "passport"
 
 export const checkAuthenticated = (authLevel:number) => {
     return (req:Request, res:Response, next:NextFunction) => {

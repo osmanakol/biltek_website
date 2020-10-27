@@ -3,24 +3,29 @@ import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
 import {validate} from "../middlewares/validation";
+import "../middlewares/authorize"
 import{ParticipantValidationChain} from "../models/participants/participantModel"
 import { EventController } from "../controller/EventController";
 import {hash} from "bcrypt"
-import "passport"
+import passport from "passport"
+import { AdminController } from "../controller/AdminController";
+
+
+
 
 export class ApiRoutes {
     private participantController:ParticipantController;
     private universityController:UniversityController;
     private deparmentController:DepartmentController;
     private eventController:EventController;
-    public users:any;
+    private adminController:AdminController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
         this.universityController = new UniversityController();
         this.deparmentController = new DepartmentController();
         this.eventController = new EventController();
-        this.users = [];
+        this.adminController = new AdminController();
         this.Routes();
     }
 
@@ -74,27 +79,20 @@ export class ApiRoutes {
             .post(validate(ParticipantValidationChain),this.participantController.addEvent)
         // auth attempts
         this.router.route("/register")
-            .post( async (req:Request, res:Response, next:NextFunction) =>{
-                    try{
-                        this.users.push({
-                        name:req.body.name,
-                        passHash:await hash(req.body.password, 10)
-                        })
-                    console.log(this.users)
-                    res.json({
-                        data: req.body,
-                        state: "Success"
-                    })
-                    res.redirect("/login")  
-                }catch{
-                    res.redirect("/register")
-                }              
-            })
+            .post( this.adminController.createAdmin)
         this.router.route("/login")
-            .post( async (req:Request, res:Response, next:NextFunction) => {
-                
+            .post( 
+                passport.authenticate("local", {
+                    successRedirect: '/',
+                    failureRedirect: '/register',
+                    failureFlash: false
+                })
+            )
+        this.router.route("/logout").delete(
+            async (req:Request, res:Response) =>{
+                req.logOut()
+                res.redirect('/login')
             })
-        
         return this.router;
     }
 } 
