@@ -4,7 +4,7 @@ import { AdminModel } from "../models/admins/adminModel";
 
 export class AdminRepository extends BaseRepository<AdminModel>{
     public findByName = async (name:string) => {
-        const result = await this._model.findById({ "name": name });
+        const result = await this._model.findOne({ "name": name });
         return result as unknown as AdminModel
     }
 }

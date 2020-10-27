@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-
+import {checkAuthenticated, checkNotAuthenticated} from "../middlewares/authorize"
 export class WebRoutes {
 
     constructor(private router: express.Router) {
@@ -7,7 +7,7 @@ export class WebRoutes {
     }
 
     public Routes = (): express.Router => {
-        this.router.get("/", (req: Request
+        this.router.get("/",checkAuthenticated ,(req: Request
             , res: Response) => {
             res.render("site/homepage", { layout: "homepageLayout" })
         })
@@ -39,10 +39,10 @@ export class WebRoutes {
         })
 
         //authentication attempts
-        this.router.get("/register", (req: Request, res: Response) => {
+        this.router.get("/register", checkNotAuthenticated, (req: Request, res: Response) => {
             res.render("site/authRegister", { layout: "authenticationLayout" })
         })
-        this.router.get("/login", (req: Request, res: Response) => {
+        this.router.get("/login", checkNotAuthenticated, (req: Request, res: Response) => {
             res.render("site/authLogon", { layout: "authenticationLayout" })
         })
 

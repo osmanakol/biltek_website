@@ -3,13 +3,15 @@ import {compare} from "bcrypt"
 
 
 export function initalize(passport:any, getUserByName:any, getUserById:any){
-    const authenticateUser = (name:string, pass:string, done:Function) => {
-        const user = getUserByName(name)
+    const authenticateUser = async (name:string, pass:string, done:Function) => {
+        const user = await getUserByName(name)
+        console.log(user)
+        console.log(pass)
         if(user == null){
             return done(null, false, {message: 'user does not exist'})
         }
         try{
-            if(compare(pass, user.pass)){
+            if( await compare(pass, user.password)){
                 return done(null, user)
             }else {
                 return done(null, false, {message: 'Password wrong'})
@@ -19,7 +21,7 @@ export function initalize(passport:any, getUserByName:any, getUserById:any){
                 return done(err);
         }
     }
-    passport.use( new Strategy({usernameField:'name', passwordField:"passHash"}, authenticateUser))
-    passport.serializeUser((user:any, done:any) => done(null, user.id))
-    passport.deserializeUser((id:any, done:any) => {return done(null, getUserById(id)) })
+    passport.use( new Strategy({usernameField:'name', passwordField:"password"}, authenticateUser))
+    passport.serializeUser( (user:any, done:any) => done(null, user.id) )
+    passport.deserializeUser( (id:any, done:any) => {return done(null, getUserById(id)) } )
 }

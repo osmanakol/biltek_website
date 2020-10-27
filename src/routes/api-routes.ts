@@ -82,6 +82,10 @@ export class ApiRoutes {
             .post( this.adminController.createAdmin)
         this.router.route("/login")
             .post( 
+                (req:Request, res:Response, next: NextFunction) => {
+                    console.log(req.body, req.headers)
+                    next()
+                },
                 passport.authenticate("local", {
                     successRedirect: '/',
                     failureRedirect: '/register',

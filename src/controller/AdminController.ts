@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { AdminService } from "../services/AdminService";
 import { AdminModel } from "../models/admins/adminModel";
 import { hash } from "bcrypt"
+import { Result } from "express-validator";
 export class AdminController {
     private AdminService: AdminService
 
@@ -38,18 +39,12 @@ export class AdminController {
             })
         }
     }
-    public findByName = async (req: Request, res: Response, next: NextFunction) => {
+    public findByName = async (name:string) => {
         try {
-            const result = await this.AdminService.findById(req.body.name)
-            res.json({
-                data: result,
-                state: "Success"
-            })
-        } catch (error) {
-            res.json({
-                err: error,
-                state: "Error"
-            })
+            const result = await this.AdminService.findByName(name)
+            return result
+        } catch(err){
+            return err
         }
     }
 
