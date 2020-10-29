@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*    Content Area    */
+
+.about-page {
+  height: 100vh;
+}
+
+.about-page>div {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.about-page-counter {
+  width: 100%;
+}
+
+.about-page-text-area {
+  width: 55%;
+}
+
+/*    Counter   */
+
+.about-page-counter {
+  text-align: center;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  top: 0%;
+}
+
+.about-page-counter>div {
+  padding: 0 58px;
+}
+
+.about-page-counter>div>h2 {
+  margin-bottom: 3px;
+  font-size: 32px;
+}
+
+.about-page-counter>div>p {
+  margin: 0;
+  font-size: 22px;
+}
+
+/*    About Text    */
+
+.about-page-text-area {
+  margin-top: 105px;
+}
+
+.about-page-text-area>p {
+  text-align: left;
+}
+
+/*    Responsive    */
+
+@media screen and (max-width: 850px) {
+  .about-page>div {
+    width: 80%;
+  }
+  .about-page-counter>div>h2 {
+    font-size: 28px;
+  }
+  .about-page-counter>div>p {
+    font-size: 18px;
+  }
+  .about-page-text-area {
+    width: 73%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-page-counter>div {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .about-page-content {
+    width: 90%;
+  }
+  .about-page-counter>div>h2 {
+    font-size: 24px;
+  }
+  .about-page-counter>div>p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .about-page-counter>div {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .about-page-counter>div {
+    padding: 0 18px;
+  }
+}
+
+
+
+@media screen and (max-width: 1880px) and (max-height: 720px) {
+  .about-page {
+    margin-top: 7vh;
+  }
+}
+
+@media screen and (max-width: 1880px) and (max-height: 635px) {
+  .about-page {
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (max-width: 1880px) and (max-height: 560px) {
+  .about-page {
+    margin-top: 30vh;
+  }
+}
+
+@media screen and (max-width: 1880px) and (max-height: 500px) {
+  .about-page {
+    margin-top: 55vh;
+  }
+}
