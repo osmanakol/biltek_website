@@ -1,10 +1,9 @@
-
-function login() {
+function submit_user() {
     const name = $("#name");
     const pass = $("#password");
     //TODO input check
     $.ajax({
-        url: `/api/login`,
+        url: `/api/register`,
         type: "POST",
         data: {
             "name": name.val(),
@@ -15,7 +14,8 @@ function login() {
             console.log("hata ?")
         }
         else{
-            
+            sweetAlert("Kayıt Başarılı", "success", "", false ,false, 1500);
+
         }
     }
     , error(res) {

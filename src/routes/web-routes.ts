@@ -1,5 +1,6 @@
-import express, { Request, Response } from "express";
-import {checkAuthenticated, checkNotAuthenticated} from "../middlewares/authorize"
+import express, { NextFunction, Request, Response } from "express";
+import {isAuthorized} from "../middlewares/authorize"
+import passport from "passport"
 export class WebRoutes {
 
     constructor(private router: express.Router) {
@@ -7,8 +8,8 @@ export class WebRoutes {
     }
 
     public Routes = (): express.Router => {
-        this.router.get("/",checkAuthenticated ,(req: Request
-            , res: Response) => {
+        this.router.get("/", passport.authenticate('jwt', { session: false }),isAuthorized,
+        (req: Request, res: Response) => {
             res.render("site/homepage", { layout: "homepageLayout" })
         })
         this.router.get("/comingSoon", (req: Request, res: Response) => {
@@ -19,7 +20,8 @@ export class WebRoutes {
         })
 
         //Website 2
-        this.router.get("/home2", (req: Request, res: Response) => {
+        this.router.get("/home2",passport.authenticate('jwt', { session: false }),
+        (req: Request, res: Response) => {
             res.render("site/homepage2", { layout: "homepage2Layout" })
         })
         this.router.get("/about", (req: Request, res: Response) => {
@@ -39,10 +41,10 @@ export class WebRoutes {
         })
 
         //authentication attempts
-        this.router.get("/register", checkNotAuthenticated, (req: Request, res: Response) => {
+        this.router.get("/register", (req: Request, res: Response) => {
             res.render("site/authRegister", { layout: "authenticationLayout" })
         })
-        this.router.get("/login", checkNotAuthenticated, (req: Request, res: Response) => {
+        this.router.get("/login", (req: Request, res: Response) => {
             res.render("site/authLogon", { layout: "authenticationLayout" })
         })
 

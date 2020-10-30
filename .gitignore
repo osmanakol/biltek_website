@@ -6,3 +6,4 @@ package-lock.json
 *.log
 *.log.*
 *audit.json
+id_rsa_priv.pem

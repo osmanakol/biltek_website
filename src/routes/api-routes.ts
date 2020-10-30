@@ -6,10 +6,11 @@ import {validate} from "../middlewares/validation";
 import "../middlewares/authorize"
 import{ParticipantValidationChain} from "../models/participants/participantModel"
 import { EventController } from "../controller/EventController";
-import {hash} from "bcrypt"
+import {compare, hash} from "bcrypt"
 import passport from "passport"
 import { AdminController } from "../controller/AdminController";
-
+import { issueJWT } from "../lib/utils"
+ 
 
 
 
@@ -83,20 +84,35 @@ export class ApiRoutes {
         this.router.route("/login")
             .post( 
                 (req:Request, res:Response, next: NextFunction) => {
-                    console.log(req.body, req.headers)
-                    next()
-                },
-                passport.authenticate("local", {
-                    successRedirect: '/',
-                    failureRedirect: '/register',
-                    failureFlash: false
+                    this.adminController.findByName(req.body.name).then(async (user) =>  {
+                        try{
+                        if (!user) {
+                            res.status(401).json({ success: false, msg: "could not find user" });
+                        }
+                        
+                        // Function defined at bottom of app.js
+                        console.log("og")
+                        const isValid = await compare(req.body.password, user.password)
+                        
+                        if (isValid) {
+            
+                            const tokenObject = issueJWT(user);
+                            res.cookie('jwt', tokenObject.token);
+                            res.redirect("/")
+                        } else {
+            
+                            res.status(401).json({ success: false, msg: "you entered the wrong password" });
+            
+                        }
+                    } catch(err){
+                        res.status(401).json({ success: false, msg: "an error occured" });
+                    }
+            
+                    })
+                    .catch((err) => {
+                        next(err);
+                    });
                 })
-            )
-        this.router.route("/logout").delete(
-            async (req:Request, res:Response) =>{
-                req.logOut()
-                res.redirect('/login')
-            })
         return this.router;
     }
 } 

@@ -10,7 +10,8 @@ import {initalize} from "./middlewares/authentication-config"
 import passport from "passport"
 import { AdminController } from "./controller/AdminController"
 
-
+import "cookie-parser"
+import cookieParser from "cookie-parser";
 
 
 
@@ -39,14 +40,15 @@ class App {
         this.app.use(express.static(staticFile));
         this.app.use(bodyParser.json());
         this.app.use(passport.initialize())
+        this.app.use(cookieParser())
         this.app.use(bodyParser.urlencoded({
             extended: true
         }));
     }
 
     private passportConfig = () => {
-        const config = new AdminController()
-        initalize(passport,config.findByName , config.findById)
+        const configAdminController = new AdminController()
+        initalize(passport,configAdminController.findByName)
     }
 
     private routeConfig = () => {
