@@ -6,7 +6,7 @@ body {
 /*    Content Area    */
 
 .about-page {
-  height: 100vh;
+  height: auto;
 }
 
 .about-page>div {

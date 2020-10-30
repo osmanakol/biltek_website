@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     width: auto;
     position: relative;
-    top: 8%;
+    top: 20%;
 }
 
 /*      About Tittle        */
@@ -63,7 +63,7 @@ body {
 
 @media screen and (max-width: 660px) {
     .about-page-header-content {
-        top: 12%;
+        top: 24%;
     }
     .about-page-title {
         font-size: 40px;
@@ -75,9 +75,6 @@ body {
 }
 
 @media screen and (max-width: 520px) {
-    .about-page-header-content {
-        top: 20%;
-    }
     .about-page-title {
         font-size: 37px;
     }
@@ -88,14 +85,23 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-    .about-page-header-content {
-        top: 23%;
-    }
     .about-page-title {
         font-size: 32px;
     }
     .about-page-video-area>iframe {
         width: 300px;
         height: 180px;
+    }
+}
+
+@media screen and (max-width: 1880px) and (max-height: 610px) {
+    .about-page-header-content {
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 1880px) and (max-height: 510px) {
+    .about-page-header-content {
+        top: 8%;
     }
 }
