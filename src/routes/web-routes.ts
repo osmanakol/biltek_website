@@ -20,7 +20,8 @@ export class WebRoutes {
         })
 
         //Website 2
-        this.router.get("/home2",passport.authenticate('jwt', { session: false }),
+        this.router.get("/home2",
+            passport.authenticate('jwt', { session: false }),isAuthorized,
         (req: Request, res: Response) => {
             res.render("site/homepage2", { layout: "homepage2Layout" })
         })

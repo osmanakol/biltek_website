@@ -11,7 +11,8 @@ export class AdminController {
     }
 
     public createAdmin = async (req:Request, res: Response, next: NextFunction) => {
-        const adminObj = new AdminModel(req.body.name, await hash(req.body.password, 10))
+        const adminObj = new AdminModel(req.body.name, await hash(req.body.password, 10), req.body.options)
+        
         try {
             const result = await this.AdminService.create(adminObj)
             res.status(201).json({
@@ -24,8 +25,11 @@ export class AdminController {
                 message:error.message
             })   
         }
+
     }
+
     public findById = async (req: Request, res: Response, next: NextFunction) => {
+        
         try {
             const result = await this.AdminService.findById(req.body._id)
             res.json({
@@ -38,7 +42,9 @@ export class AdminController {
                 state: "Error"
             })
         }
+
     }
+    
     public findByName = async (name:string) => {
         try {
             const result = await this.AdminService.findByName(name)

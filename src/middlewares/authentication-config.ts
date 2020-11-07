@@ -1,9 +1,10 @@
 import {Strategy} from  "passport-jwt"
 import { readFileSync } from "fs"
 import { join } from "path"
-import {Request} from "express"
+import { Request } from "express"
+import {cookieExtractor} from "../lib/utils"
 
-const pathToKey = join(__dirname, '..', '..','id_rsa_pub.pem');
+const pathToKey = join(__dirname, '..', '..','publicKey','id_rsa_pub.pem');
 const PUB_KEY = readFileSync(pathToKey, 'utf8');
 
 
@@ -24,16 +25,13 @@ export function initalize(passport:any, getUserById:any){
                 return done(err);
         }
     }
-    const cookieExtractor = (req:Request) => {
-        var token = null;
-        if (req && req.cookies) token = req.cookies['jwt']
-         return req.cookies['jwt']
-    }
+
     const options = {
         jwtFromRequest:  cookieExtractor,
         secretOrKey: PUB_KEY,
         ignoreExpiration:false
     }
+
     passport.use( new Strategy(options, authenticateUser))
     passport.serializeUser( (user:any, done:any) => done(null, user.id) )
     passport.deserializeUser( (id:any, done:any) =>{

@@ -1,13 +1,15 @@
 function submit_user() {
     const name = $("#name");
     const pass = $("#password");
+    const authLevel = $("#authLevel")
     //TODO input check
     $.ajax({
         url: `/api/register`,
         type: "POST",
         data: {
             "name": name.val(),
-            "password": pass.val()
+            "password": pass.val(),
+            "authLevel": authLevel.val()
         },
     success(res) {
         if(typeof res.error !== "undefined"){

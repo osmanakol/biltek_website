@@ -2,26 +2,23 @@ import { Request, Response ,NextFunction } from "express"
 let passport = require("passport")
 import {AdminController} from "../controller/AdminController"
 import { AdminService } from "../services/AdminService"
-export const checkAuthenticated = (req:Request, res:Response, next:NextFunction) => { 
-  console.log("")
-  if(req.isAuthenticated()){
-            next()
-    }
-    res.redirect("/register")
-}
+import { cookieExtractor } from "../lib/utils"
+import {decode} from "jsonwebtoken"
+
 export const isAuthorized = 
-  (req:Request, res:Response, next:NextFunction) => { 
+  async (req:Request, res:Response, next:NextFunction) => { 
     let controller = new AdminService()
-    if(req.cookies['jwt'].authLevel < authorizationLevel) res.redirect("/")
-    else next()
+    if(req.originalUrl == "/") 
+      var requiredLevel = 4
+    else if (req.originalUrl == "/home2") 
+      var requiredLevel = 5
+    //console.log(req.method)  "GET" "POST" "PUT"
+    var token = decode(cookieExtractor(req))
+    var user = await controller.findById(token.sub)
+    if(requiredLevel <= user.authLevel) 
+      next()
+    else 
+      res.redirect("/login")
 }
 
 
-
-export const checkNotAuthenticated = (req:Request, res:Response, next:NextFunction) =>{
-  console.log("")  
-  if (req.isAuthenticated()) {
-      return res.redirect('/login')
-    }
-    next()
-  }

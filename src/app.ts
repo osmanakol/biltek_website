@@ -9,8 +9,6 @@ import {httpLogger } from "./middlewares/logger";
 import {initalize} from "./middlewares/authentication-config"
 import passport from "passport"
 import { AdminController } from "./controller/AdminController"
-
-import "cookie-parser"
 import cookieParser from "cookie-parser";
 
 

@@ -87,11 +87,9 @@ export class ApiRoutes {
                     this.adminController.findByName(req.body.name).then(async (user) =>  {
                         try{
                         if (!user) {
-                            res.status(401).json({ success: false, msg: "could not find user" });
+                            res.status(401).json({ success: false, msg: "could not find user" });  // res.redirect("/login")
                         }
                         
-                        // Function defined at bottom of app.js
-                        console.log("og")
                         const isValid = await compare(req.body.password, user.password)
                         
                         if (isValid) {
@@ -101,11 +99,11 @@ export class ApiRoutes {
                             res.redirect("/")
                         } else {
             
-                            res.status(401).json({ success: false, msg: "you entered the wrong password" });
+                            res.status(401).json({ success: false, msg: "you entered the wrong password" }); // res.redirect("/login")
             
                         }
                     } catch(err){
-                        res.status(401).json({ success: false, msg: "an error occured" });
+                        res.status(401).json({ success: false, msg: "an error occured" }); // res.redirect("/login") 
                     }
             
                     })
