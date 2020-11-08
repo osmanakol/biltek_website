@@ -14,6 +14,7 @@ const ContactSchema:Schema=new Schema({
     phone:{type:String},
     email:{type:String,required:"Email info is required for contact",unique:true,},
     socialmedias:{type:Map,of:String},
+    company:[{type:Schema.Types.ObjectId,ref:"company"}]
 
 
 
