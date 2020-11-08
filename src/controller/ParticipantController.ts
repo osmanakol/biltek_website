@@ -17,6 +17,7 @@ export class ParticipantController {
                 data: result,
                 state: "Success"
             })
+            next()
         } catch (error) {
             res.status(400).json({
                 state:"Error",
@@ -104,14 +105,14 @@ export class ParticipantController {
     public addEvent = async (req:Request,res:Response,next:NextFunction)=>{
         try {
             const result = await this.participantService.addEvent(req.body.eventId,new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone));
-            console.log("try dayım",result)
-            res.json({
+            console.log(result)
+            res.status(201).json({
                 data:result,
                 state:"Success"
             })
         } catch (error) {
-            console.log("bura geldim",error)
-            res.json({
+            res.status(400).json({
+                msg:error.message,
                 err:error,
                 state:"Error"
             })

@@ -15,19 +15,19 @@
             <form>
                 <div class="events-form-content-information">
                     <select id="events-form-event-select" name="events" required="">
-                         <option value="" disabled="" selected="">Etkinlikler*</option>
+
                     </select>
                 </div>
                 <div class="events-form-content-information">
-                    <input id="name_surname" type="text" required="" name="">
+                    <input id="name_surname" type="text" placeholder="İsim Soyisim*" required="" onfocusout="name_surname_f()" onfocus="name_surname_f2()">
                     <span>İsim Soyisim*</span>
                 </div>
                 <div class="events-form-content-information">
-                    <input id="email" type="email" required="" name="">
+                    <input id="email" type="email" placeholder="Email*" required="" onfocusout="email_f()" onfocus="email_f2()">
                     <span>Email*</span>
                 </div>
                 <div class="events-form-content-information">
-                    <input id="phoneNumber" type="tel" required="" name="">
+                    <input id="phoneNumber" type="tel" placeholder="Telefon" required=""  onfocusout="phoneNumber_f()" onfocus="phoneNumber_f2()">
                     <span>Telefon</span>
                 </div>
                 <div class="events-form-content-information">

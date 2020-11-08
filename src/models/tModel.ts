@@ -1,38 +1,22 @@
 import { checkSchema } from "express-validator"
 
-
-type role = "Leader" | "Member"
-
-export interface ITeamMember {
-    year: number
-    role: role;
-    team_id:string
-}
-
-export interface IEvent{
-    event_id:string,
-    isJoin:boolean
-}
-export class ParticipantModel {
+export class TModel {
     public name_surname: string;
     public university: string;
     public department: string;
     public email: string;
     public date: string;
-    public phone?: string;
-    public events? :IEvent[]
-    public teams?:ITeamMember[]
-  
+    public team: string
+    public sinif:string
 
-    constructor(name_surname: string, university: string, department: string, email: string,phone?: string,events?:IEvent[],teams?:ITeamMember[] , date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
+    constructor(name_surname: string, department: string, email: string, team: string,sinif:string ,university: "Ankara Yıldırım Beyazıt Üniversite", date = new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" })) {
         this.name_surname = name_surname;
         this.university = university;
         this.department = department;
         this.email = email;
-        this.phone = phone;
+        this.sinif = sinif
         this.date = date;
-        this.teams = teams
-        this.events = events
+        this.team = team
     }
 
     public get FullName(): string {
@@ -41,7 +25,7 @@ export class ParticipantModel {
 
 }
 
-export const ParticipantValidationChain = checkSchema({
+export const TValidationChain = checkSchema({
     name_surname: {
         exists: true,
         errorMessage: "Name_surname propertysi eksik",
@@ -78,34 +62,6 @@ export const ParticipantValidationChain = checkSchema({
                  });
              },
          }*/
-    },
-    phone: {
-        exists: {
-            errorMessage: "Phone property eksik"
-        },
-        isMobilePhone:{
-            errorMessage:"Lütfen geçerli bir telefon numarasını yazınız",
-            options:"tr-TR"
-        },
-        blacklist: {
-            options: ['-']
-        },
-        optional: {
-            options: { nullable: true,checkFalsy:true }
-        }
-        
-       
-        /*custom:{
-            options:(value:string)=>{
-                //if(value!='' || value!=undefined){
-                    if(value.match('/^[0-9]+$/') || value.length==0 || value==undefined)
-                        return value
-                //}
-            },
-            errorMessage:"Invalid Phone Number"
-        },*/
-
-
     },
     university: {
         exists: true,

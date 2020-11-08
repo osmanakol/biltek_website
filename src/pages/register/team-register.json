@@ -1,0 +1,122 @@
+[
+    {
+        "index:": 0,
+        "text": "Ekip Seçiniz",
+        "tag": "h2",
+        "class": [],
+        "child": [],
+        "functions": [],
+        "data": "",
+        "html": ""
+    },
+    {
+        "index:": 1,
+        "text": "İsim Soyisim",
+        "tag": "input",
+        "class": {
+            "type": "text",
+            "id": "name_surname"
+        },
+        "child": {
+            "span": {
+                "type": "span",
+                "text": "İsim Soyisim*"
+            }
+        },
+        "functions": [],
+        "data": "",
+        "html": ""
+    },
+    {
+        "index": 2,
+        "text": "Email*",
+        "tag": "input",
+        "class": {
+            "id": "email",
+            "type": "email"
+        },
+        "child": {
+            "span": {
+                "type": "span",
+                "text": "Email*"
+            }
+        },
+        "functions": [],
+        "data": "",
+        "html": ""
+    },
+    {
+        "index": 3,
+        "text": "Üniversity",
+        "tag": "select",
+        "class": {
+            "id": "university",
+            "name": "university",
+            "disable": true
+        },
+        "child": {
+            "option": {
+                "type": "option",
+                "text": "Ankara Yıldırım Beyazıt Üniversitesi"
+            }
+        },
+        "functions": {
+            "onchange": "getDepartmentsById()"
+        },
+        "data": "",
+        "html": ""
+    },
+    {
+        "index": 4,
+        "text": "Bölümünüz",
+        "tag": "select",
+        "class": {
+            "id": "department",
+            "name": "department"
+        },
+        "child": {
+            "option": {
+                "type": "option",
+                "text": "Bölümünüz*"
+            }
+        },
+        "functions": [],
+        "data": "",
+        "html": ""
+    },
+    {
+        "index": 4,
+        "text": "Sınıfınız*",
+        "type": "select",
+        "class": {
+            "id": "class"
+        },
+        "child": {
+            "option": {
+                "type": "option",
+                "text": "Sınıfınız*"
+            }
+        },
+        "functions": [],
+        "data": [],
+        "html": ""
+    },
+    {
+        "index": 5,
+        "text": "Ekibinizi Seçiniz*",
+        "type": "select",
+        "class": {
+            "id": "teams",
+            "name": "teams"
+        },
+        "child": {
+            "option": {
+                "type": "option",
+                "text": "Ekibinizi Seçiniz*"
+            }
+        },
+        "functions": [],
+        "data": "",
+        "html": ""
+    }
+]

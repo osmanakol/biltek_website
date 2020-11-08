@@ -22,6 +22,11 @@ class App {
     }
 
     private handlebars = ()=>{
+        const hb = exphbs.create({
+            helpers:{
+                
+            }
+        })
         this.app.engine('handlebars',exphbs());
         this.app.set('view engine','handlebars');
     }
