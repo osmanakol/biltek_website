@@ -8,7 +8,7 @@ export interface IAdmin extends Document, AdminModel{
 const AdminSchema: Schema = new Schema({
     name: { type: String, required: 'Name and surname are required', trim: true },
     password: { type: String, required: 'password is required', trim: true },
-    options: {type: String, required: 'authLevel is required', trim: true}
+    options: {type: Object, required: 'Options are required', trim: false}
 })
 
 AdminSchema.pre<IAdmin>( 'save', function (_next){
@@ -26,7 +26,6 @@ AdminSchema.pre<IAdmin>( 'save', function (_next){
         }
     })
 })
-
 
 const AdminDbModel: Model<IAdmin> = model("admins", AdminSchema)
 

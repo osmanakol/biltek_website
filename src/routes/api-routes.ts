@@ -41,10 +41,10 @@ export class ApiRoutes {
             })
         // ? Routes /api/participant
         this.router.route('/participant')
-            //.get(this.participantController.findAll)
+            .get(this.participantController.findAll)
             .post(validate(ParticipantValidationChain),this.participantController.createParticipant)
-             //.put(this.participantController.updateParticipant)
-             //.delete(this.participantController.deleteParticipant);
+            .put(this.participantController.updateParticipant)
+            .delete(this.participantController.deleteParticipant);
 
         // ? Routes /api/university
         this.router.route('/university')
@@ -69,8 +69,8 @@ export class ApiRoutes {
         
         this.router.route('/event')
             .get(this.eventController.findAll)
-            // .post(this.eventController.create)
-            // .put(this.eventController.update)
+            .post(this.eventController.create)
+            .put(this.eventController.update)
         
         this.router.route('/event/isActive')
             .get(this.eventController.getByActiveEvent)

@@ -10,13 +10,11 @@ const PRIV_KEY = readFileSync(pathToKey, 'utf8');
 
 export function issueJWT(user:any) {
     const _id = user._id;
-    const authLevel = user.authLevel;
     const expiresIn = "2d";  // 25 minutes
   
     const payload = {
       sub: _id,
-      iat: Date.now(), 
-      authLevel: authLevel
+      iat: Date.now()
     };
   
     const signedToken = sign(payload, PRIV_KEY, { expiresIn: expiresIn, algorithm: 'RS256' });

@@ -1,7 +1,7 @@
 function submit_user() {
     const name = $("#name");
     const pass = $("#password");
-    const authLevel = $("#authLevel")
+    
     //TODO input check
     $.ajax({
         url: `/api/register`,
@@ -9,7 +9,7 @@ function submit_user() {
         data: {
             "name": name.val(),
             "password": pass.val(),
-            "authLevel": authLevel.val()
+            "options": {canSeePartipicants:true, canSeeAdmins:false}
         },
     success(res) {
         if(typeof res.error !== "undefined"){

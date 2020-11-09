@@ -11,8 +11,9 @@ export interface IauthOptions{
     
     canChangeAdmins?: boolean;
     canSeeAdmins?: boolean;
-    
+            
     canChangeEvents?: boolean;
     canSeeEvents?: boolean;
+
 
 }
