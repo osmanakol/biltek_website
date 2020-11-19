@@ -1,5 +1,5 @@
 import express, { NextFunction, Request, Response } from "express";
-import {isAuthorized} from "../middlewares/authorize"
+import {isPriveleged} from "../middlewares/authorize"
 import passport from "passport"
 export class WebRoutes {
 
@@ -8,7 +8,7 @@ export class WebRoutes {
     }
 
     public Routes = (): express.Router => {
-        this.router.get("/", passport.authenticate('jwt', { session: false }),isAuthorized,
+        this.router.get("/", passport.authenticate('jwt', { session: false }),isPriveleged,
         (req: Request, res: Response) => {
             res.render("site/homepage", { layout: "homepageLayout" })
         })
@@ -21,7 +21,7 @@ export class WebRoutes {
 
         //Website 2
         this.router.get("/home2",
-            passport.authenticate('jwt', { session: false }),isAuthorized,
+            passport.authenticate('jwt', { session: false }),isPriveleged,
         (req: Request, res: Response) => {
             res.render("site/homepage2", { layout: "homepage2Layout" })
         })
