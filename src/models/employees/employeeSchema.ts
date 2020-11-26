@@ -11,10 +11,7 @@ export const EmployeeSchema:Schema=new Schema({
     contact:{
         mail:{type:String,required:"Email is required"},
         phone:{type:String},
-        social:{
-            linkedIn:{type:String},
-            instagram:{type:String}
-        }
+        social:{type:Map,of:String}
     }
     //contact:[{type:Schema.Types.ObjectId,ref:"contact"}],
 

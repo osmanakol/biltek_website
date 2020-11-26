@@ -12,7 +12,6 @@ export class EmployeeController{
     public create = async (req:Request,res:Response,next:NextFunction) => {
         try {
             console.log(req.body)
-            //name_surname:string,gender:gender,company:ICompany,contact:IContact[],events:IEvent[]
             const result = await this.employeeService.create(new EmployeeModel(req.body.name_surname,req.body.gender,req.body.company,req.body.contact))
             console.log(result)
             res.status(201).json({
