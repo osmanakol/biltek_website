@@ -13,10 +13,10 @@ const SpeakerSchema:Schema=new Schema({
         phone:{type:String},
         social:{type:Map,of:String},
     },
-    event:{
+    event:[{
         _id:false,
         event_id:{type:Schema.Types.ObjectId,ref:"events"}
-    }
+    }]
 })
 
 const SpeakerDBModel:Model<ISpeaker>=model("speaker",SpeakerSchema)

@@ -10,9 +10,9 @@ export class SpeakerModel{
     public gender:Gender
     public company:ICompany
     public contact:any
-    public event:IEvent
+    public event:IEvent[]
     
-    constructor(name_surname:string,gender:Gender,company:ICompany,contact:any,event:IEvent) {
+    constructor(name_surname:string,gender:Gender,company:ICompany,contact:any,event:IEvent[]) {
         this.name_surname=name_surname;
         this.gender=gender
         this.company=company
