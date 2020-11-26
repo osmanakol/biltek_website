@@ -1,14 +1,23 @@
 import { checkSchema } from "express-validator"
 import { ICompany } from "../company/companySchema"
-import { IContact } from "../contact/contactSchema"
-import { EmployeeModel,gender } from "../employees/employeeModel"
+//import { IContact } from "../contact/contactSchema"
+import { Gender } from "../employees/employeeModel"
+
 import { IEvent } from "../participants/participantModel"
 
-export class SpeakerModel extends EmployeeModel{
-    public events:IEvent[]
-    constructor(name_surname:string,gender:gender,company:ICompany,contact:IContact[],events:IEvent[]) {
-        super(name_surname,gender, company, contact)
-        this.events=events
+export class SpeakerModel{
+    public name_surname:string
+    public gender:Gender
+    public company:ICompany
+    public contact:any
+    public event:IEvent
+    
+    constructor(name_surname:string,gender:Gender,company:ICompany,contact:any,event:IEvent) {
+        this.name_surname=name_surname;
+        this.gender=gender
+        this.company=company
+        this.contact=contact
+        this.event=event
     }
 }
 

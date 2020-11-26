@@ -1,16 +1,11 @@
-import { IContact } from "../contact/contactSchema"
-import { ISpeaker } from "../speakers/SpeakerSchema"
-
 
 export class CompanyModel{
     public company_name:string
-    //public employees:IEmployee[]
-    public speakers:ISpeaker[]
-    public contact:IContact
+    public contact:any
 
-    // TODO:it should be completed when employee is added 
-    constructor() {
-        
+    constructor(company_name:string,contact:any) {
+        this.company_name=company_name
+        this.contact=contact
     }
 
 }

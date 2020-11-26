@@ -7,9 +7,10 @@ export interface ICompany extends Document{
 
 const CompanySchema:Schema=new Schema({
     company_name:{type:String,required:"Company name is required"},
-    speakers:[{type:Schema.Types.ObjectId,ref:"speaker"}],
-    employees:[{type:Schema.Types.ObjectId,ref:"employee"}],
-    contact:[{type:Schema.Types.ObjectId,ref:"contact"}],
+    contact:{
+        mail:{type:String,required:true},
+        phone:{type:String}
+    }
 
 
 })
