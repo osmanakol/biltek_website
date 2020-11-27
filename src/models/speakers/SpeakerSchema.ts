@@ -6,12 +6,9 @@ export interface ISpeaker extends Document{
 
 const SpeakerSchema:Schema=new Schema({
     name_surname:{type:String,required:'Name/surname required'},
-    gender:{type:String,enum:["Male","Female"],required:"Gender required"},
-    company:{type:Schema.Types.ObjectId,ref:"company"},
-    contact:{
-        mail:{type:String,required:"Email is required"},
-        phone:{type:String},
-        social:{type:Map,of:String},
+    employee:{
+        _id:false,
+        employee_id:{type:Schema.Types.ObjectId,ref:"employee"}
     },
     event:[{
         _id:false,

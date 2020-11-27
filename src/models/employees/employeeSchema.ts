@@ -11,10 +11,11 @@ export const EmployeeSchema:Schema=new Schema({
     contact:{
         mail:{type:String,required:"Email is required"},
         phone:{type:String},
-        social:{type:Map,of:String}
+        /**Map<Key,Value>
+         * type map: provides to create nested document
+         * of: defines type of Value*/
+        socialMedia:{type:Map,of:String}
     }
-    //contact:[{type:Schema.Types.ObjectId,ref:"contact"}],
-
 })
 
 const EmployeeDBModel:Model<IEmployee>=model("employee",EmployeeSchema)
