@@ -12,7 +12,7 @@ export class SpeakerController{
         try {
             console.log(req.body)
             //name_surname:string,gender:gender,company:ICompany,contact:IContact[],events:IEvent[]
-            const result = await this.speakerService.create(new SpeakerModel(req.body.name_surname,req.body.gender,req.body.company,req.body.contact,req.body.events))
+            const result = await this.speakerService.create(new SpeakerModel(req.body.name_surname,req.body.employee,req.body.events))
             console.log(result)
             res.status(201).json({
                 data: result,

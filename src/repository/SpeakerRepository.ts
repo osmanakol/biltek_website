@@ -4,13 +4,14 @@ import { BaseRepository } from "./base/BaseRepository";
 
 export class SpeakerRepository extends BaseRepository<SpeakerModel>{
     
-    private findByEmail = async (model:SpeakerModel) =>{
-        const result= await this._model.findOne({email:model.contact.mail})
+    private findByName = async (model:SpeakerModel) =>{
+        const result= await this._model.findOne({name_surname:model.name_surname})
         return result    
     }
-    private updateSpeaker=async(event:IEvent,email:string)=>{
-        const result= this._model.findByIdAndUpdate({email:email},{$push:{event:event}})
+    private updateSpeaker=async(event:IEvent,name_surname:string)=>{
+        const result= this._model.findByIdAndUpdate({name_surname:name_surname},{$push:{event:event}})
         return result
     }
+    //! speaker için addEvent gibi fonksiyon gerekli mi?
 
 }
