@@ -8,7 +8,7 @@ export interface IEvents extends Document, EventModel {
 const EventSchema: Schema = new Schema({
     eventName: { type: String, trim: true, required: true },
     topic: { type: String, required: true },
-    speaker: { type: String, trim: true, required: true },
+    speaker:{type:Schema.Types.ObjectId,ref:"speaker",trim:true,required:true},//speaker: { type: String, trim: true, required: true },
     img: { type: String, required: true },
     url: { type: String },
     isActive: { type: Boolean, default: false, required: true },
