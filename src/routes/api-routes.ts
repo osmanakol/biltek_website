@@ -7,6 +7,7 @@ import { ParticipantValidationChain } from "../models/participants/participantMo
 import { TeamsController } from "../controller/TeamsController";
 import { EventController } from "../controller/EventController";
 import { sendNotificationMail } from "../middlewares/notificationMailer"
+import { SpeakerController } from "../controller/SpeakerController";
 
 export class ApiRoutes {
     private participantController: ParticipantController;
@@ -14,6 +15,7 @@ export class ApiRoutes {
     private deparmentController: DepartmentController
     private teamController: TeamsController;
     private eventController: EventController;
+    private speakerController:SpeakerController;
 
     constructor(private router: express.Router) {
         this.participantController = new ParticipantController();
@@ -21,6 +23,7 @@ export class ApiRoutes {
         this.deparmentController = new DepartmentController();
         this.teamController = new TeamsController();
         this.eventController = new EventController();
+        this.speakerController=new SpeakerController();
         this.Routes();
     }
 
@@ -33,6 +36,11 @@ export class ApiRoutes {
                     message: "Biltek Website Teams"
                 })
             })
+
+        //? Routes /api/speaker
+        this.router.route("/speaker")
+        .get(this.speakerController.findAll)
+        .post(this.speakerController.create)
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
