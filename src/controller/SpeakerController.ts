@@ -11,8 +11,7 @@ export class SpeakerController{
     public create = async (req:Request,res:Response,next:NextFunction) => {
         try {
             console.log(req.body)
-            //name_surname:string,gender:gender,company:ICompany,contact:IContact[],events:IEvent[]
-            const result = await this.speakerService.create(new SpeakerModel(req.body.name_surname,req.body.employee,req.body.events))
+            const result = await this.speakerService.create(new SpeakerModel(req.body.employee,req.body.events))
             console.log(result)
             res.status(201).json({
                 data: result,

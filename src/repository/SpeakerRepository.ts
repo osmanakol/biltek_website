@@ -9,9 +9,9 @@ export class SpeakerRepository extends BaseRepository<SpeakerModel>{
         return result    
     }
     private updateSpeaker=async(event:IEvent,name_surname:string)=>{
-        const result= this._model.findByIdAndUpdate({name_surname:name_surname},{$push:{event:event}})
+        const result= this._model.findByIdAndUpdate({name_surname:name_surname},{$push:{events:event}})
         return result
     }
-    //! speaker için addEvent gibi fonksiyon gerekli mi?
+   
 
 }
