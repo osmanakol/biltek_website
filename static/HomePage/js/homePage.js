@@ -16,3 +16,58 @@ var currentScrollPos = window.pageYOffset;
   }
   /*prevScrollpos = currentScrollPos;*/
 }
+
+// Events
+
+$(document).ready(() => { 
+  getEventList(); 
+  getUniversity(); 
+}); 
+function getEventList() { 
+  $.ajax({ 
+    url: `/api/event`, 
+    type: "GET", 
+    success(res) { 
+      if (typeof res.error !== "undefined") { 
+      } else { 
+        // $('#events-form-event-select').empty(); 
+        const eventList = $.parseJSON(JSON.stringify(res)); 
+        $.each(eventList.data, (i, d) => { 
+          var time = new Date(d.time.startTime); 
+          var a; 
+          if (d.isActive == true) { 
+            a = "active"; 
+          } else { 
+            a = "disabled"; 
+          } 
+          $("#events").append( 
+            '<div class="event-box"><div class="event-card ' + 
+              d.isActive + 
+              " " + 
+              a + 
+              '" value="' + 
+              d._id + 
+              '"><img class="event-img" src="' + 
+              d.img + 
+              '"><div class="event-reg-btn"><i class="fas fa-plus"></i></div></div><div class="event-date"><p>' + 
+              time.getDate() + 
+              "." + 
+              time.getMonth() + 
+              "." + 
+              time.getFullYear() + 
+              '</p></div><div class="dot"><dt>.</dt><dt>.</dt><dt>.</dt><dt>.</dt><dt>.</dt><dt>.</dt></div></div>' 
+            // '<div class="deneme-card ' + 
+            //   d.isActive + 
+            //   " " + 
+            //   i + 
+            //   ' " value="' + 
+            //   d._id + 
+            //   '"><p>' + 
+            //   d.eventName + 
+            //   "</p></div>" 
+          ); 
+        }); 
+      } 
+    }, 
+  }); 
+}
