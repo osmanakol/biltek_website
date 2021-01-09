@@ -82,6 +82,8 @@ export class ApiRoutes {
             .post(this.eventController.create)
         // .put(this.eventController.update)
 
+        
+        
         this.router.route('/event/isActive')
             .get(this.eventController.getByActiveEvent)
 
