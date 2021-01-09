@@ -3,7 +3,7 @@
 }
 .homepage-events-part {
   width: 100%;
-  height: 125vh;
+  height: auto;
   background-image: url(/img/eventsBackground.png);
   background-size: cover;
   background-position: center;
@@ -141,13 +141,70 @@
   font-size: 35px;
 }
 
- @media only screen and (max-width: 1305px){
-   .events{
-     width: 950px;
-   }
+@media only screen and (max-width: 1305px) {
+  .events {
+    width: 950px;
+  }
 
-   .event-card{
-     width: 350px;
-     height: 210px;
-   }
- }
+  .event-card {
+    width: 350px;
+    height: 210px;
+  }
+}
+
+@media only screen and (max-width: 1130px) {
+  .events {
+    width: 780px;
+  }
+
+  .event-box:nth-child(odd) .event-date {
+    left: 65%;
+  }
+  .event-box:nth-child(even) .event-date {
+    left: 35%;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .events {
+    width: 395px;
+  }
+
+  .event-box .event-date {
+    top: unset;
+    transform: translate(-50%, 50%);
+    left: 50% !important;
+  }
+
+  .event-box .event-card .event-reg-btn {
+    left: 50% !important;
+    top: unset;
+    transform: translate(-50%, -50%);
+    right: unset;
+  }
+
+  .event-box:nth-child(even) .event-card .event-reg-btn {
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  .dot {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .events {
+    width: 95%;
+  }
+  .event-card {
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .event-box:nth-child(odd) .event-card {
+    left: 50%;
+  }
+}
