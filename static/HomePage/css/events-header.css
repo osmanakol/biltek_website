@@ -1,549 +1,210 @@
-#homepage-events-part{
+#homepage-events-part {
   position: relative;
 }
-
-.homepage-events-header-line{
-    position: relative;
-    margin-top: 35px;
-    text-align: center;
-    font-size: calc(1.5rem + 0.6vw);
-    font-family: 'Noto Sans', sans-serif;
-
+.homepage-events-part {
+  width: 100%;
+  height: auto;
+  background-image: url(/img/eventsBackground.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
-.homepage-events-register-information img{
-  border-radius: 20px;
-  height: 100%;
-    width: 100%;
-}
-/* ----- GRİD ------ */
-.homepage-events-grid-container {
-  display: grid;
-  grid-gap: 10px;
-  padding: 10px;
-  grid-template-columns: repeat(19, 1fr);
-  grid-template-rows: repeat(14, minmax(45px, auto));
-}
-
-.homepage-events-grid-container > div {
+.homepage-events-header-line {
+  position: relative;
+  margin-top: 35px;
   text-align: center;
-  
+  font-size: calc(1.5rem + 0.6vw);
+  font-family: "Noto Sans", sans-serif;
 }
-  .homepage-events-grid-item1 {
-  grid-column: 1 / span 1;
-  grid-row:1/ span 14 ;}
-
-  .homepage-events-grid-item2{
-  grid-column: 3 / span 4;
-  grid-row: 1/ span 4;}
-
-  .homepage-events-grid-item3{
-  grid-column: 3 / span 4;
-  grid-row: 11/ span 4;}
-
-   .homepage-events-grid-item4{
-  grid-column: 9/ span 3;
-  grid-row: 2 / span 2;}
-
-   .homepage-events-grid-item5{
-  grid-column:9/ span 3;
-  grid-row: 7 / span 2;}
-
-   .homepage-events-grid-for-timeline-points{
-  grid-column: 10/ span 1;
-  grid-row: 1/ span 14;}
-
-   .homepage-events-grid-item6{
-  grid-column:9/ span 3;
-  grid-row: 12 / span 2}
-
-   .homepage-events-grid-item7{
-  grid-column:14 / span 4;
-  grid-row: 6 / span 4;}
-
-   .homepage-events-grid-item8{
-  grid-column: 14 / span 1;
-  grid-row: 1/ span 14;}
-
-   .homepage-events-grid-for-timeline-button{
-  grid-column: 10 / span 1;
-  grid-row: 15;
+.events {
+  width: 1120px;
+  margin: 0 auto;
+  height: 930px;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
-
-   .homepage-events-grid-item-for-ellipse{
-  grid-column: 13 / span 4;
-  grid-row: 10 / span 5;
-
-}
-
-   .homepage-events-grid-item-for-ellipse-smallellipse{
-  grid-column: 16 / span 3;
-  grid-row: 14 / span 3;
-}
-
-   .homepage-events-grid-item-for-ellipse-subsmallellipse{
-  grid-column: 17 / span 2;
-  grid-row: 11 / span 2;
-}
-
-
-/* ----- ELLİPSE ------ */
-.homepage-events-all-ellipse{
-  background: linear-gradient(30deg,#cbbacc 10%,#2580b3);
-  border-radius: 50%;
-  position: absolute;
-}
-
-.homepage-events-bigEllipse{
-  height: 100%;
-  width: 89vw;
-  transform: translate(-47%,3%);
-  z-index: -1;
-}
-
-.homepage-events-mediumElipse{
-  height: 227px;
-  width: 227px;
-  z-index: -1;
-  position: relative;}
-
-.homepage-events-smallElipse{
-  height: 161px;
-  width: 156px;
-  right: 0;
+.event-box {
+  width: 100%;
+  height: 300px;
+  margin: 5px 0;
   position: relative;
-  }
-
-.homepage-events-subsmallElipse{
-  height: 83px;
-  width: 83px;
 }
-
-
-
-
-/* ----- İNFORMATİON BOX ------ */
-
-.homepage-events-register-information{
+.event-card {
+  position: absolute;
+  height: 250px;
+  width: 400px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.event-box:nth-child(odd) .event-card {
+  left: 25px;
+}
+.event-box:nth-child(even) .event-card {
+  right: 25px;
+}
+.event-date {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.event-date p {
+  margin: 0;
+}
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 25pt;
+  filter: opacity(0.5);
+}
+.event-img {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 21px;
-  box-shadow: 0px 0px 10px black;
-  background: white;
+  border-radius: 20px;
+}
+.event-reg-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.event-reg-btn i {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  font-size: 2vh;
+  color: white;
+}
+.event-card.disabled .event-reg-btn {
+  background-color: red;
+}
+.event-card.active .event-reg-btn {
+  background-color: green;
+}
+.event-box:nth-child(even) .event-card .event-reg-btn {
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.event-box:nth-child(odd) .event-card .event-reg-btn {
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 
-   /* ----- TİMELİNE ------ */
-
-   .homepage-events-points{
-    color: darkblue;
-    font-size: 31px;
-  }
-
-  .homepage-events-date-time-icon.fa{
-    display: inline-block;
-    border-radius: 45px;
-    box-shadow: 0px 0px 9px #0e0e0e;
-    padding: 9px 16px;
-  }
-  
-  .homepage-events-date-time-icon{
-    color: black;
-    margin-top: 0vh;
-    margin-left: 1px;
-    font-size: unset;
-    font-size: 35px;   
-  }
-
-  .homepage-events-timeline-info-box{ 
-    height: 45px;
-    box-shadow: 0px 0px 10px black;
-    border-radius: 30px;
-    background: white;
-    padding: 2px;
-    transform: translate(0px, 24px);
-  }
-  
-
-  /* ------------ DATE PART---------------*/
-
-.homepage-events-joint-date-content{
-  font-family: 'Noto Sans', sans-serif;
-  position: relative;
-  top: 9px;
-  font-size: 18px;
+.events-icon-area {
+  width: 60px;
+  display: block;
+  border-radius: 45px;
+  box-shadow: 0px 0px 9px #0e0e0e;
+  padding: 9px 16px;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  background-color: white;
+  height: 60px;
+  margin: 33px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#event-box-area {
+  height: auto;
+}
 
-  /*---------------------- BUTTON PARTS---------------------------*/
-  
-    .main-hr {
-      width: 30%;
-      border: none;
-      border-top: 1px solid #c3c3c3;
-      }
+.events-icon-area.none {
+  display: none;
+}
 
-    .homepage-events-not-expired-register-btn {
-      /* width: 50px;
-      height: 50px;
-      border: 1px solid #cdcdcd;
-      background: darkblue;
-      border-radius: 25px;
-      overflow: hidden;
-      position: absolute;
-      transition: width 0.2s ease-in-out;
-      left: 0;
-      top: 50%;
-      transform: translate(-50%,-50%); */
+.events-down-icon {
+  color: black;
+  margin-top: 0vh;
+  margin-left: 1px;
+  font-size: unset;
+  font-size: 35px;
+}
 
-      width: 50px;
-      height: 50px;
-      border: 1px solid #cdcdcd;
-      background: red;
-      border-radius: 25px;
-      overflow: hidden;
-      position: absolute;
-      transition: width 0.2s ease-in-out;
-      left: 0;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      }
-
-    .homepage-events-missing-register-btn{
-      width: 50px;
-      height: 50px;
-      border: 1px solid #cdcdcd;
-      background: red;
-      border-radius: 25px;
-      overflow: hidden;
-      position: absolute;
-      transition: width 0.2s ease-in-out;
-      left: 0;
-      top: 50%;
-      transform: translate(-50%,-50%);
-
-      }
-
-      .homepage-events-missing-register-btn-right-side{
-        width: 50px;
-        height: 50px;
-        border: 1px solid #cdcdcd;
-        background: red;
-        border-radius: 25px;
-        overflow: hidden;
-        position: absolute;
-        transition: width 0.2s ease-in-out;
-        right: 0;
-        top: 50%;
-        transform: translate(50%,-50%);
-  
-        }
-      .homepage-events-register-btn:hover {
-        width: 140px;
-      }
-      .homepage-events-register-btn::before,
-      .homepage-events-register-btn::after {
-        transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-        content: "";
-        position: absolute;
-        height: 4px;
-        width: 10px;
-        top: calc(50% - 2px);
-        background: white;
-      }
-      .homepage-events-register-btn::after {
-        right: 14px;
-        overflow: hidden;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-      }
-      .homepage-events-register-btn::before {
-        left: 14px;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-      }
-      .homepage-events-not-expired-register-btn:focus {
-        outline: none;
-      }
-      .homepage-events-register-content-btn {
-        opacity: 0;
-        transition: opacity 0.2s;
-        color: white;
-      }
-      .homepage-events-register-btn:hover::before,
-      .homepage-events-register-btn:hover::after {
-        width: 4px;
-        border-radius: 2px;
-      }
-      .homepage-events-register-btn:hover .btn-txt {
-        opacity: 1;
-      }
-      .homepage-events-register-part-icon-btn::after,
-      .homepage-events-register-part-icon-btn::before {
-        transition: all 0.2s ease-in-out;
-        content: "";
-        position: absolute;
-        height: 20px;
-        width: 2px;
-        top: calc(50% - 10px);
-        background: white;
-        overflow: hidden;
-      }
-      .homepage-events-register-part-icon-btn::before {
-        left: 22px;
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-      }
-      .homepage-events-register-part-icon-btn::after {
-        right: 22px;
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-      }
-      .homepage-events-register-btn:hover .homepage-events-register-part-icon-btn::before {
-        left: 15px;
-        height: 4px;
-        top: calc(50% - 2px);
-      }
-      .homepage-events-register-btn:hover .homepage-events-register-part-icon-btn::after {
-        right: 15px;
-        height: 4px;
-        top: calc(50% - 2px);
-      }
-      
-
- /*---------------------- MOBİL RESPONSİVE PART---------------------------*/
-
- /* .width: auto;
-  position: relative;
-  top: 15%;
-  text-align: center;
-  font-size: calc(1.5rem + 0.6vw);
-  font-family: 'Noto Sans', sans-serif;
-
- } */
- @media screen and (max-width: 1190px){
-
-  .homepage-events-grid-item2 {
-    grid-column: 3 / span 5;
-    grid-row: 1/ span 4;}
-
-  .homepage-events-grid-item3 {
-    grid-column: 3 / span 5;
-    grid-row: 11/ span 4;}
-
-  .homepage-events-grid-item7 {
-    grid-column: 13 / span 5;
-    grid-row: 6 / span 4;}
-
-    .homepage-events-grid-item-for-ellipse{
-      grid-column: 12 / span 3;
-      grid-row: 10 / span 4;}
-
-      .homepage-events-mediumElipse{
-        height: 190px;
-        width: 189px;
-      }
-      .homepage-events-grid-item-for-ellipse-smallellipse{
-        grid-column: 15 / span 3;
-        grid-row: 13 / span 3;
-      }
-
-      .homepage-events-smallElipse{
-        height: 158px;
-        width: 163px;
-      }
-
-      .homepage-events-grid-item-for-ellipse-subsmallellipse{
-        grid-column: 18 / span 1;
-        grid-row: 11 / span 2;
-      }
-      .homepage-events-subsmallElipse{
-        height: 70px;
-        width: 70px;
-      }
-
+@media only screen and (max-width: 1305px) {
+  .events {
+    width: 950px;
   }
 
+  .event-card {
+    width: 350px;
+    height: 210px;
+  }
+}
 
-@media screen and (max-width: 768px) {
-  
-  .homepage-events-bigEllipse{
-    display: none;
-  }
-  .homepage-events-points{
-    display: none;
-  }
-  .homepage-events-mediumElipse{
-    display: none;
+@media only screen and (max-width: 1130px) {
+  .events {
+    width: 780px;
   }
 
-  .homepage-events-smallElipse{
-    display: none;
+  .event-box:nth-child(odd) .event-date {
+    left: 65%;
+  }
+  .event-box:nth-child(even) .event-date {
+    left: 35%;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .events {
+    width: 395px;
   }
 
-  .homepage-events-subsmallElipse{
-    display: none;
-  }
-
-  .homepage-events-register-information{
-    width: 100%;
-    height: 100%;
-  }
-  .homepage-events-not-expired-register-btn{
-    bottom: 0;
+  .event-box .event-date {
+    top: unset;
     transform: translate(-50%, 50%);
-    left: auto;
-    top: auto;
-    
+    left: 50% !important;
   }
 
-  .homepage-events-header-line{
-    transform: translateY(-16px);
+  .event-box .event-card .event-reg-btn {
+    left: 50% !important;
+    top: unset;
+    transform: translate(-50%, -50%);
+    right: unset;
   }
 
-  .homepage-events-missing-register-btn-right-side{
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    right: auto;
-    top: auto;
-
+  .event-box:nth-child(even) .event-card .event-reg-btn {
+    right: 0;
+    transform: translate(-50%, -50%);
   }
-  .homepage-events-grid-item2 {
-    grid-column: 4 / span 13;
-    grid-row: 1/ span 3;
+  .dot {
+    display: none;
   }
-
-  .homepage-events-date-missing-information{
-    width: 100%;
-    height: 100%;
-  }
-  .homepage-events-missing-register-btn{
-    bottom: 0;
-    transform: translate(-50%, 50%);
-    left: auto;
-    top: auto;
-  }
-
-  .homepage-events-grid-item3{
-    grid-column: 4 / span 13;
-    grid-row: 5/ span 3;
-  }
-
-  .homepage-events-grid-item7{
-    grid-column: 4 / span 13;
-    grid-row: 9 / span 3
-  }
-
-  .homepage-events-grid-item4{
-    grid-column: 7/ span 7;
-    grid-row: 1/ span 1;
-  }
-
-  .homepage-events-timeline-info-box{
-    top: 0;
-    transform: translate(0%, -50%); 
-    padding: 3px;
-   }
-
-  .homepage-events-grid-item5{
-    grid-column: 7/ span 7;
-    grid-row: 5 / span 1;
-  }
- 
-  .homepage-events-grid-item6{
-    grid-column: 7/ span 7;
-    grid-row: 9/ span 1;
-  }
-  
-  .homepage-events-grid-for-timeline-button{
-    grid-column: 7  / span 7;
-    grid-row: 13;
-  }
-
 }
 
-@media screen and (max-width: 600px){
-  .homepage-events-timeline-info-box{
-    padding: 0px;
+@media only screen and (max-width: 400px) {
+  .events {
+    width: 95%;
   }
-  .homepage-events-grid-item2 {
-    grid-column: 4 / span 13;
-  }
-  .homepage-events-grid-item4 {
-    grid-column: 7/ span 7;
-  }
-
-  .homepage-events-grid-item3{
-    grid-column: 4 / span 13;
+  .event-card {
+    width: 300px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .homepage-events-grid-item5{
-    grid-column: 7/ span 7;
-  }
-  .homepage-events-grid-item7{
-    grid-column: 4 / span 13;
-  }
-  .homepage-events-grid-item6{
-    grid-column: 7/ span 7;
-
-  }
-
-}
-
-@media screen and (max-width: 400px){
-
-  .homepage-events-timeline-info-box{
-    padding: 0px;
-  }
-  .homepage-events-grid-item2 {
-    grid-column: 3 / span 15;
-  }
-  .homepage-events-grid-item4 {
-    grid-column: 6/ span 9;
-  }
-
-  .homepage-events-grid-item3{
-    grid-column: 3 / span 15;
-  }
-
-  .homepage-events-grid-item5{
-    grid-column: 6/ span 9;
-  }
-  .homepage-events-grid-item7{
-    grid-column: 3 / span 15;
-  }
-  .homepage-events-grid-item6{
-    grid-column: 6/ span 9;
-
-  }
-
-/*---------------------- ELLİPSE RESPONSİVE PART---------------------------*/
-
-}
-
-@media screen and (max-width: 900px)
-{
-  .homepage-events-grid-item-for-ellipse{
-    grid-column: 12 / span 4;
-    grid-row: 10 / span 3;
-  }
-
-  .homepage-events-mediumElipse{
-    height: 154px;
-    width: 157px;
-  }
-  .homepage-events-grid-item-for-ellipse-smallellipse{
-    grid-column: 15 / span 3;
-    grid-row: 13 / span 2;
-  }
-  .homepage-events-smallElipse{
-    height: 108px;
-    width: 110px;
-
-  }
-  .homepage-events-subsmallElipse{
-    height: 60px;
-    width: 60px;
+  .event-box:nth-child(odd) .event-card {
+    left: 50%;
   }
 }

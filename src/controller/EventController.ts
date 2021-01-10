@@ -43,7 +43,14 @@ export class EventController {
 
     public findAll = async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const result = await this.eventService.findAll()
+            let result;
+            if(req.query.sorted){
+                result = await this.eventService.findAllWithSort()
+            }
+            else{
+                result = await this.eventService.findAll()
+            }
+            
             res.json({
                 data: result,
                 state: "Success"
@@ -55,6 +62,7 @@ export class EventController {
             })
         }
     }
+
 
     public getByActiveEvent = async (req:Request,res:Response,next:NextFunction) =>{
         try {
