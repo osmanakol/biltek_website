@@ -55,7 +55,7 @@ function getEventList() {
               d._id +
               '"><img class="event-img" src="' +
               d.img +
-              '"><div class="event-reg-btn"><i class="fas fa-plus"></i></div></div><div class="event-date"><p>' +
+              '"><a class="event-reg-btn"><i class="fas fa-plus"></i></a></div><div class="event-date"><p>' +
               time.getDate() +
               "." +
               time.getMonth() +
@@ -112,5 +112,9 @@ $(document).ajaxComplete(function () {
     } else {
       $(".events-icon-area-2").removeClass("none");
     }
+  });
+
+  $(".event-card.active > .event-reg-btn").click(function () {
+    window.location = "https://www.aybubiltek.com/event/register";
   });
 });
