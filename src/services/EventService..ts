@@ -27,6 +27,11 @@ export class EventService{
         return result;
     }
 
+    public findAllWithSort = async () =>{
+        const result = await this.repository.findAllwithSortDate()
+        return result
+    }
+
     public getByActiveEvent = async (isActive:boolean) =>{
         const result = await this.repository.getByActiveEvent(isActive);
         return result;
