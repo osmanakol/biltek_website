@@ -80,7 +80,6 @@ function getEventList() {
 
 $(document).ajaxComplete(function () {
   var scrollNum = countEventBox / 3;
-  console.log(countEventBox, scrollNum);
   var scrollCount = 0;
   var eventHeight = document.getElementById("events");
   var a = eventHeight.offsetHeight;

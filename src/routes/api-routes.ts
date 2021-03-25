@@ -1,4 +1,4 @@
-import express, { Router, Request, Response, NextFunction } from "express";
+import express, {Request, Response } from "express";
 import { ParticipantController } from "../controller/ParticipantController";
 import { UniversityController } from "../controller/UniversityController";
 import { DepartmentController } from "../controller/DepartmentController";
@@ -6,8 +6,8 @@ import { validate } from "../middlewares/validation";
 import { ParticipantValidationChain } from "../models/participants/participantModel"
 import { TeamsController } from "../controller/TeamsController";
 import { EventController } from "../controller/EventController";
-import { sendNotificationMail } from "../middlewares/notificationMailer"
 import { SpeakerController } from "../controller/SpeakerController";
+import { sendNotificationMail } from "../middlewares/notificationMailer";
 
 export class ApiRoutes {
     private participantController: ParticipantController;
@@ -44,7 +44,7 @@ export class ApiRoutes {
         // ? Routes /api/participant
         this.router.route('/participant')
             .get(this.participantController.findAll)
-            .post(validate(ParticipantValidationChain), this.participantController.createParticipant)
+            .post(validate(ParticipantValidationChain), this.participantController.createParticipant, sendNotificationMail())
         //.put(this.participantController.updateParticipant)
         //.delete(this.participantController.deleteParticipant);
 
@@ -52,7 +52,7 @@ export class ApiRoutes {
         this.router.route('/teams')
             //.post(this.teamController.createTeam);
             //.get(this.participantController.findAll)
-            //.post(validate(ParticipantValidationChain),this.participantController.createParticipant,sendNotificationMail())
+            //.post(validate(ParticipantValidationChain),this.participantController.createParticipant)
              //.put(this.participantController.updateParticipant)
              //.delete(this.participantController.deleteParticipant);
 
@@ -89,7 +89,7 @@ export class ApiRoutes {
 
         this.router.route('/event/participant/add')
             .get()
-            .post(validate(ParticipantValidationChain), this.participantController.addEvent)
+            .post(validate(ParticipantValidationChain), this.participantController.addEvent, sendNotificationMail())
         this.router.route('/teams/participant/add')
             .post(this.teamController.create)
             .get(this.teamController.get)

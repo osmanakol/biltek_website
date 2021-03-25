@@ -100,6 +100,7 @@ function submit_validation() {
             type: "POST",
             data: {
                 "eventId": events.val(),
+                "event_name": events.text(),
                 "name_surname": nameSurname.val(),
                 "university": school.text(),
                 "department": department.text(),
@@ -123,11 +124,8 @@ function submit_validation() {
             }
             //TODO ,ERROR EKLENECEK
             , error(res) {
-                console.log(res)
                 if (res.responseJSON.msg){
-                    console.log(res)
                     sweetAlert(res.responseJSON.msg, "warning", "", false, false, 1500);
-                    
                 }
                 else
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);

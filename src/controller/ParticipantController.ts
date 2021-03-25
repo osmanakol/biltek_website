@@ -13,15 +13,17 @@ export class ParticipantController {
         const participantObj = new ParticipantModel(req.body.name_surname, req.body.university, req.body.department, req.body.email, req.body.phone)
         try {
             const result = await this.participantService.create(participantObj)
-            res.status(201).json({
+            /*res.status(201).json({
                 data: result,
                 state: "Success"
-            })
-            next()
+            })*/
+            req.query.message = `Merhaba ${req.body.name_surname},\n<br>Aramıza hoşgeldin :)`
+            next();
         } catch (error) {
             res.status(400).json({
-                state:"Error",
-                message:error.message
+                msg:error.message,
+                err:error,
+                state:"Error"
             })   
         }
     }
@@ -105,11 +107,12 @@ export class ParticipantController {
     public addEvent = async (req:Request,res:Response,next:NextFunction)=>{
         try {
             const result = await this.participantService.addEvent(req.body.eventId,new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone));
-            console.log(result)
-            res.status(201).json({
-                data:result,
-                state:"Success"
-            })
+            // res.status(201).json({
+            //     data:result,
+            //     state:"Success"
+            // })
+            req.query.message = `Merhaba ${req.body.name_surname},\n<br>${req.body.event_name} etkinliğine kaydınız başarılı bir şekilde yapılmıştır.` 
+            next()
         } catch (error) {
             res.status(400).json({
                 msg:error.message,

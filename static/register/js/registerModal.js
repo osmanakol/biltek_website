@@ -25,7 +25,7 @@ $("#mobile-homepage-header-register-btn-a").click(function () {
 
 
 
-function e_mail_validation() {
+/*function e_mail_validation() {
 
     const email = document.getElementById("email");
 
@@ -49,7 +49,7 @@ function e_mail_validation() {
 
         }
     });
-}
+}*/
 
 
 function getUniversity() {
@@ -150,9 +150,10 @@ function submit_validation() {
             }
             //TODO ,ERROR EKLENECEK
             , error(res) {
-                if(Array.isArray(res.responseJSON.errors))
-                    sweetAlert(res.responseJSON.errors[0].msg, "warning", "", false, false, 1500);
-                else    
+                if (res.responseJSON.msg){
+                    sweetAlert(res.responseJSON.msg, "warning", "", false, false, 1500);
+                }
+                else
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
             }
 
