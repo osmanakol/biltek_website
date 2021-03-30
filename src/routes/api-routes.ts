@@ -6,7 +6,6 @@ import { validate } from "../middlewares/validation";
 import { ParticipantValidationChain } from "../models/participants/participantModel"
 import { TeamsController } from "../controller/TeamsController";
 import { EventController } from "../controller/EventController";
-import { sendNotificationMail } from "../middlewares/notificationMailer"
 import { SpeakerController } from "../controller/SpeakerController";
 
 export class ApiRoutes {
