@@ -1,4 +1,3 @@
-import bodyParser from "body-parser";
 import express, { Application} from "express";
 import connection from "./models/configuration/connection";
 import { ApiRoutes } from "./routes/api-routes";
@@ -33,8 +32,8 @@ class App {
 
     private config = () => {
         this.app.use(express.static(staticFile));
-        this.app.use(bodyParser.json());
-        this.app.use(bodyParser.urlencoded({
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({
             extended: true
         }));
     }

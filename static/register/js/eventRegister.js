@@ -39,7 +39,7 @@ function getDepartmentsById() {
                 $.each(departmentList.data, (i, d) => {
                     $('#department').append('<option value="">' + d.departmentName + '</option>')
                 })
-                $("#department").prop('selectedIndex', 0)
+                $("#department").prop('selectedIndex', -1)
             }
         }
     })
@@ -90,7 +90,7 @@ function submit_validation() {
     else if (school.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
     }
-    else if (department.index() === 0) {
+    else if (department.index() === -1) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen bölümünüzü seçtiğinizden emin olun!!", true, false);
     }
     else {
