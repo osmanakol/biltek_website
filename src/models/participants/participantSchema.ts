@@ -30,7 +30,6 @@ const ParticipantSchema: Schema = new Schema({
 })
 
 ParticipantSchema.pre<IParticipant>('save', function (_next) {
-    //console.log("geldim lo")
     ParticipantDbModel.findOne({ email: this.email }, { email: 1, _id: 0 }, (err) => {
         if (err)
             _next(err)

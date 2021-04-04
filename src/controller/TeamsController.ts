@@ -13,15 +13,12 @@ export class TeamsController {
 
     public create = async (req:Request,res:Response,next:NextFunction) => {
         try {
-            console.log(req.body)
             const result = await this.teamService.add(new TModel(req.body.name_surname,req.body.department,req.body.email,req.body.team,req.body.sinif,req.body.university))
-            console.log(result)
             res.status(201).json({
                 data: result,
                 status: "Success"
             })
         } catch (error) {
-            console.log(error)
             res.status(400).json({
                 err: error,
                 status: "Error",

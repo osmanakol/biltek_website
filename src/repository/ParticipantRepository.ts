@@ -23,7 +23,6 @@ export class ParticipantRepository extends BaseRepository<ParticipantModel>{
                     isJoin: false
                 }
                 const test = mongoParticipant.toObject().events.filter((event: any) => event.event_id == eventId)
-                console.log(test)
                 if(test.length){
                     const error:Error = new Error("Bu etkinliğine kaydınız bulunmaktadır.")
                     return Promise.reject(error)

@@ -11,15 +11,12 @@ export class EmployeeController{
 
     public create = async (req:Request,res:Response,next:NextFunction) => {
         try {
-            console.log(req.body)
             const result = await this.employeeService.create(new EmployeeModel(req.body.name_surname,req.body.gender,req.body.company,req.body.contact))
-            console.log(result)
             res.status(201).json({
                 data: result,
                 status: "Success"
             })
         } catch (error) {
-            console.log(error)
             res.status(400).json({
                 err: error,
                 status: "Error",

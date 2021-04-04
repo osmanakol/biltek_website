@@ -105,7 +105,6 @@ export class ParticipantController {
     public addEvent = async (req:Request,res:Response,next:NextFunction)=>{
         try {
             const result = await this.participantService.addEvent(req.body.eventId,new ParticipantModel(req.body.name_surname,req.body.university,req.body.department,req.body.email,req.body.phone));
-            console.log(result)
             res.status(201).json({
                 data:result,
                 state:"Success"
