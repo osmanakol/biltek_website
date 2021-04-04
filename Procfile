@@ -1,1 +1,1 @@
-web:npm start
+web: bin/start-nginx npm start
