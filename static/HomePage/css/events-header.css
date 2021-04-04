@@ -31,7 +31,7 @@
 }
 .event-card {
   position: absolute;
-  height: 250px;
+  height: 225px;
   width: 400px;
   top: 50%;
   transform: translateY(-50%);

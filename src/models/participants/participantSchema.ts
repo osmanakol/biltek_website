@@ -4,8 +4,8 @@ import { response } from "express";
 import { logger } from "../../middlewares/logger";
 
 
-export interface IParticipant extends Document, ParticipantModel,ITeamMember {
-    addEvent():Document
+export interface IParticipant extends Document, ParticipantModel, ITeamMember {
+    addEvent(): Document
 }
 
 
@@ -17,15 +17,15 @@ const ParticipantSchema: Schema = new Schema({
     phone: { type: String },
     date: { type: String, required: "Date is a required parameter", default: new Date().toLocaleDateString("tr-TR", { timeZone: "Europe/Istanbul", weekday: "long", year: "numeric", month: "short", day: "numeric" }) },
     teams: [{
-        year:{type:Number,default:new Date().getFullYear},
-        _id:false,
-        team_id:{type:Schema.Types.ObjectId,ref:"teams"},
-        role:{type:String ,enum:["Leader","Member"],required:"Role is required",default:"Member"}
+        year: { type: Number, default: new Date().getFullYear },
+        _id: false,
+        team_id: { type: Schema.Types.ObjectId, ref: "teams" },
+        role: { type: String, enum: ["Leader", "Member"], required: "Role is required", default: "Member" }
     }],
-    events:[{
-        _id:false,
-        event_id:{type:Schema.Types.ObjectId,ref:"events"},
-        isJoin:{type:Boolean}
+    events: [{
+        _id: false,
+        event_id: { type: Schema.Types.ObjectId, ref: "events" },
+        isJoin: { type: Boolean }
     }]
 })
 
