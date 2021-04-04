@@ -10,15 +10,12 @@ export class SpeakerController{
     }
     public create = async (req:Request,res:Response,next:NextFunction) => {
         try {
-            console.log(req.body)
             const result = await this.speakerService.create(new SpeakerModel(req.body.employee,req.body.events))
-            console.log(result)
             res.status(201).json({
                 data: result,
                 status: "Success"
             })
         } catch (error) {
-            console.log(error)
             res.status(400).json({
                 err: error,
                 status: "Error",

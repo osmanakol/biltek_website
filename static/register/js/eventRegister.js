@@ -82,7 +82,6 @@ function submit_validation() {
     }
     else if (email.val() === "" || !emailPattern.test(email.val())) {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
-        console.log(email.val())
     }
     else if (events.index() === -1) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen etkinlik seçmeyi unutmayınız!!!", true, false);
@@ -110,7 +109,6 @@ function submit_validation() {
 
             success(res) {
                 if (typeof res.error !== "undefined") {
-                    console.log("buraya geldim")
                 }
                 else {
 
@@ -123,9 +121,7 @@ function submit_validation() {
             }
             //TODO ,ERROR EKLENECEK
             , error(res) {
-                console.log(res)
                 if (res.responseJSON.msg){
-                    console.log(res)
                     sweetAlert(res.responseJSON.msg, "warning", "", false, false, 1500);
                     
                 }

@@ -16,11 +16,8 @@ function currentPhoto(photoIndex){
         photoModal[0].style.display="unset";
         var clickedPhoto=photos[photoIndex-1];
         var modalPhoto=document.getElementsByClassName("homepage-photos-clicked-image");
-        /*console.log("alt is",clickedPhoto.alt);*/
         modalPhoto[0].src=clickedPhoto.src;
         modalPhoto[0].alt=clickedPhoto.alt;
-        /*console.log("modal alt",modalPhoto.alt)
-        console.log("modal src",modalPhoto.src)*/
     }
 }
 

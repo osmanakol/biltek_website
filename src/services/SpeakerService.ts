@@ -18,7 +18,6 @@ export class SpeakerService{
     }
 
     public createMany = async (item: SpeakerModel[]) => {
-        console.log("Service,createmany")
         const result = await this.repository.createMany(item)
         return result;
     }

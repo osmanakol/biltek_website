@@ -113,7 +113,6 @@ function submit_validation() {
     }
     else if (email.val() === "" || !emailPattern.test(email.val())) {
         sweetAlert("Geçersiz Email", "warning", "Lütfen geçerli bir email adresi girdiğinizden emin olun!!", true, false);
-        console.log(email.val())
     }
     else if (school.index() === 0) {
         sweetAlert("Eksik Zorunlu Alan", "warning", "Lütfen üniversitesinizi seçtiğinizden emin olun!!", true, false);
@@ -137,7 +136,7 @@ function submit_validation() {
 
             success(res) {
                 if (typeof res.error !== "undefined") {
-                    console.log("buraya geldim")
+
                 }
                 else {
 

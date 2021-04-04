@@ -8,4 +8,6 @@ export const MONGODB_URI:string = process.env.mongoURIString || ""
 
 export const staticFile:string = process.env.__static || ""
 
+export const staticFile2:string = process.env.__static2 || ""
+
 export const HOST = process.env.HOST

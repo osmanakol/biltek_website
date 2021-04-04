@@ -7,8 +7,9 @@ import { logger } from "./middlewares/logger";
   * ? create server for your app
   */
 const port2 = PORT || 3003;
-app.listen(port2,()=>{
+app.set("port", 4445)
+app.listen(app.get('port'),()=>{
   logger.info("winston and morgan module is using for logging")
   logger.info("http requests logs are in access.log file")
-  logger.info(`Server Çalışıyor, http://${HOST}:${PORT}`)
+  logger.info(`Server Çalışıyor, http://${HOST}:${app.get('port')}`)
 });

@@ -26,7 +26,6 @@ export class UniversityService {
     }
 
     public createMany = async (item: UniversityModel[]) => {
-        console.log("Service");
         const result = await this.repository.createMany(item);
         return result;
     }
