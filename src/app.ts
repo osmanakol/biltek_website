@@ -46,8 +46,14 @@ class App {
   };
 
   private config = () => {
-    this.app.use(cors())
-    this.ctf.use(cors())
+    this.app.use(cors({
+      credentials: true,
+      origin: '*'
+    }))
+    this.ctf.use(cors({
+      credentials: true,
+      origin: '*'
+    }))
     this.app.use("/main",express.static(staticFile));
     console.info(path.resolve("subdomain", "ctf-page", "assets", "."))
     this.ctf.use("/static" ,express.static(staticFile2))
