@@ -80,8 +80,8 @@ class App {
   };
 
   private virtualHost = () => {
-    const domain = "mysite.local";
-    //process.env.NODE_ENV === "production" ? "aybubiltek.com" : "mysite.local";
+    const domain = 
+       process.env.NODE_ENV === "production" ? "aybubiltek.com" : "mysite.local";
 
     this.app.use(vhost(`ctf.${domain}`, this.ctf));
   };
