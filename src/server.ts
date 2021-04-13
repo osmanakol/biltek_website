@@ -3,6 +3,7 @@ import { HOST, PORT } from "./config";
 import { logger } from "./middlewares/logger";
 import { cpus } from "os";
 import cluster from "cluster";
+import fs from "fs";
  /**
   * @param port
   * @param host
@@ -19,8 +20,12 @@ if(cluster.isMaster){
   })
 } else {
   const port2 = PORT || 3003;
-  app.set("port", 4445)
+  app.set("port", PORT)
   app.listen(app.get('port'),()=>{
+    if (process.env.DYNO) {
+      console.log("Running on Heroku...");
+      fs.openSync("/tmp/app-initialized", "w");
+    }
     logger.info("winston and morgan module is using for logging")
     logger.info("http requests logs are in access.log file")
     logger.info(`Server Çalışıyor, http://${HOST}:${app.get('port')}`)
