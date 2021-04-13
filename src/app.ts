@@ -8,7 +8,8 @@ import exphbs from "express-handlebars";
 import { staticFile, staticFile2 } from "./config";
 import { httpLogger } from "./middlewares/logger";
 import path from "path";
-import cors from "cors";
+import compression from "compression";
+
 class App {
   public app: Application;
   public ctf: Application;
@@ -46,14 +47,9 @@ class App {
   };
 
   private config = () => {
-    /*this.app.use(cors({
-      credentials: true,
-      origin: '*'
-    }))
-    this.ctf.use(cors({
-      credentials: true,
-      origin: '*'
-    }))*/
+    this.app.use(compression())
+    this.ctf.use(compression())
+
     this.app.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
       res.header(
