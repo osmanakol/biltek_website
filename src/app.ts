@@ -8,6 +8,7 @@ import exphbs from "express-handlebars";
 import { staticFile, staticFile2 } from "./config";
 import { httpLogger } from "./middlewares/logger";
 import path from 'path';
+import cors from "cors";
 class App {
   public app: Application;
   public ctf:Application;
@@ -45,6 +46,8 @@ class App {
   };
 
   private config = () => {
+    this.app.use(cors())
+    this.ctf.use(cors())
     this.app.use("/main",express.static(staticFile));
     console.info(path.resolve("subdomain", "ctf-page", "assets", "."))
     this.ctf.use("/static" ,express.static(staticFile2))
@@ -61,8 +64,8 @@ class App {
   };
 
   private virtualHost = () => {
-    const domain =
-      process.env.NODE_ENV === "production" ? "aybubiltek.com" : "mysite.local";
+    const domain ="mysite.local"
+      //process.env.NODE_ENV === "production" ? "aybubiltek.com" : "mysite.local";
     
     this.app.use(vhost(`ctf.${domain}`, this.ctf))
   };
