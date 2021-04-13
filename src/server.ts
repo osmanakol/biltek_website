@@ -11,10 +11,6 @@ import fs from "fs";
   */
 
 if(cluster.isMaster){
-  if (process.env.DYNO) {
-    console.log("Running on Heroku...");
-    fs.openSync("/tmp/app-initialized", "w");
-  }
   for (let index = 0; index < cpus().length; index++) {
     cluster.fork()
   }
