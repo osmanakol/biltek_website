@@ -19,7 +19,7 @@ if(cluster.isMaster){
   })
 } else {
   const port2 = PORT || 3003;
-  app.set("port", 4443)
+  app.set("port", 4445)
   app.listen(app.get('port'),()=>{
     logger.info("winston and morgan module is using for logging")
     logger.info("http requests logs are in access.log file")
