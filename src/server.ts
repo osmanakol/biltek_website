@@ -20,7 +20,7 @@ if(cluster.isMaster){
   })
 } else {
   const port2 = PORT || 3003;
-  app.set("port", PORT)
+  app.set("port", process.env.PORT)
   app.listen(app.get('port'),()=>{
     if (process.env.DYNO) {
       console.log("Running on Heroku...");
