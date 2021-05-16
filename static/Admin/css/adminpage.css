@@ -1,0 +1,369 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+  }
+  .admin-panel {
+    background-color: #212121;
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
+  
+  /*           Sidebar            */
+  .admin-panel-sidebar {
+    width: 270px;
+    background-color: #212121;
+  }
+  
+  /*           Sidebar Top Area            */
+  .admin-panel-sidebar-exit-icon {
+    position: absolute;
+    top: 20px;
+    left: 220px;
+  }
+  .admin-panel-sidebar-exit-icon > i {
+    font-size: 35px;
+    color: #707070;
+  }
+  .admin-panel-sidebar-top-area {
+    width: 100%;
+    height: 154px;
+    border-bottom: 0.5px solid #2e2e2e;
+  }
+  .admin-panel-sidebar-clubname {
+    font-size: 42px;
+    color: white;
+    margin: 3px;
+    text-align: center;
+  }
+  .admin-panel-sidebar-logo-area {
+    height: 85px;
+    width: 85px;
+    border-radius: 100%;
+    background-color: #3e3e3e;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .admin-panel-sidebar-logo {
+    height: 75px;
+    width: 75px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /*        Sidebar Bottom Area        */
+  /* .mobil-admin-panel-sidebar-bottom-area{
+      display: none;
+  } */
+  .admin-panel-sidebar-bottom-area {
+    height: 72%;
+    width: 100%;
+  }
+  .admin-panel-sidebar-icons {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 17px 0px;
+    text-decoration: none;
+    align-items: center;
+  }
+  .admin-panel-sidebar-homepage-icon,
+  .admin-panel-sidebar-about-icon,
+  .admin-panel-sidebar-teams-icon {
+    margin-right: 15px;
+    margin-left: 25px;
+  }
+  .admin-panel-sidebar-homepage-icon > i,
+  .admin-panel-sidebar-about-icon > i,
+  .admin-panel-sidebar-teams-icon > i {
+    color: white;
+    font-size: 30px;
+  }
+  .admin-panel-sidebar-links {
+    /* position: absolute; */
+    width: 100%;
+    text-align: center;
+  }
+  .admin-panel-sidebar-link {
+    display: block;
+    color: white;
+    margin-top: 8px;
+  }
+  .dropdown-link {
+    display: none;
+  }
+  .dropdown-link.active {
+    display: block;
+    color: white;
+    width: 80%;
+    margin: 0;
+  }
+  .admin-panel-sidebar-dropdown {
+    color: white;
+    display: flex;
+    padding: 17px 0px;
+    cursor: pointer;
+  }
+  .admin-panel-sidebar-dropdown-div {
+    transform: translate(20%);
+    text-align: center;
+  } /* admin-panel-sidebar-link dropdown-link*/
+  .dropdown-sid {
+    padding: 17px 0px;
+    cursor: pointer;
+  }
+  .admin-panel-sidebar-circle {
+    height: 15px;
+    background: whitesmoke;
+    width: 15px;
+    border-radius: 100%;
+    margin-right: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  
+  .fa-caret-down {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+  
+  .admin-panel-sidebar-dropdown-card {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  ul.sidebar-ul {
+    color: white;
+    margin: unset;
+    padding: unset;
+  }
+  
+  li.sidebar-ul-li {
+    list-style: none;
+  }
+  
+  li.sidebar-ul-li a:hover {
+    list-style: none;
+    background-color: #171717;
+  }
+  
+  li.sidebar-ul-li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    color: white;
+    text-decoration: none;
+  }
+  
+  li.sidebar-ul-li a i {
+    margin: 0 20px;
+    width: 27px;
+  }
+  
+  li.sidebar-ul-li a p {
+    margin: 3px;
+  }
+  
+  ul.sidebar-dropdown-team.sidebar-ul {
+    width: 80%;
+    display: none;
+    margin-left: auto;
+  }
+  
+  .dropdown-active {
+    display: block !important;
+  }
+  
+  i.i-dropdown {
+    margin-left: auto !important;
+  }
+  
+  .li-profil {
+    background-color: #a854a5 !important;
+  }
+  
+  /*           Right Box          */
+  .admin-panel-box {
+    width: 87%;
+    background-color: #3e3e3e;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .admin-panel-box-line {
+    height: 88px;
+    border-bottom: 1px solid #707070;
+    position: relative;
+  }
+  
+  .sidebar-toggle-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 50px; */
+    width: 114px;
+    height: 100%;
+    /* background-color: red; */
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  .sidebar-toggle-button:hover {
+    background-color: #2f2f2f;
+  }
+  
+  .sidebar-toggle-button i {
+    color: white;
+    font-size: 22pt;
+  }
+  
+  .admin-panel-box-content {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: flex;
+    height: 100%;
+  }
+  
+  .admin-panel-box-profile {
+    display: flex;
+    padding: 14px 0;
+    width: 300px;
+  }
+  .admin-panel-box-profile-img {
+    height: 100%;
+    margin: 0 22px;
+  }
+  .admin-panel-box-title-area {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
+  .admin-panel-box-title-area > p {
+    color: white;
+    margin: 0;
+  }
+  .admin-panel-box-title-area-name {
+    font-size: calc(1.2rem);
+  }
+  .admin-panel-box-title-area-degree {
+    font-size: calc(1rem);
+  }
+  
+  @media only screen and (max-width: 1260px) {
+    .admin-panel-sidebar-exit-icon {
+      left: 200px;
+    }
+  }
+  
+  /*           Mobile             */
+  
+  @media only screen and (max-width: 992px) {
+    .admin-panel-sidebar {
+      width: 15%;
+    }
+    .admin-panel-sidebar-exit-icon {
+      left: 0;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  
+    .admin-panel-sidebar-clubname {
+      display: none;
+    }
+    .admin-panel-sidebar-logo-area {
+      height: 75px;
+      width: 75px;
+      margin: 20px 0;
+    }
+    .admin-panel-sidebar-logo {
+      height: 65px;
+      width: 65px;
+    }
+    .admin-panel-box {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      width: 85%;
+    }
+    .admin-panel-box-profile {
+      width: 255px;
+    }
+  
+    .admin-panel-sidebar-top-area {
+      height: auto;
+    }
+  
+    .admin-panel-sidebar-bottom-area {
+      overflow-y: scroll;
+    }
+  
+    li.sidebar-ul-li a {
+      display: block;
+    }
+  
+    li.sidebar-ul-li a i {
+      margin: 0 !important;
+    }
+  
+    .sidebar-toggle-button {
+      display: none;
+    }
+    /* .admin-panel-sidebar-bottom-area{
+          display: none;
+      } */
+    /* .mobil-admin-panel-sidebar-bottom-area{
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      .mobil-admin-panel-sidebar-bottom>a{
+          display: flex;
+          padding: 20px;
+          font-size: 45px;
+          color: white;
+      } */
+  }
+  
+  @media only screen and (max-width: 653px) {
+    li.sidebar-ul-li a p {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 577px) {
+    .admin-panel-sidebar-logo-area {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .admin-panel-sidebar-logo {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media only screen and (max-width: 370px) {
+    .admin-panel-box-profile {
+      width: 230px;
+    }
+  }
+  
+  @media only screen and (max-height: 430px) {
+    .admin-panel-sidebar-bottom-area {
+      height: 63%;
+    }
+  }
+  
