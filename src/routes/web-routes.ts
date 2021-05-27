@@ -25,6 +25,9 @@ export class WebRoutes {
         this.router.get("/admin", (req:Request, res:Response) =>{
             res.render("site/admin", {layout:"adminpanelLayout"})
         })
+        this.router.get("/login", (req:Request, res:Response) =>{
+            res.render("site/login", {layout:"loginLayout"})
+        })
 
         //Website 2
         this.router.get("/home2", (req: Request, res: Response) => {
