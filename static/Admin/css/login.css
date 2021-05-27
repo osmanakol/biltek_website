@@ -24,6 +24,30 @@ body .login .left-area {
   width: 70%;
 }
 
+@media (max-width: 1250px) {
+  body .login .left-area {
+    width: 60%;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .left-area {
+    width: 40%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .login .left-area {
+    display: none;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .left-area {
+    display: none;
+  }
+}
+
 body .login .left-area .img-area {
   background-image: url(https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
   background-size: cover;
@@ -52,6 +76,18 @@ body .login .left-area .img-area .text-area {
           backdrop-filter: blur(16px);
 }
 
+@media (max-width: 1250px) {
+  body .login .left-area .img-area .text-area {
+    width: 525px;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .left-area .img-area .text-area {
+    display: none;
+  }
+}
+
 body .login .left-area .img-area .text-area .text {
   margin: 75px;
 }
@@ -70,6 +106,30 @@ body .login .left-area .img-area .text-area .text h2 {
 
 body .login .right-area {
   width: 30%;
+}
+
+@media (max-width: 1250px) {
+  body .login .right-area {
+    width: 40%;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .right-area {
+    width: 60%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .login .right-area {
+    width: 100%;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .right-area {
+    width: 100%;
+  }
 }
 
 body .login .right-area .top-area {
@@ -92,11 +152,34 @@ body .login .right-area .content-area {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .login .right-area .content-area .content {
   width: 300px;
-  margin: auto;
+}
+
+@media (max-width: 530px) {
+  body .login .right-area .content-area .content {
+    width: 275px;
+  }
+}
+
+@media (max-height: 690px) {
+  body .login .right-area .content-area .content {
+    margin-top: 80px;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .right-area .content-area .content {
+    margin-top: 125px;
+  }
 }
 
 body .login .right-area .content-area .content .tittle-area h2 {

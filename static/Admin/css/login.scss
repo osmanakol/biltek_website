@@ -18,6 +18,18 @@ body {
         .left-area {
             position: relative;
             width: 70%;
+            @media (max-width:1250px) {
+                width: 60%;
+            }
+            @media (max-width:920px) {
+                width: 40%;
+            }
+            @media (max-width:530px) {
+                display: none;
+            }
+            @media (max-height:480px) {
+                display: none;
+            }
 
             .img-area {
                 background-image: url(https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
@@ -36,6 +48,12 @@ body {
                     border-radius: 5px;
                     background-color: rgba(255, 255, 255, .15);
                     backdrop-filter: blur(16px);
+                    @media (max-width:1250px) {
+                        width: 525px;
+                    }
+                    @media (max-width:920px) {
+                        display: none;
+                    }
 
                     .text {
                         margin: 75px;
@@ -60,6 +78,18 @@ body {
 
         .right-area {
             width: 30%;
+            @media (max-width:1250px) {
+                width: 40%;
+            }
+            @media (max-width:920px) {
+                width: 60%;
+            }
+            @media (max-width:530px) {
+                width: 100%;
+            }
+            @media (max-height:480px) {
+                width: 100%;
+            }
 
             .top-area {
                 height: 70px;
@@ -79,10 +109,20 @@ body {
             .content-area {
                 display: flex;
                 height: 100vh;
+                align-items: center;
+                justify-content: center;
 
                 .content {
                     width: 300px;
-                    margin: auto;
+                    @media (max-width:530px) {
+                        width: 275px;
+                    }
+                    @media (max-height:690px) {
+                        margin-top: 80px;
+                    }
+                    @media (max-height:480px) {
+                        margin-top: 125px;
+                    }
 
                     .tittle-area {
                         h2 {
