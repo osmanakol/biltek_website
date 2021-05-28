@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="main/Admin/css/login.css">
+</head>
+
+<body>
+
+    {{{body}}}
+    <script>
+        function show() {
+            var x = document.getElementById("password");
+            var open = document.getElementById("open");
+            var close = document.getElementById("close");
+            if (x.type === "password") {
+                x.type = "text";
+                open.style.display = "block";
+                close.style.display = "none";
+
+            } else {
+                x.type = "password";
+                open.style.display = "none";
+                close.style.display = "block";
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
