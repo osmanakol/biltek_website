@@ -22,6 +22,9 @@ export class WebRoutes {
         // this.router.get("/teams/register", (req: Request, res: Response) => {
         //     res.render("site/EventsForm", { layout: "EventsFormLayout", data: teams })
         // })
+        this.router.get("/admin", (req:Request, res:Response) =>{
+            res.render("site/admin", {layout:"adminpanelLayout"})
+        })
 
         //Website 2
         this.router.get("/home2", (req: Request, res: Response) => {

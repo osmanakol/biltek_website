@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main/Admin/css/adminpage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="admin-panel">
+        {{> adminSideBar}}
+        <div class="admin-panel-box">
+
+            {{>adminpanelboxnav}}
+            <div class="adminpanel-wrapper">
+                {{{body}}}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const element = document.getElementById("dropdown-team")
+        function dropdown() {
+            element.classList.toggle("dropdown-active")
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/fba63233b9.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+
+</html>
