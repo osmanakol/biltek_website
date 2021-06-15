@@ -20,13 +20,13 @@ if (cluster.isMaster) {
   });
 } else {
   const port2 = PORT || 3003;
-  app.set("port", 4445);
+  app.set("port", 4446);
   app.listen(app.get("port"), "0.0.0.0", () => {
-    if (process.env.DYNO && count == 0) {
+    /*if (process.env.DYNO && count == 0) {
       console.log("Running on Heroku...");
       fs.openSync("/tmp/app-initialized", "w");
       count++;
-    }
+    }*/
     logger.info("winston and morgan module is using for logging");
     logger.info("http requests logs are in access.log file");
     logger.info(`Server Çalışıyor, http://${HOST}:${app.get("port")}`);
