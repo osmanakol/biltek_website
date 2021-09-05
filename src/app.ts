@@ -48,7 +48,7 @@ class App {
 
   private config = () => {
     this.app.use(compression())
-    this.ctf.use(compression())
+    //this.ctf.use(compression())
 
     this.app.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
