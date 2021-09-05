@@ -240,7 +240,7 @@
 .s-logo-box:nth-child(5n) {
   margin-right: 0;
 }
-img {
+.s-logo-box img {
   width: 80%;
   height: auto;
   filter: grayscale(100%);
