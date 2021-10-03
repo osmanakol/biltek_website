@@ -21,7 +21,7 @@ export class ParticipantController {
         } catch (error) {
             res.status(400).json({
                 state:"Error",
-                message:error.message
+               // message:error.message
             })   
         }
     }
@@ -111,7 +111,7 @@ export class ParticipantController {
             })
         } catch (error) {
             res.status(400).json({
-                msg:error.message,
+              //  msg:error.message,
                 err:error,
                 state:"Error"
             })

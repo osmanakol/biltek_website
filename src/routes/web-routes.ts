@@ -45,6 +45,9 @@ export class WebRoutes {
         this.router.get("/contact", (req: Request, res: Response) => {
             res.render("site/contact", { layout: "contactLayout" })
         })
+        this.router.get("/mail", (req: Request, res: Response) => {
+            res.render("site/mail", { layout: "mailLayout" })
+        })
         return this.router;
     }
 }
