@@ -54,7 +54,7 @@ function e_mail_validation() {
 
 function getUniversity() {
     $.ajax({
-        url: "/api/university",
+        url: "https://api.aybubiltek.com/school/get/universities",
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {
@@ -74,9 +74,8 @@ function getUniversity() {
 
 
 function getDepartmentsById() {
-
     $.ajax({
-        url: `/api/departments?universityId=${$('#university option:selected').val()}`,
+        url: `https://api.aybubiltek.com//school/get/university/${$('#university option:selected').val()}/departments`,
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {
@@ -86,7 +85,7 @@ function getDepartmentsById() {
                 $('#departmant').empty();
                 const departmentList = $.parseJSON(JSON.stringify(res));
                 $.each(departmentList.data, (i, d) => {
-                    $('#departmant').append('<option value="">' + d.departmentName + '</option>')
+                    $('#departmant').append('<option value="' + d._id + '">' + d.departmentName + '</option>')
                 })
                 $("#departmant").prop('selectedIndex',0)
             }
@@ -123,14 +122,18 @@ function submit_validation() {
     else {
         //save data in database
         $.ajax({
-            url: `/api/participant`,
+            url: `https://api.aybubiltek.com/membership`,
             type: "POST",
             data: {
                 "name_surname": nameSurname.val(),
-                "university": school.text(),
-                "department": department.text(),
+                "university": {
+                   "_id": school.val()
+                },
+                "department":{ 
+                   "_id": department.val()
+                },
                 "email": email.val(),
-                "phone": phone.val()
+                "phone_number": phone.val()
             },
 
 

@@ -19,7 +19,7 @@ export class SpeakerController{
             res.status(400).json({
                 err: error,
                 status: "Error",
-                msg:error.message
+               // msg:error.message
             })
         }
     }

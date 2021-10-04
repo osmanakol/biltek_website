@@ -42,7 +42,7 @@ function phone_validate() {
 
 function getUniversity() {
     $.ajax({
-        url: "/api/university",
+        url: "https://api.aybubiltek.com/school/get/universities",
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {

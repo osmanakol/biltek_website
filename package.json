@@ -12,7 +12,7 @@
     "start": "node dist/server.js",
     "dev": "nodemon  -r dotenv/config --exec ts-node src/server.ts",
     "build": "tsc --outDir dist",
-    "pm2":"NODE_ENV=production pm2 start dist/server.js",
+    "pm2": "NODE_ENV=production pm2 start dist/server.js",
     "dev:debug": "ts-node-dev --inspect --respawn src/server.ts"
   },
   "repository": {
