@@ -1,0 +1,134 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body .container {
+    font-weight: normal;
+    border-collapse: collapse;
+    border: 0;
+    margin: auto;
+    padding: 0;
+    color: #555559;
+    background-color: white;
+    font-size: 16px;
+    line-height: 26px;
+    width: 600px;
+  }
+  
+  body .container tr .border {
+    border: 1px solid #eeeff0;
+    margin: 0;
+  }
+  
+  body .container tr .border table .imageSection {
+    border-bottom: 4px solid #10afcd;
+    padding: 0 20px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  
+  body .container tr .border table .imageSection .top-image {
+    width: 50px;
+  }
+  
+  body .container tr .border table .side-title {
+    color: #555559;
+    border-collapse: collapse;
+  }
+  
+  body .container tr .border table .side-title table tr {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  body .container tr .border table .side-title table tr .headTitle {
+    font-size: 25px;
+    line-height: 30px;
+    padding-top: 10px;
+  }
+  
+  body .container tr .border table .side-title table tr .subTitle {
+    padding-top: 5px;
+    font-size: 18px;
+    line-height: 29px;
+  }
+  
+  body .container tr .border table .side-title table tr .subTitle #introTitle {
+    font-weight: 600;
+  }
+  
+  body .container tr .border table .side-title table tr .bannerArea {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  body .container tr .border table .side-title table tr .bannerArea #infoBanner .top-image {
+    width: 560px;
+    height: auto;
+  }
+  
+  body .container tr .border table .side-title table tr .bannerArea #infoBanner #registerButton {
+    background-color: #10afcd;
+    border: 10px solid #10afcd;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: 0;
+    color: white;
+  }
+  
+  body .container tr .border table .side-title table tr .top-padding {
+    padding: 15px;
+  }
+  
+  body .container tr .border table .side-title table tr .text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0 20px 20px;
+  }
+  
+  body .container tr .border table .side-title table tr .text #registerButton {
+    text-align: center;
+  }
+  
+  body .container tr .border table .side-title table tr .text #registerButton a {
+    background-color: #10afcd;
+    border: 10px solid #10afcd;
+    border-radius: 3px;
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    font-weight: bold;
+  }
+  
+  body .container tr .border table .socialArea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  body .container tr .border table .socialArea .icon {
+    padding: 0 10px 20px 10px;
+    font-size: 16px;
+    color: #10afcd;
+  }
+ 
