@@ -75,7 +75,7 @@ function getUniversity() {
 
 function getDepartmentsById() {
     $.ajax({
-        url: `https://api.aybubiltek.com//school/get/university/${$('#university option:selected').val()}/departments`,
+        url: `https://api.aybubiltek.com/school/get/university/${$('#university option:selected').val()}/departments`,
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {
@@ -124,6 +124,7 @@ function submit_validation() {
         $.ajax({
             url: `https://api.aybubiltek.com/membership`,
             type: "POST",
+            async:true,
             data: {
                 "name_surname": nameSurname.val(),
                 "university": {
@@ -135,28 +136,38 @@ function submit_validation() {
                 "email": email.val(),
                 "phone_number": phone.val()
             },
+            success: function(data){
+        
+                sweetAlert(data.message, "success", "", false, false, 1500);
+             }
+             , error: function(res){
+     
+                 sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
 
+                 /*if(Array.isArray(res.responseJSON.))
+                     sweetAlert(res.responseJSON.message[0].msg, "warning", "", false, false, 1500);
+                 else    
+                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);*/
+             }
+            /*success(res) {
+                debugger
 
-            success(res) {
-                if (typeof res.error !== "undefined") {
-
-                }
-                else {
-
-
-                    sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
-                    $(".modal-back").css("display", "none");
-                    $(".register-modal").css("transform", "translate(-50%,-50%) scale(0)");
-                    $("#addParticipants")[0].reset();
-                }
-            }
+                sweetAlert("Kayıt Başarılı", "success", "", false, false, 1500);
+                $(".modal-back").css("display", "none");
+                $(".register-modal").css("transform", "translate(-50%,-50%) scale(0)");
+                $("#addParticipants")[0].reset();
+            }*/
             //TODO ,ERROR EKLENECEK
-            , error(res) {
+            /*, error(res) {
+                debugger
+                console.log(res)
+                sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
+                /*
                 if(Array.isArray(res.responseJSON.errors))
                     sweetAlert(res.responseJSON.errors[0].msg, "warning", "", false, false, 1500);
                 else    
                     sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);
-            }
+            }*/
 
 
 
