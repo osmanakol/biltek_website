@@ -147,6 +147,9 @@ function submit_validation() {
         email: email.val(),
         phone_number: phone.val(),
       },
+      beforeSend: function(){
+        $('#loader').removeClass('hidden')
+      },
       success: function (data) {
         sweetAlert(data.message, "success", "", false, false, 1500);
         $("#email-1").val("");
@@ -163,6 +166,9 @@ function submit_validation() {
                  else    
                      sweetAlert(res.responseJSON.message, "warning", "", false, false, 1500);*/
       },
+      complete(res){
+        $('#loader').addClass('hidden')
+      }
       /*success(res) {
                 debugger
 
