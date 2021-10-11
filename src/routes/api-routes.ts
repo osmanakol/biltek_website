@@ -39,11 +39,11 @@ export class ApiRoutes {
         //? Routes /api/speaker
         this.router.route("/speaker")
         .get(this.speakerController.findAll)
-        .post(this.speakerController.create)
+        //.post(this.speakerController.create)
         // ? Routes /api/participant
-        this.router.route('/participant')
-            .get(this.participantController.findAll)
-            .post(validate(ParticipantValidationChain), this.participantController.createParticipant)
+        //this.router.route('/participant')
+        //    .get(this.participantController.findAll)
+        //    .post(validate(ParticipantValidationChain), this.participantController.createParticipant)
         //.put(this.participantController.updateParticipant)
         //.delete(this.participantController.deleteParticipant);
 
@@ -56,29 +56,29 @@ export class ApiRoutes {
              //.delete(this.participantController.deleteParticipant);
 
         // ? Routes /api/university
-        this.router.route('/university')
-            .get(this.universityController.findAll)
+        //this.router.route('/university')
+        //    .get(this.universityController.findAll)
         // .post(this.universityController.createUniversity)
         // .put(this.universityController.update)
         // .delete(this.universityController.delete);
 
         // ? Routes /api/university/addMany
-        this.router.route('/university/addMany')
-            .post(this.universityController.createUniversities)
+        //this.router.route('/university/addMany')
+        //    .post(this.universityController.createUniversities)
 
         // ? Routes /api/department
-        this.router.route('/department')
-            .get(this.deparmentController.findAll)
+        //this.router.route('/department')
+        //    .get(this.deparmentController.findAll)
         // .post(this.deparmentController.createMany)
         // .put(this.deparmentController.update)
         // .delete(this.deparmentController.delete);
 
-        this.router.route('/departments')
-            .get(this.deparmentController.getDepartmentsByUniversityId);
+        //this.router.route('/departments')
+        //    .get(this.deparmentController.getDepartmentsByUniversityId);
 
         this.router.route('/event')
             .get(this.eventController.findAll)
-            .post(this.eventController.create)
+            //.post(this.eventController.create)
         // .put(this.eventController.update)
 
         
@@ -89,9 +89,9 @@ export class ApiRoutes {
         this.router.route('/event/participant/add')
             .get()
             .post(validate(ParticipantValidationChain), this.participantController.addEvent)
-        this.router.route('/teams/participant/add')
+        /*this.router.route('/teams/participant/add')
             .post(this.teamController.create)
-            .get(this.teamController.get)
+            .get(this.teamController.get)*/
         return this.router;
     }
 } 
