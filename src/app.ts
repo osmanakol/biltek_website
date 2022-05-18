@@ -1,7 +1,5 @@
 import vhost from "vhost";
 import express, { Application } from "express";
-import connection from "./models/configuration/connection";
-import { ApiRoutes } from "./routes/api-routes";
 import { WebRoutes } from "./routes/web-routes";
 import { CtfRoutes } from "./routes/ctf-routes";
 import exphbs from "express-handlebars";
@@ -24,7 +22,6 @@ class App {
     this.config();
     //this.virtualHost();
     this.routeConfig();
-    this.mongoSetup();
   }
 
   private handlebars = () => {
@@ -87,14 +84,10 @@ class App {
     // ? http://aybubiltek.com/
     this.app.use("/", new WebRoutes(this.webrouter).Routes());
     // ? http://aybubiltek.com/api
-    this.app.use("/api", new ApiRoutes(this.router).Routes());
 
     //this.ctf.use("/", new CtfRoutes().Routes());
   };
 
-  private mongoSetup = () => {
-    connection.connection();
-  };
 }
 
 export default new App().app;

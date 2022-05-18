@@ -19,8 +19,8 @@ if (cluster.isMaster) {
     cluster.fork();
   });
 } else {
-  const port2 = PORT || 3003;
-  app.set("port", 4447);
+  const port2 = PORT || 4445;
+  app.set("port", port2);
   app.listen(app.get("port"), "0.0.0.0", () => {
     /*if (process.env.DYNO && count == 0) {
       console.log("Running on Heroku...");
