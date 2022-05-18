@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+* {
+  --dark: #082437;
+  --white: #F6F6F6;
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--white);
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--dark);
+}
+
+body .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .login .left-area {
+  position: relative;
+  width: 70%;
+}
+
+@media (max-width: 1250px) {
+  body .login .left-area {
+    width: 60%;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .left-area {
+    width: 40%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .login .left-area {
+    display: none;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .left-area {
+    display: none;
+  }
+}
+
+body .login .left-area .img-area {
+  background-image: url(https://images.pexels.com/photos/1038916/pexels-photo-1038916.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+  background-size: cover;
+  height: 100vh;
+  -webkit-filter: drop-shadow(1px 0px 3px black);
+          filter: drop-shadow(1px 0px 3px black);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .login .left-area .img-area .text-area {
+  text-align: center;
+  width: 650px;
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+
+@media (max-width: 1250px) {
+  body .login .left-area .img-area .text-area {
+    width: 525px;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .left-area .img-area .text-area {
+    display: none;
+  }
+}
+
+body .login .left-area .img-area .text-area .text {
+  margin: 75px;
+}
+
+body .login .left-area .img-area .text-area .text * {
+  margin: 0;
+}
+
+body .login .left-area .img-area .text-area .text h4 {
+  font-weight: initial;
+}
+
+body .login .left-area .img-area .text-area .text h2 {
+  font-size: 5rem;
+}
+
+body .login .right-area {
+  width: 30%;
+}
+
+@media (max-width: 1250px) {
+  body .login .right-area {
+    width: 40%;
+  }
+}
+
+@media (max-width: 920px) {
+  body .login .right-area {
+    width: 60%;
+  }
+}
+
+@media (max-width: 530px) {
+  body .login .right-area {
+    width: 100%;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .right-area {
+    width: 100%;
+  }
+}
+
+body .login .right-area .top-area {
+  height: 70px;
+  margin: 25px 25px 0 0;
+  position: absolute;
+  right: 0;
+}
+
+body .login .right-area .top-area .logo-area {
+  height: 100%;
+}
+
+body .login .right-area .top-area .logo-area img {
+  height: 100%;
+}
+
+body .login .right-area .content-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .login .right-area .content-area .content {
+  width: 300px;
+}
+
+@media (max-width: 530px) {
+  body .login .right-area .content-area .content {
+    width: 275px;
+  }
+}
+
+@media (max-height: 690px) {
+  body .login .right-area .content-area .content {
+    margin-top: 80px;
+  }
+}
+
+@media (max-height: 480px) {
+  body .login .right-area .content-area .content {
+    margin-top: 125px;
+  }
+}
+
+body .login .right-area .content-area .content .tittle-area h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+body .login .right-area .content-area .content .login-form .filed {
+  margin: 30px 0;
+}
+
+body .login .right-area .content-area .content .login-form .filed label {
+  font-size: 1.2rem;
+}
+
+body .login .right-area .content-area .content .login-form .filed .input {
+  border-bottom: 1px solid var(--dark);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .login .right-area .content-area .content .login-form .filed .input input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  line-height: 2rem;
+  width: 100%;
+}
+
+body .login .right-area .content-area .content .login-form .filed .input input[type=text],
+body .login .right-area .content-area .content .login-form .filed .input input[type=password] {
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+body .login .right-area .content-area .content .login-form .filed .input i {
+  font-size: 17px;
+  cursor: pointer;
+}
+
+body .login .right-area .content-area .content .login-form .filed .input #open {
+  display: none;
+}
+
+body .login .right-area .content-area .content .login-form .button-area {
+  margin: 40px 0;
+}
+
+body .login .right-area .content-area .content .login-form .button-area button {
+  border: none;
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+}
+/*# sourceMappingURL=login.css.map */
