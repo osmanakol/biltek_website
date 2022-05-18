@@ -7,7 +7,7 @@ $(document).ready(() => {
 function getUniversity() {
     $.ajax({
         type: "GET",
-        url: `/api/university`,
+        url: `https://api.aybubiltek.com/school/get/universities`,
         success(res) {
             if (typeof res.error !== "undefined") {
 
@@ -27,7 +27,7 @@ function getUniversity() {
 function getDepartmentsById() {
 
     $.ajax({
-        url: `/api/departments?universityId=${$('#university option:selected').val()}`,
+        url: `https://api.aybubiltek.com/school/get/university/${$("#university option:selected").val()}/departments`,
         type: "GET",
         success(res) {
             if (typeof res.error !== "undefined") {
@@ -37,7 +37,7 @@ function getDepartmentsById() {
                 $('#department').empty();
                 const departmentList = $.parseJSON(JSON.stringify(res));
                 $.each(departmentList.data, (i, d) => {
-                    $('#department').append('<option value="">' + d.departmentName + '</option>')
+                    $('#department').append('<option value="' + d._id + '">' + d.departmentName + "</option>")
                 })
                 $("#department").prop('selectedIndex', -1)
             }

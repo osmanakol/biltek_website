@@ -67,9 +67,7 @@ function getUniversity() {
 
 function getDepartmentsById() {
   $.ajax({
-    url: `https://api.aybubiltek.com/school/get/university/${$(
-      "#university option:selected"
-    ).val()}/departments`,
+    url: `https://api.aybubiltek.com/school/get/university/${$("#university option:selected").val()}/departments`,
     type: "GET",
     success(res) {
       if (typeof res.error !== "undefined") {
