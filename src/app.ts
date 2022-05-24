@@ -1,13 +1,11 @@
-import vhost from "vhost";
 import express, { Application } from "express";
 import { WebRoutes } from "./routes/web-routes";
-import { CtfRoutes } from "./routes/ctf-routes";
 import exphbs from "express-handlebars";
-import { staticFile, staticFile2 } from "./config";
+import { staticFile } from "./config";
 import { httpLogger } from "./middlewares/logger";
 import path from "path";
 import compression from "compression";
-
+import cors from "cors";
 class App {
   public app: Application;
   public ctf: Application;
@@ -47,6 +45,20 @@ class App {
     this.app.use(compression())
     //this.ctf.use(compression())
 
+
+    this.app.use(cors({
+      allowedHeaders: [
+        'Origin',
+        'X-Requested-With',
+        'Content-Type',
+        'Accept',
+        'X-Access-Token',
+      ],
+      credentials: true,
+      methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+      origin: "*",
+      preflightContinue: false,
+    }))
     this.app.use(function (req, res, next) {
       res.header("Access-Control-Allow-Origin", "*");
       res.header(
@@ -87,6 +99,9 @@ class App {
 
     //this.ctf.use("/", new CtfRoutes().Routes());
   };
+
+
+  
 
 }
 
