@@ -9,3 +9,5 @@ export const staticFile:string = process.env.__static || ""
 export const staticFile2:string = process.env.__static2 || ""
 
 export const HOST = process.env.HOST
+
+export const maintainMode = process.env.maintain;

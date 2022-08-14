@@ -1,11 +1,13 @@
 import express, { Application } from "express";
 import { WebRoutes } from "./routes/web-routes";
+import { MaintainRoutes } from "./routes/maintain-routes";
 import exphbs from "express-handlebars";
 import { staticFile } from "./config";
 import { httpLogger } from "./middlewares/logger";
 import path from "path";
 import compression from "compression";
 import cors from "cors";
+import { maintainMode } from "./config";
 class App {
   public app: Application;
   public ctf: Application;
@@ -93,9 +95,11 @@ class App {
 
   private routeConfig = () => {
     this.app.use(httpLogger);
-    // ? http://aybubiltek.com/
-    this.app.use("/", new WebRoutes(this.webrouter).Routes());
-    // ? http://aybubiltek.com/api
+    if (maintainMode) {
+      this.app.use("/", new MaintainRoutes(this.webrouter).Routes())
+    } else {
+      this.app.use("/", new WebRoutes(this.webrouter).Routes());
+    }
 
     //this.ctf.use("/", new CtfRoutes().Routes());
   };
